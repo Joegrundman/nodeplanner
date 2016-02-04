@@ -1,0 +1,22 @@
+#mapDiv {
+  border: 1px solid lightslategray;
+  width: 100%;
+  height: 300px;
+  overflow: scroll;
+}
+
+#mapCanvas {
+  position: relative;
+  display: block;
+  z-index: 99;
+}
+
+#mapContainer {
+  position: relative;
+  width: 100%;
+}
+
+#backgroundCanvas {
+  position: relative;
+  display: none;
+}

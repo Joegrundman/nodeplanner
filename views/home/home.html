@@ -1,0 +1,32 @@
+{% extends "../index.html" %}
+
+{% block view %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+      {% include "./_map.html" %}
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    console.log('home/home.html - starting warplanner')
+    getWindowDimensions()
+    WP.initialize()
+  })
+</script>
+
+{% endblock %}
+
+<!-- <script>
+console.log('starting warplanner')
+
+$document.ready(function(){
+  getWindowDimensions()
+  WP.initialize()
+})
+
+</script> -->

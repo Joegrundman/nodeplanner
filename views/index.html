@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warplanner</title>
+
+  <!-- stylesheets -->
+  <link rel='stylesheet' href='/stylesheets/bootstrap-slate.min.css' />
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- end stylesheets -->
+  <!-- Vendor -->
+  <script src="javascripts/Vendor/jquery.min.js"></script>
+  <!-- End Vendor -->
+
+  <!-- Browserify -->
+  <script src="javascripts/Misc/globals.js"></script>
+  <script src="javascripts/Canvas/canvas.js"></script>
+  <script src="javascripts/Canvas/canvas-extensions.js"></script>
+  <script src="javascripts/Loaders/fileloader.js"></script>
+  <script src="javascripts/Map/map.js"></script>
+  <script src="javascripts/Map/map-mouse.js"></script>
+  <script src="javascripts/Map/map-ui.js"></script>
+  <script src="javascripts/Misc/cookies.js"></script>
+  <script src="javascripts/Misc/game.js"></script>
+  <script src="javascripts/Misc/misc-ui.js"></script>
+  <script src="javascripts/Misc/scroll.js"></script>
+  <script src="javascripts/Misc/ui-util.js"></script>
+
+
+</head>
+<body>
+
+  <header>{% include "./shared/navbar.html" %}</header>
+
+  {% block view %}{% endblock %}
+
+
+</body>
+</html>
