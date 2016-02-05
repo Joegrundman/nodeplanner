@@ -6,18 +6,23 @@ var WP = {
 
     WP.Canvas.initCanvas()
     WP.FileLoader.Util.startGame("euro", filename)
+    WP.Eventing.attachEvents()
+
+    if (!hexInfo) { hexInfo = new WP.HexInfo(); }
+	  hexInfo.updateFor(game.currentMap.hexes[0], true);
+
     onWindowResize()
   }
 }
 
-var mapCanvas, backgroundCanvas
-var mapCtx, backgroundCtx
-var game, mapNav
-var keyPress
-var fileName
-var mapHeight = -1
-var mapWidth = -1
-var mapImage
+var mapCanvas, navigatorCanvas, backgroundCanvas, hexInfoCanvas, forcepoolCanvas, newUnitCanvas, shipsAtSeaCanvas, shipyardCanvas, taskforceCanvas, unitCounterCanvas, hexInfoBackgroundCanvas;
+var mapCtx, navigatorCtx, backgroundCtx, hexInfoCtx, forcepoolCtx, hexInfoBackgroundCtx, newUnitCtx, shipsAtSeaCtx, shipyardCtx, taskforceCtx, unitCounterCtx;
+var game, mapNav, hexInfo, forcepool, attrition, codebreaking, diplomacy, dieRoller, gameSettings, hexControl, newUnit, phase, researchDisplay, shipsAtSea, shipyard, recordHandler, taskforce, unitCounter;
+var keyPress;
+var fileName;
+var mapHeight = -1;
+var mapWidth = -1;
+var mapImage;
 
 function Enum() { }
 Enum.HexSides = { east: 0, southeast: 1, southwest: 3, west: 4, northwest: 5, northeast: 6 };

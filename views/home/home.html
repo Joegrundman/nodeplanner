@@ -2,31 +2,55 @@
 
 {% block view %}
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
 
+
+    <div class="col-md-1">
+      {% include "./_sidepanel.html" %}
+    </div>
+
+
+    <div class="col-md-11">
       {% include "./_map.html" %}
     </div>
+
   </div>
-</div>
+</div> -->
+
+<div id="mySplashDiv" style="width: 100%; display: block; position: absolute; top: 65px; left: 0px"></div>
+<div id="mainGameDiv" style="display: none">
+<table style="width: 100%; padding: 0px; margin: 0px">
+	<tr style="vertical-align: top">
+		<td>
+      {% include "./_sidepanel.html" %}
+			<!--<div id="menuDiv" style="float: left; width:174px; height:300px; border: 0px solid #535353; margin-right: 3px; margin-left: 3px">
+				 @Html.Partial("_Phase")
+				@Html.Partial("_Navigator")
+				@Html.Partial("_HexInfo")
+			</div>-->
+		</td>
+		<td style="width: 100%">
+      {% include "./_map.html" %}
+			<!-- @Html.Partial("_Map") -->
+		</td>
+	</tr>
+</table>
 
 <script>
   $(document).ready(function () {
     console.log('home/home.html - starting warplanner')
     getWindowDimensions()
-    WP.initialize()
+    splash(WP.initialize)
+
+    function splash(fn){
+      setTimeout(function(){
+        fn()
+        $("#mySplashDiv").hide()
+        $("#mainGameDiv").show()
+      }, 100)
+    }
   })
 </script>
 
 {% endblock %}
-
-<!-- <script>
-console.log('starting warplanner')
-
-$document.ready(function(){
-  getWindowDimensions()
-  WP.initialize()
-})
-
-</script> -->

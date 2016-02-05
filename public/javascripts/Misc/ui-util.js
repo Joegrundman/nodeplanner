@@ -11,11 +11,13 @@ function getWindowDimensions() {
     window.mapWidth = $(window).width()
     window.mapHeight = $(window).height()
   }
-//  window.mapHeight = window.mapHeight - 75
-//  window.mapWidth = window.mapWidth - 192
-window.mapHeight = window.mapHeight - 100
+  // using goldfarb table display
+   window.mapHeight = window.mapHeight - 90
+   window.mapWidth = window.mapWidth - 192
 
-  window.mapWidth = window.mapWidth - 40
+  // my nums for bootstrap
+  // window.mapHeight = window.mapHeight - 100
+  // window.mapWidth = window.mapWidth - 40
 
 }
 
@@ -27,15 +29,40 @@ function repositionControls(){
 
   var mapDiv = $("#mapDiv")
   var menuDiv =$("#menuDiv")
+  var hexInfoDiv = $("#hexInfoDiv");
+  var splashImgDiv = $("#splashImg");
 
-  mapDiv.height(window.mapHeight)
-  mapDiv.width(window.mapWidth)
+  mapDiv.height(window.mapHeight);
+  splashImgDiv.height($(window).height());
+  mapDiv.width(window.mapWidth);
+  menuDiv.height(window.mapHeight);
+  hexInfoDiv.height(window.mapHeight - 268 - $("#phaseDiv").height());
+
 }
 
 function onWindowResize() {
-  console.log('Misc/ui-util - onWindowResize')
   var map = game.currentMap
   getWindowDimensions()
   repositionControls()
   map.draw()
+  mapNav.refresh()
+}
+
+
+function adjust(value) {
+	return value * game.zoomLevel;
+}
+
+function Point(x, y) {
+	this.x = x;
+	this.y = y;
+}
+
+function getPoint (canvasName, e) {
+	if (typeof e == 'undefined') e = mapCanvas.event;
+	var obj = document.getElementById(canvasName);
+	var relPos = WP.Map.Mouse.Util.getRelativePosition(obj, e.clientX, e.clientY);
+	var x = relPos[0];
+	var y = relPos[1];
+	return new Point(x, y);
 }

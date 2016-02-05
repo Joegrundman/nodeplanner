@@ -9,7 +9,98 @@ WP.Map = function (theater, id) {
   this.hexes = null
   this.currentHex =null
 
-  // this.getHex = function(id) {
-  //   return this.hexes[id]
-  // }
+  this.getHex = function(id) {
+    return this.hexes[id]
+  }
 }
+
+WP.Map.prototype.createHexes = function (id) {
+	this.hexes = new Array();
+	var i = 1;
+	for (var x = 0; x < 51; x++) {
+		for (var y = 0; y < 40; y++) {
+			if ((id == 0) && (x == 50 && (y % 2 > 0)))
+			{ i++; continue; }
+			this.hexes[i] = new WP.Hex(i, this, x, y);
+			i++;
+		}
+	}
+};
+
+WP.Map.prototype.placeUnitFromForcepool = function (unit, hex) {
+	game.selectedUnit = null;
+	var stack = forcepool.unitHolder.findStackContaining(unit);
+	if (unit.type.toLowerCase() == "cruiser") {
+		if (!ctrlPressed() && unit.strength > 2) {
+			unit = unit.breakdownAndCreate(2);
+		}
+		else if (ctrlPressed() && unit.strength > 6) {
+		unit = unit.breakdownAndCreate(6);
+		}
+		else {
+		stack.removeUnit(unit);
+		}
+	}
+	else if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+		unit = unit.breakdownAndCreate(1);
+	}
+	else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+		unit = unit.breakdownAndCreate(5);
+	}
+	else {
+		stack.removeUnit(unit);
+	}
+
+	hex.addOrCombineUnit(unit);
+	hex.clear();
+	hex.draw();
+
+	game.setSelectedUnit(stack.getTopUnit());
+	forcepool.draw();
+};
+
+WP.Map.prototype.placeUnitFromShipyard = function (unit, hex) {
+	game.selectedUnit = null;
+
+	var stack = shipyard.unitHolder.findStackContaining(unit);
+	if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+		unit = unit.breakdownAndCreate(1);
+	}
+	else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+		unit = unit.breakdownAndCreate(5);
+	}
+	else {
+		stack.removeUnit(unit);
+	}
+
+	hex.addOrCombineUnit(unit);
+	hex.clear();
+	hex.draw();
+	shipyard.removeUnitFromShipyard(shipyard, unit);
+	game.setSelectedUnit(stack.getTopUnit());
+
+	shipyard.draw();
+};
+
+WP.Map.prototype.placeUnitFromTaskforce = function (unit, hex) {
+	game.selectedUnit = null;
+
+	var stack = taskforce.unitHolder.findStackContaining(unit);
+	if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+		unit = unit.breakdownAndCreate(1);
+	}
+	else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+		unit = unit.breakdownAndCreate(5);
+	}
+	else {
+		stack.removeUnit(unit);
+	}
+
+	hex.addOrCombineUnit(unit);
+	hex.clear();
+	hex.draw();
+	taskforce.removeUnitFromTaskforce(taskforce, unit);
+	game.setSelectedUnit(stack.getTopUnit());
+
+	taskforce.draw();
+};

@@ -1,14 +1,12 @@
 WP.Map.UI = {}
 
 WP.Map.prototype.drawBackground = function () {
-  console.log('Map/map - drawBackground')
   var mapImage = new Image()
   var map = this
 
   mapImage.onload = function() {
-    console.log('Map/map -drawBackground - onload')
     var mapDiv = $("#mapDiv")
-    // var menuDiv = $("#menuDiv")
+    var menuDiv = $("#menuDiv")
 
     // mapDiv.hide()
     // menuDiv.hide()
@@ -17,7 +15,7 @@ WP.Map.prototype.drawBackground = function () {
 
     WP.Canvas.resizeCanvas(mapCanvas, map)
     WP.Canvas.resizeCanvas(backgroundCanvas, map)
-    console.log('mapWidth:', map.width)
+
     backgroundCtx.drawImage(mapImage, 0, 0, map.width, map.height)
 
     if(WP.Misc.Ui.isiPad() || WP.Misc.Ui.isiPod()) {
@@ -26,7 +24,7 @@ WP.Map.prototype.drawBackground = function () {
       $('#mapBackgroundDiv').css("background-image", "url(" + url + ")")
     }
 
-    // map.drawHexes()
+     map.drawHexes()
     // mapNav.refresh()
 
     var mapBackgroundDiv = $("#mapBackgroundDiv")
@@ -43,8 +41,32 @@ WP.Map.prototype.drawBackground = function () {
   mapImage.src = url
 }
 
+WP.Map.prototype.drawHexes = function () {
+	for (var i in this.hexes) {
+		this.hexes[i].draw();
+	}
+}
+
 WP.Map.prototype.draw = function() {
-  console.log('Map/map - draw')
-  // this.setZoom()
+  this.setZoom()
   this.drawBackground()
+}
+
+WP.Map.prototype.setZoom = function () {
+	for (var i in this.hexes) {
+		this.hexes[i].setZoom();
+	}
+};
+
+WP.Map.prototype.redrawHexesContainingUnits = function (units) {
+	for (var i in this.hexes) {
+		for (var u in units) {
+			for (var hu in this.hexes[i].units) {
+				if (hu == u) {
+					this.hexes[i].clear();
+					this.hexes[i].draw();
+				}
+			}
+		}
+	}
 }
