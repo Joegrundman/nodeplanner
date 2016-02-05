@@ -120,8 +120,8 @@ WP.UnitHolder.prototype.drawTaskforceStacks = function () {
 
 WP.UnitHolder.prototype.drawAllStacks = function () {
 	var md = 12;
-	var x = md;
-	var y = md;
+	var x = md - 3;
+	var y = md - 3;
 	var size = this.stacks[0].units[0].size;
 
 	for (var s = 0; s < this.stacks.length; s++) {

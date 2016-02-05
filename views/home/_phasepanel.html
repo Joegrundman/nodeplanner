@@ -1,25 +1,29 @@
-<table>
-	<tr>
-	<td>
-		<span id="phCurrentYear" style="font-weight: bold; font-size: 18px"></span>
-		<span id="phCurrentSeason" style="font-weight: bold; font-size: 14px"></span></td>
-	</tr>
-	<tr id="phCurrentCoalition" style="font-weight: bold; font-size: 14px"></tr>
-	<tr id="phCurrentPhase" style="font-size: 12px"></tr>
-	<tr id="phCurrentPhaseId" style="font-size: 10px"></tr>
-	<tr>
-		<td style="white-space: nowrap; text-align: left; width: 100%">
-			<input id="phBack" title="Back" type="button" value="  <  "  style="padding: 1px"; >
-			<input id="phFwd" title="Forward" type="button" value="    >    "  style="font-weight: bold; padding: 1px"; >
-			<input id="phFastFwd" title="Fast Forward" type="button" value=" >> "  style="padding: 1px"; >
-		</td>
-	</tr>
-</table>
-<script type='text/javascript'>
-	$(document).ready(function () {
+<div id="phasepanel">
+	<table>
+		<tr>
+			<td>
+				<span id="phCurrentYear" style="font-weight: bold; font-size: 18px"></span>
+				<span id="phCurrentSeason" style="font-weight: bold; font-size: 14px"></span>
+			</td>
+		</tr>
+		<tr id="phCurrentCoalition" style="font-weight: bold; font-size: 14px"></tr>
+		<tr id="phCurrentPhase" style="font-size: 12px"></tr>
+		<tr id="phCurrentPhaseId" style="font-size: 10px"></tr>
+		<tr>
+			<td style="white-space: nowrap; text-align: left; width: 100%">
+				<input id="phBack" class="phasepanelbtn" title="Back" type="button" value="  <  "  style="padding: 1px"; >
+				<input id="phFwd" class="phasepanelbtn" title="Forward" type="button" value="    >    "  style="font-weight: bold; padding: 1px"; >
+				<input id="phFastFwd" class="phasepanelbtn" title="Fast Forward" type="button" value=" >> "  style="padding: 1px"; >
+			</td>
+		</tr>
+	</table>
+</div>
 
-		$('#phBack').click(function () { phase.handleClick(-1); });
-		$('#phFwd').click(function () { phase.handleClick(1); });
-		$('#phFastFwd').click(function () { phase.handleClick(5); });
-	})
+<script type='text/javascript'>
+$(document).ready(function () {
+
+	$('#phBack').click(function () { phase.handleClick(-1); });
+	$('#phFwd').click(function () { phase.handleClick(1); });
+	$('#phFastFwd').click(function () { phase.handleClick(5); });
+})
 </script>

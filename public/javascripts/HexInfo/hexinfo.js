@@ -15,13 +15,17 @@ WP.HexInfo.prototype.refreshHeader = function () {
 	var owner = "Ocean";
 	var cty = null;
 	var hexId = null;
-	var cityName = null; var port = null; var beachIsland = null; var capital = null; var terrain = null;
+	var cityName = null;
+	var port = null;
+	var beachIsland = null;
+	var capital = null;
+	var terrain = null;
 
 	if (this.hex) {
 		cty = this.hex.owner;
 		hexId = this.hex.letter + this.hex.number;
 		if (this.hex.cityName) { cityName = this.hex.cityName; }
-		if (this.hex.isCapital) { capital = "Capital  "; }
+		if (this.hex.isCapital) { capital = "Capital"; }
 		if (this.hex.isPort) { port = "Port"; }
 		if (this.hex.isBeach) { beachIsland = "Beach"; }
 		if (this.hex.isIsland) { beachIsland = "Island"; }

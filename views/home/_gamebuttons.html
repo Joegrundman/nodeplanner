@@ -1,0 +1,71 @@
+<div id="menuButtonContainer">
+    <table>
+        <tr>
+            <td>
+                <img class="menuButton" title="Attrition Combat" alt="Attrition Combat" id="buttonAttrition" src="/Content/Buttons/attritionCombat.png"  />
+            </td>
+            <td>
+                <img class="menuButton" title="Codebreaking" alt="Codebreaking" id="buttonCodebreaking" src="/Content/Buttons/codeBreaking.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Diplomacy" alt="Diplomacy" id="buttonDiplomacy" src="/Content/Buttons/diplomacy.png"/>
+            </td>
+            <td>
+                <img class="menuButton" title="Forcepool" alt="Forcepool" id="buttonForcepool" src="/Content/Buttons/forcepool.png" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="menuButton" title="Combat Groups" alt="Combat Groups" id="buttonCombatGroups" src="/Content/Buttons/combatGroups.png"/>
+            </td>
+            <td>
+                <img class="menuButton" title="Die Roller" alt="Die Roller" id="buttonDieRoller" src="/Content/Buttons/dieRoller.png"/>
+            </td>
+            <td>
+                <img class="menuButton" title="Tables and Records" alt="Newspaper" id="buttonNewspaper" src="/Content/Buttons/newspaper.png"/>
+            </td>
+            <td>
+                <img class="menuButton" title="New Unit" alt="New Unit" id="buttonNewUnit" src="/Content/Buttons/newUnit.png"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="menuButton" title="Replay" alt="Replay" id="buttonReplay" src="/Content/Buttons/replay.png"/>
+            </td>
+            <td>
+                <img class="menuButton" title="Research" alt="Research" id="buttonResearch" src="/Content/Buttons/research.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Settings" alt="Settings" id="buttonSettings" src="/Content/Buttons/settings.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Ships at Sea" alt="Ships atSea" id="buttonShipsAtSea" src="/Content/Buttons/shipsAtSea.png"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <img class="menuButton" title="Shipyards" alt="Shipyards" id="buttonShipyards" src="/Content/Buttons/shipyards.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Switch Theaters" alt="Switch Theaters" id="buttonSwitchTheaters" src="/Content/Buttons/switchTheaters.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Task Forces" alt="Taskforces" id="buttonTaskForces" src="/Content/Buttons/taskForces.png" />
+            </td>
+            <td>
+                <img class="menuButton" title="Unit Counter" alt="Unit Counter" id="buttonUnitCounter" src="/Content/Buttons/unitCounter.png"/>
+            </td>
+
+        </tr>
+    </table>
+
+</div>
+
+<script  type='text/javascript'>
+$(document).ready(function () {
+    $(".menuButton").hover(function () { $(this).attr("src", "/Content/Buttons/" + (this).alt.replace(" ", "") + "Red.png"); },
+    function () { $(this).attr("src", "/Content/Buttons/" + (this).alt.replace(" ", "") + ".png"); });
+});
+
+</script>

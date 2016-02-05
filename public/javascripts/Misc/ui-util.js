@@ -12,12 +12,15 @@ function getWindowDimensions() {
     window.mapHeight = $(window).height()
   }
   // using goldfarb table display
-   window.mapHeight = window.mapHeight - 90
-   window.mapWidth = window.mapWidth - 192
+   // window.mapHeight = window.mapHeight -40
+   // window.mapWidth = window.mapWidth - 206
 
   // my nums for bootstrap
   // window.mapHeight = window.mapHeight - 100
   // window.mapWidth = window.mapWidth - 40
+
+  window.mapHeight = window.mapHeight -80
+  window.mapWidth = window.mapWidth - 186
 
 }
 
@@ -28,15 +31,15 @@ function repositionControls(){
   $('footer').hide()
 
   var mapDiv = $("#mapDiv")
-  var menuDiv =$("#menuDiv")
-  var hexInfoDiv = $("#hexInfoDiv");
+  var menuDiv = $("#menuDiv")
+  // var hexInfoDiv = $("#hexInfoDiv");
   var splashImgDiv = $("#splashImg");
 
   mapDiv.height(window.mapHeight);
   splashImgDiv.height($(window).height());
   mapDiv.width(window.mapWidth);
   menuDiv.height(window.mapHeight);
-  hexInfoDiv.height(window.mapHeight - 268 - $("#phaseDiv").height());
+  //hexInfoDiv.height(window.mapHeight - 268 - $("#phaseDiv").height());
 
 }
 
