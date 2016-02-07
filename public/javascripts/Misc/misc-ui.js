@@ -6,14 +6,16 @@ WP.Misc.Ui = {
 			$("#attrition").dialog('close');
 		// if ($('#codebreaking').dialog('isOpen') == true)
 		// 	$("#codebreaking").dialog('close');
+        if ($('#diplomacy').dialog('isOpen') == true)
+			$("#diplmacy").dialog('close');
 		if ($('#forcepoolDialog').dialog('isOpen') == true)
 			$("#forcepoolDialog").dialog('close');
 		if ($('#gameSettings').dialog('isOpen') == true)
 			$("#gameSettings").dialog('close');
-		// if ($('#hexControl').dialog('isOpen') == true)
-		// 	$("#hexControl").dialog('close');
-		// if ($('#researchDisplay').dialog('isOpen') == true)
-		// 	$("#researchDisplay").dialog('close');
+		if ($('#hexControl').dialog('isOpen') == true)
+			$("#hexControl").dialog('close');
+		if ($('#researchDisplay').dialog('isOpen') == true)
+			$("#researchDisplay").dialog('close');
 		if ($('#newUnit').dialog('isOpen') == true)
 			$("#newUnit").dialog('close');
 		// if ($('#recordHandler').dialog('isOpen') == true)

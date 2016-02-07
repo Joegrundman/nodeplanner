@@ -1,0 +1,45 @@
+
+<div id="researchDisplay" class="dialogPopup" title="Research Display">
+
+	<table style="width: 100%">
+		<tr style="vertical-align: middle">
+			<td><input id="rdAir" type="button" value=" Air " style="width: 100%; padding: 1px"; ></td>
+			<td><input id="rdNaval" type="button" value=" Naval " style="width: 100%;padding: 1px;" ></td>
+			<td><input id="rdMilitary" type="button" value=" Military " style="width: 100%;padding: 1px;" ></td>
+			<td><input id="rdAtomic" type="button" value=" Atomic " style="width: 100%;padding: 1px;" ></td>
+			<td><input id="rdIntel" type="button" value=" Intel "  style="width: 100%;padding: 1px;" ></td>				
+		</tr>	
+	</table>
+	<table id="rdMain" border = "1" style="width: 100%">
+		<tr style="vertical-align: middle">
+			<td>Projects</td>
+			<td><img src="/content/flags/us-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/britain-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/france-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/russia-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/germany-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/italy-smallest.png" alt="European Axis" /></td>
+			<td><img src="/content/flags/japan-smallest.png" alt="European Axis" /></td>		
+		</tr>	
+	</table>
+</div>
+
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+
+		wireUpRDClick("Air");
+		wireUpRDClick("Naval");
+		wireUpRDClick("Military");
+		wireUpRDClick("Atomic");
+		wireUpRDClick("Intel");
+
+	})
+
+	function wireUpRDClick(rdCategory) {
+		$('#rd' + rdCategory).click(function () {
+			researchDisplay.handleResearchCategorySelected(rdCategory);
+		});
+
+	}
+</script>

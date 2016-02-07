@@ -1,0 +1,30 @@
+WP.ResearchDisplay = function () {
+	this.currentCategory = "";
+	//............us, gb, fr, ru, ge, it, jp;
+	this.airGen = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.airDrm = [2, 2, 1, 1, 2, 1, 2, 1];
+	this.airRange = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.airDefense = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.bombers = [1, 1, 0, 0, 0, 0, 0, 1];
+	this.jets = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.airTraining = [4, 2, 0, 0, 1, 1, 3, 0];
+	this.navGen = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.navDrm = [2, 2, 1, 0, 3, 1, 3, 1];
+	this.torps = [0, 0, 0, 0, 0, 0, 1, 1];
+	this.asw = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.harborAttacks = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.milGen = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.ctl = [1, 1, 1, 1, 2, 1, 2, 1];
+	this.armor = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.winterPrep = [0, 0, 0, 6, 0, 0, 0, 1];
+	this.rockets = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.producedICs = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.atoGen = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.radar = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.atomBombs = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.intelGen = [0, 0, 0, 0, 0, 0, 0, 1];
+	this.spies = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.coverts = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.coints = [0, 0, 0, 0, 0, 0, 0, 0];
+	this.occPol = [0, 0, 0, 0, 0, 0, 0, 0];
+}

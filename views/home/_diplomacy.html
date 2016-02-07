@@ -1,0 +1,42 @@
+
+<div id="diplomacy" class="dialogPopup" title="Diplomacy">
+	<div id="dipCountryGroupings" style="width:100%">
+		<table style="width:100%; padding-bottom: 5px">
+			<tr style="vertical-align:middle">
+				<td><img id="dipCountryFlag" src="." alt="Flag" class="snippet-smallshadow" /></td>
+				<td style="white-space: nowrap; text-align: right; width: 100%">
+					<input id="dipBritain" type="button" value="Britain"  style="padding: 1px;" />
+					<input id="dipRussia" type="button" value="Russia"  style="padding: 1px;" />
+					<input id="dipGermany" type="button" value="Germany"  style="padding: 1px;" />
+					<input id="dipJapan" type="button" value="Japan"  style="padding: 1px;" />
+				</td>
+			</tr>
+			<tr class="dialogSelectorContainer">
+				<td style="width: 100%; padding-left: 10px;"><select class="dialogSelect" id="dipCountry"></select></td>
+				<td style="white-space:nowrap"><select class="dialogSelect" id="dipCountryStatus"></select></td>
+			</tr>			
+		</table>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$('#dipCountry').change(function () {
+			diplomacy.handleCountrySelected($('#dipCountry').val());
+			diplomacy.draw();
+		});
+		wireUpDipClick("Britain", 0);
+		wireUpDipClick("Japan", 4);
+		wireUpDipClick("Russia", 6);
+		wireUpDipClick("Germany", 2);
+
+		function wireUpDipClick(country, prop) {
+			$('#dip' + country).click(function () {
+				$("#dipCountry").prop("selectedIndex", prop);
+				diplomacy.handleCountrySelected($('#dipCountry').val());
+				diplomacy.draw();
+			});
+		} 
+	})
+	
+</script>

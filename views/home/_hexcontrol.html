@@ -1,0 +1,51 @@
+
+<div id="hexControl" class="dialogPopup" title="Hex Control">
+	<div id="hcCountryGroupings" style="width:100%">
+		<table style="width: 100%">
+			<tr style="vertical-align: middle">
+				<td>
+					<img id="hcCountryFlag" src="." alt="Flag" class="snippet-smallshadow" />
+				</td>
+				<td style="white-space: nowrap; text-align: right; width: 100%">
+					<input id="hcBritain" type="button" value="Britain"  style="padding: 1px"; >
+					<input id="hcFrance" type="button" value="France"  style="padding: 1px;" >
+					<input id="hcUS" type="button" value="U.S.A."  style="padding: 1px;" >
+					<input id="hcRussia" type="button" value="Russia"  style="padding: 1px;" >
+					<input id="hcChina" type="button" value="China"  style="padding: 1px;" >
+					<input id="hcGermany" type="button" value="Germany"  style="padding: 1px;" >
+					<input id="hcItaly" type="button" value="Italy"  style="padding: 1px;" >
+					<input id="hcJapan" type="button" value="Japan"  style="padding: 1px;" >
+				</td>
+			</tr>
+		</table>
+		<table style="width:100%; padding-top:4px;">
+			<tr style="vertical-align:middle">				
+				<td><select class="dialogSelect"  id="hcCountry"></select></td>
+			</tr>			
+		</table>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$('#hcCountry').change(function () {
+			hexControl.handleCountrySelected($('#hcCountry').val());
+		});
+		
+		wireUpHexControlClick("Britain", 0);
+		wireUpHexControlClick("France", 1);
+		wireUpHexControlClick("US", 7);
+		wireUpHexControlClick("Russia", 6);
+		wireUpHexControlClick("China", 5);
+		wireUpHexControlClick("Germany", 2);
+		wireUpHexControlClick("Japan", 4);
+		wireUpHexControlClick("Italy", 3);
+		});
+	
+	function wireUpHexControlClick(country, prop) {
+		$('#hc' + country).click(function () {
+			$("#hcCountry").prop("selectedIndex", prop);
+			hexControl.handleCountrySelected($('#hcCountry').val());
+		});
+	}
+</script>
