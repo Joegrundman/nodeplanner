@@ -1,3 +1,6 @@
+/* global getPoint */
+/* global $ */
+/* global shipyard */
 
 WP.Shipyard.Mouse = {}
 

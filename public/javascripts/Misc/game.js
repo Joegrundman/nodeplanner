@@ -1,3 +1,5 @@
+/* global onWindowResize */
+/* global phase */
 WP.Game = function (){
     this.name = 'not set'
     this.mapIndex = 0
@@ -127,7 +129,7 @@ WP.Game.prototype.getShipyardFromUnit = function (unitId) {
             return this.shipyards[si];
         }
     }
-    alert("Game.getShipyard from unit: Unknown shipyard with: " + unitID);
+    alert("Game.getShipyard from unit: Unknown shipyard with: " + unitId);
     return null;
 }
 
@@ -138,7 +140,7 @@ WP.Game.prototype.getTaskforceFromUnit = function (unitId) {
             return this.taskforces[ti];
         }
     }
-    alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitID);
+    alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitId);
     return null;
 }
 
@@ -232,16 +234,16 @@ WP.Game.prototype.setSelectedUnit = function (unit) {
     this.handleSelectUnselectOnBoard(oldUnit);
     this.handleSelectUnselectInDialog(oldUnit, forcepool);
     // this.handleSelectUnselectInDialog(oldUnit, shipsAtSea);
-    // this.handleSelectUnselectInDialog(oldUnit, shipyard);
-    // this.handleSelectUnselectInDialog(oldUnit, taskforce);
-    // this.handleSelectUnselectInDialog(oldUnit, unitCounter);
+    this.handleSelectUnselectInDialog(oldUnit, shipyard);
+    this.handleSelectUnselectInDialog(oldUnit, taskforce);
+    this.handleSelectUnselectInDialog(oldUnit, unitCounter);
 
     this.handleSelectUnselectOnBoard(unit);
     this.handleSelectUnselectInDialog(unit, forcepool);
     // this.handleSelectUnselectInDialog(unit, shipsAtSea);
-    // this.handleSelectUnselectInDialog(unit, shipyard);
-    // this.handleSelectUnselectInDialog(unit, taskforce);
-    // this.handleSelectUnselectInDialog(unit, unitCounter);
+    this.handleSelectUnselectInDialog(unit, shipyard);
+    this.handleSelectUnselectInDialog(unit, taskforce);
+    this.handleSelectUnselectInDialog(unit, unitCounter);
 };
 
 WP.Game.prototype.switchTheaters = function () {

@@ -1,3 +1,4 @@
+/* global game */
 WP.Unit.UI = {
 
 	drawBase: function (ctx, unit) {
@@ -28,6 +29,7 @@ WP.Unit.UI = {
 	},
 
 	drawColorRect: function (ctx, x, y, w, h, color) {
+        var boxColor
 		var blackLineColor = new WP.Color(0, 0, 0);
 		var blueBoxColor = new WP.Color(11, 128, 244);
 		var yellowBoxColor = new WP.Color(238, 237, 41);
@@ -43,13 +45,14 @@ WP.Unit.UI = {
 	},
 
 	drawDamaged: function (ctx, unit) {
-		burningShip = new Image();
+		var burningShip = new Image();
 		burningShip.src = "content/units/burning_ship.gif";
 		ctx.drawImage(burningShip, 0, 11);
 	},
 
 	drawEllipse: function (ctx, x, y, w, h, color, linewidth) {
 		var kappa = 0.5522848;
+        var ox, oy, xe, ye, xm, ym
 		ox = (w / 2) * kappa, 		// control point offset horizontal
 				oy = (h / 2) * kappa, // control point offset vertical
 				xe = x + w,           // x-end
@@ -119,7 +122,7 @@ WP.Unit.UI = {
 
 	drawInverted: function (ctx, unit) {
 		ctx.lineWidth = 1;
-		for (i = 7; i < 40; i += 7) {
+		for (var i = 7; i < 40; i += 7) {
 			ctx.strokeStyle = unit.owner.foreColor.toRgb();
 			ctx.beginPath();
 			ctx.moveTo(2, i);

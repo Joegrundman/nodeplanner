@@ -1,3 +1,4 @@
+/* global forcepool */
 WP.Forcepool.UI = {
 	addCountryToDropdown: function(cty) {
 		//$('#fpCountry').append($("<option />").attr("value", cty.id).text(cty.name));
@@ -34,7 +35,7 @@ WP.Forcepool.prototype.draw = function () {
 	var id = $('#fpGroupings').val();
 	var cty = game.getCountry($('#fpCountry').val());
 	var units = new Array();
-	for (i = 0; i < cty.units.length; i++) {
+	for (var i = 0; i < cty.units.length; i++) {
 		var unit = cty.units[i];
 		if (unit.location == 1 && unit.fpg == id) {
 			units[units.length] = unit;

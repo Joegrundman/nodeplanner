@@ -1,0 +1,34 @@
+<div id="unitCounter" class="dialogPopup" title="Unit Counter">
+	<div id="ucCountryGroupings" style="width:100%; height:100%">
+		<table style="width:100%; height:100%">
+			<tr style="vertical-align:middle">
+				<td><img id="ucCountryFlag" src="." alt="Flag" class="snippet-smallshadow" /></td>
+				<td><select class="dialogSelect" id="ucCountry"></select></td>
+				<td style="white-space:nowrap; width:100%;"><input id="ucStackCheckbox" type="checkbox" checked="checked" />Stack similar units</td>
+				<td style="white-space:nowrap; width:100%;"><input id="ucShowUnbuiltCheckbox" type="checkbox" checked="checked" />Show unbuilt units</td>
+			</tr>			
+			<tr style="height:100%">
+				<td colspan="4">
+					<div id="ucDetails" style="width:100%; height:100%; background-color:White; border: 1px solid black;">
+						<canvas id="unitCounterCanvas"></canvas>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$('#ucCountry').change(function () {
+			unitCounter.handleCountrySelected($('#ucCountry').val());
+			unitCounter.draw();
+		});
+		$("#ucStackCheckbox").click(function () { unitCounter.draw(); });
+		$("#ucShowUnbuiltCheckbox").click(function () { unitCounter.draw(); });
+		$("#unitCounter").resize(function () { 
+            //$("#ucDetails").height($("#unitCounter").height());
+         });
+	})
+</script>
+

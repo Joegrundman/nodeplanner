@@ -205,7 +205,7 @@ WP.Unit.prototype.setTaskforceAddress = function (taskforceOwner, x, y) {
 }
 
 WP.Unit.prototype.unitHasSameAddress = function (stack) {
-	for (i = 0; i < stack.units.length; i++) {
+	for (var i = 0; i < stack.units.length; i++) {
 		if ((stack.units[i].holderX == this.holderX) && (stack.units[i].holderY == this.holderY)) {
 				return true;
 		}
@@ -214,7 +214,7 @@ WP.Unit.prototype.unitHasSameAddress = function (stack) {
 }
 
 WP.Unit.prototype.unitTypeExistsInStack = function (stack) {
-	for (i = 0; i < stack.units.length; i++) {
+	for (var i = 0; i < stack.units.length; i++) {
 		if (stack.units[i].type == this.type) {
 			if (stack.units[i].strength == this.strength) {
 				return true;

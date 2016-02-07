@@ -1,3 +1,5 @@
+/* global taskforce */
+/* global mapNav */
 WP.Eventing = {
 	attachEvents: function () {
 		$.ajaxSetup({ cache: false });
@@ -16,13 +18,13 @@ WP.Eventing = {
 		//$("#diplomacy").dialog({ autoOpen: false, resizable: false });
 		//$("#gameSettings").dialog({ autoOpen: false });
 		//$("#hexControl").dialog({ autoOpen: false });
-		//$("#newUnit").dialog({ autoOpen: false });
+		$("#newUnit").dialog({ autoOpen: false });
 		//$("#recordHandler").dialog({ autoOpen: false, close: function () { WP.RecordHandler.UI.handleDialogClose(); } });
 		//$("#researchDisplay").dialog({ autoOpen: false });
 		//$("#shipsAtSea").dialog({ autoOpen: false });
 		$("#shipyard").dialog({ autoOpen: false });
 		$("#taskforce").dialog({ autoOpen: false });
-		//$("#unitCounter").dialog({ autoOpen: false });
+		$("#unitCounter").dialog({ autoOpen: false });
 
 		WP.Eventing.attachWindowingEvents();
 		WP.Eventing.attachMapEvents();
@@ -49,7 +51,7 @@ WP.Eventing = {
 		// $("#hexControl").dialog({
 		// 	beforeClose: function () { hexControl.showUnits(); }
 		// });
-		// if (!newUnit) newUnit = new WP.NewUnit();
+		if (!newUnit) newUnit = new WP.NewUnit();
 		// if (!researchDisplay) researchDisplay = new WP.ResearchDisplay();
 		// if (!shipsAtSea) shipsAtSea = new WP.ShipsAtSea();
 		// WP.Eventing.attachDialogWithHolderMouseEvents(shipsAtSea, shipsAtSeaCanvas);
@@ -57,8 +59,8 @@ WP.Eventing = {
 		WP.Eventing.attachDialogWithHolderFullMouseEvents(shipyard, shipyardCanvas);
 		if (!taskforce) taskforce = new WP.Taskforce();
 		WP.Eventing.attachDialogWithHolderFullMouseEvents(taskforce, taskforceCanvas);
-		// if (!unitCounter) unitCounter = new WP.UnitCounter();
-		// WP.Eventing.attachDialogWithHolderMouseEvents(unitCounter, unitCounterCanvas);
+		if (!unitCounter) unitCounter = new WP.UnitCounter();
+		WP.Eventing.attachDialogWithHolderMouseEvents(unitCounter, unitCounterCanvas);
 	},
 
 	attachDialogWithHolderFullMouseEvents: function (dialog, dialogCanvas) {
@@ -130,14 +132,14 @@ WP.Eventing = {
 		$("#buttonForcepool").click(function () { WP.Forcepool.UI.handleMenuButton(); });
 		// $("#buttonHexControl").click(function () { WP.HexControl.UI.handleMenuButton(); });
 		// $("#buttonNewspaper").click(function () { WP.RecordHandler.UI.handleMenuButton(); });
-		// $("#buttonNewUnit").click(function () { WP.NewUnit.UI.handleMenuButton(); });
+		$("#buttonNewUnit").click(function () { WP.NewUnit.UI.handleMenuButton(); });
 		// $("#buttonResearch").click(function () { WP.ResearchDisplay.UI.handleMenuButton(); });
 		// $("#buttonSettings").click(function () { WP.GameSettings.UI.handleMenuButton(); });
         $("#buttonShipyards").click(function () { WP.Shipyard.UI.handleMenuButton(); });
 		// $("#buttonShipsAtSea").click(function () { WP.ShipsAtSea.UI.handleMenuButton(); });
 		$("#buttonSwitchTheaters").click(function () { game.switchTheaters(); });
 		$("#buttonTaskForces").click(function () { WP.Taskforce.UI.handleMenuButton(); });
-		// $("#buttonUnitCounter").click(function () { WP.UnitCounter.UI.handleMenuButton(); });
+		$("#buttonUnitCounter").click(function () { WP.UnitCounter.UI.handleMenuButton(); });
 		//
 		// $("#infoBarButtonDownload").click(WP.FileSaver.Util.saveGame);
 

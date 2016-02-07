@@ -31,7 +31,7 @@ WP.Shipyard.prototype.draw = function () {
 
 	var holder = WP.UnitHolder.Util.unitHolderBuilder(shipyardCtx, $("#syDetails"));
 
-	for (i = 0; i < syd.shipyardUnits.length; i++) {
+	for (var i = 0; i < syd.shipyardUnits.length; i++) {
 		var syUnit = syd.shipyardUnits[i];
 		var unit = game.getUnitForShipyard(syUnit.id, syUnit.x, syUnit.y);
 		units[units.length] = unit;

@@ -1,3 +1,26 @@
+/* global unitCounterCtx */
+/* global unitCounterCanvas */
+/* global taskforceCtx */
+/* global taskforceCanvas */
+/* global shipyardCtx */
+/* global shipyardCanvas */
+/* global shipsAtSeaCtx */
+/* global shipsAtSeaCanvas */
+/* global newUnitCtx */
+/* global newUnitCanvas */
+/* global navigatorCtx */
+/* global navigatorCanvas */
+/* global mapCtx */
+/* global mapCanvas */
+/* global hexInfoBackgroundCtx */
+/* global hexInfoBackgroundCanvas */
+/* global hexInfoCtx */
+/* global hexInfoCanvas */
+/* global forcepoolCtx */
+/* global forcepoolCanvas */
+/* global backgroundCtx */
+/* global backgroundCanvas */
+
 WP.Canvas = {
 
   initCanvas: function () {
@@ -6,8 +29,10 @@ WP.Canvas = {
     WP.Canvas.initForcepoolCanvas()
     WP.Canvas.initHexInfoCanvas()
     WP.Canvas.initNavigatorCanvas()
+    WP.Canvas.initNewUnitCanvas()
     WP.Canvas.initShipyardCanvas()
     WP.Canvas.initTaskforceCanvas()
+    WP.Canvas.initUnitCounterCanvas()
   },
 
   initBackgroundCanvas: function() {

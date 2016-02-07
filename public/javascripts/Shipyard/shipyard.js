@@ -28,7 +28,7 @@ WP.Shipyard.prototype.addShipyardUnit = function (shipyardUnit) {
 }
 
 WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
-	var shipyard = game.getShipyardFromUnit(unit.id);
+	shipyard = game.getShipyardFromUnit(unit.id);
 	var j = 0;
 	while (j < shipyard.shipyardUnits.length) {
 		if (shipyard.shipyardUnits[j].id == unit.id) {
@@ -42,7 +42,7 @@ WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
 
 WP.Shipyard.prototype.updateShipyardUnitAddress = function (unit) {
 	var shipyard = game.getShipyardFromUnit(unit.id);
-	for (i = 0; i < shipyard.shipyardUnits.length; i++) {
+	for (var i = 0; i < shipyard.shipyardUnits.length; i++) {
 		if (shipyard.shipyardUnits[i].id == unit.id) {
 			shipyard.shipyardUnits[i].x = unit.holderX;
 			shipyard.shipyardUnits[i].y = unit.holderY;

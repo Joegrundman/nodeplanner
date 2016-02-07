@@ -1,0 +1,112 @@
+<div id="newUnit" class="dialogPopup" title="Create New Units">
+	<div id="nuCountryGroupings" style="width:100%">
+		<div style="vertical-align: middle; width: 100%">
+			<img id="nuCountryFlag" src="." alt="Flag" class="snippet-smallshadow" />
+			<span style="padding-bottom: 3px; padding-left: 30px">
+				<input id="nuBritain" type="button" value="Britain"  style="padding: 1px" />
+				<input id="nuFrance" type="button" value="France"  style="padding: 1px" />
+				<input id="nuUS" type="button" value="U.S.A."  style="padding: 1px" />
+				<input id="nuRussia" type="button" value="Russia"  style="padding: 1px" />
+				<input id="nuGermany" type="button" value="Germany"  style="padding: 1px" />
+				<input id="nuItaly" type="button" value="Italy"  style="padding: 1px" />
+				<input id="nuJapan" type="button" value="Japan"  style="padding: 1px" />
+			</span>
+		</div>
+		<br />
+		<div class="dialogSelectorContainer" style="vertical-align: middle; width: 100%">
+			<select class="dialogSelect" id="nuCountry"></select>
+			<select class="dialogSelect" id="nuTypeGroup"></select>
+			<select class="dialogSelect" id="nuType"></select>
+			&nbsp;&nbsp;
+			<input id="nuSlow" type="checkbox" /> Slow ship
+		</div>
+		<br />
+		<div style="vertical-align: middle; width: 100%">
+			Strength: <input id="nuStrength" type="text" name="Strength" value="1" onkeyup="newUnit.draw()" style="width: 20px; font-size: 12px" />	
+			Movement: <input id="nuMove" type="text" name="Movement" value="3" onkeyup="newUnit.draw()" style="width: 20px; font-size: 12px" />	
+			Name: <input id="nuName" type="text" name="Name" value="New" onkeyup="newUnit.draw()" style="font-size: 12px; width: 165px" />
+		</div>
+		<div style="vertical-align: middle; width: 100%; padding-bottom: 15px">
+			<table>
+				<tr style="vertical-align: middle">
+					<td style="white-space: nowrap">Select forcepool grouping: </td>
+					<td style="width: 100%"><select class="dialogSelect" id="nuGroupings"></select></td>
+				</tr>
+				<tr style="vertical-align: middle">
+					<td style="white-space: nowrap">Or, create a new grouping: </td>
+					<td style="width: 100%">
+						<input id="nuFpg" type="text" name="NewFpg" style="width: 150px; font-size: 12px" />
+						<input id="nuFpgButton" type="button" value="New Group" style="padding: 1px;" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div style="width: 100%; padding-bottom: 3px; padding-top:5px; border-width: 1px 0px 0px 0px; border-style: solid; border-color: #CCCCCC">
+			Unit Preview:
+		</div>
+		<div class="dialogCanvasDiv" style="width: 60px; height: 60px; float: left; overflow: hidden">
+			<canvas id="newUnitCanvas" style="overflow: hidden"></canvas>
+		</div>
+		<div style="float: left; white-space: nowrap; padding-top: 15px">
+			&nbsp;&nbsp;
+			<input id="nuAddUnit" type="button" value="Add Unit" style="font-size:16px" />
+	</div>	
+	</div>
+</div>
+<script type='text/javascript'>
+	$(document).ready(function() {
+		$('#nuCountry').change(function() {
+			newUnit.handleCountrySelected($('#nuCountry').val());
+			newUnit.draw();
+		});
+		
+		$('#nuTypeGroup').change(function() {
+			WP.NewUnit.UI.fillTypeList();
+			newUnit.draw();
+		});
+		
+		$('#nuType').change(function() {
+			newUnit.draw();
+		});
+		
+		$('#nuGroupings').change(function() {
+			newUnit.draw();
+		});
+		
+		$("#nuSlow").click(function() {
+			newUnit.draw();
+		});
+		
+		$("#nuAddUnit").click(function() {
+			newUnit.addNewUnit();
+		});
+		
+		$("#nuFpgButton").click(function() {
+			newUnit.addNewForcepoolGroup($('#nuCountry').val());
+			newUnit.handleCountrySelected($('#nuCountry').val());
+			newUnit.draw();
+		});
+		
+		wireUpNewUnitClick("Britain", 0);
+		wireUpNewUnitClick("France", 1);
+		wireUpNewUnitClick("US", 7);
+		wireUpNewUnitClick("Russia", 6);
+		wireUpNewUnitClick("Germany", 2);
+		wireUpNewUnitClick("Japan", 4);
+		wireUpNewUnitClick("Italy", 3);
+		$("#newUnit").resize(function() { $("#nuDetails").height($("#newUnit").height()); });
+	});
+	
+	function wireUpNewUnitClick(country, prop) {
+		$('#nu' + country).click(function () {
+			$("#nuCountry").prop("selectedIndex", prop);
+			newUnit.handleCountrySelected($('#nuCountry').val());
+			newUnit.draw();
+		});
+	}
+	
+	function reDraw() {
+		newUnit.draw();
+	}
+</script>
+
