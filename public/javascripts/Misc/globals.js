@@ -17,7 +17,7 @@ var WP = {
 
 var mapCanvas, navigatorCanvas, backgroundCanvas, hexInfoCanvas, forcepoolCanvas, newUnitCanvas, shipsAtSeaCanvas, shipyardCanvas, taskforceCanvas, unitCounterCanvas, hexInfoBackgroundCanvas;
 var mapCtx, navigatorCtx, backgroundCtx, hexInfoCtx, forcepoolCtx, hexInfoBackgroundCtx, newUnitCtx, shipsAtSeaCtx, shipyardCtx, taskforceCtx, unitCounterCtx;
-var game, mapNav, hexInfo, forcepool, attrition, codebreaking, diplomacy, dieRoller, gameSettings, hexControl, newUnit, phase, researchDisplay, shipsAtSea, shipyard, recordHandler, taskforce, unitCounter;
+var game, mapNav, hexInfo, forcepool, attrition, codebreaking, diplomacy, dieRoller, gameSettings, hexControl, newUnit, phase, researchDisplay, shipsAtSea, shipyard, tables, taskforce, unitCounter;
 var keyPress;
 var fileName;
 var mapHeight = -1;

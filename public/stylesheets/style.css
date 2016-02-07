@@ -181,3 +181,56 @@ html, body {
 #shipyard {
     width: 500;
 }
+
+/* --- codebreaking cards---------------------------------------------------------- */
+.codebreakingCard
+{
+		height: 120px;
+		float: left;
+		overflow: hidden;
+		width: 85px;
+		background-color: White;
+		border-width: 1px;
+		border-color: rgba(50, 50, 50, 1.0);
+		margin-bottom: 5px;
+		margin-right: 7px;
+		text-align: center;
+		border:1px solid #DEDEDE;
+		/* uncomment for shadow
+		-moz-box-shadow: 3px 3px 1px #999;
+		padding: 1px 5px 1px 5px;
+		-webkit-box-shadow: 3px 3px 1px #999;
+		*/
+}
+
+.card1 
+{
+		 -moz-transform: rotate(-6deg);  
+			 -o-transform: rotate(-6deg);  
+	-webkit-transform: rotate(-6deg);  
+			-ms-transform: rotate(-6deg);  
+}
+
+.card2 
+{
+		 -moz-transform: rotate(-3deg);  
+			 -o-transform: rotate(-3deg);  
+	-webkit-transform: rotate(-3deg);  
+			-ms-transform: rotate(-3deg);  
+}
+
+.card3 
+{
+		 -moz-transform: rotate(3deg);  
+			 -o-transform: rotate(3deg);  
+	-webkit-transform: rotate(3deg);  
+			-ms-transform: rotate(3deg);  
+}
+
+.card4 
+{
+		 -moz-transform: rotate(6deg);  
+			 -o-transform: rotate(6deg);  
+	-webkit-transform: rotate(6deg);  
+			-ms-transform: rotate(6deg);  
+}

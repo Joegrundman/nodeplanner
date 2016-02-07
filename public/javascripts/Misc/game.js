@@ -233,14 +233,14 @@ WP.Game.prototype.setSelectedUnit = function (unit) {
 
     this.handleSelectUnselectOnBoard(oldUnit);
     this.handleSelectUnselectInDialog(oldUnit, forcepool);
-    // this.handleSelectUnselectInDialog(oldUnit, shipsAtSea);
+    this.handleSelectUnselectInDialog(oldUnit, shipsAtSea);
     this.handleSelectUnselectInDialog(oldUnit, shipyard);
     this.handleSelectUnselectInDialog(oldUnit, taskforce);
     this.handleSelectUnselectInDialog(oldUnit, unitCounter);
 
     this.handleSelectUnselectOnBoard(unit);
     this.handleSelectUnselectInDialog(unit, forcepool);
-    // this.handleSelectUnselectInDialog(unit, shipsAtSea);
+    this.handleSelectUnselectInDialog(unit, shipsAtSea);
     this.handleSelectUnselectInDialog(unit, shipyard);
     this.handleSelectUnselectInDialog(unit, taskforce);
     this.handleSelectUnselectInDialog(unit, unitCounter);

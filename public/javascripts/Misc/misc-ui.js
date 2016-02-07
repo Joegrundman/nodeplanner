@@ -4,10 +4,10 @@ WP.Misc.Ui = {
 	closeAllDialogs: function () {
 		if ($('#attrition').dialog('isOpen') == true)
 			$("#attrition").dialog('close');
-		// if ($('#codebreaking').dialog('isOpen') == true)
-		// 	$("#codebreaking").dialog('close');
+		if ($('#codebreaking').dialog('isOpen') == true)
+			$("#codebreaking").dialog('close');
         if ($('#diplomacy').dialog('isOpen') == true)
-			$("#diplmacy").dialog('close');
+			$("#diplomacy").dialog('close');
 		if ($('#forcepoolDialog').dialog('isOpen') == true)
 			$("#forcepoolDialog").dialog('close');
 		if ($('#gameSettings').dialog('isOpen') == true)
@@ -18,8 +18,8 @@ WP.Misc.Ui = {
 			$("#researchDisplay").dialog('close');
 		if ($('#newUnit').dialog('isOpen') == true)
 			$("#newUnit").dialog('close');
-		// if ($('#recordHandler').dialog('isOpen') == true)
-		// 	$("#recordHandler").dialog('close');
+		if ($('#tables').dialog('isOpen') == true)
+			$("#tables").dialog('close');
 		if ($('#shipsAtSea').dialog('isOpen') == true)
 			$("#shipsAtSea").dialog('close');
 		if ($('#shipyard').dialog('isOpen') == true)

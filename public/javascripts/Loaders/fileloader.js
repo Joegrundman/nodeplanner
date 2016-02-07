@@ -19,10 +19,10 @@ WP.FileLoader.prototype.load = function () {
 		url: loader.file,
 		dataType: "xml",
 		success: function (xml) {
-			// loader.processGameDetails(xml);
+			loader.processGameDetails(xml);
 			loader.processCountries(xml);
-			// loader.processCodebreakingRecords(xml);
-			 loader.processMaps(xml);
+			loader.processCodebreakingRecords(xml);
+			loader.processMaps(xml);
 			loader.processShipyards(xml);
 			loader.processTaskforces(xml);
 			loader.processPostLoad();

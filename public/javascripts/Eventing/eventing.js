@@ -14,14 +14,14 @@ WP.Eventing = {
 		});
 
 		$("#attrition").dialog({ autoOpen: false, resizable: false, close: function () { WP.Attrition.UI.handleDialogClose(); } });
-		//$("#codebreaking").dialog({ autoOpen: false, resizable: false, close: function () { WP.Codebreaking.UI.handleDialogClose(); } });
+		$("#codebreaking").dialog({ autoOpen: false, resizable: false, close: function () { WP.Codebreaking.UI.handleDialogClose(); } });
 		$("#forcepoolDialog").dialog({ autoOpen: false });
 		//$("#dieRoller").dialog({ autoOpen: false, resizable: false });
 		$("#diplomacy").dialog({ autoOpen: false, resizable: false });
 		$("#gameSettings").dialog({ autoOpen: false });
 		$("#hexControl").dialog({ autoOpen: false });
 		$("#newUnit").dialog({ autoOpen: false });
-		//$("#recordHandler").dialog({ autoOpen: false, close: function () { WP.RecordHandler.UI.handleDialogClose(); } });
+		$("#tables").dialog({ autoOpen: false, close: function () { WP.Tables.UI.handleDialogClose(); } });
 		$("#researchDisplay").dialog({ autoOpen: false });
 		$("#shipsAtSea").dialog({ autoOpen: false });
 		$("#shipyard").dialog({ autoOpen: false });
@@ -127,12 +127,12 @@ WP.Eventing = {
 
 	attachToolbarEvents: function () {
 		$("#buttonAttrition").click(function () { WP.Attrition.UI.handleMenuButton(); });
-		// $("#buttonCodebreaking").click(function () { WP.Codebreaking.UI.handleMenuButton(); });
+		$("#buttonCodebreaking").click(function () { WP.Codebreaking.UI.handleMenuButton(); });
 		// $("#buttonDieRoller").click(function () { WP.DieRoller.UI.handleMenuButton(); });
 		$("#buttonDiplomacy").click(function () { WP.Diplomacy.UI.handleMenuButton(); });
 		$("#buttonForcepool").click(function () { WP.Forcepool.UI.handleMenuButton(); });
 		$("#buttonHexControl").click(function () { WP.HexControl.UI.handleMenuButton(); });
-		// $("#buttonNewspaper").click(function () { WP.RecordHandler.UI.handleMenuButton(); });
+		$("#buttonNewspaper").click(function () { WP.Tables.UI.handleMenuButton(); });
 		$("#buttonNewUnit").click(function () { WP.NewUnit.UI.handleMenuButton(); });
 		$("#buttonResearch").click(function () { WP.ResearchDisplay.UI.handleMenuButton(); });
 		$("#buttonSettings").click(function () { WP.GameSettings.UI.handleMenuButton(); });

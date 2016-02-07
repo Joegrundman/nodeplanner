@@ -1,0 +1,2 @@
+WP.Tables = function () {
+}
