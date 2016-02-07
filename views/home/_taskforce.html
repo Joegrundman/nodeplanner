@@ -1,0 +1,43 @@
+<div id="taskforce" title="Taskforce">
+
+	<table style="width: 100%">
+		<tr style="vertical-align: middle">
+			<td><img id="tfCountryFlag" src="." alt="Flag" class="snippet-smallshadow" /></td>
+			<td style="white-space: nowrap; text-align: right; width: 100%">
+				<input id="tfBritain" type="button" value=" Britain "  style="padding: 1px"; >
+				<input id="tfFrance" type="button" value=" France "  style="padding: 1px;" >
+				<input id="tfUS" type="button" value=" U.S.A. "  style="padding: 1px;" >
+				<input id="tfRussia" type="button" value=" Russia "  style="padding: 1px;" >
+				<input id="tfGermany" type="button" value=" Germany "  style="padding: 1px;" >
+				<input id="tfItaly" type="button" value=" Italy "  style="padding: 1px;" >
+				<input id="tfJapan" type="button" value=" Japan "  style="padding: 1px;" >
+			</td>
+		</tr>
+	</table>
+
+	<div id="tfDetails" style="margin: 7px 0px 5px 0px; border: 1px solid #898989; width:463px; height:463px; background: url(/Content/Tables/tfDisplay.jpg)">
+		<canvas id="taskforceCanvas"></canvas>
+	</div>
+
+</div>
+
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+
+		wireUpTaskforceClick("Britain");
+		wireUpTaskforceClick("France");
+		wireUpTaskforceClick("US");
+		wireUpTaskforceClick("Russia");
+		wireUpTaskforceClick("Germany");
+		wireUpTaskforceClick("Italy");
+		wireUpTaskforceClick("Japan");
+		$("#taskforce").resize(function () { $("#tfDetails").height($("#taskforce").height()); });
+	})
+
+	function wireUpTaskforceClick(tfOwner) {
+		$('#tf' + tfOwner).click(function () {
+			taskforce.handleTaskforceSelected(tfOwner);
+		});
+	}
+</script>

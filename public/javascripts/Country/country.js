@@ -49,8 +49,8 @@ WP.Country.Util = {
 
 WP.Country.prototype.addColony = function(colony) {
 	colony.colonyOf = this;
-	//this.colonies[this.colonies.length] = colony;
-	this.colonies.push(colony)
+	this.colonies[this.colonies.length] = colony;
+
 	colony.colonyOf = this;
 };
 
@@ -59,30 +59,30 @@ WP.Country.prototype.addForcepoolGrouping = function(grouping) {
 };
 
 WP.Country.prototype.addUnit = function(unit) {
-	//this.units[this.units.length] = unit;
-	this.units.push(unit)
+	this.units[this.units.length] = unit;
+	//this.units.push(unit)
 	unit.owner = this;
 };
 
 WP.Country.prototype.getUnit = function(id) {
-	// for (var ci = 0; ci < this.units.length; ci++) {
-	// 	if (this.units[ci].id == id)
-	// 		return this.units[ci];
-	// }
-	return this.units.filter(function(unit) {return unit.id === id})
+	for (var ci = 0; ci < this.units.length; ci++) {
+		if (this.units[ci].id == id)
+			return this.units[ci];
+	}
+	//return this.units.filter(function(unit) {return unit.id === id})
 	alert("Game.getUnit: Unknown unit: " + id);
 	return null;
 };
 
 WP.Country.prototype.removeUnit = function(unit) {
-	// var j = 0;
-	// while (j < this.units.length) {
-	// 	if (this.units[j] == unit)
-	// 		this.units.splice(j, 1);
-	// 	else
-	// 		j++;
-	// }
-	this.units = this.units.filter(function(u){ return u !== unit})
+	var j = 0;
+	while (j < this.units.length) {
+		if (this.units[j] == unit)
+			this.units.splice(j, 1);
+		else
+			j++;
+	}
+	//this.units = this.units.filter(function(u){ return u !== unit})
 };
 
 WP.Country.prototype.toString = function() {

@@ -13,8 +13,8 @@ WP.InitLoader.prototype.init = function (fileLoader) {
 
       loader.processCountries(xml)
       loader.processMaps(xml)
-      // loader.processShipyards(xml)
-      // loader.processTaskforces(xml)
+      loader.processShipyards(xml)
+      loader.processTaskforces(xml)
       fileLoader.load()
     }
   })

@@ -9,14 +9,10 @@ var swig = require('swig')
 var app = express();
 
 var router = require('./router')(app)
-// var routes = require('./routes/index');
-// var users = require('./routes/users');
-
 
 
 // view engine setup
-
-//Swig setup
+// ===> Swig setup
 app.engine('html', swig.renderFile)
 app.set('view engine', 'html')
 app.set('views', path.join(__dirname, 'views'))
@@ -38,7 +34,7 @@ if (app.get('env') === 'production') {
 // app.set('view engine', 'swig');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

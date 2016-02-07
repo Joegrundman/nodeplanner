@@ -1,0 +1,59 @@
+<div id="forcepoolDialog" class="dialogPopup" title="Forcepools">
+	<div id="fpCountryGroupings" style="width:100%">
+		<table style="width: 100%">
+			<tr style="vertical-align: middle">
+				<td>
+					<img id="fpCountryFlag" src="." alt="Flag" class="smallFlag" />
+				</td>
+				<td style="white-space: nowrap; text-align: right; width: 100%">
+					<input id="fpBritain" type="button" value="Britain"  style="padding: 1px"; >
+					<input id="fpFrance" type="button" value="France"  style="padding: 1px;" >
+					<input id="fpUS" type="button" value="U.S.A."  style="padding: 1px;" >
+					<input id="fpRussia" type="button" value="Russia"  style="padding: 1px;" >
+					<input id="fpChina" type="button" value="China"  style="padding: 1px;" >
+					<input id="fpGermany" type="button" value="Germany"  style="padding: 1px;" >
+					<input id="fpItaly" type="button" value="Italy"  style="padding: 1px;" >
+					<input id="fpJapan" type="button" value="Japan"  style="padding: 1px;" >
+				</td>
+			</tr>
+		</table>
+		<table style="width:100%; padding-top:4px;">
+			<tr class="dialogSelectorContainer" style="vertical-align:middle">
+				<td><select id="fpCountry" class="dialogSelect"></select></td>
+				<td><select id="fpGroupings" class="dialogSelect"></select></td>
+				<td style="white-space:nowrap; width:100%; text-align: right"><input id="fpStackCheckbox" type="checkbox" checked="checked" />Stack similar units</td>
+			</tr>
+		</table>
+		<div id="fpDetails" class="dialogCanvasDiv">
+			<canvas id="forcepoolCanvas"></canvas>
+		</div>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+
+		$('#fpCountry').change(function () {
+			forcepool.handleCountrySelected($('#fpCountry').val());
+			forcepool.draw();
+		});
+		$('#fpGroupings').change(function () { forcepool.draw(); });
+		$("#fpStackCheckbox").click(function () { forcepool.draw(); });
+		wireUpForcepoolClick("Britain", 0);
+		wireUpForcepoolClick("France", 1);
+		wireUpForcepoolClick("US", 7);
+		wireUpForcepoolClick("Russia", 6);
+		wireUpForcepoolClick("Germany", 2);
+		wireUpForcepoolClick("Japan", 4);
+		wireUpForcepoolClick("Italy", 3);
+		wireUpForcepoolClick("China", 5);
+		$("#forcepoolDialog").resize(function () { $("#fpDetails").height($("#forcepoolDialog").height()); });
+	})
+	function wireUpForcepoolClick(country, prop) {
+		$('#fp' + country).click(function () {
+			$("#fpCountry").prop("selectedIndex", prop);
+			forcepool.handleCountrySelected($('#fpCountry').val());
+			forcepool.draw();
+		});
+	}
+</script>

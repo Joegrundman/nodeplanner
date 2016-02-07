@@ -23,8 +23,8 @@ WP.FileLoader.prototype.load = function () {
 			loader.processCountries(xml);
 			// loader.processCodebreakingRecords(xml);
 			 loader.processMaps(xml);
-			// loader.processShipyards(xml);
-			// loader.processTaskforces(xml);
+			loader.processShipyards(xml);
+			loader.processTaskforces(xml);
 			loader.processPostLoad();
 		}
 	});

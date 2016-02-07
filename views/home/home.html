@@ -11,26 +11,34 @@
 			</td>
 			<td style="width: 100%">
 				{% include "./_map.html" %}
+
 			</td>
 		</tr>
 	</table>
 
-	<script>
 
-	// Start the Warplanner scripts
+</div>
+<!-- Popup dialogs -->
+{% include "./_forcepool.html" %}
+{% include "./_shipyard.html" %}
+{% include "./_taskforce.html" %}
+<!-- End Popup dialogs -->
+<script>
 
-	$(document).ready(function () {
-		getWindowDimensions()
-		splash(WP.initialize)
+// Start the Warplanner scripts
 
-		function splash(fn){
-			setTimeout(function(){
-				fn()
-				// $("#mySplashDiv").hide()
-				$("#mainGameDiv").show()
-			}, 100)
-		}
-	})
-	</script>
+$(document).ready(function () {
+	getWindowDimensions()
+	splash(WP.initialize)
 
-	{% endblock %}
+	function splash(fn){
+		setTimeout(function(){
+			fn()
+			// $("#mySplashDiv").hide()
+			$("#mainGameDiv").show()
+		}, 100)
+	}
+})
+</script>
+
+{% endblock %}

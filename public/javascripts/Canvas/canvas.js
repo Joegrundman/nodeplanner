@@ -1,11 +1,13 @@
 WP.Canvas = {
 
   initCanvas: function () {
-    console.log('Canvas/canvas - initCanvas')
     WP.Canvas.initMapCanvas()
     WP.Canvas.initBackgroundCanvas()
+    WP.Canvas.initForcepoolCanvas()
     WP.Canvas.initHexInfoCanvas()
     WP.Canvas.initNavigatorCanvas()
+    WP.Canvas.initShipyardCanvas()
+    WP.Canvas.initTaskforceCanvas()
   },
 
   initBackgroundCanvas: function() {
@@ -17,7 +19,7 @@ WP.Canvas = {
 		forcepoolCanvas = $("#forcepoolCanvas")[0];
 		forcepoolCtx = forcepoolCanvas.getContext('2d');
 	},
-  
+
   initHexInfoCanvas: function () {
     hexInfoCanvas = $("#hexInfoCanvas")[0];
     hexInfoCtx = hexInfoCanvas.getContext('2d');

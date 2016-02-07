@@ -1,8 +1,43 @@
 html, body {
     height: 100%
 }
-#mainGameDiv {
+.dialogCanvasDiv {
+    margin-top: 10px;
+    background-color: beige;
+    border: 1px solid darkslategrey;
+    border-radius: 5px 5px 5px 5px;
+}
 
+.dialogPopup {
+    padding: 5px;
+    background-color: white;
+    border: 1px solid darkslategrey;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 5px grey;
+}
+
+.dialogSelectOverflow {
+    height: 150px;
+}
+
+.dialogSelectorContainer {
+    position: relative;
+    z-index: auto;
+}
+
+
+.dialogSelect {
+    width : 120px;
+    height: 25px;
+    margin: 2px;
+    border: 1px solid darkslategrey;
+    border-radius: 3px;
+    background-color: beige;
+    color : black;
+}
+
+#mainGameDiv {
+    position: absolute;
 }
 
 #mapDiv {
@@ -14,7 +49,7 @@ html, body {
 #mapCanvas {
   position: relative;
   display: block;
-  z-index: 99;
+  z-index: 20;
 }
 
 #mapContainer {
@@ -25,6 +60,7 @@ html, body {
 #backgroundCanvas {
   position: relative;
   display: none;
+  z-index: 10;
 }
 
 #menuDiv {
@@ -123,4 +159,25 @@ html, body {
     overflow: hidden;
     background-color: beige;
     height: 180px;
+}
+
+#forcepoolDialog {
+    position: relative;
+    z-index: 30;
+}
+
+
+#fpCountry {
+    position: relative;
+    z-index:300;
+    width: 100px;
+}
+
+.smallFlag {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#shipyard {
+    width: 500;
 }
