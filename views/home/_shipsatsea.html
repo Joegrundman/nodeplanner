@@ -1,0 +1,27 @@
+<div id="shipsAtSea" class="dialogPopup" title="Ships At Sea">
+	<div id="sasCountryGroupings" style="width:100%">
+		<table style="width:100%; padding-bottom: 5px">
+			<tr style="vertical-align:middle">
+				<td><img id="sasCountryFlag" src="." alt="Flag" class="snippet-smallshadow" /></td>
+				<td style="width: 100%; padding-left: 10px;"><select class="dialogSelect" id="sasCountry"></select></td>
+				<td style="white-space:nowrap"><input id="sasStackCheckbox" type="checkbox" checked="checked" />Stack similar units</td>
+				<td style="white-space:nowrap"><input id="sasTFCheckbox" type="checkbox" checked="checked" />Show ships in TF only</td>
+			</tr>			
+		</table>
+		<div id="sasDetails" class="dialogCanvasDiv" style="height: 250px">
+			<canvas id="shipsAtSeaCanvas"></canvas>
+		</div>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$('#sasCountry').change(function () {
+			shipsAtSea.handleCountrySelected($('#sasCountry').val());
+			shipsAtSea.draw();
+		});
+		$("#sasStackCheckbox").click(function () { shipsAtSea.draw(); });
+		$("#sasTFCheckbox").click(function () { shipsAtSea.draw(); });
+		$("#shipsAtSea").resize(function () { $("#sasDetails").height($("#shipsAtSea").height()); });
+	})
+</script>

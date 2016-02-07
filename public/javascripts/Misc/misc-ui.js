@@ -2,30 +2,30 @@ WP.Misc = {  };
 
 WP.Misc.Ui = {
 	closeAllDialogs: function () {
-		// if ($('#attrition').dialog('isOpen') == true)
-		// 	$("#attrition").dialog('close');
+		if ($('#attrition').dialog('isOpen') == true)
+			$("#attrition").dialog('close');
 		// if ($('#codebreaking').dialog('isOpen') == true)
 		// 	$("#codebreaking").dialog('close');
 		if ($('#forcepoolDialog').dialog('isOpen') == true)
 			$("#forcepoolDialog").dialog('close');
-		// if ($('#gameSettings').dialog('isOpen') == true)
-		// 	$("#gameSettings").dialog('close');
+		if ($('#gameSettings').dialog('isOpen') == true)
+			$("#gameSettings").dialog('close');
 		// if ($('#hexControl').dialog('isOpen') == true)
 		// 	$("#hexControl").dialog('close');
 		// if ($('#researchDisplay').dialog('isOpen') == true)
 		// 	$("#researchDisplay").dialog('close');
-		// if ($('#newUnit').dialog('isOpen') == true)
-		// 	$("#newUnit").dialog('close');
+		if ($('#newUnit').dialog('isOpen') == true)
+			$("#newUnit").dialog('close');
 		// if ($('#recordHandler').dialog('isOpen') == true)
 		// 	$("#recordHandler").dialog('close');
-		// if ($('#shipsAtSea').dialog('isOpen') == true)
-		// 	$("#shipsAtSea").dialog('close');
+		if ($('#shipsAtSea').dialog('isOpen') == true)
+			$("#shipsAtSea").dialog('close');
 		if ($('#shipyard').dialog('isOpen') == true)
 			$("#shipyard").dialog('close');
 		if ($('#taskforce').dialog('isOpen') == true)
 			$("#taskforce").dialog('close');
-		// if ($('#unitCounter').dialog('isOpen') == true)
-		// 	$("#unitCounter").dialog('close');
+		if ($('#unitCounter').dialog('isOpen') == true)
+			$("#unitCounter").dialog('close');
 
 	},
 

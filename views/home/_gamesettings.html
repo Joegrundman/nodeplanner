@@ -1,0 +1,19 @@
+<div id="gameSettings" class="dialogPopup" title="Game Settings">
+	<div id="gsGeneral" style="width:100%; border: 1px black">
+		<table style="width:100%; padding-bottom: 5px">
+			<tr style="vertical-align:middle">
+				<td style="white-space:nowrap"><input id="gsUnitTexture" type="checkbox" checked="checked" /> Toggle textured units</td>
+				<td><span id="gsShowTexToggle"></span></td>
+			
+			</tr>
+					
+		</table>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$("#gsUnitTexture").click(function () { gameSettings.update(); });
+
+	})
+</script>

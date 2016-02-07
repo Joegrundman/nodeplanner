@@ -30,6 +30,7 @@ WP.Canvas = {
     WP.Canvas.initHexInfoCanvas()
     WP.Canvas.initNavigatorCanvas()
     WP.Canvas.initNewUnitCanvas()
+    WP.Canvas.initShipsAtSeaCanvas()
     WP.Canvas.initShipyardCanvas()
     WP.Canvas.initTaskforceCanvas()
     WP.Canvas.initUnitCounterCanvas()

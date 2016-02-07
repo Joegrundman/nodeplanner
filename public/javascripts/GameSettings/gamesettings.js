@@ -1,0 +1,2 @@
+WP.GameSettings = function () {
+}

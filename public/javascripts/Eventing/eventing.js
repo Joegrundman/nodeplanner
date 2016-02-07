@@ -11,17 +11,17 @@ WP.Eventing = {
 			alert(error);
 		});
 
-		//$("#attrition").dialog({ autoOpen: false, resizable: false, close: function () { WP.Attrition.UI.handleDialogClose(); } });
+		$("#attrition").dialog({ autoOpen: false, resizable: false, close: function () { WP.Attrition.UI.handleDialogClose(); } });
 		//$("#codebreaking").dialog({ autoOpen: false, resizable: false, close: function () { WP.Codebreaking.UI.handleDialogClose(); } });
 		$("#forcepoolDialog").dialog({ autoOpen: false });
 		//$("#dieRoller").dialog({ autoOpen: false, resizable: false });
 		//$("#diplomacy").dialog({ autoOpen: false, resizable: false });
-		//$("#gameSettings").dialog({ autoOpen: false });
+		$("#gameSettings").dialog({ autoOpen: false });
 		//$("#hexControl").dialog({ autoOpen: false });
 		$("#newUnit").dialog({ autoOpen: false });
 		//$("#recordHandler").dialog({ autoOpen: false, close: function () { WP.RecordHandler.UI.handleDialogClose(); } });
 		//$("#researchDisplay").dialog({ autoOpen: false });
-		//$("#shipsAtSea").dialog({ autoOpen: false });
+		$("#shipsAtSea").dialog({ autoOpen: false });
 		$("#shipyard").dialog({ autoOpen: false });
 		$("#taskforce").dialog({ autoOpen: false });
 		$("#unitCounter").dialog({ autoOpen: false });
@@ -46,15 +46,15 @@ WP.Eventing = {
 		// if (!diplomacy) diplomacy = new WP.Diplomacy();
 		if (!forcepool) forcepool = new WP.Forcepool();
 		WP.Eventing.attachDialogWithHolderMouseEvents(forcepool, forcepoolCanvas);
-		// if (!gameSettings) gameSettings = new WP.GameSettings();
+	    if (!gameSettings) gameSettings = new WP.GameSettings();
 		// if (!hexControl) hexControl = new WP.HexControl();
 		// $("#hexControl").dialog({
 		// 	beforeClose: function () { hexControl.showUnits(); }
 		// });
 		if (!newUnit) newUnit = new WP.NewUnit();
 		// if (!researchDisplay) researchDisplay = new WP.ResearchDisplay();
-		// if (!shipsAtSea) shipsAtSea = new WP.ShipsAtSea();
-		// WP.Eventing.attachDialogWithHolderMouseEvents(shipsAtSea, shipsAtSeaCanvas);
+		if (!shipsAtSea) shipsAtSea = new WP.ShipsAtSea();
+		WP.Eventing.attachDialogWithHolderMouseEvents(shipsAtSea, shipsAtSeaCanvas);
 		if (!shipyard) shipyard = new WP.Shipyard();
 		WP.Eventing.attachDialogWithHolderFullMouseEvents(shipyard, shipyardCanvas);
 		if (!taskforce) taskforce = new WP.Taskforce();
@@ -124,19 +124,18 @@ WP.Eventing = {
 	},
 
 	attachToolbarEvents: function () {
-		// $("#buttonAttrition").click(function () { WP.Attrition.UI.handleMenuButton(); });
+		$("#buttonAttrition").click(function () { WP.Attrition.UI.handleMenuButton(); });
 		// $("#buttonCodebreaking").click(function () { WP.Codebreaking.UI.handleMenuButton(); });
 		// $("#buttonDieRoller").click(function () { WP.DieRoller.UI.handleMenuButton(); });
 		// $("#buttonDiplomacy").click(function () { WP.Diplomacy.UI.handleMenuButton(); });
-		// $("#buttonForcepool").click(function (event) { $("#forcepoolDialog").dialog("open"); event.preventDefault() });
 		$("#buttonForcepool").click(function () { WP.Forcepool.UI.handleMenuButton(); });
 		// $("#buttonHexControl").click(function () { WP.HexControl.UI.handleMenuButton(); });
 		// $("#buttonNewspaper").click(function () { WP.RecordHandler.UI.handleMenuButton(); });
 		$("#buttonNewUnit").click(function () { WP.NewUnit.UI.handleMenuButton(); });
 		// $("#buttonResearch").click(function () { WP.ResearchDisplay.UI.handleMenuButton(); });
-		// $("#buttonSettings").click(function () { WP.GameSettings.UI.handleMenuButton(); });
+		$("#buttonSettings").click(function () { WP.GameSettings.UI.handleMenuButton(); });
         $("#buttonShipyards").click(function () { WP.Shipyard.UI.handleMenuButton(); });
-		// $("#buttonShipsAtSea").click(function () { WP.ShipsAtSea.UI.handleMenuButton(); });
+		$("#buttonShipsAtSea").click(function () { WP.ShipsAtSea.UI.handleMenuButton(); });
 		$("#buttonSwitchTheaters").click(function () { game.switchTheaters(); });
 		$("#buttonTaskForces").click(function () { WP.Taskforce.UI.handleMenuButton(); });
 		$("#buttonUnitCounter").click(function () { WP.UnitCounter.UI.handleMenuButton(); });
