@@ -77,7 +77,7 @@ WP.Unit.UI = {
 
 	drawEliminated: function (ctx, unit) {
 		ctx.lineWidth = 1;
-		for (i = 7; i < 40; i += 7) {
+		for (var i = 7; i < 40; i += 7) {
 			ctx.strokeStyle = new WP.Color(150, 107, 180).toRgb();
 			ctx.beginPath();
 			ctx.moveTo(2, 40- i);
@@ -227,7 +227,7 @@ WP.Unit.UI = {
 	},
 
 	drawWhiteBase: function (ctx, unit) {
-		bc = unit.owner.backColor;
+		var bc = unit.owner.backColor;
 		unit.owner.backColor = new WP.Color(245, 245, 245);
 		WP.Unit.UI.drawBase(ctx, unit);
 		unit.owner.backColor = bc;

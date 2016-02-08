@@ -1,6 +1,6 @@
 var WP = {
   initialize: function () {
-    console.log('Misc/globals.js  - initializing WP')
+
     // for sample testing only - to be commented out
     var filename = 'content/Sample/sample.xml'
 
@@ -12,7 +12,8 @@ var WP = {
 	  hexInfo.updateFor(game.currentMap.hexes[0], true);
 
     onWindowResize()
-  }
+
+  },
 }
 
 var mapCanvas, navigatorCanvas, backgroundCanvas, hexInfoCanvas, forcepoolCanvas, newUnitCanvas, shipsAtSeaCanvas, shipyardCanvas, taskforceCanvas, unitCounterCanvas, hexInfoBackgroundCanvas;

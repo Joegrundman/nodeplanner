@@ -164,7 +164,7 @@ WP.Unit.UI.Misc = {
 
 	drawIsolation: function (ctx, unit) {
 		WP.Unit.UI.drawWhiteBase(ctx, unit);
-		fc = unit.owner.foreColor
+		var fc = unit.owner.foreColor
 		var black = new WP.Color(30, 30, 30);
 		var red = new WP.Color(225, 80, 30);
 		unit.owner.foreColor = black
@@ -272,7 +272,7 @@ WP.Unit.UI.Misc = {
 
 	drawPartialSupply: function (ctx, unit) {
 		WP.Unit.UI.drawWhiteBase(ctx, unit);
-		fc = unit.owner.foreColor
+		var fc = unit.owner.foreColor
 		var black = new WP.Color(30, 30, 30);
 		var red = new WP.Color(225, 80, 30);
 		var white = new WP.Color(250, 250, 250);

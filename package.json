@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "test": "karma start public/test/karma.conf.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",

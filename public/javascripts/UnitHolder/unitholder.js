@@ -1,7 +1,7 @@
 WP.UnitHolder = function () {
 	this.ctx = null;
 	this.units = null;
-	this.stacks = null;
+	this.stacks = []
 	this.stackSimilar = false;
 }
 
@@ -25,24 +25,32 @@ WP.UnitHolder.Util = {
 }
 
 WP.UnitHolder.prototype.drawSingle = function () {
-	for (var i = 0; i < this.units.length; i++) {
-		var newStack = new WP.UnitStack();
-		newStack.units[0] = this.units[i];
-		this.stacks[this.stacks.length] = newStack;
-	}
-	this.drawAllStacks();
+	// for (var i = 0; i < this.units.length; i++) {
+	// 	var newStack = new WP.UnitStack();
+	// 	newStack.units[0] = this.units[i];
+	// 	this.stacks[this.stacks.length] = newStack;
+	// }
+    var these = this
+    these.units.forEach(function(u){
+        var newStack = new WP.UnitStack()
+        newStack.units[0] = u
+        these.stacks.push(newStack)
+    })
+	these.drawAllStacks();
 }
 
 WP.UnitHolder.prototype.drawStacked = function () {
 	for (var i = this.units.length - 1; i > -1; i--) {
 		var matchingStack = this.units[i].findStackThatMatches(this.stacks);
 		if (matchingStack < 0) {
-			this.stacks[this.stacks.length] = new WP.UnitStack();
+			//this.stacks[this.stacks.length] = new WP.UnitStack();
+            this.stacks.push(new WP.UnitStack())
 			matchingStack = this.stacks.length - 1;
 		}
 
 		var stackToAdd = this.stacks[matchingStack];
-		stackToAdd.units[stackToAdd.units.length] = this.units[i];
+	//	stackToAdd.units[stackToAdd.units.length] = this.units[i];
+    stackToAdd.units.push(this.units[i])
 	}
 	this.drawAllStacks();
 }
@@ -165,3 +173,5 @@ WP.UnitHolder.prototype.findStackFor = function (x, y) {
 	}
 	return null;
 }
+
+
