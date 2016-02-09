@@ -220,10 +220,19 @@ WP.Unit.UI = {
 	},
 
 	drawUnitTexture: function (ctx) {
-
-		var unitTexture = new Image();
-		unitTexture.src = "content/Units/unit_texture0.png";
-		ctx.drawImage(unitTexture, -1, 0);
+  	var dark = "rgba(70, 70, 70, 0.7)"
+        var clear = "rgba(10, 10, 10, 0)"
+        
+        var unitTexture = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
+		
+        unitTexture.addColorStop(0, clear)
+        unitTexture.addColorStop(1, dark)
+        ctx.fillStyle = unitTexture
+        ctx.fillRect(0, 0, 42, 42)
+      
+        // var unitTexture = new Image();
+		// unitTexture.src = "content/Units/unit_texture0.png";
+		// ctx.drawImage(unitTexture, -1, 0);
 	},
 
 	drawWhiteBase: function (ctx, unit) {
