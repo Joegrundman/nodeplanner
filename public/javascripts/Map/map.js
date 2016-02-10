@@ -58,7 +58,8 @@ WP.Map.prototype.placeUnitFrom = function (dialog, unit, hex) {
     hex.addOrCombineUnit(unit);
     hex.clear();
     hex.draw();
-
+    dialog.removeUnitFrom(dialog, unit) 
+    
     game.setSelectedUnit(stack.getTopUnit());
     dialog.draw();
 

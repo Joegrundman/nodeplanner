@@ -15,3 +15,4 @@ WP.GameSettings.prototype.update = function () {
 	game.toggleShowUnitTexture(showUnitTexture);
 
 }
+

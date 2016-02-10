@@ -20,6 +20,7 @@ WP.Shipyard.Util = {
 		shipyard.rate = rate;
 		return shipyard;
 	}
+    
 }
 
 WP.Shipyard.prototype.addShipyardUnit = function (shipyardUnit) {
@@ -27,7 +28,21 @@ WP.Shipyard.prototype.addShipyardUnit = function (shipyardUnit) {
 	//shipyardUnit.owner = this;
 }
 
-WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
+// WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
+// 	shipyard = game.getShipyardFromUnit(unit.id);
+// 	var j = 0;
+// 	while (j < shipyard.shipyardUnits.length) {
+// 		if (shipyard.shipyardUnits[j].id == unit.id) {
+// 			shipyard.shipyardUnits.splice(j, 1);
+// 		}
+// 		else {
+// 			j++;
+// 		}
+// 	}
+
+// }
+
+WP.Shipyard.prototype.removeUnitFrom = function (shipyard, unit) {
 	shipyard = game.getShipyardFromUnit(unit.id);
 	var j = 0;
 	while (j < shipyard.shipyardUnits.length) {
@@ -38,6 +53,7 @@ WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
 			j++;
 		}
 	}
+
 }
 
 WP.Shipyard.prototype.updateShipyardUnitAddress = function (unit) {
@@ -48,6 +64,13 @@ WP.Shipyard.prototype.updateShipyardUnitAddress = function (unit) {
 			shipyard.shipyardUnits[i].y = unit.holderY;
 		}
 	}
+    // var syUnits = game.getShipyardFromUnit(unit.id).shipyardUnits
+    // syUnits.forEach(su => {
+    //     if (su.id == unit.id) {
+    //         su.x = unit.holderX
+    //         su.y = unit.holderY
+    //     }
+    // })
 }
 
 

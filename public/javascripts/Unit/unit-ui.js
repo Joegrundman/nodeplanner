@@ -223,10 +223,10 @@ WP.Unit.UI = {
 
 	drawUnitTexture: function (ctx) {
         
-        var dark = "rgba(70, 70, 70, 0.7)"
-        var clear = "rgba(10, 10, 10, 0)"
+        var dark = "rgba(20, 20, 70, 0.7)"
+        var clear = "rgba(10, 10, 10, 0.1)"
         
-        var unitTexture = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
+        var unitTexture = ctx.createRadialGradient(20, 12, 14, 20, 25, 60)
 		// dynamic drawing replaces jpeg for more reliable loading
         unitTexture.addColorStop(0, clear)
         unitTexture.addColorStop(1, dark)

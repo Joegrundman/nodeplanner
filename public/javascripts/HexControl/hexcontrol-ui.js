@@ -17,7 +17,7 @@ WP.HexControl.UI = {
 		// 		WP.HexControl.UI.addCountryToDropdown(cty);
 		// 	}
 		// }
-        game.countries(cty => {if (!cty.isMajorPower) { WP.HexControl.UI.addCountryToDropdown(cty) }})
+        game.countries.forEach(cty => {if (!cty.isMajorPower) { WP.HexControl.UI.addCountryToDropdown(cty) }})
         
 		hexControl.handleCountrySelected($('#hcCountry').val());
 	},

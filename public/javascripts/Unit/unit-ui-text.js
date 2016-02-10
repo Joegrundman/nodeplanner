@@ -101,7 +101,8 @@ WP.Unit.UI.Text = {
 
 	writeDoubleGenericText: function (ctx, unit, text, font, xMod, yMod, color) {
 		WP.Unit.UI.Text.writeGenericText(ctx, unit, text, font, xMod, yMod, color);
-		WP.Unit.UI.Text.writeGenericText(ctx, unit, text, font, xMod, yMod, color);
+        // advances in chrome rendering make doubling text obsolete
+		// WP.Unit.UI.Text.writeGenericText(ctx, unit, text, font, xMod, yMod, color);
 	},
 
 	writeAutoGenericText: function (ctx, unit, text, font, xMod, yMod, color) {

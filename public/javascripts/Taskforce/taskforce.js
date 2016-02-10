@@ -25,7 +25,20 @@ WP.Taskforce.prototype.addTaskforceUnit = function (taskforceUnit) {
 	//taskforceUnit.owner = this;
 }
 
-WP.Taskforce.prototype.removeUnitFromTaskforce = function (taskforce, unit) {
+// WP.Taskforce.prototype.removeUnitFromTaskforce = function (taskforce, unit) {
+// 	var taskforce = game.selectedTaskforce;
+// 	var j = 0;
+// 	while (j < taskforce.taskforceUnits.length) {
+// 		if (taskforce.taskforceUnits[j].id == unit.id) {
+// 			taskforce.taskforceUnits.splice(j, 1);
+// 		}
+// 		else {
+// 			j++;
+// 		}
+// 	}
+// }
+
+WP.Taskforce.prototype.removeUnitFrom = function (taskforce, unit) {
 	var taskforce = game.selectedTaskforce;
 	var j = 0;
 	while (j < taskforce.taskforceUnits.length) {

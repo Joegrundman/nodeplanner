@@ -16,7 +16,7 @@ WP.Taskforce.prototype.draw = function () {
 	for (var i = 0; i < tf.taskforceUnits.length; i++) {
 		var taskforceUnit = tf.taskforceUnits[i];
 		var unit = game.getUnitForTaskforce(taskforceUnit.id, taskforceUnit.x, taskforceUnit.y);
-		units[units.length] = unit;
+		units.push(unit);
 	}
 	var holder = WP.UnitHolder.Util.unitHolderBuilder(taskforceCtx, $("#tfDetails"));
 	holder.units = units;
