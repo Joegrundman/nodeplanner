@@ -25,7 +25,7 @@ WP.Map.prototype.drawBackground = function () {
     }
 
      map.drawHexes()
-    // mapNav.refresh()
+     mapNav.refresh()
 
     var mapBackgroundDiv = $("#mapBackgroundDiv")
     mapBackgroundDiv.height(mapImage.height)

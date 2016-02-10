@@ -70,6 +70,9 @@ WP.Game.prototype.getAllHighlightedUnits = function () {
             units[++i] = unit;
         }
     }
+    // this.countries.forEach(cty => cty.units.filter(unit => unit.highlighted)
+    //                                        .forEach(unit => units.push(unit)))
+    
     return units;
 };
 
@@ -100,6 +103,8 @@ WP.Game.prototype.getCountryFromName = function (name) {
         if (this.countries[ci].name == name)
         return this.countries[ci];
     }
+    // var res = this.countries.filter(cty => cty.name == name)
+    // if (res[0]) { return res }
     alert("Game.getCountry: Unknown country: " + name);
     return null;
 };
@@ -109,6 +114,8 @@ WP.Game.prototype.getShipyards = function (id) {
         if (this.shipyards[si].id == id)
         return this.shipyards[si];
     }
+    // var res = this.shipyards.filter(sy => sy.id == id)
+    // if (res) { return res }
     alert("Game.getShipyard: Unknown shipyard: " + id);
     return null;
 };
@@ -118,6 +125,8 @@ WP.Game.prototype.getShipyardFromName = function (name) {
         if (this.shipyards[si].name == name)
         return this.shipyards[si];
     }
+//    var res = this.shipyards.filter(sy => sy.name == name)
+//     if (res) { return res }
     alert("Game.getShipyard: Unknown shipyard: " + name);
     return null;
 };
@@ -129,6 +138,8 @@ WP.Game.prototype.getShipyardFromUnit = function (unitId) {
             return this.shipyards[si];
         }
     }
+    // var res = this.shipyards.filter(sy => sy.shipyardUnits.some(unit => unit.id == unitId))
+    // if (res) { return res }
     alert("Game.getShipyard from unit: Unknown shipyard with: " + unitId);
     return null;
 }
@@ -140,6 +151,8 @@ WP.Game.prototype.getTaskforceFromUnit = function (unitId) {
             return this.taskforces[ti];
         }
     }
+    // var res = this.taskforces.filter(tf => tf.taskforceUnits.some(unit => unit.id == unitId))
+    // if (res) { return res }
     alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitId);
     return null;
 }
@@ -155,6 +168,13 @@ WP.Game.prototype.getUnitForShipyard = function (id, x, y) {
             }
         }
     }
+    // this.countries.forEach(cty => cty.units.forEach(unit => {
+    //     if (unit.id == id) {
+    //         unit.holderX = x
+    //         unit.holderY = y
+    //         return unit
+    //     }
+    // }))
     return null;
 };
 

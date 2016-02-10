@@ -21,7 +21,7 @@ WP.Taskforce.Util = {
 }
 
 WP.Taskforce.prototype.addTaskforceUnit = function (taskforceUnit) {
-	this.taskforceUnits[this.taskforceUnits.length] = taskforceUnit;
+	this.taskforceUnits.push(taskforceUnit);
 	//taskforceUnit.owner = this;
 }
 
@@ -40,7 +40,7 @@ WP.Taskforce.prototype.removeUnitFromTaskforce = function (taskforce, unit) {
 
 WP.Taskforce.prototype.updateTaskforceUnitAddress = function (unit) {
 	var taskforce = game.selectedTaskforce;
-	for (i = 0; i < taskforce.taskforceUnits.length; i++) {
+	for (var i = 0; i < taskforce.taskforceUnits.length; i++) {
 		if (taskforce.taskforceUnits[i].id == unit.id) {
 			taskforce.taskforceUnits[i].x = unit.holderX;
 			taskforce.taskforceUnits[i].y = unit.holderY;

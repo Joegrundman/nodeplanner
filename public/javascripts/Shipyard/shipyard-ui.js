@@ -4,11 +4,9 @@ WP.Shipyard.UI = {
 	},
 
 	fillShipyardList: function () {
-		console.log('Hallo')
 		$('#syYard').empty();
 		var shipyards = game.shipyards;
 		for (var i = 0; i < shipyards.length; i++) {
-			console.log(shipyards[i].name)
 			WP.Shipyard.UI.addYardToDropdown(shipyards[i]);
 		}
 		$("#syYard").prop("selectedIndex", 11);

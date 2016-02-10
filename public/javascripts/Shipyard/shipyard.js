@@ -23,7 +23,7 @@ WP.Shipyard.Util = {
 }
 
 WP.Shipyard.prototype.addShipyardUnit = function (shipyardUnit) {
-	this.shipyardUnits[this.shipyardUnits.length] = shipyardUnit;
+	this.shipyardUnits.push(shipyardUnit);
 	//shipyardUnit.owner = this;
 }
 

@@ -57,7 +57,7 @@ WP.Phase.prototype.processLoadedPhase = function (currentPhaseId, year, season) 
 }
 
 WP.Phase.prototype.setPhaseData = function (currentPhaseId) {
-	for (i = 0; i < phase.phases.length; i++) {
+	for (var i = 0; i < phase.phases.length; i++) {
 		var phaseData = phase.phases[i];
 		if (phaseData[0] == currentPhaseId) {
 			game.currentPhaseId = phaseData[0];
@@ -71,7 +71,7 @@ WP.Phase.prototype.setPhaseData = function (currentPhaseId) {
 
 WP.Phase.prototype.getPhaseId = function (year, season) {
 	var seasonNum = phase.getSeasonNum(season);
-	for (i = 0; i < phase.phases.length; i++) {
+	for (var i = 0; i < phase.phases.length; i++) {
 		var phaseData = phase.phases[i];
 		if (phaseData[1] == year) {
 			if (phaseData[3] == seasonNum) {
@@ -83,13 +83,13 @@ WP.Phase.prototype.getPhaseId = function (year, season) {
 }
 
 WP.Phase.prototype.getSeasonNum = function (name) {
-	for (i = 0; i < phase.seasons.length; i++) {
+	for (var i = 0; i < phase.seasons.length; i++) {
 		if (phase.seasons[i] == name) { return i; }
 	}
 }
 
 WP.Phase.prototype.getPhaseName = function () {
-	for (i = 0; i < phase.phaseList.length; i++){
+	for (var i = 0; i < phase.phaseList.length; i++){
 		if (phase.phaseList[i][0] == game.currentPhase){return phase.phaseList[i][1]}
 	}
 }

@@ -27,8 +27,9 @@ WP.Map.prototype.createHexes = function (id) {
     }
 };
 
-// Refactored code to replace the rest of the functions here
 
+// first argument must be the dialog that currently holds the unit to be placed on the map
+// ie taskforce, shipyard or forcepool
 WP.Map.prototype.placeUnitFrom = function (dialog, unit, hex) {
     game.selectedUnit == null
     var stack = dialog.unitHolder.findStackContaining(unit)
@@ -65,80 +66,80 @@ WP.Map.prototype.placeUnitFrom = function (dialog, unit, hex) {
 
 // end refactored
 
-WP.Map.prototype.placeUnitFromForcepool = function (unit, hex) {
-    game.selectedUnit = null;
-    var stack = forcepool.unitHolder.findStackContaining(unit);
-    if (unit.type.toLowerCase() == "cruiser") {
-        if (!ctrlPressed() && unit.strength > 2) {
-            unit = unit.breakdownAndCreate(2);
-        }
-        else if (ctrlPressed() && unit.strength > 6) {
-            unit = unit.breakdownAndCreate(6);
-        }
-        else {
-            stack.removeUnit(unit);
-        }
-    }
-    else if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
-        unit = unit.breakdownAndCreate(1);
-    }
-    else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
-        unit = unit.breakdownAndCreate(5);
-    }
-    else {
-        stack.removeUnit(unit);
-    }
+// WP.Map.prototype.placeUnitFromForcepool = function (unit, hex) {
+//     game.selectedUnit = null;
+//     var stack = forcepool.unitHolder.findStackContaining(unit);
+//     if (unit.type.toLowerCase() == "cruiser") {
+//         if (!ctrlPressed() && unit.strength > 2) {
+//             unit = unit.breakdownAndCreate(2);
+//         }
+//         else if (ctrlPressed() && unit.strength > 6) {
+//             unit = unit.breakdownAndCreate(6);
+//         }
+//         else {
+//             stack.removeUnit(unit);
+//         }
+//     }
+//     else if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+//         unit = unit.breakdownAndCreate(1);
+//     }
+//     else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+//         unit = unit.breakdownAndCreate(5);
+//     }
+//     else {
+//         stack.removeUnit(unit);
+//     }
 
-    hex.addOrCombineUnit(unit);
-    hex.clear();
-    hex.draw();
+//     hex.addOrCombineUnit(unit);
+//     hex.clear();
+//     hex.draw();
 
-    game.setSelectedUnit(stack.getTopUnit());
-    forcepool.draw();
-};
+//     game.setSelectedUnit(stack.getTopUnit());
+//     forcepool.draw();
+// };
 
-WP.Map.prototype.placeUnitFromShipyard = function (unit, hex) {
-    game.selectedUnit = null;
+// WP.Map.prototype.placeUnitFromShipyard = function (unit, hex) {
+//     game.selectedUnit = null;
 
-    var stack = shipyard.unitHolder.findStackContaining(unit);
-    if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
-        unit = unit.breakdownAndCreate(1);
-    }
-    else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
-        unit = unit.breakdownAndCreate(5);
-    }
-    else {
-        stack.removeUnit(unit);
-    }
+//     var stack = shipyard.unitHolder.findStackContaining(unit);
+//     if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+//         unit = unit.breakdownAndCreate(1);
+//     }
+//     else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+//         unit = unit.breakdownAndCreate(5);
+//     }
+//     else {
+//         stack.removeUnit(unit);
+//     }
 
-    hex.addOrCombineUnit(unit);
-    hex.clear();
-    hex.draw();
-    shipyard.removeUnitFromShipyard(shipyard, unit);
-    game.setSelectedUnit(stack.getTopUnit());
+//     hex.addOrCombineUnit(unit);
+//     hex.clear();
+//     hex.draw();
+//     shipyard.removeUnitFromShipyard(shipyard, unit);
+//     game.setSelectedUnit(stack.getTopUnit());
 
-    shipyard.draw();
-};
+//     shipyard.draw();
+// };
 
-WP.Map.prototype.placeUnitFromTaskforce = function (unit, hex) {
-    game.selectedUnit = null;
+// WP.Map.prototype.placeUnitFromTaskforce = function (unit, hex) {
+//     game.selectedUnit = null;
 
-    var stack = taskforce.unitHolder.findStackContaining(unit);
-    if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
-        unit = unit.breakdownAndCreate(1);
-    }
-    else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
-        unit = unit.breakdownAndCreate(5);
-    }
-    else {
-        stack.removeUnit(unit);
-    }
+//     var stack = taskforce.unitHolder.findStackContaining(unit);
+//     if (unit.factorable && !ctrlPressed() && unit.strength > 1) {
+//         unit = unit.breakdownAndCreate(1);
+//     }
+//     else if (unit.factorable && ctrlPressed() && unit.strength > 5) {
+//         unit = unit.breakdownAndCreate(5);
+//     }
+//     else {
+//         stack.removeUnit(unit);
+//     }
 
-    hex.addOrCombineUnit(unit);
-    hex.clear();
-    hex.draw();
-    taskforce.removeUnitFromTaskforce(taskforce, unit);
-    game.setSelectedUnit(stack.getTopUnit());
+//     hex.addOrCombineUnit(unit);
+//     hex.clear();
+//     hex.draw();
+//     taskforce.removeUnitFromTaskforce(taskforce, unit);
+//     game.setSelectedUnit(stack.getTopUnit());
 
-    taskforce.draw();
-};
+//     taskforce.draw();
+// };

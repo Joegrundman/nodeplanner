@@ -175,8 +175,8 @@ WP.Unit.UI = {
 	},
 
 	drawSharedAlliedBase: function (ctx, unit) {
-		var tan = new WP.Color(151, 172, 108); //us back color
-		var olive = new WP.Color(209, 188, 140); //britain back color
+		var tan = new WP.Color(151, 172, 108); //tan back color
+		var olive = new WP.Color(209, 188, 140); //us back color
 		ctx.fillStyle = tan.toRgb();
 		ctx.fill();
 		ctx.lineWidth = 0;
@@ -227,7 +227,7 @@ WP.Unit.UI = {
         var clear = "rgba(10, 10, 10, 0)"
         
         var unitTexture = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
-		
+		// dynamic drawing replaces jpeg for more reliable loading
         unitTexture.addColorStop(0, clear)
         unitTexture.addColorStop(1, dark)
         ctx.fillStyle = unitTexture
@@ -235,10 +235,7 @@ WP.Unit.UI = {
       
         // var unitTexture = new Image();
 		// unitTexture.src = "content/Units/unit_texture0.png";
-		// ctx.drawImage(unitTexture, -1, 0);
-        
-        
-        
+		// ctx.drawImage(unitTexture, -1, 0);     
 	},
 
 	drawWhiteBase: function (ctx, unit) {

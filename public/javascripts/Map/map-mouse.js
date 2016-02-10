@@ -40,13 +40,16 @@ WP.Map.prototype.handleHexClick = function () {
 
 	var unit = game.selectedUnit;
 	if (unit && unit.location == 1 && this.currentHex) {
-		this.placeUnitFromForcepool(unit, this.currentHex);
+		// this.placeUnitFromForcepool(unit, this.currentHex);
+		this.placeUnitFrom(forcepool, unit, this.currentHex);
 	}
 	if (unit && unit.location == 3 && this.currentHex) {
-		this.placeUnitFromShipyard(unit, this.currentHex);
+		// this.placeUnitFromShipyard(unit, this.currentHex);
+        this.placeUnitFrom(shipyard, unit, this.currentHex);
 	}
 	if (unit && unit.location == 4 && this.currentHex) {
-		this.placeUnitFromTaskforce(unit, this.currentHex);
+        this.placeUnitFrom(taskforce, unit, this.currentHex);
+		// this.placeUnitFromTaskforce(unit, this.currentHex);
 	}
 	else {
 		this.selectUnit();

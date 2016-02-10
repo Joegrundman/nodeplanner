@@ -74,7 +74,7 @@ WP.UnitHolder.prototype.drawShipyard = function () {
 			}
 
 			var stackToAdd = this.stacks[matchingStack];
-			stackToAdd.units[stackToAdd.units.length] = this.units[i];
+			stackToAdd.units.push(this.units[i]);
 		}
 		this.drawShipyardStacks();
 	}
@@ -105,7 +105,7 @@ WP.UnitHolder.prototype.drawTaskforce = function () {
 			}
 
 			var stackToAdd = this.stacks[matchingStack];
-			stackToAdd.units[stackToAdd.units.length] = this.units[i];
+			stackToAdd.units.push(this.units[i]);
 		}
 		this.drawTaskforceStacks();
 	}

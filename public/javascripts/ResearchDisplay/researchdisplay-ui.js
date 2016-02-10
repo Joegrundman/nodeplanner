@@ -31,12 +31,12 @@ WP.ResearchDisplay.prototype.getProjectList = function (category) {
 WP.ResearchDisplay.prototype.createProjectTable = function (projectList) {
 	$('.rdGroup').remove();
 	var htmlToAppend = '';
-	for (i = 0; i < projectList.length; i++) {
+	for (var i = 0; i < projectList.length; i++) {
 		var project = projectList[i];
 		var rdProjElem = '<tr id="rd' + i + '" class="rdGroup"><td id="rdProj' + i + '">' + project + '</td>';
 		htmlToAppend += rdProjElem;
 		var results = researchDisplay.getResearchResults(project);
-		for (j = 0; j < 7; j++) {
+		for (var j = 0; j < 7; j++) {
 			var rdResearchElem = '<td><input id="rd~' + j + '^' + i + '" type="number" value="' + results[j] + '" onchange="researchDisplay.update(id, value)" style="width:35px"></td>';
 			htmlToAppend += rdResearchElem;
 		}

@@ -50,9 +50,9 @@ WP.Forcepool.prototype.draw = function () {
 	// 		units[units.length] = unit;
 	// 	}
 	// }
-    cty.units.forEach(un => {
-        if (un.location === 1 && un.fpg === id) {
-            units.push(un)
+    cty.units.forEach(u => {
+        if (u.location == 1 && u.fpg == id) {
+            units.push(u)
         }
     })
 
