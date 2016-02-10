@@ -8,15 +8,24 @@ WP.Forcepool.UI = {
 	fillCountryList: function() {
 		$('#fpCountry').empty();
 		var majors = game.getMajorPowers();
-		for (var i = 0; i < majors.length; i++) {
-			WP.Forcepool.UI.addCountryToDropdown(majors[i]);
-		}
-		for (var i = 0; i < game.countries.length; i++) {
-			var cty = game.countries[i];
-			if (!cty.isMajorPower && cty.units.length > 0) {
-				WP.Forcepool.UI.addCountryToDropdown(cty);
-			}
-		}
+		// for (var i = 0; i < majors.length; i++) {
+		// 	WP.Forcepool.UI.addCountryToDropdown(majors[i]);
+		// }
+        majors.forEach(m => WP.Forcepool.UI.addCountryToDropdown(m))
+        
+		// for (var i = 0; i < game.countries.length; i++) {
+		// 	var cty = game.countries[i];
+		// 	if (!cty.isMajorPower && cty.units.length > 0) {
+		// 		WP.Forcepool.UI.addCountryToDropdown(cty);
+		// 	}
+		// }
+        
+        game.countries.forEach(cty => {
+           if (!cty.isMajorPower && cty.units.length > 0) {
+		        WP.Forcepool.UI.addCountryToDropdown(cty)
+           }
+        })
+        
 		forcepool.handleCountrySelected($('#fpCountry').val());
 	},
 
@@ -35,12 +44,17 @@ WP.Forcepool.prototype.draw = function () {
 	var id = $('#fpGroupings').val();
 	var cty = game.getCountry($('#fpCountry').val());
 	var units = new Array();
-	for (var i = 0; i < cty.units.length; i++) {
-		var unit = cty.units[i];
-		if (unit.location == 1 && unit.fpg == id) {
-			units[units.length] = unit;
-		}
-	}
+	// for (var i = 0; i < cty.units.length; i++) {
+	// 	var unit = cty.units[i];
+	// 	if (unit.location == 1 && unit.fpg == id) {
+	// 		units[units.length] = unit;
+	// 	}
+	// }
+    cty.units.forEach(un => {
+        if (un.location === 1 && un.fpg === id) {
+            units.push(un)
+        }
+    })
 
 	var holder = WP.UnitHolder.Util.unitHolderBuilder(forcepoolCtx, $("#fpDetails"));
 	holder.units = units;

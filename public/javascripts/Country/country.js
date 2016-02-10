@@ -49,26 +49,28 @@ WP.Country.Util = {
 
 WP.Country.prototype.addColony = function(colony) {
 	colony.colonyOf = this;
-	this.colonies[this.colonies.length] = colony;
-
+	this.colonies.push(colony);
 	colony.colonyOf = this;
 };
 
 WP.Country.prototype.addForcepoolGrouping = function(grouping) {
-	this.forcepoolGroupings[this.forcepoolGroupings.length] = grouping;
+	this.forcepoolGroupings.push(grouping);
 };
 
 WP.Country.prototype.addUnit = function(unit) {
-	this.units[this.units.length] = unit;
-	//this.units.push(unit)
+	this.units.push(unit);
 	unit.owner = this;
 };
 
 WP.Country.prototype.getUnit = function(id) {
-	for (var ci = 0; ci < this.units.length; ci++) {
-		if (this.units[ci].id == id)
-			return this.units[ci];
-	}
+	// for (var ci = 0; ci < this.units.length; ci++) {
+	// 	if (this.units[ci].id == id)
+	// 		return this.units[ci];
+	// }
+    
+    this.units.forEach(u => {
+        if (u.id === id) {return u}
+    })
 	//return this.units.filter(function(unit) {return unit.id === id})
 	alert("Game.getUnit: Unknown unit: " + id);
 	return null;

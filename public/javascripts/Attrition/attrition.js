@@ -15,7 +15,7 @@ WP.Attrition.prototype.addUnit = function (unit) {
 	}
 
 	if (!foundUnit) {
-		this.units[this.units.length] = unit;
+		this.units.push(unit);
 		unit.highlight = new WP.Color(255, 255, 72).toRgb();
 	}
 }
@@ -25,9 +25,10 @@ WP.Attrition.prototype.handleHexClick = function () {
 	var hex = map.currentHex;
 	if (!hex) return;
 	if (ctrlPressed()) {
-		for (var i = 0; i < hex.units.length; i++) {
-			this.addUnit(hex.units[i]);
-		}
+		// for (var i = 0; i < hex.units.length; i++) {
+		// 	this.addUnit(hex.units[i]);
+		// }
+        hex.units.forEach(u => this.addUnit(u))
 	}
 	else {
 		this.addUnit(hex.getTopUnit());

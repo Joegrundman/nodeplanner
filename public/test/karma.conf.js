@@ -21,10 +21,10 @@ module.exports = function(config) {
         files: [
             "javascripts/vendor/jquery.min.js",
             "javascripts/vendor/jquery-ui.min.js",
-            "javascripts/Misc/globals.js",
+            "javascripts/Globals/globals.js",
             "javascripts/UnitHolder/unitholder.js",
-            "test/spec/Misc/globals.test.js",
-            "test/spec/UnitHolder/unitholder.test.js"
+            "test/spec/Globals/globals.test.js",
+            "test/spec/**/*.test.js"
         ],
         
         // list of files/patterns to exclude

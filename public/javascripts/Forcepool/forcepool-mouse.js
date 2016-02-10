@@ -8,13 +8,20 @@ WP.Forcepool.prototype.handleCountrySelected = function (id) {
 			.append($("<option />")
 			.attr("value", "0")
 			.text("Unbuilt"));
-	for (var i = 0; i < cty.forcepoolGroupings.length; i++) {
-		var group = cty.forcepoolGroupings[i];
-		$('#fpGroupings')
+	// for (var i = 0; i < cty.forcepoolGroupings.length; i++) {
+	// 	var group = cty.forcepoolGroupings[i];
+	// 	$('#fpGroupings')
+	// 		.append($("<option />")
+	// 		.attr("value", group.id)
+	// 		.text(group.name));
+	// }
+    
+    cty.forcepoolGroupings.forEach(group => {
+        $('#fpGroupings')
 			.append($("<option />")
 			.attr("value", group.id)
 			.text(group.name));
-	}
+    })
 }
 
 WP.Forcepool.prototype.onMouseDown = function (e) {

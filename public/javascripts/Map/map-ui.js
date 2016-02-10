@@ -42,9 +42,10 @@ WP.Map.prototype.drawBackground = function () {
 }
 
 WP.Map.prototype.drawHexes = function () {
-	for (var i in this.hexes) {
-		this.hexes[i].draw();
-	}
+	// for (var i in this.hexes) {
+	// 	this.hexes[i].draw();
+	// }
+    this.hexes.forEach(h => h.draw())
 }
 
 WP.Map.prototype.draw = function() {
@@ -53,20 +54,31 @@ WP.Map.prototype.draw = function() {
 }
 
 WP.Map.prototype.setZoom = function () {
-	for (var i in this.hexes) {
-		this.hexes[i].setZoom();
-	}
+	// for (var i in this.hexes) {
+	// 	this.hexes[i].setZoom();
+	// }
+    this.hexes.forEach(h => h.setZoom())
 };
 
 WP.Map.prototype.redrawHexesContainingUnits = function (units) {
-	for (var i in this.hexes) {
-		for (var u in units) {
-			for (var hu in this.hexes[i].units) {
-				if (hu == u) {
-					this.hexes[i].clear();
-					this.hexes[i].draw();
-				}
-			}
-		}
-	}
+	// for (var i in this.hexes) {
+	// 	for (var u in units) {
+	// 		for (var hu in this.hexes[i].units) {
+	// 			if (hu == u) {
+	// 				this.hexes[i].clear();
+	// 				this.hexes[i].draw();
+	// 			}
+	// 		}
+	// 	}
+	// }
+    this.hexes.forEach(h =>{
+        this.units.forEach(u => {
+            h.units.forEach(hu => {
+                if (hu == u){
+                    h.clear()
+                    h.draw()
+                }
+            })
+        })
+    })
 }

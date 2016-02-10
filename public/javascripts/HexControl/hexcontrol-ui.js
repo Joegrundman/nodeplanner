@@ -6,16 +6,19 @@ WP.HexControl.UI = {
 	fillCountryList: function () {
 		$('#hcCountry').empty();
 		var majors = game.getMajorPowers();
-		for (var i = 0; i < majors.length; i++) {
-			WP.HexControl.UI.addCountryToDropdown(majors[i]);
-		}
+		// for (var i = 0; i < majors.length; i++) {
+		// 	WP.HexControl.UI.addCountryToDropdown(majors[i]);
+		// }
+        majors.forEach(m => WP.HexControl.UI.addCountryToDropdown(m))
 
-		for (i = 0; i < game.countries.length; i++) {
-			var cty = game.countries[i];
-			if (!cty.isMajorPower) {
-				WP.HexControl.UI.addCountryToDropdown(cty);
-			}
-		}
+		// for (i = 0; i < game.countries.length; i++) {
+		// 	var cty = game.countries[i];
+		// 	if (!cty.isMajorPower) {
+		// 		WP.HexControl.UI.addCountryToDropdown(cty);
+		// 	}
+		// }
+        game.countries(cty => {if (!cty.isMajorPower) { WP.HexControl.UI.addCountryToDropdown(cty) }})
+        
 		hexControl.handleCountrySelected($('#hcCountry').val());
 	},
 

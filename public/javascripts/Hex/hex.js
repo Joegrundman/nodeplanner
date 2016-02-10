@@ -38,7 +38,7 @@ WP.Hex.Util = {
 
 WP.Hex.prototype.addUnit = function (unit) {
 	if (!unit) return;
-	this.units[this.units.length] = unit;
+	this.units.push(unit)
 	unit.location = 2;
 	unit.hex = this;
 }
@@ -51,7 +51,7 @@ WP.Hex.prototype.addOrCombineUnit = function (unit) {
 			return;
 		}
 	}
-	this.units[this.units.length] = unit;
+	this.units.push(unit)
 	unit.location = 2;
 	unit.hex = this;
 }

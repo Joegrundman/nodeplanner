@@ -1,113 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Warplanner</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warplanner</title>
 
-  <!-- stylesheets -->
-  <link rel='stylesheet' href='/stylesheets/bootstrap-slate.min.css' />
-  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="/stylesheets/jquery-ui.css"/>
-  <link rel="stylesheet" href="/stylesheets/jquery-ui.structure.css"/>
-  <link rel="stylesheet" href="/stylesheets/jquery-ui.theme.css"/>
-  <link rel="stylesheet" href="/stylesheets/bootstrap-vertical-tabs.css" />
+    <!-- stylesheets -->
+    <link rel='stylesheet' href='/stylesheets/bootstrap-slate.min.css' />
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.structure.css" />
+    <link rel="stylesheet" href="/stylesheets/jquery-ui.theme.css" />
+    <link rel="stylesheet" href="/stylesheets/bootstrap-vertical-tabs.css" />
 
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <!-- end stylesheets -->
-  <!-- Vendor -->
-  <script src="javascripts/Vendor/jquery.min.js"></script>
-  <script src="javascripts/Vendor/jquery-ui.min.js"></script>
-  <!--verticaltabs by dean.edwards.name/packer/-->
-  <!--<script src="javascripts/Vendor/verticaltabs.js"></script> -->
-  <!-- End Vendor -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- end stylesheets -->
+    <!-- Vendor  need even for production unless cdnified-->
+    <script src="javascripts/Vendor/jquery.min.js"></script>
+    <script src="javascripts/Vendor/jquery-ui.min.js"></script>
+    <!--verticaltabs by dean.edwards.name/packer/-->
+    <!--<script src="javascripts/Vendor/verticaltabs.js"></script> -->
+    <!-- End Vendor -->
 
-  <!-- Browserify -->
-  <script src="javascripts/Web/web.js"></script>
-  <script src="javascripts/Misc/globals.js"></script>
-  <script src="javascripts/Attrition/attrition.js"></script>
-  <script src="javascripts/Attrition/attrition-ui.js"></script>
-  <script src="javascripts/Canvas/canvas.js"></script>
-  <script src="javascripts/Canvas/canvas-extensions.js"></script>
-  <script src="javascripts/Country/country.js"></script>
-  <script src="javascripts/Country/country-ui.js"></script>
-  <script src="javascripts/Country/country-ui-colors.js"></script>
-  <script src="javascripts/Codebreaking/codebreaking.js"></script>
-  <script src="javascripts/Codebreaking/codebreakingresult.js"></script>
-  <script src="javascripts/Codebreaking/codebreaking-ui.js"></script>
-  <script src="javascripts/Diplomacy/diplomacy.js"></script>
-  <script src="javascripts/Diplomacy/diplomacy-mouse.js"></script>
-  <script src="javascripts/Diplomacy/diplomacy-ui.js"></script>
-  <script src="javascripts/Eventing/eventing.js"></script>
-  <script src="javascripts/Eventing/eventing-keyboard.js"></script>
-  <script src="javascripts/Forcepool/forcepool.js"></script>
-  <script src="javascripts/Forcepool/forcepool-mouse.js"></script>
-  <script src="javascripts/Forcepool/forcepool-ui.js"></script>
-  <script src="javascripts/GameSettings/gamesettings.js"></script>
-  <script src="javascripts/GameSettings/gamesettings-ui.js"></script>
-  <script src="javascripts/Hex/hex.js"></script>
-  <script src="javascripts/Hex/hex-ui.js"></script>
-  <script src="javascripts/Hex/hex-ui-borders.js"></script>
-  <script src="javascripts/Hex/hex-ui-text.js"></script>
-  <script src="javascripts/HexControl/hexcontrol.js"></script>
-  <script src="javascripts/HexControl/hexcontrol-ui.js"></script>
-  <script src="javascripts/HexControl/hexcontrol-mouse.js"></script>
-  <script src="javascripts/HexInfo/hexinfo.js"></script>
-  <script src="javascripts/Loaders/commonloader.js"></script>
-  <script src="javascripts/Loaders/fileloader.js"></script>
-  <script src="javascripts/Loaders/initloader.js"></script>
-  <script src="javascripts/Map/map.js"></script>
-  <script src="javascripts/Map/map-mouse.js"></script>
-  <script src="javascripts/Map/map-ui.js"></script>
-  <script src="javascripts/Misc/convert.js"></script>
-  <script src="javascripts/Misc/cookies.js"></script>
-  <script src="javascripts/Misc/game.js"></script>
-  <script src="javascripts/Misc/misc-ui.js"></script>
-  <script src="javascripts/Misc/scroll.js"></script>
-  <script src="javascripts/Misc/ui-util.js"></script>
-  <script src="javascripts/Misc/xmlhelper.js"></script>
-  <script src="javascripts/Navigator/navigator.js"></script>
-  <script src="javascripts/Navigator/navigator-mouse.js"></script>
-  <script src="javascripts/NewUnit/newunit.js"></script>
-  <script src="javascripts/NewUnit/newunit-mouse.js"></script>
-  <script src="javascripts/NewUnit/newunit-ui.js"></script>
-  <script src="javascripts/Phase/phase.js"></script>
-  <script src="javascripts/ResearchDisplay/researchdisplay.js"></script>
-  <script src="javascripts/ResearchDisplay/researchdisplay-ui.js"></script>
-  <script src="javascripts/ShipsAtSea/shipsatsea.js"></script>
-  <script src="javascripts/ShipsAtSea/shipsatsea-mouse.js"></script>
-  <script src="javascripts/ShipsAtSea/shipsatsea-ui.js"></script>
-  <script src="javascripts/Shipyard/shipyard.js"></script>
-  <script src="javascripts/Shipyard/shipyard-mouse.js"></script>
-  <script src="javascripts/Shipyard/shipyard-ui.js"></script>
-  <script src="javascripts/Tables/tables.js"></script>
-  <script src="javascripts/Tables/tables-ui.js"></script>
-  <script src="javascripts/Taskforce/taskforce.js"></script>
-  <script src="javascripts/Taskforce/taskforce-mouse.js"></script>
-  <script src="javascripts/Taskforce/taskforce-ui.js"></script>
-  <script src="javascripts/Unit/unit.js"></script>
-  <script src="javascripts/Unit/unit-ui.js"></script>
-  <script src="javascripts/Unit/unit-ui-air.js"></script>
-  <script src="javascripts/Unit/unit-ui-ground.js"></script>
-  <script src="javascripts/Unit/unit-ui-misc.js"></script>
-  <script src="javascripts/Unit/unit-ui-naval.js"></script>
-  <script src="javascripts/Unit/unit-ui-text.js"></script>
-  <script src="javascripts/UnitCounter/unitcounter.js"></script>
-  <script src="javascripts/UnitCounter/unitcounter-mouse.js"></script>
-  <script src="javascripts/UnitCounter/unitcounter-ui.js"></script>
-  <script src="javascripts/UnitHolder/unitholder.js"></script>
-  <script src="javascripts/UnitStack/unitstack.js"></script>
-
-
+    <!-- Browserify -->
+    <!--<script src="javascripts/Web/web.js"></script>
+    <script src="javascripts/Globals/globals.js"></script>>
+    <script src="javascripts/Attrition/attrition.js"></script>
+    <script src="javascripts/Attrition/attrition-ui.js"></script>
+    <script src="javascripts/Canvas/canvas.js"></script>
+    <script src="javascripts/Canvas/canvas-extensions.js"></script>
+    <script src="javascripts/Country/country.js"></script>
+    <script src="javascripts/Country/country-ui.js"></script>
+    <script src="javascripts/Country/country-ui-colors.js"></script>
+    <script src="javascripts/Codebreaking/codebreaking.js"></script>
+    <script src="javascripts/Codebreaking/codebreakingresult.js"></script>
+    <script src="javascripts/Codebreaking/codebreaking-ui.js"></script>
+    <script src="javascripts/Diplomacy/diplomacy.js"></script>
+    <script src="javascripts/Diplomacy/diplomacy-mouse.js"></script>
+    <script src="javascripts/Diplomacy/diplomacy-ui.js"></script>
+    <script src="javascripts/Eventing/eventing.js"></script>
+    <script src="javascripts/Eventing/eventing-keyboard.js"></script>
+    <script src="javascripts/Forcepool/forcepool.js"></script>
+    <script src="javascripts/Forcepool/forcepool-mouse.js"></script>
+    <script src="javascripts/Forcepool/forcepool-ui.js"></script>
+    <script src="javascripts/GameSettings/gamesettings.js"></script>
+    <script src="javascripts/GameSettings/gamesettings-ui.js"></script>
+    <script src="javascripts/Hex/hex.js"></script>
+    <script src="javascripts/Hex/hex-ui.js"></script>
+    <script src="javascripts/Hex/hex-ui-borders.js"></script>
+    <script src="javascripts/Hex/hex-ui-text.js"></script>
+    <script src="javascripts/HexControl/hexcontrol.js"></script>
+    <script src="javascripts/HexControl/hexcontrol-ui.js"></script>
+    <script src="javascripts/HexControl/hexcontrol-mouse.js"></script>
+    <script src="javascripts/HexInfo/hexinfo.js"></script>
+    <script src="javascripts/Loaders/commonloader.js"></script>
+    <script src="javascripts/Loaders/fileloader.js"></script>
+    <script src="javascripts/Loaders/initloader.js"></script>
+    <script src="javascripts/Map/map.js"></script>
+    <script src="javascripts/Map/map-mouse.js"></script>
+    <script src="javascripts/Map/map-ui.js"></script>
+    <script src="javascripts/Misc/convert.js"></script>
+    <script src="javascripts/Misc/cookies.js"></script>
+    <script src="javascripts/Misc/game.js"></script>
+    <script src="javascripts/Misc/misc-ui.js"></script>
+    <script src="javascripts/Misc/scroll.js"></script>
+    <script src="javascripts/Misc/ui-util.js"></script>
+    <script src="javascripts/Misc/xmlhelper.js"></script>
+    <script src="javascripts/Navigator/navigator.js"></script>
+    <script src="javascripts/Navigator/navigator-mouse.js"></script>
+    <script src="javascripts/NewUnit/newunit.js"></script>
+    <script src="javascripts/NewUnit/newunit-mouse.js"></script>
+    <script src="javascripts/NewUnit/newunit-ui.js"></script>
+    <script src="javascripts/Phase/phase.js"></script>
+    <script src="javascripts/ResearchDisplay/researchdisplay.js"></script>
+    <script src="javascripts/ResearchDisplay/researchdisplay-ui.js"></script>
+    <script src="javascripts/ShipsAtSea/shipsatsea.js"></script>
+    <script src="javascripts/ShipsAtSea/shipsatsea-mouse.js"></script>
+    <script src="javascripts/ShipsAtSea/shipsatsea-ui.js"></script>
+    <script src="javascripts/Shipyard/shipyard.js"></script>
+    <script src="javascripts/Shipyard/shipyard-mouse.js"></script>
+    <script src="javascripts/Shipyard/shipyard-ui.js"></script>
+    <script src="javascripts/Tables/tables.js"></script>
+    <script src="javascripts/Tables/tables-ui.js"></script>
+    <script src="javascripts/Taskforce/taskforce.js"></script>
+    <script src="javascripts/Taskforce/taskforce-mouse.js"></script>
+    <script src="javascripts/Taskforce/taskforce-ui.js"></script>
+    <script src="javascripts/Unit/unit.js"></script>
+    <script src="javascripts/Unit/unit-ui.js"></script>
+    <script src="javascripts/Unit/unit-ui-air.js"></script>
+    <script src="javascripts/Unit/unit-ui-ground.js"></script>
+    <script src="javascripts/Unit/unit-ui-misc.js"></script>
+    <script src="javascripts/Unit/unit-ui-naval.js"></script>
+    <script src="javascripts/Unit/unit-ui-text.js"></script>
+    <script src="javascripts/UnitCounter/unitcounter.js"></script>
+    <script src="javascripts/UnitCounter/unitcounter-mouse.js"></script>
+    <script src="javascripts/UnitCounter/unitcounter-ui.js"></script>
+    <script src="javascripts/UnitHolder/unitholder.js"></script>
+    <script src="javascripts/UnitStack/unitstack.js"></script>-->
+    
+    <!-- Minified scripts file for production -->
+    <script src="dist/Min/wp.min.js"></script>
+    <!--end minified scripts-->
 
 </head>
+
 <body>
 
-  <header>{% include "./shared/navbar.html" %}</header>
+    <header>{% include "./shared/navbar.html" %}</header>
 
-  {% block view %}{% endblock %}
+    {% block view %}{% endblock %}
 
 
 </body>
+
 </html>

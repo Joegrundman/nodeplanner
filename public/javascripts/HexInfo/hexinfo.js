@@ -43,8 +43,8 @@ WP.HexInfo.prototype.refreshHeader = function () {
 	}
 
 	if (cty) {
-		var flag = WP.Country.UI.getFlagUrl(cty);
-		var owner = cty.name;
+		flag = WP.Country.UI.getFlagUrl(cty);
+		owner = cty.name;
 	}
 
 	$("#hexInfoFlag").attr("src", flag);

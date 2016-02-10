@@ -27,28 +27,28 @@ WP.Game = function (){
 
 WP.Game.prototype.addCountry = function (country) {
     if (!this.countries) this.countries = [];
-    this.countries[this.countries.length] = country;
+    this.countries.push(country);
 };
 
 
 WP.Game.prototype.addCodebreakingResult = function (result) {
     if (!this.codebreakingResults) this.codebreakingResults = [];
-    this.codebreakingResults[this.codebreakingResults.length] = result;
+    this.codebreakingResults.push(result);
 };
 
 WP.Game.prototype.addCountry = function (country) {
     if (!this.countries) this.countries = [];
-    this.countries[this.countries.length] = country;
+    this.countries.push(country);
 };
 
 WP.Game.prototype.addShipyard = function (shipyard) {
     if (!this.shipyards) this.shipyards = [];
-    this.shipyards[this.shipyards.length] = shipyard;
+    this.shipyards.push(shipyard);
 };
 
 WP.Game.prototype.addTaskforce = function (taskforce) {
     if (!this.taskforces) this.taskforces = [];
-    this.taskforces[this.taskforces.length] = taskforce;
+    this.taskforces.push(taskforce);
 };
 
 WP.Game.prototype.addUnitToHex = function (unit, hex, stack) {

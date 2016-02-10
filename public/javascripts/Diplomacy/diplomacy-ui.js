@@ -1,15 +1,4 @@
-WP.Diplomacy = function () {
 
-}
-
-WP.DiplomaticResult = function () {
-
-	var id = null;
-	var dipText = null;
-	var proAllied = null;
-	var proAxis = null;
-	var trigger = null;
-}
 
 WP.DiplomaticResult.Util = {
 
