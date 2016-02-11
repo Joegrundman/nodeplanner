@@ -1,4 +1,8 @@
+'use strict';
+
 var WP = {
+
+    
   initialize: function () {
 
     // for sample testing only - to be commented out

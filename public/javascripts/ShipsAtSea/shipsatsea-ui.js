@@ -27,7 +27,7 @@ WP.ShipsAtSea.prototype.draw = function () {
 	var units = new Array();
 	var showOnlyTFs = false;
 	showOnlyTFs = $('#sasTFCheckbox').is(':checked');
-	for (i = 0; i < cty.units.length; i++) {
+	for (var i = 0; i < cty.units.length; i++) {
 		var unit = cty.units[i];
 		if (showOnlyTFs) {
 			if (unit.location == 4 && unit.canSink()) {

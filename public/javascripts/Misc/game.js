@@ -291,7 +291,6 @@ WP.Game.prototype.toggleShowUnitTexture = function (showTexture) {
 
 WP.Game.Util = {
     gameBuilder: function () {
-        console.log('Misc/game - Game.Util.GameBuilder - building')
         game = new WP.Game()
         game.name = "new"
         game.countries = []

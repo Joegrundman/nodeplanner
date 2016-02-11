@@ -89,7 +89,7 @@ WP.Unit.UI.Naval = {
 		WP.Unit.UI.makeShape(ctx, 1, 0, 0.3, color, [16.5], [20], [18.5, 18.5], [13.5], [21.5], [13.5, 16], [20.5], [19], [20.5, 16]);
 	},
 
-	drawNelson: function (ctx, unit, fillShipColor) {
+	drawNelson: function (ctx, unit, color) {
 		WP.Unit.UI.makeShape(ctx, 1, 0, 1.7, color, [3], [22], [38, 22], [32], [22], [30, 21.2], [27, 22], [26, 21.2], [22, 21.8], [19, 21], [17, 17.5], [16.5, 17.5], [16, 21], [7, 21], [5, 22], [12.5], [21], [12.5, 18]);
 		WP.Unit.UI.makeShape(ctx, 1, 0, 1, color, [38.2], [21.5], [3.5, 21.5], [8.5], [17], [8.5, 16], [8.5], [14], [8.5, 13]);
 		WP.Unit.UI.makeShape(ctx, 1, 0, 0.3, color, [8.5], [20], [8.5, 13]);
@@ -335,6 +335,7 @@ WP.Unit.UI.Naval = {
 		var owner = unit.owner.name.toLowerCase()
 		var bbcode = WP.Unit.UI.Naval.getBBCode(unit);
 		var black = new WP.Color(40, 40, 40);
+        var color
 		WP.Unit.UI.Text.writeShipType(ctx, unit, bbcode);
 		if (unit.slow) { WP.Unit.UI.drawNavalColorBox(ctx, "orange"); color = black; }
 		else { color = unit.owner.foreColor; }
@@ -458,7 +459,7 @@ WP.Unit.UI.Naval = {
 		WP.Unit.UI.Text.writeGenericText(ctx, unit, unit.name, "bold 7px verdana", 31, 8);
 		if (unit.sunk) {
 			WP.Unit.UI.drawSunk(ctx, unit);
-			color = new WP.Color(40, 40, 40);
+			var color = new WP.Color(40, 40, 40);
 			WP.Unit.UI.Naval.drawCA(ctx, unit, 0, 7, color);
 			WP.Unit.UI.Naval.drawCA(ctx, unit, 6, 10, color);
 		}
@@ -475,6 +476,7 @@ WP.Unit.UI.Naval = {
 	},
 
 	drawCarrier: function (ctx, unit) {
+        var color
 		var CVCode = WP.Unit.UI.Naval.getCVCode(unit);
 		var black = new WP.Color(40, 40, 40);
 		WP.Unit.UI.Text.writeShipType(ctx, unit, CVCode);
@@ -547,7 +549,7 @@ WP.Unit.UI.Naval = {
 	drawCve: function (ctx, unit) {
 		if (unit.sunk) { WP.Unit.UI.drawSunk(ctx, unit); }
 		else { WP.Unit.UI.drawNavalColorBox(ctx, "purple"); }
-		color = new WP.Color(30, 30, 30);
+		var color = new WP.Color(30, 30, 30);
 		WP.Unit.UI.Text.writeShipType(ctx, unit, "CVE");
 		if (unit.owner.name.toLowerCase() == "britain") { WP.Unit.UI.Naval.drawRuler(ctx, unit, color); }
 		else { WP.Unit.UI.Naval.drawBogue(ctx, unit, color); }

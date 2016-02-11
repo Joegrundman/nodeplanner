@@ -20,7 +20,7 @@ WP.Navigator.Util = {
  getBaseMapTemplate: function (navWidth, navHeight) {
    var templateMap = navigatorCtx.getImageDataSafely(0, 0, navWidth, navHeight);
    var baseMap = new Array(templateMap.data.length);
-   for (id = 0; id < baseMap.length; id++) {
+   for (var id = 0; id < baseMap.length; id++) {
      baseMap[id] = templateMap.data[id];
    }
    return baseMap;
@@ -32,7 +32,7 @@ WP.Navigator.Util = {
    var yMod = map.height / navHeight;
 
    navigatorCtx.lineWidth = 0;
-   for (x = 0; x < game.currentMap.hexes.length; x++) {
+   for (var x = 0; x < game.currentMap.hexes.length; x++) {
      var hex = game.currentMap.hexes[x];
      if (!hex) continue;
      if (!hex.owner) continue;

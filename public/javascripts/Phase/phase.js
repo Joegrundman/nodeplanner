@@ -106,7 +106,7 @@ WP.Phase.prototype.initPhases = function () {
 		for (var season = 0; season < 4; season++) {
 			if (year == 1939 && (season == 0 || season == 1)) continue;
 			for (var coa = 0; coa < 2; coa++) {
-				for (p = 0; p < phase.phaseList.length; p++) {
+				for (var p = 0; p < phase.phaseList.length; p++) {
 					var phaseValue = phase.phaseList[p][0];
 					var newPhase = new Array(i, year, phaseValue, season, coa);
 					//alert(i + " " + year + " " + phaseValue + " " + season + " " + coa);
