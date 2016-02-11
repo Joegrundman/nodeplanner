@@ -6,6 +6,8 @@ A browser based tool to play Bruce Harper's A World At War
 Not finished
 ____________
 
+You must have node installed.
+
 To install, clone the repo, navigate a terminal to the directory and type 
 
 `npm install`
