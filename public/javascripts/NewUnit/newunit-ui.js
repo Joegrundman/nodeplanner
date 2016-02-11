@@ -87,7 +87,8 @@ WP.NewUnit.prototype.getNewUnit = function (cty, fpg, type, name, strength, move
 	if ((slow) && (type == "battleship")) { slow = true; }
 	else { slow = false; }
 	if ((type == "cruiser") && (strength % 2 > 0)) { strength += 1 }
-	var unit = WP.Unit.Util.unitBuilder(id, fpg, type, name, strength, movement, location, slow);
+	var unit = WP.Unit.unitBuilder(id, fpg, type, name, strength, movement, location, slow);
+	// var unit = WP.Unit.Util.unitBuilder(id, fpg, type, name, strength, movement, location, slow);
 	unit.owner = cty;
 	return unit;
 };

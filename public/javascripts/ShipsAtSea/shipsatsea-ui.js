@@ -40,7 +40,8 @@ WP.ShipsAtSea.prototype.draw = function () {
 			}
 		}
 	}
-	var holder = WP.UnitHolder.Util.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
+	var holder = WP.UnitHolder.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
+	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
 	holder.units = units;
 	holder.stackSimilar = $('#sasStackCheckbox').is(':checked');
 	holder.draw();

@@ -41,7 +41,8 @@ WP.UnitCounter.prototype.draw = function () {
             units.push(unit)
         }
     }
-	var holder = WP.UnitHolder.Util.unitHolderBuilder(unitCounterCtx, $("#ucDetails"));
+	var holder = WP.UnitHolder.unitHolderBuilder(unitCounterCtx, $("#ucDetails"));
+	// var holder = WP.UnitHolder.Util.unitHolderBuilder(unitCounterCtx, $("#ucDetails"));
 	holder.units = units;
     holder.stackSimilar = $("#ucStackCheckbox").is(':checked')
 	holder.draw();

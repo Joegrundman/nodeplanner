@@ -56,7 +56,9 @@ WP.Forcepool.prototype.draw = function () {
         }
     })
 
-	var holder = WP.UnitHolder.Util.unitHolderBuilder(forcepoolCtx, $("#fpDetails"));
+	// var holder = WP.UnitHolder.Util.unitHolderBuilder(forcepoolCtx, $("#fpDetails"));
+    // es6
+	var holder = WP.UnitHolder.unitHolderBuilder(forcepoolCtx, $("#fpDetails"));
 	holder.units = units;
 	holder.stackSimilar = $('#fpStackCheckbox').is(':checked');
 	holder.draw();

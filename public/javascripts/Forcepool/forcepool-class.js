@@ -8,3 +8,4 @@ WP.Forcepool = function () {
 WP.Forcepool.prototype.removeUnitFrom = function () {
 	// this empty function is required
 }
+

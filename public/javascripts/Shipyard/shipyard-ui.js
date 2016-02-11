@@ -27,7 +27,8 @@ WP.Shipyard.prototype.draw = function () {
 	var cty = game.getCountryFromName(syd.owner);
 	var units = new Array();
 
-	var holder = WP.UnitHolder.Util.unitHolderBuilder(shipyardCtx, $("#syDetails"));
+	var holder = WP.UnitHolder.unitHolderBuilder(shipyardCtx, $("#syDetails"));
+	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipyardCtx, $("#syDetails"));
 
 	for (var i = 0; i < syd.shipyardUnits.length; i++) {
 		var syUnit = syd.shipyardUnits[i];

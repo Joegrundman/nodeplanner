@@ -7,6 +7,7 @@ var header = require('gulp-header')
 var gulpFilter = require('gulp-filter')
 var complexity = require('gulp-complexity')
 var gulpif = require('gulp-if')
+var strip = require('gulp-strip-comments')
 //var imageop = require('gulp-image-optimzation')
 
 
@@ -53,6 +54,7 @@ var banner = ['/**',
          'public/javascripts/UnitStack/*.js'
      ])
      .pipe(concat('wp.min.js'))
+     .pipe(strip())
      .pipe(header(banner))
      .pipe(gulp.dest('./public/dist/Min'))
  })
