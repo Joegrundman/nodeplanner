@@ -8,16 +8,16 @@ WP.Codebreaking.prototype.addCard = function (card) {
 }
 
 WP.Codebreaking.prototype.getResultFor = function (year, season, side) {
-	// for (var i = 0; i < game.codebreakingResults.length; i++) {
-	// 	var result = game.codebreakingResults[i];
-	// 	if (result.year == year) {
-	// 		if (result.season == season) {
-	// 			if (result.side == side) {
-	// 				return result;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	for (var i = 0; i < game.codebreakingResults.length; i++) {
+		var result = game.codebreakingResults[i];
+		if (result.year == year) {
+			if (result.season == season) {
+				if (result.side == side) {
+					return result;
+				}
+			}
+		}
+	}
     
     game.codeBreakingResults.forEach(res => {
         if (res.year === year && res.seaason === season && res.side === side) {
