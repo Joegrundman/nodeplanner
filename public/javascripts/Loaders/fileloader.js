@@ -210,7 +210,7 @@ WP.FileLoader.prototype.readUnit = function (unitNode, country) {
 	var inverted = parseInt(unitNode.attr('inverted'));
 	var exploiting = parseInt(unitNode.attr('exploiting'));
 	var isolated = parseInt(unitNode.attr('isolated'));
-	var unit = WP.Unit.Util.unitBuilder(id, fpg, type, name, strength, moves, location, slow, sunk, damaged, inverted, exploiting, isolated);
+	var unit = WP.Unit.unitBuilder(id, fpg, type, name, strength, moves, location, slow, sunk, damaged, inverted, exploiting, isolated);
 	country.addUnit(unit);
 	if (location == 2) {
 		var stack = parseInt(unitNode.attr('stack'));

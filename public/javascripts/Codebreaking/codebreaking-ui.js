@@ -71,9 +71,9 @@ WP.Codebreaking.UI = {
 	}
 }
 
+
 WP.Codebreaking.prototype.draw = function () {
 	var year = parseInt($('#cbYear').val());
 	var season = parseInt($('#cbSeason').val());
 	WP.Codebreaking.UI.showResultsFor(year, season, codebreaking.selected);
 }
-

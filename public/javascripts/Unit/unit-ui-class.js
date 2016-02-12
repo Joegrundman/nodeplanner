@@ -1,6 +1,12 @@
+'use strict';
+
 /* global Point */
 /* global WP */
 /* global game */
+
+
+
+
 WP.Unit.UI = {
 
 	drawBase: function (ctx, unit) {
@@ -222,20 +228,18 @@ WP.Unit.UI = {
 	},
 
 	drawUnitTexture: function (ctx) {
-<<<<<<< HEAD:public/javascripts/Unit/unit-ui-class.js
+
         
         var dark = "rgba(20, 20, 70, 0.7)"
         var clear = "rgba(10, 10, 10, 0.1)"
         
         var unitTexture = ctx.createRadialGradient(20, 12, 14, 20, 25, 60)
 		// dynamic drawing replaces jpeg for more reliable loading
-=======
+
   	var dark = "rgba(70, 70, 70, 0.7)"
         var clear = "rgba(10, 10, 10, 0)"
         
         var unitTexture = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
-		
->>>>>>> b7c43c070c0ecb472dcc0e1a5639ba7c507bfeb7:public/javascripts/Unit/unit-ui.js
         unitTexture.addColorStop(0, clear)
         unitTexture.addColorStop(1, dark)
         ctx.fillStyle = unitTexture
@@ -243,11 +247,11 @@ WP.Unit.UI = {
       
         // var unitTexture = new Image();
 		// unitTexture.src = "content/Units/unit_texture0.png";
-<<<<<<< HEAD:public/javascripts/Unit/unit-ui-class.js
+
 		// ctx.drawImage(unitTexture, -1, 0);     
-=======
+
 		// ctx.drawImage(unitTexture, -1, 0);
->>>>>>> b7c43c070c0ecb472dcc0e1a5639ba7c507bfeb7:public/javascripts/Unit/unit-ui.js
+
 	},
 
 	drawWhiteBase: function (ctx, unit) {
