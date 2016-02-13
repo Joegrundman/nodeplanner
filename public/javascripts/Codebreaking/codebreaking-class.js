@@ -22,28 +22,11 @@ WP.Codebreaking = class {
         console.log(result)
         return result
     }
+    
+    draw () {
+        var year = parseInt($('#cbYear').val());
+        var season = parseInt($('#cbSeason').val());
+        WP.Codebreaking.UI.showResultsFor(year, season, codebreaking.selected);       
+    }
+    
 }
-
-// WP.Codebreaking = function () {
-// 	this.selected = 6;
-// 	this.cards = [];
-// }
-
-// WP.Codebreaking.prototype.addCard = function (card) {
-// 	this.cards.push(card);
-// }
-
-// WP.Codebreaking.prototype.getResultFor = function (year, season, side) {
-// 	for (var i = 0; i < game.codebreakingResults.length; i++) {
-// 		var result = game.codebreakingResults[i];
-// 		if (result.year == year) {
-// 			if (result.season == season) {
-// 				if (result.side == side) {
-// 					return result;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	return null;
-// }
-

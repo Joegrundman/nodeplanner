@@ -31,13 +31,3 @@ WP.HexControl.UI = {
 	}
 }
 
-// WP.HexControl.prototype.addFlags = function () {
-// 	game.hexControlDialogIsOpen = true;
-// 	onWindowResize();
-// }
-
-// WP.HexControl.prototype.showUnits = function () {
-// 	game.hexControlDialogIsOpen = false;
-// 	hexControl.selectedUnit = null;
-// 	onWindowResize();
-// }

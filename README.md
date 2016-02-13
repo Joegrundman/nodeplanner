@@ -22,6 +22,11 @@ and navigate the browser to
 
 press the **play** button to go to the game screen
 
+use 
+
+`npm run dev` 
+to use nodemon to auto-restart the server after changes
+
 --------------------------------------------------
 
 the index file can draw on the concatenated files using 
@@ -38,4 +43,14 @@ go to
 
 comment out the script tag pulling wp.min.js, and uncomment the other source files
 
+to update wp.min.js type
+`gulp concat`
+
+
+the es6 classes don't reliably concat in cases where  
+a large section of commented out code exists at end of files
+
+this build system is primitive so far
+
+Watch the speed of unit movement when using the wp.min.js!! Awesome
 

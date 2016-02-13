@@ -31,8 +31,3 @@ WP.HexControl = class {
 }
 
 
-
-
-// WP.HexControl = function () {
-// 	this.selectedCountry = null;
-// }
