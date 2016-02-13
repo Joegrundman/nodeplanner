@@ -146,7 +146,7 @@ WP.FileLoader = class {
         var id = parseInt(unitNode.attr('id'));
         var x = parseInt(unitNode.attr('x'));
         var y = parseInt(unitNode.attr('y'));
-        var shipyardUnit = WP.ShipyardUnit.Util.shipyardUnitBuilder(id, x, y);
+        var shipyardUnit = WP.ShipyardUnit.shipyardUnitBuilder(id, x, y);
         shipyard.addShipyardUnit(shipyardUnit);
     }
     
@@ -163,7 +163,7 @@ WP.FileLoader = class {
         var id = parseInt(unitNode.attr('id'));
         var x = parseInt(unitNode.attr('x'));
         var y = parseInt(unitNode.attr('y'));
-        var taskforceUnit = WP.TaskforceUnit.Util.taskforceUnitBuilder(id, x, y);
+        var taskforceUnit = WP.TaskforceUnit.taskforceUnitBuilder(id, x, y);
         taskforce.addTaskforceUnit(taskforceUnit);
     }
     

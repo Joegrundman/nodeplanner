@@ -22,21 +22,23 @@ WP.Shipyard.UI = {
 	}
 }
 
-WP.Shipyard.prototype.draw = function () {
-	var syd = game.getShipyards($('#syYard').val());
-	var cty = game.getCountryFromName(syd.owner);
-	var units = new Array();
+WP.Shipyard.Mouse = {}
 
-	var holder = WP.UnitHolder.unitHolderBuilder(shipyardCtx, $("#syDetails"));
-	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipyardCtx, $("#syDetails"));
+// WP.Shipyard.prototype.draw = function () {
+// 	var syd = game.getShipyards($('#syYard').val());
+// 	var cty = game.getCountryFromName(syd.owner);
+// 	var units = new Array();
 
-	for (var i = 0; i < syd.shipyardUnits.length; i++) {
-		var syUnit = syd.shipyardUnits[i];
-		var unit = game.getUnitForShipyard(syUnit.id, syUnit.x, syUnit.y);
-		units[units.length] = unit;
-	}
+// 	var holder = WP.UnitHolder.unitHolderBuilder(shipyardCtx, $("#syDetails"));
+// 	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipyardCtx, $("#syDetails"));
 
-	holder.units = units;
-	holder.drawShipyard();
-	shipyard.unitHolder = holder;
-}
+// 	for (var i = 0; i < syd.shipyardUnits.length; i++) {
+// 		var syUnit = syd.shipyardUnits[i];
+// 		var unit = game.getUnitForShipyard(syUnit.id, syUnit.x, syUnit.y);
+// 		units[units.length] = unit;
+// 	}
+
+// 	holder.units = units;
+// 	holder.drawShipyard();
+// 	shipyard.unitHolder = holder;
+// }

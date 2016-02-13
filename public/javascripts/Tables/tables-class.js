@@ -1,2 +1,5 @@
-WP.Tables = function () {
+'use strict';
+
+WP.Tables = class {
+    constructor () {}
 }

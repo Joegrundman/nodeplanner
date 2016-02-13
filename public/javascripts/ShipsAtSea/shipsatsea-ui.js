@@ -22,28 +22,28 @@ WP.ShipsAtSea.UI = {
 	}
 }
 
-WP.ShipsAtSea.prototype.draw = function () {
-	var cty = game.getCountry($('#sasCountry').val());
-	var units = new Array();
-	var showOnlyTFs = false;
-	showOnlyTFs = $('#sasTFCheckbox').is(':checked');
-	for (var i = 0; i < cty.units.length; i++) {
-		var unit = cty.units[i];
-		if (showOnlyTFs) {
-			if (unit.location == 4 && unit.canSink()) {
-				units[units.length] = unit;
-			}
-		}
-		else {
-			if ((unit.location == 4 || unit.location == 2) && unit.canSink()) {
-				units[units.length] = unit;
-			}
-		}
-	}
-	var holder = WP.UnitHolder.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
-	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
-	holder.units = units;
-	holder.stackSimilar = $('#sasStackCheckbox').is(':checked');
-	holder.draw();
-	shipsAtSea.unitHolder = holder;
-}
+// WP.ShipsAtSea.prototype.draw = function () {
+// 	var cty = game.getCountry($('#sasCountry').val());
+// 	var units = new Array();
+// 	var showOnlyTFs = false;
+// 	showOnlyTFs = $('#sasTFCheckbox').is(':checked');
+// 	for (var i = 0; i < cty.units.length; i++) {
+// 		var unit = cty.units[i];
+// 		if (showOnlyTFs) {
+// 			if (unit.location == 4 && unit.canSink()) {
+// 				units[units.length] = unit;
+// 			}
+// 		}
+// 		else {
+// 			if ((unit.location == 4 || unit.location == 2) && unit.canSink()) {
+// 				units[units.length] = unit;
+// 			}
+// 		}
+// 	}
+// 	var holder = WP.UnitHolder.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
+// 	// var holder = WP.UnitHolder.Util.unitHolderBuilder(shipsAtSeaCtx, $("#sasDetails"));
+// 	holder.units = units;
+// 	holder.stackSimilar = $('#sasStackCheckbox').is(':checked');
+// 	holder.draw();
+// 	shipsAtSea.unitHolder = holder;
+// }

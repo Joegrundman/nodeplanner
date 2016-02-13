@@ -1,7 +1,6 @@
 'use strict';
 
-
-WP.Country = class {
+WP.Country  = class {
     constructor () {
         this.id = -1;
         this.name = "unknown";

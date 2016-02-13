@@ -25,26 +25,3 @@ WP.UnitCounter.UI = {
 		unitCounter.draw();
 	}
 }
-
-WP.UnitCounter.prototype.draw = function () {
-
-	var cty = game.getCountry($("#ucCountry").val())
-    var units = new Array();
-
-    var drawUnbuilt = $("#ucShowUnbuiltCheckbox").is(':checked')
-    
-    for (var i = 0; i < cty.units.length; i++){
-        var unit = cty.units[i]
-        if (!drawUnbuilt){
-            if (unit.location != 1) { units.push(unit) }
-        } else {
-            units.push(unit)
-        }
-    }
-	var holder = WP.UnitHolder.unitHolderBuilder(unitCounterCtx, $("#ucDetails"));
-	// var holder = WP.UnitHolder.Util.unitHolderBuilder(unitCounterCtx, $("#ucDetails"));
-	holder.units = units;
-    holder.stackSimilar = $("#ucStackCheckbox").is(':checked')
-	holder.draw();
-	unitCounter.unitHolder = holder;
-}

@@ -104,7 +104,7 @@ WP.InitLoader = class {
         var name = shipyardNode.attr('name');
         var rate = shipyardNode.attr('rate');
         var id = shipyardIndex;
-        var shipyard = WP.Shipyard.Util.shipyardBuilder(id, name, owner, rate);
+        var shipyard = WP.Shipyard.shipyardBuilder(id, name, owner, rate);
         game.addShipyard(shipyard);
     }
     
@@ -112,7 +112,7 @@ WP.InitLoader = class {
         var owner = taskforceNode.attr('owner');
         var size = taskforceNode.attr('size');
         var id = taskforceIndex;
-        var taskforce = WP.Taskforce.Util.taskforceBuilder(id, owner, size);
+        var taskforce = WP.Taskforce.taskforceBuilder(id, owner, size);
         game.addTaskforce(taskforce);       
     }
     
