@@ -9,7 +9,8 @@ var WP = {
     var filename = 'content/Sample/sample.xml'
 
     WP.Canvas.initCanvas()
-    WP.FileLoader.Util.startGame("euro", filename)
+    WP.FileLoader.startGame("euro", filename)
+    // WP.FileLoader.Util.startGame("euro", filename)
     WP.Eventing.attachEvents()
 
     if (!hexInfo) { hexInfo = new WP.HexInfo(); }

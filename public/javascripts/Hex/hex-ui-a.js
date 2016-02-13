@@ -25,47 +25,47 @@ WP.Hex.UI = {
 };
 
 
-WP.Hex.prototype.clear = function() {
-	mapCtx.clearRect(this.unitStartPoint.x - 10, this.unitStartPoint.y - 9, this.width, (this.size * 1.6) - 1);
-};
+// WP.Hex.prototype.clear = function() {
+// 	mapCtx.clearRect(this.unitStartPoint.x - 10, this.unitStartPoint.y - 9, this.width, (this.size * 1.6) - 1);
+// };
 
-WP.Hex.prototype.draw = function () {
+// WP.Hex.prototype.draw = function () {
 
-	if (game.hexControlDialogIsOpen) { this.drawFlagsOnHexes(); return;  }
+// 	if (game.hexControlDialogIsOpen) { this.drawFlagsOnHexes(); return;  }
 
-	if (this.units.length > 0) {
-		mapCtx.drawUnits(this.units, this.unitStartPoint.x, this.unitStartPoint.y);
-	}
+// 	if (this.units.length > 0) {
+// 		mapCtx.drawUnits(this.units, this.unitStartPoint.x, this.unitStartPoint.y);
+// 	}
 
-};
+// };
 
-WP.Hex.prototype.drawFlagsOnHexes = function () {
-	if (this.owner)
-	mapCtx.drawImage(this.owner.flagImage, this.unitStartPoint.x + 7, this.unitStartPoint.y + 7);
-};
+// WP.Hex.prototype.drawFlagsOnHexes = function () {
+// 	if (this.owner)
+// 	mapCtx.drawImage(this.owner.flagImage, this.unitStartPoint.x + 7, this.unitStartPoint.y + 7);
+// };
 
-WP.Hex.prototype.getBackground = function() {
-	return null;
-	if (!this.background)
-		this.background = backgroundCtx.getImageDataSafely(this.unitStartPoint.x - 10, this.unitStartPoint.y - 9, this.width, (this.size * 1.6));
+// WP.Hex.prototype.getBackground = function() {
+// 	return null;
+// 	if (!this.background)
+// 		this.background = backgroundCtx.getImageDataSafely(this.unitStartPoint.x - 10, this.unitStartPoint.y - 9, this.width, (this.size * 1.6));
 
-	return this.background;
-};
+// 	return this.background;
+// };
 
-WP.Hex.prototype.getLargeBackground = function () {
-	//return null;
-	if (!this.largeBackground) {
-		try {
-			var x = this.unitStartPoint.x - 17;
-			var y = this.unitStartPoint.y - 18;
-			var w = this.width + 20;
-			var h = (this.size * 1.6) + 30;
+// WP.Hex.prototype.getLargeBackground = function () {
+// 	//return null;
+// 	if (!this.largeBackground) {
+// 		try {
+// 			var x = this.unitStartPoint.x - 17;
+// 			var y = this.unitStartPoint.y - 18;
+// 			var w = this.width + 20;
+// 			var h = (this.size * 1.6) + 30;
 
-			this.largeBackground = backgroundCtx.getImageDataSafely(x, y, w, h);
-		}
-		catch (err) {
-			return null;
-		}
-	}
-	return this.largeBackground;
-}
+// 			this.largeBackground = backgroundCtx.getImageDataSafely(x, y, w, h);
+// 		}
+// 		catch (err) {
+// 			return null;
+// 		}
+// 	}
+// 	return this.largeBackground;
+// }
