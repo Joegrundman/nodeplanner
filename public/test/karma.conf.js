@@ -23,8 +23,8 @@ module.exports = function(config) {
             "javascripts/vendor/jquery-ui.min.js",
             "javascripts/Globals/globals.js",
             "javascripts/**/*.js",
-            "test/spec/Globals/globals.test.js",
-            "test/spec/**/*.test.js"
+            "test/spec/globals.test.js",
+            "test/spec/*.test.js"
         ],
         
         // list of files/patterns to exclude

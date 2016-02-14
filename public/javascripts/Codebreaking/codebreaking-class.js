@@ -19,7 +19,6 @@ WP.Codebreaking = class {
                 result = res
             }
         })
-        console.log(result)
         return result
     }
     

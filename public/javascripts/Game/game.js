@@ -87,13 +87,13 @@ WP.Game = class {
     }
     
     getCountry (id) {
-        for (var ci = 0; ci < this.countries.length; ci++) {
-            if (this.countries[ci].id == id) {
-                return this.countries[ci];
-            }
-        }
+        var res = null
+        this.countries.forEach(cty => {
+            if(cty.id == id) { res = cty }
+        })
+        
         alert("Game.getCountry: Unknown country: " + id);
-        return null;
+        return res;
     }
     
     getCurrentMapId () {
@@ -103,12 +103,12 @@ WP.Game = class {
     }
     
     getCountryFromName (name) {
-        for (var ci = 0; ci < this.countries.length; ci++) {
-            if (this.countries[ci].name == name)
-            return this.countries[ci];
-        }
+        var res = null
+        this.countries.forEach(cty => {
+            if (cty.name == name) { res = cty }
+        })
         alert("Game.getCountry: Unknown country: " + name);
-        return null;
+        return res;
     }
     
     setCurrentDate (currentPhaseId, year, season) {
@@ -119,59 +119,57 @@ WP.Game = class {
     }
     
     getShipyards (id) {
-        for (var si = 0; si < this.shipyards.length; si++) {
-            if (this.shipyards[si].id == id)
-            return this.shipyards[si];
-        }
-        alert("Game.getShipyard: Unknown shipyard: " + id);
-        return null;      
+        var res = null
+        this.shipyards.forEach(sy => {
+            if (sy.id == id) { res = sy }
+        })
+        alert("Game.getShipyards: Unknown shipyard: " + id);
+        return res;      
     }
     
     getShipyardFromName (name) {
-        for (var si = 0; si < this.shipyards.length; si++) {
-            if (this.shipyards[si].name == name)
-            return this.shipyards[si];
-        }
-        alert("Game.getShipyard: Unknown shipyard: " + name);
-        return null;        
+        var res = null
+        this.shipyards.forEach(sy => {
+            if (sy.name == name) { res = sy }
+        })
+        alert("Game.getShipyardFromName: Unknown shipyard: " + name);
+        return res        
     }
     
     getShipyardFromUnit (unitId) {
-       for (var si = 0; si < this.shipyards.length; si++) {
-            for (var sj = 0; sj < this.shipyards[si].shipyardUnits.length; sj++) {
-                if (this.shipyards[si].shipyardUnits[sj].id == unitId)
-                return this.shipyards[si];
-            }
-        }
+        var res = null
+        this.shipyards.forEach(sy => {
+            sy.shipyardUnits.forEach(syu => {
+                if (syu.id == unitId) { res = sy }
+            })
+        })
         alert("Game.getShipyard from unit: Unknown shipyard with: " + unitId);
-        return null;      
+        return res;      
     }
     
     getTaskforceFromUnit (unitId) {
-        for (var ti = 0; ti < this.taskforces.length; ti++) {
-            for (var tj = 0; tj < this.taskforces[ti].taskforceUnits.length; tj++) {
-                if (this.taskforces[ti].taskforces[tj].id == unitId)
-                return this.taskforces[ti];
-            }
-        }
-        // var res = this.taskforces.filter(tf => tf.taskforceUnits.some(unit => unit.id == unitId))
-        // if (res) { return res }
+        var res = null
+        this.taskforces.forEach(tf => {
+            tf.taskforceUnits.forEach(tfu => {
+                if (tfu.id == unitId) { res = tf }
+            })
+        })
         alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitId);
-        return null;   
+        return res;   
     }
     
     getUnitForShipyard (id, x, y) {
-        for (var ci = 0; ci < this.countries.length; ci++) {
-            var cty = this.countries[ci];
-            for (var ui = 0; ui < cty.units.length; ui++) {
-                if (cty.units[ui].id == id) {
-                    cty.units[ui].holderX = x;
-                    cty.units[ui].holderY = y;
-                    return cty.units[ui];
+        var res = null
+        this.countries.forEach(cty => {
+            cty.units.forEach(cu => {
+                if (cu.id == id) {
+                    cu.holderX = x
+                    cu.holderY = y
+                    res = cu
                 }
-            } 
-        }
-        return null       
+            })
+        })
+        return res       
     }
     
     getTaskforces (id) {
