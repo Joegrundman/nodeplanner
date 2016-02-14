@@ -8,17 +8,11 @@ WP.Attrition = class {
     addUnit (unit) {
         if (!unit) { return }
         if (!unit.canBeCountedInAttrition()) { return }
-        var foundUnit = false
-        var _this = this
-        _this.units.forEach(u => {
-            if (u == unit) {
-                _this.removeUnit(unit)
-                foundUnit = true
-            }
-        })
+
+        var foundUnit = this.units.some(u => u == unit)
         
         if (!foundUnit) {
-            _this.units.push(unit)
+            this.units.push(unit)
             unit.highlight = new WP.Color(255, 255, 72).toRgb()
         }
     }
@@ -39,14 +33,20 @@ WP.Attrition = class {
        
     removeUnit (unit) {
         if (!unit) return;
+        var unitFound = false
         var j = 0;
         while (j < this.units.length) {
-            if (this.units[j] == unit)
-                this.units.splice(j, 1);
+            if (this.units[j] == unit) {
+                    this.units.splice(j, 1);
+                    unitFound = true
+                }
             else
                 j++;
         }
-        unit.highlight = null;
+  
+       unit.highlight = null;           
+        
+
     }
     
     refreshTotals () {
