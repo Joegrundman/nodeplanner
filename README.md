@@ -54,3 +54,14 @@ this build system is primitive so far
 
 Watch the speed of unit movement when using the wp.min.js!! Awesome
 
+Germany Safe
+============
+
+Since i have been advised that i cannot be showing swastikas to german employers, 
+i have used a SFW version of the german flag. To go back to authentic, go to
+
+content/flags and find the germany flags.
+
+Rename all the germany.jpg files as germany-safe.jpg etc
+
+rename all the germany-unsafe.jpg as germany.jpg
