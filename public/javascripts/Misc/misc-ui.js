@@ -10,8 +10,8 @@ WP.Misc.Ui = {
 			$("#diplomacy").dialog('close');
 		if ($('#forcepoolDialog').dialog('isOpen') == true)
 			$("#forcepoolDialog").dialog('close');
-		if ($('#gameSettings').dialog('isOpen') == true)
-			$("#gameSettings").dialog('close');
+		if ($('#gSettings').dialog('isOpen') == true)
+			$("#gSettings").dialog('close');
 		if ($('#hexControl').dialog('isOpen') == true)
 			$("#hexControl").dialog('close');
 		if ($('#researchDisplay').dialog('isOpen') == true)

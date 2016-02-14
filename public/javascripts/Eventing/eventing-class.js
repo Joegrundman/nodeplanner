@@ -18,7 +18,7 @@ WP.Eventing = {
 		$("#forcepoolDialog").dialog({ autoOpen: false });
 		//$("#dieRoller").dialog({ autoOpen: false, resizable: false });
 		$("#diplomacy").dialog({ autoOpen: false, resizable: false });
-		$("#gameSettings").dialog({ autoOpen: false });
+		$("#gSettings").dialog({ autoOpen: false });
 		$("#hexControl").dialog({ autoOpen: false });
 		$("#newUnit").dialog({ autoOpen: false });
 		$("#tables").dialog({ autoOpen: false, close: function () { WP.Tables.UI.handleDialogClose(); } });
