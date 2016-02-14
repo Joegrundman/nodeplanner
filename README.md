@@ -52,7 +52,7 @@ a large section of commented out code exists at end of files
 
 this build system is primitive so far
 
-Watch the speed of unit movement when using the wp.min.js!! Awesome
+Watch the speed of unit movement when using the wp.min.js!! Awesome 
 
 Germany Safe
 ============

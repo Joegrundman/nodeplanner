@@ -12,10 +12,3 @@ WP.GameSettings = class {
     
     
 }
-
-// WP.GameSettings.prototype.update = function () {
-
-// 	var showUnitTexture = $('#gsUnitTexture').is(':checked');
-// 	game.toggleShowUnitTexture(showUnitTexture);
-
-// }

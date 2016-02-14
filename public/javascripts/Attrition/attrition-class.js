@@ -23,8 +23,7 @@ WP.Attrition = class {
         }
     }
     
-    handleHexClick() {
- 
+    handleHexClick() { 
         var map = game.currentMap
         var hex = map.currentHex
         var _this = this
@@ -69,5 +68,7 @@ WP.Attrition = class {
         $("#attritionDetails").html(details);
         $("#attritionTotal").html(total);
     }
+    
+
     
 }

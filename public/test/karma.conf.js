@@ -22,7 +22,7 @@ module.exports = function(config) {
             "javascripts/vendor/jquery.min.js",
             "javascripts/vendor/jquery-ui.min.js",
             "javascripts/Globals/globals.js",
-            "javascripts/UnitHolder/unitholder.js",
+            "javascripts/**/*.js",
             "test/spec/Globals/globals.test.js",
             "test/spec/**/*.test.js"
         ],

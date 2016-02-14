@@ -18,7 +18,7 @@ var WP = {
 
     onWindowResize()
 
-  },
+  }
 }
 
 var mapCanvas, navigatorCanvas, backgroundCanvas, hexInfoCanvas, forcepoolCanvas, newUnitCanvas, shipsAtSeaCanvas, shipyardCanvas, taskforceCanvas, unitCounterCanvas, hexInfoBackgroundCanvas;

@@ -1,0 +1,1684 @@
+<?xml version="1.0"?>
+<game version="2.8.0.8" starting-year="1939" starting-season="Fall">
+  <info type="0" title="[EvE_gw]">
+    <diplomacy baseline="0,1,-1/1,1,-1/2,0,-1/3,0,-1/4,0,-1/5,4,-1/6,1,-1/7,1,1/8,3,-1/9,1,0/10,3,-1/11,3,-1/12,3,-1/13,3,-1/14,3,-1/15,1,0/16,1,0/17,2,-1/18,3,-1/19,3,-1/20,3,-1/21,1,0/22,3,-1/23,3,-1/30,0,4/31,3,1/25,3,-1/26,3,-1/27,1,0/32,3,4/33,1,0/34,3,-1/35,3,-1/36,0,4/37,1,0/38,1,1/39,3,3/40,1,0/41,1,1/42,1,-1/43,3,-1/44,3,-1/45,1,0/46,3,-1/47,1,6/48,2,-1/49,3,-1/50,3,-1/51,1,0/52,1,0/53,1,0/54,3,-1/55,3,-1/56,3,-1/57,3,-1/58,3,-1/59,1,0/60,1,1/61,3,-1/62,3,-1/67,3,2/63,3,2/64,3,2/65,3,4/66,3,-1/24,3,0/28,3,2/29,3,6/:" />
+    <map current="0" />
+    <statistics axis="" wa="" russia="" japan="" />
+  </info>
+  <countries>
+    <c id="7" c="1" ally="1" name="Algeria" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="8" c="1" ally="0" name="Arabia" dipstatus="4" dipstate="0" diplotext="" />
+    <c id="9" c="1" ally="0" name="Australia" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="936" fpg="0" t="i" n="NGF" s="2" m="2" loc="2" h="1/1078" />
+        <u i="937" fpg="1" t="i" n="1 Aus" s="2" m="3" loc="1" />
+        <u i="938" fpg="1" t="i" n="3 Aus" s="2" m="2" loc="1" />
+        <u i="939" fpg="2" t="i" n="4 Aus" s="2" m="2" loc="1" />
+        <u i="940" fpg="0" t="i" n="2 NZ" s="1" m="3" loc="2" h="0/1957" />
+        <u i="941" fpg="0" t="i" n="SF" s="1" m="2" loc="2" h="1/1119" />
+        <u i="942" fpg="0" t="i" n="NTF" s="1" m="2" loc="2" h="1/877" />
+        <u i="943" fpg="1" t="i" n="5 Aus" s="1" m="2" loc="1" />
+        <u i="944" fpg="2" t="i" n="8 Aus" s="1" m="2" loc="1" />
+        <u i="945" fpg="2" t="i" n="10 Aus" s="1" m="2" loc="1" />
+        <u i="946" fpg="2" t="i" n="3 NZ" s="1" m="2" loc="1" />
+        <u i="947" fpg="1" t="aaf" n="" s="2" m="4" loc="1" />
+        <u i="948" fpg="0" t="Cruiser" n="" s="4" m="6" loc="2" h="1/1120" />
+        <u i="1177" fpg="0" t="dd" n="" s="2" m="6" loc="2" h="1/1120" />
+      </units>
+      <groupings>
+        <g i="1" n="Fall 40" />
+        <g i="2" n="Production" />
+      </groupings>
+    </c>
+    <c id="10" c="3" name="Baltics" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="11" c="3" name="Belgium" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="950" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="951" fpg="0" t="i" n="1 Belg" s="2" m="3" loc="1" />
+        <u i="952" fpg="0" t="i" n="5 Belg" s="1" m="3" loc="1" />
+        <u i="953" fpg="0" t="i" n="5 Belg" s="1" m="3" loc="1" />
+        <u i="954" fpg="0" t="i" n="5 Belg" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="13" c="3" ally="43" name="Borneo" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="0" c="1" name="Britain" dipstatus="9" dipstate="0" diplotext="">
+      <codebreaking asw="1" strategic="1" blank="5" tactical="1" />
+      <units>
+        <u i="0" fpg="6" t="b" n="Lionheart" s="5" m="6" loc="1" />
+        <u i="1" fpg="6" t="b" n="Marlbrgh" s="5" m="6" loc="1" />
+        <u i="2" fpg="0" t="b" n="Nelson" s="4" m="6" loc="4" slow="1" />
+        <u i="3" fpg="0" t="b" n="Rodney" s="4" m="6" loc="4" slow="1" />
+        <u i="4" fpg="0" t="b" n="Anson" s="4" m="6" loc="3" />
+        <u i="5" fpg="0" t="b" n="Dk of York" s="4" m="6" loc="3" />
+        <u i="6" fpg="0" t="b" n="Howe" s="4" m="6" loc="3" />
+        <u i="7" fpg="0" t="b" n="Kg George" s="4" m="6" loc="3" />
+        <u i="8" fpg="0" t="b" n="Pr of Wales" s="4" m="6" loc="3" />
+        <u i="9" fpg="6" t="b" n="Vanguard" s="4" m="6" loc="1" />
+        <u i="10" fpg="0" t="b" n="Barham" s="3" m="6" loc="4" slow="1" />
+        <u i="11" fpg="0" t="b" n="Malaya" s="3" m="6" loc="4" slow="1" />
+        <u i="12" fpg="0" t="b" n="Q.Elizabeth" s="3" m="6" loc="4" slow="1" />
+        <u i="13" fpg="0" t="b" n="Ramilles" s="3" m="6" loc="4" slow="1" />
+        <u i="14" fpg="0" t="b" n="Resolution" s="3" m="6" loc="4" slow="1" />
+        <u i="15" fpg="0" t="b" n="Revenge" s="3" m="6" loc="4" slow="1" />
+        <u i="16" fpg="0" t="b" n="Royal Oak" s="3" m="6" loc="4" slow="1" />
+        <u i="17" fpg="0" t="b" n="R Sovriegn" s="3" m="6" loc="4" slow="1" />
+        <u i="18" fpg="0" t="b" n="Valiant" s="3" m="6" loc="4" slow="1" />
+        <u i="19" fpg="0" t="b" n="Warspite" s="3" m="6" loc="4" slow="1" />
+        <u i="20" fpg="0" t="bc" n="Hood" s="3" m="6" loc="4" />
+        <u i="21" fpg="0" t="bc" n="Renown" s="3" m="6" loc="4" />
+        <u i="22" fpg="0" t="bc" n="Repulse" s="3" m="6" loc="4" />
+        <u i="23" fpg="6" t="bc" n="Beatty" s="3" m="6" loc="1" />
+        <u i="24" fpg="6" t="bc" n="Jellicoe" s="3" m="6" loc="1" />
+        <u i="25" fpg="6" t="bc" n="Orion" s="2" m="6" loc="1" />
+        <u i="26" fpg="6" t="bc" n="Swiftsure" s="2" m="6" loc="1" />
+        <u i="27" fpg="0" t="cv" n="Ark Royal" s="2" m="6" loc="4" />
+        <u i="28" fpg="0" t="cv" n="Courageous" s="2" m="6" loc="4" />
+        <u i="29" fpg="0" t="cv" n="Furious" s="2" m="6" loc="4" />
+        <u i="30" fpg="0" t="cv" n="Glorious" s="2" m="6" loc="4" />
+        <u i="31" fpg="0" t="cv" n="Illustrious" s="2" m="6" loc="3" />
+        <u i="32" fpg="6" t="cv" n="Formidable" s="2" m="6" loc="1" />
+        <u i="33" fpg="6" t="cv" n="Indomitable" s="2" m="6" loc="1" />
+        <u i="34" fpg="6" t="cv" n="Victorious" s="2" m="6" loc="1" />
+        <u i="35" fpg="6" t="CVE" n="" s="6" m="6" loc="1" />
+        <u i="36" fpg="6" t="Cruiser" n="" s="10" m="6" loc="1" />
+        <u i="38" fpg="0" t="Cruiser" n="" s="2" m="6" loc="3" />
+        <u i="39" fpg="0" t="Cruiser" n="" s="2" m="6" loc="2" h="1/70" />
+        <u i="40" fpg="6" t="dd" n="" s="40" m="6" loc="1" />
+        <u i="41" fpg="0" t="dd" n="" s="1" m="6" loc="2" h="1/70" />
+        <u i="42" fpg="0" t="dd" n="" s="4" m="6" loc="4" />
+        <u i="43" fpg="6" t="ASW" n="" s="25" m="6" loc="1" />
+        <u i="98" fpg="4" t="ASW" n="" s="1" m="6" loc="1" />
+        <u i="44" fpg="0" t="ASW" n="" s="1" m="6" loc="2" h="0/48" />
+        <u i="45" fpg="0" t="sub" n="" s="1" m="6" loc="2" h="0/793" />
+        <u i="46" fpg="4" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="47" fpg="6" t="sub" n="" s="5" m="6" loc="1" />
+        <u i="48" fpg="8" t="arm" n="8" s="4" m="5" loc="1" />
+        <u i="49" fpg="8" t="arm" n="10" s="4" m="5" loc="1" />
+        <u i="50" fpg="8" t="arm" n="30" s="4" m="5" loc="1" />
+        <u i="51" fpg="8" t="arm" n="79" s="2" m="5" loc="1" />
+        <u i="52" fpg="0" t="arm" n="Gds" s="2" m="5" loc="2" h="0/187" />
+        <u i="53" fpg="0" t="arm" n="WDF" s="2" m="5" loc="2" h="0/1159" />
+        <u i="54" fpg="0" t="arm" n="31 Ind" s="2" m="5" loc="2" h="1/220" />
+        <u i="55" fpg="0" t="mech" n="1 BEF" s="3" m="4" loc="2" h="0/452" />
+        <u i="56" fpg="8" t="mech" n="2 Pol" s="3" m="4" loc="1" />
+        <u i="57" fpg="0" t="mech" n="4" s="3" m="4" loc="2" h="0/1159" />
+        <u i="58" fpg="8" t="mech" n="5" s="3" m="4" loc="1" />
+        <u i="59" fpg="8" t="mech" n="9" s="3" m="4" loc="1" />
+        <u i="60" fpg="8" t="mech" n="12" s="3" m="4" loc="1" />
+        <u i="61" fpg="8" t="mech" n="13" s="3" m="4" loc="1" />
+        <u i="62" fpg="8" t="mech" n="15" s="3" m="4" loc="1" />
+        <u i="63" fpg="0" t="i" n="Burma" s="1" m="3" loc="2" h="1/341" />
+        <u i="64" fpg="0" t="i" n="1 KRRC" s="1" m="3" loc="2" h="1/431" />
+        <u i="65" fpg="0" t="i" n="18" s="1" m="3" loc="2" h="1/431" />
+        <u i="66" fpg="8" t="Commando" n="18 Cmdo" s="1" m="3" loc="1" />
+        <u i="71" fpg="8" t="Chindit" n="Chindit" s="1" m="3" loc="1" />
+        <u i="72" fpg="8" t="Airborne" n="1 Abn" s="1" m="3" loc="1" />
+        <u i="73" fpg="8" t="Airborne" n="6 Abn" s="1" m="3" loc="1" />
+        <u i="74" fpg="8" t="Airborne" n="52 AL" s="1" m="3" loc="1" />
+        <u i="75" fpg="0" t="rep" n="1" s="1" m="1" loc="2" h="0/412" />
+        <u i="76" fpg="0" t="rep" n="2" s="1" m="1" loc="2" h="0/492" />
+        <u i="77" fpg="0" t="rep" n="3" s="1" m="1" loc="2" h="0/530" />
+        <u i="78" fpg="0" t="rep" n="4" s="1" m="1" loc="2" h="0/187" />
+        <u i="79" fpg="0" t="rep" n="5" s="1" m="1" loc="2" h="0/793" />
+        <u i="80" fpg="0" t="rep" n="6" s="1" m="1" loc="2" h="0/1671" />
+        <u i="81" fpg="0" t="rep" n="7" s="1" m="1" loc="2" h="1/589" />
+        <u i="82" fpg="0" t="rep" n="8" s="1" m="1" loc="2" h="1/540" />
+        <u i="83" fpg="0" t="aaf" n="" s="45" m="4" loc="0" />
+        <u i="84" fpg="0" t="aaf" n="" s="5" m="4" loc="2" h="0/452" />
+        <u i="85" fpg="0" t="aaf" n="" s="2" m="4" loc="2" h="1/220" />
+        <u i="86" fpg="4" t="aaf" n="" s="5" m="4" loc="1" />
+        <u i="87" fpg="5" t="aaf" n="" s="5" m="4" loc="1" />
+        <u i="91" fpg="0" t="NAS" n="" s="3" m="3" loc="2" h="0/444" />
+        <u i="92" fpg="4" t="NAS" n="" s="1" m="3" loc="1" />
+        <u i="93" fpg="5" t="NAS" n="" s="1" m="3" loc="1" />
+        <u i="94" fpg="7" t="Jet" n="" s="4" m="6" loc="1" />
+        <u i="95" fpg="0" t="JetSquadron" n="" s="10" m="6" loc="0" />
+        <u i="96" fpg="7" t="Interceptor" n="" s="10" m="6" loc="1" />
+        <u i="97" fpg="7" t="at" n="Air Trans" s="5" m="4" loc="1" />
+        <u i="102" fpg="9" t="SpyRing" n="Minor" s="1" m="6" loc="1" />
+        <u i="103" fpg="4" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="104" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" h="0/444" />
+        <u i="105" fpg="0" t="Bomber" n="" s="1" m="6" loc="2" h="0/121" />
+        <u i="106" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" h="0/446" />
+        <u i="107" fpg="0" t="Taskforce" n="2" s="1" m="6" loc="2" h="0/187" />
+        <u i="108" fpg="0" t="Taskforce" n="3" s="1" m="6" loc="2" h="0/1278" />
+        <u i="109" fpg="0" t="Taskforce" n="4" s="1" m="6" loc="2" h="0/187" />
+        <u i="110" fpg="0" t="Taskforce" n="5" s="1" m="6" loc="2" h="0/446" />
+        <u i="111" fpg="6" t="Taskforce" n="6" s="1" m="6" loc="1" />
+        <u i="112" fpg="6" t="Taskforce" n="7" s="1" m="6" loc="1" />
+        <u i="113" fpg="0" t="Grant" n="" s="5" m="6" loc="0" />
+        <u i="114" fpg="0" t="Grant" n="" s="10" m="6" loc="0" />
+        <u i="115" fpg="0" t="Grant" n="" s="10" m="6" loc="0" />
+        <u i="116" fpg="0" t="Grant" n="" s="10" m="6" loc="0" />
+        <u i="117" fpg="9" t="Grant" n="" s="45" m="6" loc="1" />
+        <u i="124" fpg="9" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="126" fpg="9" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1162" fpg="4" t="tr" n="" s="5" m="6" loc="1" />
+        <u i="1164" fpg="0" t="tr" n="" s="5" m="6" loc="2" h="1/2003" />
+        <u i="1165" fpg="0" t="tr" n="" s="22" m="6" loc="2" h="0/8" />
+        <u i="1166" fpg="0" t="tr" n="" s="8" m="6" loc="2" h="0/1956" />
+        <u i="1212" fpg="0" t="NAS" n="" s="2" m="3" loc="4" />
+        <u i="1214" fpg="0" t="Cruiser" n="" s="6" m="6" loc="4" />
+        <u i="1215" fpg="0" t="Cruiser" n="" s="10" m="6" loc="4" />
+        <u i="1216" fpg="0" t="dd" n="" s="4" m="6" loc="4" />
+        <u i="1217" fpg="0" t="dd" n="" s="5" m="6" loc="4" />
+        <u i="1218" fpg="0" t="Cruiser" n="" s="2" m="6" loc="4" />
+        <u i="1219" fpg="0" t="aaf" n="" s="3" m="4" loc="2" h="0/1278" />
+        <u i="1237" fpg="4" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="101" fpg="12" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="1287" fpg="11" t="pw" n="4" s="1" m="3" loc="1" />
+        <u i="1339" fpg="11" t="pw" n="3" s="1" m="3" loc="1" />
+        <u i="1340" fpg="10" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1341" fpg="10" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1389" fpg="0" t="tr" n="" s="5" m="6" loc="0" />
+        <u i="1390" fpg="7" t="NAS" n="" s="5" m="3" loc="1" />
+        <u i="1391" fpg="0" t="ASW" n="" s="10" m="6" loc="0" />
+        <u i="1392" fpg="0" t="tr" n="" s="5" m="6" loc="0" />
+        <u i="1400" fpg="7" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1404" fpg="7" t="Bomber" n="" s="3" m="6" loc="1" />
+        <u i="1405" fpg="7" t="aaf" n="" s="5" m="4" loc="1" />
+        <u i="1406" fpg="9" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1407" fpg="6" t="tr" n="" s="2" m="6" loc="1" />
+        <u i="1438" fpg="0" t="Cruiser" n="" s="6" m="6" loc="4" />
+        <u i="1439" fpg="0" t="Cruiser" n="" s="8" m="6" loc="4" />
+        <u i="1440" fpg="0" t="NAS" n="" s="2" m="3" loc="4" />
+        <u i="1441" fpg="0" t="NAS" n="" s="2" m="3" loc="4" />
+        <u i="1442" fpg="0" t="NAS" n="" s="2" m="3" loc="4" />
+        <u i="1466" fpg="6" t="cv" n="Indefatigable" s="2" m="6" loc="1" />
+        <u i="1467" fpg="6" t="cv" n="Implacable" s="2" m="6" loc="1" />
+      </units>
+      <groupings>
+        <g i="4" n="Fall 39" />
+        <g i="5" n="Spring 40" />
+        <g i="6" n="Naval Builds" />
+        <g i="7" n="Air Builds" />
+        <g i="8" n="Ground Builds" />
+        <g i="9" n="Other Builds" />
+        <g i="10" n="Partisans" />
+        <g i="11" n="Production Partisans" />
+        <g i="12" n="DOW +1" />
+      </groupings>
+      <TF data="Hc2+ubgUnj+72/4wlmQP9G4F48ZYvzD+uy/s9I1n0A1vUmK21+i4HwVH90ntxgXmwxA9WopxzNF9gtMfFG8Qubs/OQxxPcYwTUxUZrkV2iztauhuA7V19WfkdTqae4canZwzSPcpAk8ya4UJOF4agP6a4eoclBYcPNcapX0yJCp1BQ+RY8Qxvp9AZdsqSuj7QMKl50gHWSPzPS40O4Ggb34/z/qR4BkMctYpB55gSR1ub4/cEHHDpRBOMz00F9c7JJ2xsUzTHFpIyBLQWEpc4Qyjj66EJQKpY+acR8yLGyaIG9jIKrx1L9KKn2GfiKbF6mlPDHQXOG4=" />
+    </c>
+    <c id="14" c="3" name="Bulgaria" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="955" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="956" fpg="0" t="i" n="1 Bulg" s="1" m="3" loc="1" />
+        <u i="957" fpg="0" t="i" n="2 Bulg" s="1" m="3" loc="1" />
+        <u i="958" fpg="0" t="i" n="3 Bulg" s="1" m="3" loc="1" />
+        <u i="959" fpg="0" t="i" n="4 Bulg" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="15" c="1" ally="0" name="Burma" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="16" c="1" ally="0" name="Canada" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="960" fpg="0" t="mech" n="1 Can" s="3" m="4" loc="2" h="0/122" />
+        <u i="961" fpg="1" t="mech" n="3 Can" s="3" m="4" loc="1" />
+        <u i="962" fpg="2" t="arm" n="2 Can" s="4" m="5" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Fall 40" />
+        <g i="2" n="Spring 41" />
+      </groupings>
+    </c>
+    <c id="17" c="4" ally="5" name="Communist China" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="963" fpg="0" t="i" n="PA 1" s="2" m="2" loc="2" h="1/452" />
+        <u i="964" fpg="0" t="i" n="PA 2" s="2" m="2" loc="2" h="1/410" />
+        <u i="965" fpg="0" t="i" n="PA 4" s="2" m="2" loc="2" h="1/451" />
+        <u i="966" fpg="0" t="i" n="8 Rte" s="2" m="2" loc="2" h="1/452" />
+        <u i="967" fpg="0" t="i" n="PA 3" s="1" m="2" loc="2" h="1/412" />
+        <u i="968" fpg="0" t="i" n="PA6" s="1" m="2" loc="2" h="1/411" />
+        <u i="969" fpg="0" t="i" n="NP 5" s="1" m="2" loc="2" h="1/410" />
+        <u i="970" fpg="0" t="i" n="7 Rte" s="1" m="2" loc="2" h="1/451" />
+        <u i="1288" fpg="1" t="Partisan_Com" n="1" s="1" m="2" loc="1" />
+        <u i="1289" fpg="2" t="Partisan_Com" n="2" s="1" m="2" loc="1" />
+        <u i="1290" fpg="3" t="Partisan_Com" n="3" s="1" m="2" loc="1" />
+        <u i="1291" fpg="4" t="Partisan_Com" n="4" s="1" m="2" loc="1" />
+        <u i="1292" fpg="5" t="Partisan_Com" n="5" s="1" m="2" loc="1" />
+        <u i="1293" fpg="6" t="Partisan_Com" n="6" s="1" m="2" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Fall 39" />
+        <g i="2" n="Spring 42" />
+        <g i="3" n="Spring 43" />
+        <g i="4" n="Spring 44" />
+        <g i="5" n="Spring 45" />
+        <g i="6" n="Spring 46" />
+      </groupings>
+    </c>
+    <c id="18" c="3" name="Denmark" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="21" c="1" ally="0" name="Egypt" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="23" c="3" name="Finland" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="977" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="978" fpg="0" t="i" n="2 Finn" s="2" m="3" loc="1" />
+        <u i="979" fpg="0" t="i" n="3 Finn" s="2" m="3" loc="1" />
+        <u i="980" fpg="0" t="i" n="4 Finn" s="2" m="3" loc="1" />
+        <u i="981" fpg="0" t="i" n="6 Finn" s="2" m="3" loc="1" />
+        <u i="982" fpg="0" t="i" n="6 Finn" s="2" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="30" c="0" ally="4" name="Formosa" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="1" c="1" name="France" dipstatus="9" dipstate="0" diplotext="">
+      <units>
+        <u i="127" fpg="0" t="b" n="Jean Bart" s="4" m="6" loc="3" />
+        <u i="128" fpg="0" t="b" n="Richilieu" s="4" m="6" loc="3" />
+        <u i="129" fpg="0" t="b" n="Bretagne" s="3" m="6" loc="4" slow="1" />
+        <u i="130" fpg="0" t="b" n="Provence" s="3" m="6" loc="4" slow="1" />
+        <u i="131" fpg="0" t="b" n="Lorraine" s="3" m="6" loc="4" slow="1" />
+        <u i="132" fpg="0" t="b" n="Dunkerque" s="3" m="6" loc="4" />
+        <u i="133" fpg="0" t="b" n="Strasbourg" s="3" m="6" loc="4" />
+        <u i="134" fpg="4" t="b" n="Lille" s="3" m="6" loc="1" />
+        <u i="135" fpg="4" t="b" n="Lyon" s="3" m="6" loc="1" />
+        <u i="136" fpg="4" t="b" n="Beliqueuse" s="2" m="6" loc="1" />
+        <u i="137" fpg="4" t="b" n="Revanche" s="2" m="6" loc="1" />
+        <u i="138" fpg="4" t="Cruiser" n="" s="40" m="6" loc="1" />
+        <u i="140" fpg="0" t="Cruiser" n="" s="2" m="6" loc="3" />
+        <u i="141" fpg="0" t="Cruiser" n="" s="2" m="6" loc="3" />
+        <u i="142" fpg="4" t="dd" n="" s="60" m="6" loc="1" />
+        <u i="144" fpg="0" t="arm" n="CC" s="3" m="5" loc="2" h="0/656" />
+        <u i="145" fpg="3" t="arm" n="GC1" s="3" m="5" loc="1" />
+        <u i="146" fpg="3" t="arm" n="21" s="3" m="5" loc="1" />
+        <u i="147" fpg="0" t="i" n="Alps" s="2" m="3" loc="2" stack="2" h="0/580" />
+        <u i="148" fpg="0" t="i" n="GAC" s="2" m="3" loc="2" h="0/535" />
+        <u i="149" fpg="0" t="i" n="CEF" s="2" m="3" loc="2" stack="2" h="0/581" />
+        <u i="150" fpg="0" t="i" n="1" s="2" m="3" loc="2" stack="2" h="0/582" />
+        <u i="151" fpg="0" t="i" n="2" s="2" m="3" loc="2" h="0/615" />
+        <u i="152" fpg="0" t="i" n="3" s="2" m="3" loc="2" h="0/616" />
+        <u i="153" fpg="0" t="i" n="4" s="2" m="3" loc="2" h="0/535" />
+        <u i="154" fpg="0" t="i" n="5" s="2" m="3" loc="2" h="0/532" />
+        <u i="155" fpg="0" t="i" n="6" s="2" m="3" loc="2" h="0/573" />
+        <u i="156" fpg="0" t="i" n="7" s="2" m="3" loc="2" h="0/574" />
+        <u i="157" fpg="0" t="i" n="8" s="2" m="3" loc="2" h="0/615" />
+        <u i="158" fpg="0" t="i" n="9" s="2" m="3" loc="2" h="0/616" />
+        <u i="159" fpg="0" t="i" n="10" s="2" m="3" loc="2" h="0/656" />
+        <u i="160" fpg="0" t="i" n="11" s="2" m="3" loc="2" stack="2" h="0/657" />
+        <u i="161" fpg="3" t="i" n="12" s="2" m="3" loc="1" />
+        <u i="162" fpg="3" t="i" n="16" s="2" m="3" loc="1" />
+        <u i="163" fpg="3" t="i" n="18" s="2" m="3" loc="1" />
+        <u i="164" fpg="3" t="i" n="19" s="2" m="3" loc="1" />
+        <u i="165" fpg="0" t="i" n="LE" s="1" m="3" loc="2" h="0/633" />
+        <u i="166" fpg="0" t="i" n="Levant" s="1" m="3" loc="2" h="0/1473" />
+        <u i="167" fpg="0" t="i" n="Tunisie" s="1" m="3" loc="2" h="0/632" />
+        <u i="168" fpg="0" t="rep" n="1" s="1" m="1" loc="2" stack="1" h="0/657" />
+        <u i="169" fpg="0" t="rep" n="2" s="1" m="1" loc="2" stack="1" h="0/582" />
+        <u i="170" fpg="0" t="rep" n="3" s="1" m="1" loc="2" stack="1" h="0/581" />
+        <u i="171" fpg="0" t="rep" n="4" s="1" m="1" loc="2" stack="1" h="0/580" />
+        <u i="172" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="2" h="0/496" />
+        <u i="173" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" stack="1" h="0/496" />
+        <u i="174" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" h="0/453" />
+        <u i="175" fpg="0" t="Taskforce" n="2" s="1" m="6" loc="2" h="0/429" />
+        <u i="176" fpg="5" t="Taskforce" n="3" s="1" m="6" loc="1" />
+        <u i="177" fpg="5" t="Taskforce" n="4" s="1" m="6" loc="1" />
+        <u i="1210" fpg="0" t="Cruiser" n="" s="6" m="6" loc="4" />
+        <u i="1211" fpg="0" t="dd" n="" s="9" m="6" loc="4" />
+        <u i="1274" fpg="7" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1275" fpg="6" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1327" fpg="7" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1328" fpg="6" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1397" fpg="5" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1444" fpg="0" t="Cruiser" n="" s="4" m="6" loc="4" />
+        <u i="1453" fpg="3" t="Airbase" n=" " s="1" m="6" loc="1" />
+      </units>
+      <groupings>
+        <g i="3" n="Fall 39" />
+        <g i="4" n="Naval Builds" />
+        <g i="5" n="Other Builds" />
+        <g i="6" n="Partisans" />
+        <g i="7" n="Production Partisans" />
+      </groupings>
+      <TF data="5l0NXxWOzaddxCn+hY/lfUWqFahdqC+QHOb36UvWsJGe/9JpM9adVj9LrANrtaV+/qI8WLb6gOaLqK8ndShLVweb/uIhZcOhjyTgvZgnplM=" />
+    </c>
+    <c id="31" c="1" ally="1" name="French Indochina" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="2" c="0" name="Germany" dipstatus="9" dipstate="0" diplotext="">
+      <codebreaking strategic="1" blank="5" sub="1" tactical="1" />
+      <units>
+        <u i="178" fpg="0" t="b" n="Tirpitz" s="4" m="6" loc="3" />
+        <u i="179" fpg="0" t="b" n="Bismarck" s="4" m="6" loc="3" />
+        <u i="180" fpg="0" t="bc" n="Gneisenau" s="3" m="6" loc="4" />
+        <u i="181" fpg="0" t="bc" n="Schrnhrst" s="3" m="6" loc="4" />
+        <u i="182" fpg="0" t="pb" n="Graf Spee" s="2" m="6" loc="2" h="0/167" />
+        <u i="183" fpg="0" t="pb" n="Lutzow" s="2" m="6" loc="4" />
+        <u i="184" fpg="0" t="pb" n="Scheer" s="2" m="6" loc="2" h="0/167" />
+        <u i="185" fpg="4" t="b" n="Fried d Gr" s="5" m="6" loc="1" />
+        <u i="186" fpg="4" t="b" n="G.Deutslnd" s="5" m="6" loc="1" />
+        <u i="187" fpg="4" t="b" n="Moltke" s="4" m="6" loc="1" />
+        <u i="188" fpg="4" t="b" n="Siegfried" s="4" m="6" loc="1" />
+        <u i="189" fpg="4" t="bc" n="Barbarossa" s="3" m="6" loc="1" />
+        <u i="190" fpg="4" t="bc" n="Walnstein" s="3" m="6" loc="1" />
+        <u i="191" fpg="4" t="pb" n="Deutslnd" s="2" m="6" loc="1" />
+        <u i="192" fpg="4" t="pb" n="Mackensen" s="2" m="6" loc="1" />
+        <u i="193" fpg="4" t="pb" n="Von Dr Tann" s="2" m="6" loc="1" />
+        <u i="194" fpg="4" t="Cruiser" n="" s="40" m="6" loc="1" />
+        <u i="195" fpg="0" t="Cruiser" n="" s="4" m="6" loc="4" />
+        <u i="196" fpg="0" t="Cruiser" n="" s="2" m="6" loc="3" />
+        <u i="197" fpg="4" t="dd" n="" s="60" m="6" loc="1" />
+        <u i="200" fpg="2" t="aaf" n="" s="10" m="4" loc="1" />
+        <u i="201" fpg="0" t="arm" n="14" s="4" m="6" loc="2" stack="1" h="0/971" />
+        <u i="202" fpg="0" t="arm" n="16" s="4" m="6" loc="2" stack="2" h="0/971" />
+        <u i="203" fpg="0" t="arm" n="19" s="4" m="6" loc="2" h="0/977" />
+        <u i="204" fpg="0" t="arm" n="24" s="4" m="6" loc="2" h="0/977" />
+        <u i="205" fpg="2" t="arm" n="39" s="4" m="6" loc="1" />
+        <u i="206" fpg="2" t="arm" n="40" s="4" m="6" loc="1" />
+        <u i="207" fpg="2" t="arm" n="41" s="4" m="6" loc="1" />
+        <u i="208" fpg="2" t="arm" n="46" s="4" m="6" loc="1" />
+        <u i="209" fpg="2" t="arm" n="47" s="4" m="6" loc="1" />
+        <u i="210" fpg="2" t="arm" n="48" s="4" m="6" loc="1" />
+        <u i="211" fpg="3" t="arm" n="56" s="4" m="6" loc="1" />
+        <u i="212" fpg="3" t="arm" n="57" s="4" m="6" loc="1" />
+        <u i="213" fpg="2" t="arm" n="15 DAK" s="2" m="6" loc="1" />
+        <u i="214" fpg="2" t="arm" n="21 DAK" s="2" m="6" loc="1" />
+        <u i="215" fpg="6" t="arm" n="1 SS" s="5" m="6" loc="1" />
+        <u i="216" fpg="6" t="arm" n="2 SS" s="5" m="6" loc="1" />
+        <u i="217" fpg="6" t="arm" n="3 SS" s="5" m="6" loc="1" />
+        <u i="218" fpg="6" t="arm" n="jAH" s="5" m="6" loc="1" />
+        <u i="219" fpg="6" t="arm" n="HG" s="5" m="6" loc="1" />
+        <u i="220" fpg="6" t="arm" n="GD" s="5" m="6" loc="1" />
+        <u i="221" fpg="0" t="i" n="3LW" s="1" m="3" loc="2" stack="1" h="0/810" />
+        <u i="222" fpg="2" t="i" n="NAV" s="1" m="3" loc="1" />
+        <u i="223" fpg="6" t="i" n="22" s="1" m="3" loc="1" />
+        <u i="224" fpg="6" t="i" n="33" s="1" m="3" loc="1" />
+        <u i="225" fpg="6" t="i" n="36" s="1" m="3" loc="1" />
+        <u i="226" fpg="6" t="i" n="62" s="1" m="3" loc="1" />
+        <u i="227" fpg="6" t="i" n="64" s="1" m="3" loc="1" />
+        <u i="228" fpg="6" t="i" n="67" s="1" m="3" loc="1" />
+        <u i="229" fpg="6" t="i" n="90" s="1" m="3" loc="1" />
+        <u i="230" fpg="3" t="i" n="4 SS" s="3" m="3" loc="1" />
+        <u i="231" fpg="3" t="i" n="5 SS" s="3" m="3" loc="1" />
+        <u i="232" fpg="6" t="i" n="Vik" s="3" m="3" loc="1" />
+        <u i="233" fpg="0" t="i" n="1" s="3" m="3" loc="2" stack="1" h="0/892" />
+        <u i="234" fpg="0" t="i" n="2" s="3" m="3" loc="2" stack="1" h="0/970" />
+        <u i="235" fpg="0" t="i" n="3" s="3" m="3" loc="2" h="0/1011" />
+        <u i="236" fpg="0" t="i" n="4" s="3" m="3" loc="2" h="0/1017" />
+        <u i="237" fpg="0" t="i" n="5" s="3" m="3" loc="2" h="0/1011" />
+        <u i="238" fpg="0" t="i" n="6" s="3" m="3" loc="2" stack="1" h="0/698" />
+        <u i="239" fpg="0" t="i" n="7" s="3" m="3" loc="2" h="0/691" />
+        <u i="240" fpg="0" t="i" n="8" s="3" m="3" loc="2" h="0/692" />
+        <u i="241" fpg="0" t="i" n="9" s="3" m="3" loc="2" stack="1" h="0/693" />
+        <u i="242" fpg="0" t="i" n="10" s="3" m="3" loc="2" h="0/654" />
+        <u i="243" fpg="0" t="i" n="11" s="3" m="3" loc="2" h="0/695" />
+        <u i="244" fpg="0" t="i" n="12" s="3" m="3" loc="2" h="0/696" />
+        <u i="245" fpg="0" t="i" n="13" s="3" m="3" loc="2" h="0/697" />
+        <u i="246" fpg="0" t="i" n="17" s="3" m="3" loc="2" h="0/1017" />
+        <u i="247" fpg="2" t="i" n="18" s="3" m="3" loc="1" />
+        <u i="248" fpg="2" t="i" n="20" s="3" m="3" loc="1" />
+        <u i="249" fpg="2" t="i" n="23" s="3" m="3" loc="1" />
+        <u i="250" fpg="2" t="i" n="25" s="3" m="3" loc="1" />
+        <u i="251" fpg="2" t="i" n="27" s="3" m="3" loc="1" />
+        <u i="252" fpg="2" t="i" n="29" s="3" m="3" loc="1" />
+        <u i="253" fpg="2" t="i" n="30" s="3" m="3" loc="1" />
+        <u i="254" fpg="2" t="i" n="38" s="3" m="3" loc="1" />
+        <u i="255" fpg="2" t="i" n="42" s="3" m="3" loc="1" />
+        <u i="256" fpg="2" t="i" n="43" s="3" m="3" loc="1" />
+        <u i="257" fpg="2" t="i" n="44" s="3" m="3" loc="1" />
+        <u i="258" fpg="3" t="i" n="49" s="3" m="3" loc="1" />
+        <u i="259" fpg="3" t="i" n="50" s="3" m="3" loc="1" />
+        <u i="260" fpg="3" t="i" n="51" s="3" m="3" loc="1" />
+        <u i="261" fpg="6" t="i" n="52" s="3" m="3" loc="1" />
+        <u i="262" fpg="6" t="i" n="53" s="3" m="3" loc="1" />
+        <u i="263" fpg="6" t="i" n="54" s="3" m="3" loc="1" />
+        <u i="264" fpg="6" t="i" n="55" s="3" m="3" loc="1" />
+        <u i="265" fpg="6" t="i" n="59" s="3" m="3" loc="1" />
+        <u i="266" fpg="6" t="i" n="80" s="3" m="3" loc="1" />
+        <u i="267" fpg="6" t="i" n="81" s="3" m="3" loc="1" />
+        <u i="268" fpg="6" t="i" n="82" s="3" m="3" loc="1" />
+        <u i="269" fpg="6" t="i" n="84" s="3" m="3" loc="1" />
+        <u i="270" fpg="0" t="rep" n="1" s="1" m="1" loc="2" stack="1" h="0/896" />
+        <u i="271" fpg="0" t="rep" n="2" s="1" m="1" loc="2" h="0/774" />
+        <u i="272" fpg="0" t="rep" n="3" s="1" m="1" loc="2" stack="1" h="0/852" />
+        <u i="273" fpg="0" t="rep" n="4" s="1" m="1" loc="2" stack="1" h="0/730" />
+        <u i="274" fpg="0" t="rep" n="5" s="1" m="1" loc="2" stack="1" h="0/854" />
+        <u i="275" fpg="0" t="rep" n="6" s="1" m="1" loc="2" stack="1" h="0/853" />
+        <u i="276" fpg="0" t="rep" n="7" s="1" m="1" loc="2" stack="1" h="0/895" />
+        <u i="277" fpg="0" t="rep" n="8" s="1" m="1" loc="2" stack="2" h="0/730" />
+        <u i="278" fpg="3" t="Airborne" n="1 Fsjr" s="1" m="3" loc="1" />
+        <u i="279" fpg="3" t="Airborne" n="2 Fsjr" s="1" m="3" loc="1" />
+        <u i="280" fpg="6" t="Airborne" n="7 Fsjr" s="1" m="3" loc="1" />
+        <u i="281" fpg="6" t="Airborne" n="22 Lnd" s="1" m="3" loc="1" />
+        <u i="282" fpg="5" t="Jet" n="" s="4" m="6" loc="1" />
+        <u i="283" fpg="0" t="JetSquadron" n="" s="5" m="6" loc="0" />
+        <u i="284" fpg="5" t="Interceptor" n="" s="5" m="6" loc="1" />
+        <u i="285" fpg="7" t="Flak" n="" s="5" m="6" loc="1" />
+        <u i="286" fpg="5" t="at" n="Air Trans" s="2" m="4" loc="1" />
+        <u i="287" fpg="0" t="at" n="Air Trans" s="1" m="4" loc="2" stack="1" h="0/814" />
+        <u i="291" fpg="7" t="SpyRing" n="Minor" s="1" m="6" loc="1" />
+        <u i="292" fpg="2" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="293" fpg="2" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="294" fpg="2" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="295" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" stack="2" h="0/935" />
+        <u i="296" fpg="0" t="sub" n="" s="1" m="6" loc="2" h="0/88" />
+        <u i="297" fpg="2" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="298" fpg="4" t="sub" n="" s="14" m="6" loc="1" />
+        <u i="299" fpg="5" t="Bomber" n="" s="10" m="6" loc="1" />
+        <u i="300" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" stack="3" h="0/730" />
+        <u i="301" fpg="4" t="Taskforce" n="2" s="1" m="6" loc="1" />
+        <u i="302" fpg="4" t="Taskforce" n="3" s="1" m="6" loc="1" />
+        <u i="303" fpg="4" t="Taskforce" n="4" s="1" m="6" loc="1" />
+        <u i="304" fpg="5" t="NAS" n="" s="8" m="3" loc="1" />
+        <u i="305" fpg="7" t="Information" n="Hex" s="1" m="6" loc="1" />
+        <u i="312" fpg="0" t="Turn" n="" s="1" m="6" loc="2" h="0/38" />
+        <u i="313" fpg="7" t="AtomicAttack" n="" s="1" m="6" loc="1" />
+        <u i="314" fpg="7" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="316" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1161" fpg="0" t="cv" n="G. Zeppelin" s="2" m="6" loc="3" />
+        <u i="1163" fpg="4" t="cv" n="Strasser" s="2" m="6" loc="1" />
+        <u i="1224" fpg="0" t="dd" n="" s="6" m="6" loc="4" />
+        <u i="1225" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="2" h="0/970" />
+        <u i="1227" fpg="0" t="aaf" n="" s="5" m="4" loc="2" h="0/891" />
+        <u i="1228" fpg="0" t="aaf" n="" s="10" m="4" loc="2" stack="3" h="0/935" />
+        <u i="1235" fpg="0" t="OilPlant" n="" s="1" m="6" loc="2" h="0/812" />
+        <u i="1236" fpg="0" t="OilPlant" n="" s="1" m="6" loc="2" stack="1" h="0/935" />
+        <u i="1387" fpg="7" t="Information" n="Econ" s="1" m="6" loc="1" />
+        <u i="1395" fpg="7" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1408" fpg="4" t="AdvSub" n="" s="4" m="6" loc="1" />
+        <u i="1409" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1410" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1411" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1412" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1445" fpg="7" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="1446" fpg="7" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="1447" fpg="7" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="1448" fpg="5" t="aaf" n="" s="10" m="4" loc="1" />
+        <u i="1413" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1449" fpg="7" t="Railhead" n="" s="1" m="6" loc="1" />
+        <u i="1450" fpg="7" t="Railhead" n="" s="1" m="6" loc="1" />
+        <u i="1451" fpg="7" t="Railhead" n="" s="1" m="6" loc="1" />
+        <u i="1461" fpg="4" t="cv" n="Europa" s="2" m="6" loc="1" />
+      </units>
+      <groupings>
+        <g i="2" n="Fall 39" />
+        <g i="3" n="Winter 39" />
+        <g i="4" n="Naval Builds" />
+        <g i="5" n="Air Builds" />
+        <g i="6" n="Ground Builds" />
+        <g i="7" n="Other Builds" />
+      </groupings>
+      <TF data="NMUx4qDzC4bHFip1olYdgv10FwpozmVRHTvRMzi51VNX5Hfk/hicXLdSvHKjdw+t" />
+    </c>
+    <c id="25" c="3" name="Greece" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="983" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="984" fpg="0" t="i" n="1 Gre" s="2" m="3" loc="1" />
+        <u i="985" fpg="0" t="i" n="2 Gre" s="2" m="3" loc="0" />
+        <u i="986" fpg="0" t="i" n="3 Gre" s="2" m="3" loc="0" />
+        <u i="987" fpg="0" t="i" n="4 Gre" s="2" m="3" loc="0" />
+        <u i="988" fpg="0" t="Cruiser" n="" s="2" m="6" loc="1" />
+        <u i="989" fpg="0" t="dd" n="" s="2" m="6" loc="1" />
+        <u i="1294" fpg="2" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1295" fpg="1" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1296" fpg="2" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1297" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1454" fpg="0" t="i" n="6" s="1" m="3" loc="1" />
+        <u i="1455" fpg="0" t="i" n="5" s="1" m="3" loc="1" />
+        <u i="1456" fpg="0" t="i" n="4" s="1" m="3" loc="1" />
+        <u i="1457" fpg="0" t="i" n="3" s="1" m="3" loc="1" />
+        <u i="1458" fpg="0" t="i" n="2" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="26" c="3" name="Hungary" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="990" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="991" fpg="0" t="i" n="Gyor" s="2" m="3" loc="1" />
+        <u i="992" fpg="0" t="i" n="1 Hun" s="1" m="3" loc="1" />
+        <u i="993" fpg="0" t="i" n="2 Hun" s="1" m="3" loc="1" />
+        <u i="994" fpg="0" t="i" n="3 Hun" s="1" m="3" loc="1" />
+        <u i="995" fpg="0" t="i" n="4 Hun" s="1" m="3" loc="1" />
+        <u i="996" fpg="0" t="i" n="5 Hun" s="1" m="3" loc="1" />
+        <u i="997" fpg="0" t="i" n="7 Hun" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="27" c="1" ally="0" name="India" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="998" fpg="0" t="i" n="1 Ind" s="2" m="3" loc="2" h="0/1997" />
+        <u i="999" fpg="0" t="i" n="2 Ind" s="2" m="2" loc="2" h="1/301" />
+        <u i="1000" fpg="0" t="i" n="3 Ind" s="2" m="2" loc="2" h="1/303" />
+        <u i="1001" fpg="0" t="i" n="Ceylon" s="2" m="2" loc="2" h="1/70" />
+        <u i="1002" fpg="0" t="i" n="B.Rifles" s="1" m="2" loc="2" h="1/390" />
+        <u i="1003" fpg="0" t="i" n="5 Ind" s="1" m="3" loc="2" h="0/1997" />
+        <u i="1004" fpg="0" t="i" n="14 Ind" s="1" m="2" loc="2" h="1/70" />
+        <u i="1005" fpg="0" t="i" n="17 Ind" s="1" m="2" loc="2" h="1/220" />
+        <u i="1006" fpg="1" t="i" n="33 Ind" s="2" m="2" loc="1" />
+        <u i="1007" fpg="1" t="i" n="25 Ind" s="1" m="2" loc="1" />
+        <u i="1008" fpg="1" t="i" n="26 Ind" s="1" m="3" loc="1" />
+        <u i="1009" fpg="1" t="i" n="39 Ind" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Grouping 1" />
+      </groupings>
+    </c>
+    <c id="33" c="1" ally="0" name="Iraq" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="1256" fpg="1" t="px" n="2 Iraq" s="1" m="3" loc="1" />
+        <u i="1345" fpg="1" t="px" n="1 Iraq" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="34" c="3" name="Ireland" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1023" fpg="1" t="px" n="2 IRA" s="1" m="3" loc="1" />
+        <u i="1346" fpg="1" t="px" n="1 IRA" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="3" c="0" name="Italy" dipstatus="9" dipstate="0" diplotext="">
+      <units>
+        <u i="317" fpg="0" t="b" n="Impero" s="4" m="6" loc="3" />
+        <u i="318" fpg="0" t="b" n="Littorio" s="4" m="6" loc="3" />
+        <u i="319" fpg="0" t="b" n="Roma" s="4" m="6" loc="3" />
+        <u i="320" fpg="0" t="b" n="Veneto" s="4" m="6" loc="3" />
+        <u i="321" fpg="4" t="b" n="Lepanto" s="4" m="6" loc="1" />
+        <u i="322" fpg="4" t="b" n="Napoli" s="4" m="6" loc="1" />
+        <u i="323" fpg="0" t="b" n="Cavour" s="3" m="6" loc="4" />
+        <u i="324" fpg="0" t="b" n="Doria" s="3" m="6" loc="4" />
+        <u i="325" fpg="0" t="b" n="Duilio" s="3" m="6" loc="4" />
+        <u i="326" fpg="4" t="b" n="Caracciolo" s="3" m="6" loc="1" />
+        <u i="327" fpg="0" t="b" n="Cesare" s="3" m="6" loc="4" />
+        <u i="328" fpg="4" t="b" n="Morosini" s="3" m="6" loc="1" />
+        <u i="329" fpg="4" t="b" n="Borgia" s="3" m="6" loc="1" />
+        <u i="330" fpg="4" t="b" n="Rienzi" s="3" m="6" loc="1" />
+        <u i="331" fpg="4" t="cv" n="Aquila" s="2" m="6" loc="1" />
+        <u i="332" fpg="4" t="cv" n="Sparviero" s="2" m="6" loc="1" />
+        <u i="333" fpg="4" t="cv" n="Baracca" s="2" m="6" loc="1" />
+        <u i="334" fpg="4" t="cv" n="Falcone" s="2" m="6" loc="1" />
+        <u i="335" fpg="4" t="Cruiser" n="" s="40" m="6" loc="1" />
+        <u i="336" fpg="0" t="Cruiser" n="" s="8" m="6" loc="0" />
+        <u i="337" fpg="4" t="dd" n="" s="60" m="6" loc="1" />
+        <u i="339" fpg="0" t="sub" n="" s="1" m="6" loc="2" stack="1" h="0/790" />
+        <u i="340" fpg="3" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="341" fpg="4" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="342" fpg="4" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="343" fpg="0" t="arm" n="Celere" s="2" m="5" loc="2" h="0/661" />
+        <u i="344" fpg="5" t="arm" n="Ariete" s="2" m="5" loc="1" />
+        <u i="345" fpg="5" t="arm" n="21" s="2" m="5" loc="1" />
+        <u i="346" fpg="5" t="arm" n="Littorio" s="2" m="5" loc="1" />
+        <u i="347" fpg="0" t="i" n="Alpini" s="3" m="3" loc="2" h="0/620" />
+        <u i="348" fpg="3" t="i" n="Trento" s="3" m="3" loc="1" />
+        <u i="349" fpg="5" t="i" n="CSIR" s="3" m="3" loc="1" />
+        <u i="350" fpg="5" t="i" n="Trieste" s="3" m="3" loc="1" />
+        <u i="351" fpg="5" t="i" n="25" s="3" m="3" loc="1" />
+        <u i="352" fpg="0" t="i" n="CN" s="2" m="3" loc="2" h="0/1078" />
+        <u i="353" fpg="0" t="i" n="3" s="2" m="3" loc="2" h="0/1119" />
+        <u i="354" fpg="3" t="i" n="5" s="2" m="3" loc="1" />
+        <u i="355" fpg="5" t="i" n="7" s="2" m="3" loc="1" />
+        <u i="356" fpg="5" t="i" n="10" s="2" m="3" loc="1" />
+        <u i="357" fpg="5" t="i" n="11" s="2" m="3" loc="1" />
+        <u i="358" fpg="0" t="i" n="Abyssinia" s="1" m="3" loc="2" h="0/1958" />
+        <u i="359" fpg="0" t="i" n="Eritria" s="1" m="3" loc="2" h="0/1958" />
+        <u i="360" fpg="0" t="i" n="Libya" s="1" m="3" loc="2" h="0/755" />
+        <u i="361" fpg="0" t="i" n="Somalia" s="1" m="3" loc="2" h="0/1958" />
+        <u i="362" fpg="0" t="i" n="1" s="1" m="3" loc="2" h="0/1080" />
+        <u i="363" fpg="3" t="i" n="4" s="1" m="3" loc="1" />
+        <u i="364" fpg="3" t="i" n="8" s="1" m="3" loc="1" />
+        <u i="365" fpg="3" t="i" n="9" s="1" m="3" loc="1" />
+        <u i="366" fpg="5" t="i" n="14" s="1" m="3" loc="1" />
+        <u i="367" fpg="5" t="i" n="15" s="1" m="3" loc="1" />
+        <u i="368" fpg="5" t="Airborne" n="Folgore" s="1" m="3" loc="1" />
+        <u i="369" fpg="0" t="rep" n="1" s="1" m="1" loc="2" h="0/878" />
+        <u i="370" fpg="0" t="rep" n="2" s="1" m="1" loc="2" h="0/878" />
+        <u i="371" fpg="0" t="rep" n="3" s="1" m="1" loc="2" stack="1" h="0/745" />
+        <u i="372" fpg="0" t="rep" n="4" s="1" m="1" loc="2" h="0/785" />
+        <u i="373" fpg="0" t="rep" n="5" s="1" m="1" loc="2" h="0/827" />
+        <u i="374" fpg="0" t="rep" n="6" s="1" m="1" loc="2" h="0/831" />
+        <u i="375" fpg="5" t="aaf" n="" s="5" m="4" loc="1" />
+        <u i="376" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="2" h="0/745" />
+        <u i="380" fpg="0" t="NAS" n="" s="1" m="3" loc="2" h="0/751" />
+        <u i="381" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" h="0/751" />
+        <u i="382" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="383" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" stack="2" h="0/790" />
+        <u i="384" fpg="0" t="Taskforce" n="2" s="1" m="6" loc="2" h="0/867" />
+        <u i="385" fpg="5" t="Taskforce" n="3" s="1" m="6" loc="1" />
+        <u i="386" fpg="5" t="Taskforce" n="4" s="1" m="6" loc="1" />
+        <u i="391" fpg="5" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1222" fpg="0" t="dd" n="" s="9" m="6" loc="4" />
+        <u i="1223" fpg="0" t="Cruiser" n="" s="2" m="6" loc="4" />
+        <u i="1269" fpg="7" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1270" fpg="7" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1271" fpg="6" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1325" fpg="6" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1393" fpg="5" t="NAS" n="" s="6" m="3" loc="1" />
+        <u i="1394" fpg="5" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1443" fpg="0" t="Cruiser" n="" s="10" m="6" loc="4" />
+      </units>
+      <groupings>
+        <g i="3" n="Fall 39" />
+        <g i="4" n="Naval Builds" />
+        <g i="5" n="Other Builds" />
+        <g i="6" n="Partisans" />
+        <g i="7" n="Production Partisans" />
+      </groupings>
+      <TF data="Kpk8Jm6lCloD8GiRyfR2q80b05kLrmfj3gxiQNpVv8QzOuPCQP6MuumJWXNklb9aPOvcQuVNZLUTQ3dIqXbOoP5QAp6jaGdo" />
+    </c>
+    <c id="4" c="0" name="Japan" dipstatus="9" dipstate="0" diplotext="">
+      <codebreaking blank="6" sub="1" tactical="1" />
+      <units>
+        <u i="392" fpg="0" t="b" n="Musashi" s="5" m="6" loc="3" />
+        <u i="393" fpg="0" t="b" n="Yamato" s="5" m="6" loc="3" />
+        <u i="394" fpg="4" t="b" n="Hizen" s="5" m="6" loc="1" />
+        <u i="395" fpg="4" t="b" n="Kii" s="5" m="6" loc="1" />
+        <u i="396" fpg="4" t="b" n="Owarii" s="5" m="6" loc="1" />
+        <u i="397" fpg="4" t="b" n="Satsuma" s="5" m="6" loc="1" />
+        <u i="398" fpg="0" t="b" n="Mutsu" s="4" m="6" loc="4" slow="1" />
+        <u i="399" fpg="0" t="b" n="Nagato" s="4" m="6" loc="4" slow="1" />
+        <u i="400" fpg="4" t="b" n="Tosa" s="4" m="6" loc="1" />
+        <u i="401" fpg="4" t="b" n="Tsushima" s="4" m="6" loc="1" />
+        <u i="402" fpg="0" t="b" n="Fuso" s="3" m="6" loc="4" slow="1" />
+        <u i="403" fpg="0" t="b" n="Hyuga" s="3" m="6" loc="4" slow="1" />
+        <u i="404" fpg="0" t="b" n="Ise" s="3" m="6" loc="4" slow="1" />
+        <u i="405" fpg="0" t="b" n="Yamashiro" s="3" m="6" loc="4" slow="1" />
+        <u i="406" fpg="0" t="bc" n="Haruna" s="3" m="6" loc="4" />
+        <u i="407" fpg="0" t="bc" n="Hiei" s="3" m="6" loc="4" />
+        <u i="408" fpg="0" t="bc" n="Kirishima" s="3" m="6" loc="4" />
+        <u i="409" fpg="0" t="bc" n="Kongo" s="3" m="6" loc="4" />
+        <u i="410" fpg="4" t="bc" n="Aki" s="3" m="6" loc="1" />
+        <u i="411" fpg="4" t="bc" n="Hakata" s="3" m="6" loc="1" />
+        <u i="412" fpg="4" t="bc" n="Kurama" s="2" m="6" loc="1" />
+        <u i="413" fpg="4" t="bc" n="Tokiwa" s="3" m="6" loc="1" />
+        <u i="414" fpg="4" t="cv" n="Shinano" s="4" m="6" loc="1" />
+        <u i="415" fpg="4" t="cv" n="Koryu" s="4" m="6" loc="1" />
+        <u i="416" fpg="4" t="cv" n="Yatagarasu" s="4" m="6" loc="1" />
+        <u i="417" fpg="4" t="cv" n="Yurei" s="4" m="6" loc="1" />
+        <u i="418" fpg="0" t="cv" n="Akagi" s="3" m="6" loc="4" />
+        <u i="419" fpg="0" t="cv" n="Kaga" s="3" m="6" loc="4" />
+        <u i="420" fpg="0" t="cv" n="Soryu" s="3" m="6" loc="4" />
+        <u i="421" fpg="0" t="cv" n="Shokaku" s="3" m="6" loc="3" />
+        <u i="422" fpg="0" t="cv" n="Zuikaku" s="3" m="6" loc="3" />
+        <u i="423" fpg="0" t="cv" n="Hiryu" s="3" m="6" loc="3" />
+        <u i="424" fpg="4" t="cv" n="Amagi" s="3" m="6" loc="1" />
+        <u i="425" fpg="4" t="cv" n="Kasagi" s="3" m="6" loc="1" />
+        <u i="426" fpg="4" t="cv" n="Taiho" s="3" m="6" loc="1" />
+        <u i="427" fpg="4" t="cv" n="Unryu" s="3" m="6" loc="1" />
+        <u i="428" fpg="0" t="cv" n="Ryujo" s="2" m="6" loc="4" />
+        <u i="429" fpg="0" t="cv" n="Zuiho" s="2" m="6" loc="4" />
+        <u i="430" fpg="4" t="cv" n="Chitose" s="2" m="6" loc="1" />
+        <u i="431" fpg="4" t="cv" n="Chiyoda" s="2" m="6" loc="1" />
+        <u i="432" fpg="4" t="cv" n="Hiyo" s="2" m="6" loc="1" />
+        <u i="433" fpg="4" t="cv" n="Junyo" s="2" m="6" loc="1" />
+        <u i="434" fpg="4" t="cv" n="Ryuho" s="2" m="6" loc="1" />
+        <u i="435" fpg="4" t="cv" n="Shoho" s="2" m="6" loc="1" />
+        <u i="436" fpg="4" t="Cruiser" n="" s="40" m="6" loc="1" />
+        <u i="438" fpg="0" t="Cruiser" n="" s="2" m="6" loc="3" />
+        <u i="439" fpg="4" t="dd" n="" s="60" m="6" loc="1" />
+        <u i="441" fpg="0" t="sub" n="" s="1" m="6" loc="2" h="1/1106" />
+        <u i="442" fpg="3" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="443" fpg="5" t="aaf" n="" s="10" m="4" loc="1" />
+        <u i="444" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="2" h="1/571" />
+        <u i="445" fpg="0" t="EliteNAS" n="" s="1" m="3" loc="4" />
+        <u i="446" fpg="3" t="EliteNAS" n="" s="2" m="3" loc="1" />
+        <u i="447" fpg="5" t="EliteNAS" n="" s="45" m="3" loc="1" />
+        <u i="448" fpg="5" t="NAS" n="" s="25" m="3" loc="1" />
+        <u i="449" fpg="0" t="AAS_Search" n="" s="15" m="3" loc="0" />
+        <u i="450" fpg="0" t="AAS_Cover" n="" s="15" m="3" loc="0" />
+        <u i="451" fpg="0" t="AAS_Attack" n="" s="15" m="3" loc="0" />
+        <u i="452" fpg="5" t="at" n="Air Trans" s="3" m="4" loc="1" />
+        <u i="453" fpg="3" t="Airborne" n="1 Abn" s="1" m="2" loc="1" />
+        <u i="454" fpg="6" t="Airborne" n="2 Abn" s="1" m="3" loc="1" />
+        <u i="455" fpg="6" t="arm" n="1 Imp" s="3" m="3" loc="1" />
+        <u i="456" fpg="6" t="arm" n="2 Imp" s="3" m="3" loc="1" />
+        <u i="457" fpg="6" t="arm" n="Tora" s="3" m="3" loc="1" />
+        <u i="458" fpg="0" t="arm" n="3 Kwan" s="2" m="3" loc="2" stack="2" h="1/569" />
+        <u i="1167" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="3" h="1/569" />
+        <u i="459" fpg="0" t="arm" n="5 Kwan" s="2" m="3" loc="2" stack="2" h="1/610" />
+        <u i="461" fpg="0" t="arm" n="15 Kwan" s="1" m="3" loc="2" h="1/610" />
+        <u i="462" fpg="0" t="arm" n="23 Kwan" s="1" m="3" loc="2" stack="2" h="1/649" />
+        <u i="464" fpg="0" t="i" n="Imp Gd" s="3" m="2" loc="2" stack="6" h="1/539" />
+        <u i="465" fpg="0" t="i" n="1 Kwan" s="3" m="2" loc="2" stack="1" h="1/689" />
+        <u i="466" fpg="0" t="i" n="8 Kwan" s="3" m="2" loc="2" stack="1" h="1/687" />
+        <u i="467" fpg="0" t="i" n="10 Kwan" s="3" m="2" loc="2" stack="1" h="1/649" />
+        <u i="468" fpg="0" t="i" n="2" s="3" m="2" loc="2" stack="6" h="1/617" />
+        <u i="469" fpg="3" t="i" n="15" s="3" m="2" loc="1" />
+        <u i="470" fpg="3" t="i" n="16" s="3" m="2" loc="1" />
+        <u i="471" fpg="3" t="i" n="17" s="3" m="2" loc="1" />
+        <u i="472" fpg="6" t="i" n="18" s="3" m="2" loc="1" />
+        <u i="473" fpg="6" t="i" n="19" s="3" m="2" loc="1" />
+        <u i="474" fpg="6" t="i" n="20" s="3" m="2" loc="1" />
+        <u i="475" fpg="6" t="i" n="26" s="3" m="2" loc="1" />
+        <u i="476" fpg="6" t="i" n="33" s="3" m="2" loc="1" />
+        <u i="477" fpg="6" t="i" n="35" s="3" m="2" loc="1" />
+        <u i="478" fpg="6" t="i" n="36" s="3" m="2" loc="1" />
+        <u i="479" fpg="6" t="i" n="38" s="3" m="2" loc="1" />
+        <u i="480" fpg="6" t="i" n="41" s="3" m="2" loc="1" />
+        <u i="481" fpg="6" t="i" n="51" s="3" m="2" loc="1" />
+        <u i="482" fpg="6" t="i" n="55" s="3" m="2" loc="1" />
+        <u i="483" fpg="6" t="i" n="56" s="3" m="2" loc="1" />
+        <u i="484" fpg="0" t="i" n="9 Kwan" s="2" m="2" loc="2" stack="1" h="1/566" />
+        <u i="485" fpg="0" t="i" n="14 Kwan" s="2" m="2" loc="2" stack="1" h="1/688" />
+        <u i="486" fpg="0" t="i" n="24 Kwan" s="2" m="2" loc="2" stack="1" h="1/727" />
+        <u i="487" fpg="0" t="i" n="3" s="2" m="2" loc="2" h="1/494" />
+        <u i="488" fpg="0" t="i" n="5" s="2" m="2" loc="2" stack="1" h="1/614" />
+        <u i="489" fpg="0" t="i" n="6" s="2" m="2" loc="2" stack="1" h="1/574" />
+        <u i="490" fpg="0" t="i" n="13" s="2" m="2" loc="2" h="1/450" />
+        <u i="491" fpg="0" t="i" n="21" s="2" m="2" loc="2" h="1/493" />
+        <u i="492" fpg="0" t="i" n="22" s="2" m="2" loc="2" stack="5" h="1/617" />
+        <u i="493" fpg="0" t="i" n="34" s="2" m="2" loc="2" stack="5" h="1/539" />
+        <u i="494" fpg="6" t="i" n="40" s="2" m="2" loc="1" />
+        <u i="495" fpg="6" t="i" n="62" s="2" m="2" loc="1" />
+        <u i="496" fpg="6" t="i" n="104" s="2" m="2" loc="1" />
+        <u i="497" fpg="6" t="i" n="110" s="2" m="2" loc="1" />
+        <u i="498" fpg="6" t="i" n="116" s="2" m="2" loc="1" />
+        <u i="499" fpg="0" t="i" n="11 Kwan" s="1" m="2" loc="2" h="1/607" />
+        <u i="500" fpg="0" t="i" n="25 Kwan" s="1" m="2" loc="2" h="1/568" />
+        <u i="501" fpg="0" t="i" n="57 Kwan" s="1" m="2" loc="2" stack="1" h="1/609" />
+        <u i="502" fpg="0" t="i" n="4" s="1" m="2" loc="2" stack="2" h="1/617" />
+        <u i="503" fpg="0" t="i" n="12" s="1" m="2" loc="2" stack="3" h="1/617" />
+        <u i="504" fpg="0" t="i" n="23" s="1" m="2" loc="2" stack="4" h="1/617" />
+        <u i="505" fpg="0" t="i" n="27" s="1" m="2" loc="2" stack="1" h="1/533" />
+        <u i="506" fpg="0" t="i" n="28" s="1" m="2" loc="2" stack="1" h="1/491" />
+        <u i="507" fpg="0" t="i" n="29" s="1" m="2" loc="2" stack="2" h="1/539" />
+        <u i="508" fpg="0" t="i" n="30" s="1" m="2" loc="2" stack="3" h="1/539" />
+        <u i="509" fpg="0" t="i" n="31" s="1" m="2" loc="2" stack="4" h="1/539" />
+        <u i="510" fpg="0" t="i" n="32" s="1" m="2" loc="2" stack="1" h="1/492" />
+        <u i="511" fpg="0" t="i" n="37" s="1" m="2" loc="2" stack="1" h="1/534" />
+        <u i="512" fpg="0" t="i" n="39" s="1" m="2" loc="2" h="1/613" />
+        <u i="513" fpg="0" t="i" n="46" s="1" m="2" loc="2" h="1/573" />
+        <u i="514" fpg="0" t="i" n="47" s="1" m="2" loc="2" h="1/489" />
+        <u i="515" fpg="0" t="i" n="48" s="1" m="2" loc="2" h="1/490" />
+        <u i="516" fpg="0" t="i" n="52" s="1" m="2" loc="2" h="1/572" />
+        <u i="517" fpg="0" t="i" n="53" s="1" m="2" loc="2" h="1/532" />
+        <u i="518" fpg="0" t="i" n="54" s="1" m="2" loc="2" h="1/531" />
+        <u i="519" fpg="6" t="i" n="58" s="1" m="2" loc="1" />
+        <u i="520" fpg="6" t="i" n="59" s="1" m="2" loc="1" />
+        <u i="521" fpg="6" t="i" n="60" s="1" m="2" loc="1" />
+        <u i="522" fpg="6" t="i" n="61" s="1" m="2" loc="1" />
+        <u i="523" fpg="6" t="i" n="63" s="1" m="2" loc="1" />
+        <u i="524" fpg="6" t="i" n="64" s="1" m="2" loc="1" />
+        <u i="525" fpg="6" t="i" n="65" s="1" m="2" loc="1" />
+        <u i="526" fpg="6" t="i" n="68" s="1" m="2" loc="1" />
+        <u i="527" fpg="6" t="i" n="69" s="1" m="2" loc="1" />
+        <u i="528" fpg="6" t="i" n="70" s="1" m="2" loc="1" />
+        <u i="529" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="530" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="531" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" stack="1" h="1/569" />
+        <u i="532" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" h="1/852" />
+        <u i="533" fpg="0" t="Taskforce" n="2" s="1" m="6" loc="2" h="1/812" />
+        <u i="534" fpg="0" t="Taskforce" n="3" s="1" m="6" loc="2" h="1/772" />
+        <u i="535" fpg="0" t="Taskforce" n="4" s="1" m="6" loc="2" h="1/733" />
+        <u i="536" fpg="0" t="Taskforce" n="5" s="1" m="6" loc="2" h="1/813" />
+        <u i="537" fpg="4" t="Taskforce" n="6" s="1" m="6" loc="1" />
+        <u i="538" fpg="4" t="Taskforce" n="7" s="1" m="6" loc="1" />
+        <u i="539" fpg="4" t="Taskforce" n="8" s="1" m="6" loc="1" />
+        <u i="540" fpg="4" t="Taskforce" n="9" s="1" m="6" loc="1" />
+        <u i="541" fpg="4" t="Taskforce" n="10" s="1" m="6" loc="1" />
+        <u i="542" fpg="4" t="Taskforce" n="11" s="1" m="6" loc="1" />
+        <u i="543" fpg="4" t="Taskforce" n="12" s="1" m="6" loc="1" />
+        <u i="544" fpg="4" t="ASW" n="" s="15" m="6" loc="1" />
+        <u i="545" fpg="0" t="Marine" n="1 SNLF" s="1" m="2" loc="2" stack="2" h="1/614" />
+        <u i="546" fpg="6" t="Marine" n="2 SNLF" s="1" m="2" loc="1" />
+        <u i="547" fpg="6" t="Marine" n="5 Smri" s="1" m="2" loc="1" />
+        <u i="549" fpg="4" t="tr" n="" s="3" m="6" loc="1" />
+        <u i="553" fpg="0" t="BridgeHead" n="" s="1" m="6" loc="2" stack="1" h="1/617" />
+        <u i="554" fpg="0" t="BridgeHead" n="" s="1" m="6" loc="2" stack="1" h="1/539" />
+        <u i="555" fpg="7" t="Port" n="" s="1" m="6" loc="1" />
+        <u i="556" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="557" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="558" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="559" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="560" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="561" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="562" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="563" fpg="7" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="1188" fpg="0" t="Cruiser" n="" s="20" m="6" loc="4" />
+        <u i="1189" fpg="0" t="dd" n="" s="10" m="6" loc="4" />
+        <u i="1190" fpg="0" t="EliteNAS" n="" s="3" m="3" loc="4" />
+        <u i="1191" fpg="0" t="tr" n="" s="18" m="6" loc="0" />
+        <u i="1192" fpg="0" t="dd" n="" s="1" m="6" loc="2" h="1/612" />
+        <u i="1193" fpg="0" t="dd" n="" s="1" m="6" loc="2" stack="1" h="1/571" />
+        <u i="1194" fpg="3" t="arm" n="14" s="2" m="3" loc="1" />
+        <u i="1195" fpg="3" t="arm" n="Bicycle" s="1" m="3" loc="1" />
+        <u i="1196" fpg="0" t="dd" n="" s="2" m="6" loc="0" />
+        <u i="1197" fpg="0" t="Cruiser" n="" s="6" m="6" loc="4" />
+        <u i="1198" fpg="0" t="Cruiser" n="" s="8" m="6" loc="0" />
+        <u i="1199" fpg="0" t="Cruiser" n="" s="8" m="6" loc="0" />
+        <u i="1396" fpg="7" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1414" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1415" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1416" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1417" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1418" fpg="7" t="BeachDefense" n="" s="1" m="6" loc="1" />
+        <u i="1437" fpg="0" t="tr" n="" s="20" m="6" loc="2" h="1/1843" />
+        <u i="1459" fpg="0" t="EliteNAS" n="" s="3" m="3" loc="4" />
+        <u i="1460" fpg="0" t="EliteNAS" n="" s="3" m="3" loc="4" />
+      </units>
+      <groupings>
+        <g i="3" n="Fall 39" />
+        <g i="4" n="Naval Builds" />
+        <g i="5" n="Air Builds" />
+        <g i="6" n="Ground Builds" />
+        <g i="7" n="Additional Counters" />
+      </groupings>
+      <TF data="r9fOGoU2kBAIr4Bl4ZlOkW/LC9BV01Fj2rSy5vqblUnBrs2dQNnngtLShOFjx8m8KFd8g1n0rp6vGsPW0E3DCx39umtN5Z8b2w4M+TpTkRHXwSqaHiAQSKpkCn8u+zpayDZ3UaQmxK8vTLFXdkyBgqLx8sM43/ls/3APlz3M5DFRlkDq1+7I0Pql8rE6MaThD+jbb9eSFFGtm02O3QuvMIPM9L/MQ5DMNK3sW+tzghz4XadeQOdBedd1Y+zjbu1O" />
+    </c>
+    <c id="35" c="3" ally="43" name="Java" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="36" c="0" ally="4" name="Korea" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="37" c="1" ally="0" name="Kuwait" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="38" c="1" ally="1" name="Lebanon" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="39" c="3" ally="3" name="Libya" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="40" c="1" ally="0" name="Malaya" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="41" c="1" ally="1" name="Morocco" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="42" c="1" ally="6" name="Nationalist China" dipstatus="9" dipstate="0" diplotext="">
+      <units>
+        <u i="1024" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" h="1/415" />
+        <u i="1025" fpg="0" t="i" n="1" s="2" m="2" loc="2" h="1/535" />
+        <u i="1026" fpg="0" t="i" n="5" s="2" m="2" loc="2" h="1/495" />
+        <u i="1027" fpg="0" t="i" n="6" s="2" m="2" loc="2" h="1/454" />
+        <u i="1028" fpg="0" t="i" n="8" s="2" m="2" loc="2" h="1/453" />
+        <u i="1029" fpg="0" t="i" n="15" s="2" m="2" loc="2" h="1/535" />
+        <u i="1030" fpg="0" t="i" n="19" s="2" m="2" loc="2" h="1/495" />
+        <u i="1031" fpg="0" t="i" n="20" s="2" m="2" loc="2" h="1/454" />
+        <u i="1032" fpg="0" t="i" n="21" s="2" m="2" loc="2" h="1/453" />
+        <u i="1033" fpg="0" t="i" n="22" s="1" m="2" loc="2" h="1/537" />
+        <u i="1034" fpg="0" t="i" n="23" s="1" m="2" loc="2" h="1/576" />
+        <u i="1035" fpg="0" t="i" n="27" s="1" m="2" loc="2" h="1/577" />
+        <u i="1036" fpg="0" t="i" n="28" s="1" m="2" loc="2" h="1/577" />
+        <u i="1037" fpg="0" t="i" n="29" s="1" m="2" loc="2" h="1/536" />
+        <u i="1038" fpg="0" t="i" n="30" s="1" m="2" loc="2" h="1/498" />
+        <u i="1039" fpg="0" t="i" n="31" s="1" m="2" loc="2" h="1/615" />
+        <u i="1040" fpg="0" t="i" n="32" s="1" m="2" loc="2" h="1/575" />
+        <u i="1041" fpg="2" t="i" n="35" s="1" m="2" loc="1" />
+        <u i="1042" fpg="2" t="i" n="37" s="1" m="2" loc="1" />
+        <u i="1043" fpg="3" t="i" n="66" s="1" m="2" loc="1" />
+        <u i="1044" fpg="3" t="i" n="77" s="1" m="2" loc="1" />
+        <u i="1178" fpg="0" t="rep" n="1" s="1" m="1" loc="2" h="1/538" />
+        <u i="1179" fpg="0" t="rep" n="2" s="1" m="1" loc="2" h="1/420" />
+        <u i="1180" fpg="0" t="rep" n="3" s="1" m="1" loc="2" h="1/419" />
+        <u i="1181" fpg="0" t="rep" n="4" s="1" m="1" loc="2" h="1/379" />
+        <u i="1182" fpg="0" t="rep" n="5" s="1" m="1" loc="2" h="1/655" />
+        <u i="1183" fpg="0" t="rep" n="6" s="1" m="1" loc="2" h="1/616" />
+        <u i="1184" fpg="0" t="rep" n="7" s="1" m="1" loc="2" h="1/578" />
+        <u i="1185" fpg="0" t="rep" n="8" s="1" m="1" loc="2" h="1/579" />
+        <u i="1186" fpg="0" t="rep" n="9" s="1" m="1" loc="2" h="1/499" />
+        <u i="1187" fpg="0" t="rep" n="10" s="1" m="1" loc="2" h="1/500" />
+        <u i="1278" fpg="1" t="pw" n="2" s="1" m="2" loc="1" />
+        <u i="1279" fpg="1" t="pw" n="1" s="1" m="2" loc="1" />
+        <u i="1403" fpg="4" t="AVG" n="AVG" s="2" m="4" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Fall 39" />
+        <g i="2" n="Spring 40" />
+        <g i="3" n="Spring 41" />
+        <g i="4" n="FlyingTigers" />
+      </groupings>
+    </c>
+    <c id="43" c="3" name="Netherlands" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1047" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="1048" fpg="0" t="i" n="1 Neth" s="2" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="44" c="3" name="Norway" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1058" fpg="0" t="i" n="1 Nor" s="1" m="3" loc="1" />
+        <u i="1059" fpg="0" t="i" n="2 Nor" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="45" c="1" ally="0" name="Palestine" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="46" c="3" name="Persia" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1061" fpg="1" t="px" n="2 Persia" s="1" m="3" loc="1" />
+        <u i="1347" fpg="1" t="px" n="1 Persia" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="47" c="3" ally="6" name="Philipines" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="1062" fpg="0" t="i" n="1 Fil" s="1" m="2" loc="2" h="1/661" />
+        <u i="1063" fpg="0" t="i" n="2 Fil" s="1" m="2" loc="2" h="1/703" />
+      </units>
+    </c>
+    <c id="48" c="1" ally="0" name="Poland" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="1064" fpg="0" t="aaf" n="" s="1" m="4" loc="2" stack="2" h="0/1054" />
+        <u i="1065" fpg="0" t="i" n="Pomorze" s="2" m="3" loc="2" h="0/1013" />
+        <u i="1066" fpg="0" t="i" n="Poznan" s="2" m="3" loc="2" h="0/1013" />
+        <u i="1067" fpg="0" t="i" n="Lodz" s="2" m="3" loc="2" stack="2" h="0/1014" />
+        <u i="1068" fpg="0" t="i" n="Grodno" s="1" m="3" loc="2" stack="1" h="0/1014" />
+        <u i="1069" fpg="0" t="i" n="Karpaty" s="1" m="3" loc="2" h="0/974" />
+        <u i="1070" fpg="0" t="i" n="Krakow" s="1" m="3" loc="2" h="0/1053" />
+        <u i="1071" fpg="0" t="i" n="Modin" s="1" m="3" loc="2" stack="1" h="0/1054" />
+        <u i="1072" fpg="0" t="i" n="Narew" s="1" m="3" loc="2" h="0/1055" />
+        <u i="1073" fpg="0" t="i" n="Prusy" s="1" m="3" loc="2" h="0/973" />
+        <u i="1074" fpg="0" t="i" n="Wyszkow" s="1" m="3" loc="2" h="0/972" />
+        <u i="1168" fpg="0" t="aaf" n="" s="1" m="4" loc="2" h="0/1013" />
+        <u i="1298" fpg="2" t="pw" n="4" s="1" m="3" loc="1" />
+        <u i="1299" fpg="2" t="pw" n="3" s="1" m="3" loc="1" />
+        <u i="1300" fpg="1" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1301" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="49" c="3" name="Portugal" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="50" c="3" name="Rumania" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1075" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="1076" fpg="0" t="i" n="3 Rum" s="2" m="3" loc="1" />
+        <u i="1077" fpg="0" t="i" n="4 Rum" s="2" m="3" loc="1" />
+        <u i="1078" fpg="0" t="i" n="Rosiori" s="1" m="3" loc="1" />
+        <u i="1079" fpg="0" t="i" n="Vanatori" s="1" m="3" loc="1" />
+        <u i="1080" fpg="0" t="i" n="2 Rum" s="1" m="3" loc="1" />
+        <u i="1081" fpg="0" t="i" n="5 Rum" s="1" m="3" loc="1" />
+        <u i="1082" fpg="0" t="i" n="6 Rum" s="1" m="3" loc="1" />
+        <u i="1083" fpg="0" t="i" n="7 Rum" s="1" m="3" loc="1" />
+        <u i="1084" fpg="0" t="dd" n="" s="2" m="6" loc="1" />
+      </units>
+    </c>
+    <c id="5" c="4" name="Russia" dipstatus="9" dipstate="0" diplotext="">
+      <units>
+        <u i="567" fpg="0" t="aaf" n="" s="5" m="4" loc="2" stack="2" h="0/1295" />
+        <u i="1229" fpg="0" t="aaf" n="" s="5" m="4" loc="2" h="0/1327" />
+        <u i="568" fpg="4" t="arm" n="1 GdsTk" s="5" m="6" loc="1" />
+        <u i="569" fpg="4" t="arm" n="2 GdsTk" s="5" m="6" loc="1" />
+        <u i="570" fpg="4" t="arm" n="3 GdsTk" s="5" m="6" loc="1" />
+        <u i="571" fpg="4" t="arm" n="4 GdsTk" s="5" m="6" loc="1" />
+        <u i="572" fpg="4" t="arm" n="5 GdsTk" s="5" m="6" loc="1" />
+        <u i="573" fpg="4" t="arm" n="6 GdsTk" s="5" m="6" loc="1" />
+        <u i="574" fpg="4" t="arm" n="1 Tk" s="4" m="5" loc="1" />
+        <u i="575" fpg="4" t="arm" n="2 Tk" s="4" m="5" loc="1" />
+        <u i="576" fpg="4" t="arm" n="3 Tk" s="4" m="5" loc="1" />
+        <u i="577" fpg="4" t="arm" n="4 Tk" s="4" m="5" loc="1" />
+        <u i="578" fpg="4" t="arm" n="5 Tk" s="4" m="5" loc="1" />
+        <u i="579" fpg="4" t="arm" n="6 Tk" s="4" m="5" loc="1" />
+        <u i="580" fpg="0" t="arm" n="1 Mech" s="3" m="5" loc="2" h="0/1176" />
+        <u i="581" fpg="0" t="arm" n="3 Mech" s="3" m="5" loc="2" h="0/1172" />
+        <u i="582" fpg="0" t="arm" n="4 Mech" s="3" m="5" loc="2" h="0/1209" />
+        <u i="583" fpg="1" t="arm" n="6 Mech" s="3" m="5" loc="1" />
+        <u i="584" fpg="1" t="arm" n="7 Mech" s="3" m="5" loc="1" />
+        <u i="585" fpg="1" t="arm" n="8 Mech" s="3" m="5" loc="1" />
+        <u i="588" fpg="0" t="i" n="4" s="1" m="3" loc="2" h="0/1169" />
+        <u i="589" fpg="0" t="i" n="9" s="1" m="3" loc="2" h="0/1132" />
+        <u i="590" fpg="0" t="i" n="10" s="1" m="3" loc="2" stack="2" h="0/1164" />
+        <u i="591" fpg="0" t="i" n="11" s="1" m="3" loc="2" h="0/1171" />
+        <u i="592" fpg="0" t="i" n="12" s="1" m="3" loc="2" h="0/1170" />
+        <u i="593" fpg="0" t="i" n="19" s="1" m="3" loc="2" h="0/1302" />
+        <u i="594" fpg="0" t="i" n="20" s="1" m="3" loc="2" h="0/1167" />
+        <u i="595" fpg="0" t="i" n="23" s="1" m="3" loc="2" h="0/1168" />
+        <u i="596" fpg="0" t="i" n="24" s="1" m="3" loc="2" h="0/1133" />
+        <u i="597" fpg="0" t="i" n="26" s="1" m="3" loc="2" h="0/1134" />
+        <u i="598" fpg="0" t="i" n="31" s="1" m="3" loc="2" h="0/1135" />
+        <u i="599" fpg="0" t="i" n="17Sib" s="1" m="2" loc="2" h="1/567" />
+        <u i="600" fpg="0" t="i" n="25Sib" s="1" m="2" loc="2" h="1/448" />
+        <u i="601" fpg="0" t="i" n="35Sib" s="1" m="2" loc="2" h="1/449" />
+        <u i="602" fpg="0" t="i" n="36Sib" s="1" m="2" loc="2" h="1/843" />
+        <u i="603" fpg="1" t="i" n="33" s="1" m="3" loc="1" />
+        <u i="604" fpg="1" t="i" n="44" s="1" m="3" loc="1" />
+        <u i="605" fpg="1" t="i" n="59" s="1" m="3" loc="1" />
+        <u i="606" fpg="1" t="i" n="62" s="1" m="3" loc="1" />
+        <u i="607" fpg="1" t="i" n="67" s="1" m="3" loc="1" />
+        <u i="608" fpg="0" t="i" n="3" s="2" m="3" loc="2" h="0/1219" />
+        <u i="609" fpg="0" t="i" n="5" s="2" m="3" loc="2" h="0/1220" />
+        <u i="610" fpg="0" t="i" n="7" s="2" m="3" loc="2" h="0/1178" />
+        <u i="611" fpg="0" t="i" n="8" s="2" m="3" loc="2" h="0/1177" />
+        <u i="612" fpg="0" t="i" n="22" s="2" m="3" loc="2" h="0/1126" />
+        <u i="613" fpg="0" t="i" n="1Sib" s="2" m="2" loc="2" h="1/488" />
+        <u i="614" fpg="0" t="i" n="2Sib" s="2" m="2" loc="2" h="1/527" />
+        <u i="615" fpg="0" t="i" n="15Sib" s="2" m="2" loc="2" h="1/526" />
+        <u i="616" fpg="0" t="i" n="16Sib" s="2" m="2" loc="2" h="1/728" />
+        <u i="617" fpg="1" t="i" n="43" s="2" m="3" loc="1" />
+        <u i="618" fpg="1" t="i" n="48" s="2" m="3" loc="1" />
+        <u i="619" fpg="1" t="i" n="49" s="2" m="3" loc="1" />
+        <u i="620" fpg="1" t="i" n="50" s="2" m="3" loc="1" />
+        <u i="621" fpg="1" t="i" n="69" s="2" m="3" loc="1" />
+        <u i="622" fpg="0" t="i" n="18" s="3" m="3" loc="2" h="0/1165" />
+        <u i="623" fpg="0" t="i" n="21" s="3" m="3" loc="2" h="0/1136" />
+        <u i="624" fpg="4" t="i" n="27" s="3" m="3" loc="1" />
+        <u i="625" fpg="4" t="i" n="28" s="3" m="3" loc="1" />
+        <u i="626" fpg="0" t="i" n="39Sib" s="3" m="3" loc="2" h="1/365" />
+        <u i="627" fpg="0" t="i" n="53Sib" s="3" m="3" loc="2" h="1/728" />
+        <u i="628" fpg="1" t="i" n="6" s="3" m="3" loc="1" />
+        <u i="629" fpg="1" t="i" n="13" s="3" m="3" loc="1" />
+        <u i="630" fpg="4" t="i" n="37" s="3" m="3" loc="1" />
+        <u i="631" fpg="4" t="i" n="38" s="3" m="3" loc="1" />
+        <u i="632" fpg="4" t="i" n="40" s="3" m="3" loc="1" />
+        <u i="633" fpg="4" t="i" n="46" s="3" m="3" loc="1" />
+        <u i="634" fpg="4" t="i" n="47" s="3" m="3" loc="1" />
+        <u i="635" fpg="4" t="i" n="51" s="3" m="3" loc="1" />
+        <u i="636" fpg="4" t="i" n="52" s="3" m="3" loc="1" />
+        <u i="637" fpg="4" t="i" n="57" s="3" m="3" loc="1" />
+        <u i="638" fpg="4" t="i" n="60" s="3" m="3" loc="1" />
+        <u i="639" fpg="4" t="i" n="61" s="3" m="3" loc="1" />
+        <u i="640" fpg="4" t="i" n="65" s="3" m="3" loc="1" />
+        <u i="641" fpg="4" t="i" n="70" s="3" m="3" loc="1" />
+        <u i="642" fpg="4" t="i" n="1Gds" s="3" m="3" loc="1" />
+        <u i="643" fpg="4" t="i" n="2Gds" s="3" m="3" loc="1" />
+        <u i="644" fpg="4" t="i" n="3Gds" s="3" m="3" loc="1" />
+        <u i="645" fpg="4" t="i" n="4Gds" s="3" m="3" loc="1" />
+        <u i="646" fpg="4" t="i" n="5Gds" s="3" m="3" loc="1" />
+        <u i="647" fpg="4" t="i" n="6Gds" s="3" m="3" loc="1" />
+        <u i="648" fpg="4" t="i" n="7Gds" s="3" m="3" loc="1" />
+        <u i="649" fpg="4" t="i" n="8Gds" s="3" m="3" loc="1" />
+        <u i="650" fpg="4" t="i" n="10Gds" s="3" m="3" loc="1" />
+        <u i="651" fpg="4" t="i" n="11Gds" s="3" m="3" loc="1" />
+        <u i="652" fpg="4" t="i" n="Nav" s="3" m="3" loc="1" />
+        <u i="653" fpg="4" t="i" n="1Shk" s="3" m="3" loc="1" />
+        <u i="654" fpg="4" t="i" n="2Shk" s="3" m="3" loc="1" />
+        <u i="655" fpg="4" t="i" n="3Shk" s="3" m="3" loc="1" />
+        <u i="656" fpg="4" t="i" n="4Shk" s="3" m="3" loc="1" />
+        <u i="657" fpg="4" t="i" n="5Shk" s="3" m="3" loc="1" />
+        <u i="658" fpg="1" t="aaf" n="" s="5" m="4" loc="1" />
+        <u i="659" fpg="1" t="Airborne" n="1 VDV" s="1" m="3" loc="1" />
+        <u i="660" fpg="1" t="Airborne" n="2 VDV" s="1" m="3" loc="1" />
+        <u i="661" fpg="0" t="b" n="Gangut" s="2" m="6" loc="2" slow="1" stack="3" h="0/1164" />
+        <u i="662" fpg="0" t="b" n="Petrpvlvsk" s="2" m="6" loc="2" slow="1" stack="4" h="0/1164" />
+        <u i="663" fpg="0" t="b" n="Sevastopol" s="2" m="6" loc="2" slow="1" stack="5" h="0/1164" />
+        <u i="664" fpg="0" t="Cruiser" n="" s="2" m="6" loc="2" stack="6" h="0/1164" />
+        <u i="665" fpg="0" t="Cruiser" n="" s="6" m="6" loc="2" h="1/843" />
+        <u i="666" fpg="0" t="dd" n="" s="4" m="6" loc="0" />
+        <u i="667" fpg="0" t="dd" n="" s="3" m="6" loc="2" h="1/843" />
+        <u i="668" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1446" />
+        <u i="669" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1574" />
+        <u i="670" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1337" />
+        <u i="671" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1458" />
+        <u i="672" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1368" />
+        <u i="673" fpg="0" t="ic" n="" s="10" m="0" loc="2" stack="1" h="0/1164" />
+        <u i="674" fpg="0" t="ic" n="" s="10" m="0" loc="2" h="0/1375" />
+        <u i="706" fpg="5" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="707" fpg="5" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="708" fpg="5" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="709" fpg="5" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="710" fpg="3" t="at" n="" s="1" m="4" loc="1" />
+        <u i="711" fpg="5" t="Flak" n="" s="2" m="6" loc="1" />
+        <u i="712" fpg="1" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="713" fpg="1" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="714" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" h="1/445" />
+        <u i="715" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" h="0/1544" />
+        <u i="716" fpg="2" t="Taskforce" n="2" s="1" m="6" loc="1" />
+        <u i="717" fpg="2" t="Taskforce" n="3" s="1" m="6" loc="1" />
+        <u i="1200" fpg="0" t="aaf" n="" s="5" m="4" loc="2" h="1/445" />
+        <u i="1201" fpg="0" t="Airbase" n="" s="1" m="6" loc="2" stack="1" h="0/1295" />
+        <u i="1220" fpg="0" t="Cruiser" n="" s="4" m="6" loc="4" />
+        <u i="1221" fpg="0" t="dd" n="" s="6" m="6" loc="4" />
+        <u i="1263" fpg="7" t="Partisan_Com" n="8" s="1" m="3" loc="1" />
+        <u i="1283" fpg="7" t="Partisan_Com" n="12" s="1" m="2" loc="1" />
+        <u i="1329" fpg="7" t="Partisan_Com" n="7" s="1" m="3" loc="1" />
+        <u i="1330" fpg="7" t="Partisan_Com" n="6" s="1" m="3" loc="1" />
+        <u i="1331" fpg="7" t="Partisan_Com" n="5" s="1" m="3" loc="1" />
+        <u i="1332" fpg="6" t="Partisan_Com" n="4" s="1" m="3" loc="1" />
+        <u i="1333" fpg="6" t="Partisan_Com" n="3" s="1" m="3" loc="1" />
+        <u i="1334" fpg="6" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1335" fpg="6" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1336" fpg="7" t="Partisan_Com" n="11" s="1" m="2" loc="1" />
+        <u i="1337" fpg="6" t="Partisan_Com" n="10" s="1" m="2" loc="1" />
+        <u i="1338" fpg="6" t="Partisan_Com" n="9" s="1" m="2" loc="1" />
+        <u i="1384" fpg="5" t="ic" n="" s="75" m="0" loc="1" />
+        <u i="1385" fpg="0" t="arm" n="14 Mech Sib" s="3" m="5" loc="2" h="1/408" />
+        <u i="1386" fpg="0" t="arm" n="15 Mech Sib" s="3" m="5" loc="2" h="1/486" />
+        <u i="1398" fpg="2" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1432" fpg="3" t="aaf" n="" s="10" m="4" loc="1" />
+        <u i="1452" fpg="3" t="Bomber" n="" s="5" m="6" loc="1" />
+        <u i="1462" fpg="2" t="b" n="Ukraina" s="5" m="6" loc="1" />
+        <u i="1463" fpg="2" t="b" n="Soyuz" s="5" m="6" loc="1" />
+        <u i="1464" fpg="2" t="b" n="Demokratiya" s="4" m="6" loc="1" />
+        <u i="1465" fpg="2" t="b" n="Svobodnaya" s="4" m="6" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Fall '39" />
+        <g i="2" n="Naval Builds" />
+        <g i="3" n="Air Builds" />
+        <g i="4" n="Ground Builds" />
+        <g i="5" n="Additional Counters" />
+        <g i="6" n="Partisans" />
+        <g i="7" n="Production Partisans" />
+      </groupings>
+      <TF data="p7JZYk+sv8+GSRna6UxEPFWvu0b/CrwX" />
+    </c>
+    <c id="51" c="1" ally="0" name="Sarawak" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="52" c="1" ally="0" name="Singapore" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="53" c="1" ally="0" name="South Africa" dipstatus="6" dipstate="0" diplotext="">
+      <units>
+        <u i="1085" fpg="0" t="mech" n="1 SAf" s="3" m="4" loc="2" h="0/1960" />
+        <u i="1086" fpg="0" t="i" n="11 EAf" s="1" m="3" loc="2" h="0/2000" />
+        <u i="1087" fpg="0" t="i" n="81 WAf" s="1" m="3" loc="2" h="0/2000" />
+        <u i="1088" fpg="0" t="i" n="82 WAf" s="1" m="3" loc="2" h="0/2000" />
+      </units>
+    </c>
+    <c id="54" c="3" name="Spain" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1089" fpg="0" t="aaf" n="" s="2" m="4" loc="1" />
+        <u i="1090" fpg="0" t="arm" n="Madrid" s="2" m="5" loc="1" />
+        <u i="1091" fpg="0" t="i" n="Aragon" s="2" m="3" loc="1" />
+        <u i="1092" fpg="0" t="i" n="Andalu" s="2" m="3" loc="1" />
+        <u i="1093" fpg="0" t="i" n="Castilla" s="2" m="3" loc="1" />
+        <u i="1094" fpg="0" t="i" n="Cordoba" s="2" m="3" loc="1" />
+        <u i="1095" fpg="0" t="i" n="Galacia" s="2" m="3" loc="1" />
+        <u i="1096" fpg="0" t="i" n="Granada" s="2" m="3" loc="1" />
+        <u i="1097" fpg="0" t="i" n="Navarro" s="2" m="3" loc="1" />
+        <u i="1098" fpg="0" t="Cruiser" n="" s="6" m="6" loc="1" />
+        <u i="1099" fpg="0" t="dd" n="" s="3" m="6" loc="1" />
+        <u i="1244" fpg="2" t="Partisan_Com" n="4" s="1" m="3" loc="1" />
+        <u i="1245" fpg="2" t="pw" n="4" s="1" m="3" loc="1" />
+        <u i="1246" fpg="2" t="pw" n="3" s="1" m="3" loc="1" />
+        <u i="1247" fpg="1" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1248" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1348" fpg="1" t="px" n="3" s="1" m="3" loc="1" />
+        <u i="1349" fpg="1" t="px" n="2" s="1" m="3" loc="1" />
+        <u i="1350" fpg="1" t="px" n="1" s="1" m="3" loc="1" />
+        <u i="1351" fpg="2" t="Partisan_Com" n="3" s="1" m="3" loc="1" />
+        <u i="1352" fpg="1" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1353" fpg="1" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="55" c="3" ally="43" name="Sumatra" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="56" c="3" name="Sweden" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1100" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="1101" fpg="0" t="i" n="1 Swe" s="2" m="3" loc="1" />
+        <u i="1102" fpg="0" t="i" n="2 Swe" s="2" m="3" loc="1" />
+        <u i="1103" fpg="0" t="i" n="3 Swe" s="2" m="3" loc="1" />
+        <u i="1104" fpg="0" t="i" n="4 Swe" s="2" m="3" loc="1" />
+        <u i="1105" fpg="0" t="i" n="5 Swe" s="2" m="3" loc="1" />
+        <u i="1106" fpg="0" t="Cruiser" n="" s="2" m="6" loc="1" />
+        <u i="1107" fpg="0" t="dd" n="" s="2" m="6" loc="1" />
+        <u i="1304" fpg="2" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1305" fpg="1" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1354" fpg="2" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1355" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="57" c="3" name="Switzerland" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="58" c="3" name="Thailand" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1108" fpg="0" t="i" n="1 Thai" s="1" m="2" loc="2" h="1/348" />
+        <u i="1109" fpg="0" t="i" n="2 Thai" s="1" m="2" loc="2" h="1/342" />
+      </units>
+    </c>
+    <c id="59" c="1" ally="0" name="Transjordan" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="60" c="1" ally="1" name="Tunisia" dipstatus="6" dipstate="0" diplotext="" />
+    <c id="61" c="3" name="Turkey" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1110" fpg="0" t="aaf" n="" s="2" m="4" loc="1" />
+        <u i="1111" fpg="0" t="arm" n="Turk" s="2" m="5" loc="1" />
+        <u i="1112" fpg="0" t="i" n="1 Turk" s="2" m="3" loc="1" />
+        <u i="1113" fpg="0" t="i" n="2 Turk" s="2" m="3" loc="1" />
+        <u i="1114" fpg="0" t="i" n="3 Turk" s="2" m="3" loc="1" />
+        <u i="1115" fpg="0" t="i" n="4 Turk" s="2" m="3" loc="1" />
+        <u i="1116" fpg="0" t="i" n="5 Turk" s="2" m="3" loc="1" />
+        <u i="1117" fpg="0" t="i" n="6 Turk" s="2" m="3" loc="1" />
+        <u i="1118" fpg="0" t="i" n="7 Turk" s="2" m="3" loc="1" />
+        <u i="1119" fpg="0" t="bc" n="Yavuz" s="2" m="6" loc="1" />
+        <u i="1120" fpg="0" t="Cruiser" n="" s="2" m="6" loc="1" />
+        <u i="1121" fpg="0" t="dd" n="" s="2" m="6" loc="1" />
+        <u i="1306" fpg="2" t="Partisan_Com" n="4" s="1" m="3" loc="1" />
+        <u i="1307" fpg="2" t="Partisan_Com" n="3" s="1" m="3" loc="1" />
+        <u i="1308" fpg="1" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1309" fpg="1" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1310" fpg="2" t="pw" n="4" s="1" m="3" loc="1" />
+        <u i="1311" fpg="2" t="pw" n="3" s="1" m="3" loc="1" />
+        <u i="1312" fpg="1" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1313" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+        <u i="1314" fpg="1" t="px" n="3" s="1" m="3" loc="1" />
+        <u i="1315" fpg="1" t="px" n="2" s="1" m="3" loc="1" />
+        <u i="1316" fpg="1" t="px" n="1" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="62" c="3" name="Ukraine" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1122" fpg="0" t="i" n="1 Ukr" s="2" m="3" loc="1" />
+        <u i="1123" fpg="0" t="i" n="2 Ukr" s="2" m="3" loc="1" />
+        <u i="1124" fpg="0" t="i" n="3 Ukr" s="1" m="3" loc="1" />
+        <u i="1125" fpg="0" t="i" n="4 Ukr" s="1" m="3" loc="1" />
+        <u i="1126" fpg="0" t="i" n="5 Ukr" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="6" c="1" name="US" dipstatus="9" dipstate="0" diplotext="">
+      <codebreaking asw="1" strategic="1" blank="3" sub="1" tactical="1" wild="1" />
+      <units>
+        <u i="718" fpg="0" t="Bomber" n="" s="1" m="6" loc="2" h="0/4" />
+        <u i="719" fpg="0" t="mech" n="1" s="3" m="4" loc="2" h="0/3" />
+        <u i="720" fpg="0" t="mech" n="2" s="3" m="4" loc="2" h="0/3" />
+        <u i="721" fpg="0" t="rep" n="1" s="1" m="1" loc="2" h="0/43" />
+        <u i="722" fpg="0" t="rep" n="2" s="1" m="1" loc="2" h="0/43" />
+        <u i="723" fpg="0" t="rep" n="3" s="1" m="1" loc="2" h="0/43" />
+        <u i="724" fpg="0" t="rep" n="4" s="1" m="1" loc="2" h="0/43" />
+        <u i="725" fpg="0" t="rep" n="5" s="1" m="1" loc="2" h="0/43" />
+        <u i="726" fpg="0" t="rep" n="6" s="1" m="1" loc="2" h="0/43" />
+        <u i="949" fpg="0" t="ASW" n="" s="1" m="6" loc="2" h="0/84" />
+        <u i="727" fpg="0" t="cv" n="Yorktown" s="3" m="6" loc="4" />
+        <u i="728" fpg="0" t="b" n="Colorado" s="3" m="6" loc="4" slow="1" />
+        <u i="729" fpg="0" t="b" n="Idaho" s="3" m="6" loc="4" slow="1" />
+        <u i="730" fpg="0" t="b" n="Missisippi" s="3" m="6" loc="4" slow="1" />
+        <u i="731" fpg="0" t="b" n="New Mexico" s="3" m="6" loc="4" slow="1" />
+        <u i="732" fpg="0" t="b" n="New York" s="3" m="6" loc="4" slow="1" />
+        <u i="733" fpg="0" t="b" n="Texas" s="3" m="6" loc="4" slow="1" />
+        <u i="736" fpg="0" t="i" n="1Philip" s="1" m="3" loc="2" h="1/622" />
+        <u i="737" fpg="0" t="i" n="2Philip" s="1" m="3" loc="2" stack="2" h="1/1776" />
+        <u i="738" fpg="0" t="i" n="25" s="1" m="3" loc="2" h="1/662" />
+        <u i="739" fpg="0" t="i" n="10 Mtn" s="1" m="3" loc="2" h="1/663" />
+        <u i="740" fpg="0" t="i" n="1 Cav" s="2" m="3" loc="2" stack="1" h="1/1776" />
+        <u i="741" fpg="0" t="Marine" n="1 Mar" s="1" m="3" loc="2" h="1/2008" />
+        <u i="742" fpg="0" t="aaf" n="" s="1" m="4" loc="2" stack="3" h="1/1776" />
+        <u i="743" fpg="0" t="rep" n="Alaska" s="1" m="1" loc="2" h="1/2007" />
+        <u i="744" fpg="0" t="rep" n="Suva" s="1" m="1" loc="2" h="1/2007" />
+        <u i="745" fpg="0" t="rep" n="Noumea" s="1" m="1" loc="2" h="1/2007" />
+        <u i="746" fpg="0" t="rep" n="Pago" s="1" m="1" loc="2" h="1/2007" />
+        <u i="747" fpg="0" t="rep" n="Philip" s="1" m="1" loc="2" h="1/2007" />
+        <u i="748" fpg="0" t="rep" n="Midway" s="1" m="1" loc="2" h="1/2007" />
+        <u i="749" fpg="0" t="cv" n="Enterprise" s="3" m="6" loc="4" />
+        <u i="750" fpg="0" t="cv" n="Lexington" s="3" m="6" loc="4" />
+        <u i="751" fpg="0" t="cv" n="Saratoga" s="3" m="6" loc="4" />
+        <u i="752" fpg="0" t="b" n="Arizona" s="3" m="6" loc="4" slow="1" />
+        <u i="753" fpg="0" t="b" n="California" s="3" m="6" loc="4" slow="1" />
+        <u i="754" fpg="0" t="b" n="Maryland" s="3" m="6" loc="4" slow="1" />
+        <u i="755" fpg="0" t="b" n="Nevada" s="3" m="6" loc="4" slow="1" />
+        <u i="756" fpg="0" t="b" n="Oklahoma" s="3" m="6" loc="4" slow="1" />
+        <u i="757" fpg="0" t="b" n="Pennslvnia" s="3" m="6" loc="4" slow="1" />
+        <u i="758" fpg="0" t="b" n="Tennensee" s="3" m="6" loc="4" slow="1" />
+        <u i="759" fpg="0" t="b" n="W.Virginia" s="3" m="6" loc="4" slow="1" />
+        <u i="99" fpg="3" t="ASW" n="" s="1" m="6" loc="1" />
+        <u i="100" fpg="3" t="sub" n="" s="1" m="6" loc="1" />
+        <u i="762" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="763" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="764" fpg="3" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="765" fpg="0" t="sub" n="" s="1" m="6" loc="2" stack="2" h="1/663" />
+        <u i="766" fpg="3" t="i" n="71 Jungle" s="1" m="3" loc="1" />
+        <u i="767" fpg="3" t="i" n="Amricnal" s="2" m="3" loc="1" />
+        <u i="768" fpg="4" t="Marine" n="2 Mar" s="1" m="3" loc="1" />
+        <u i="769" fpg="4" t="aaf" n="" s="2" m="4" loc="1" />
+        <u i="1230" fpg="4" t="NAS" n="" s="8" m="3" loc="1" />
+        <u i="770" fpg="9" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="771" fpg="9" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="772" fpg="9" t="Airbase" n="" s="1" m="6" loc="1" />
+        <u i="773" fpg="7" t="arm" n="3" s="5" m="6" loc="1" />
+        <u i="774" fpg="7" t="arm" n="5" s="5" m="6" loc="1" />
+        <u i="775" fpg="7" t="arm" n="7" s="5" m="6" loc="1" />
+        <u i="776" fpg="7" t="arm" n="8" s="5" m="6" loc="1" />
+        <u i="777" fpg="7" t="arm" n="12" s="5" m="6" loc="1" />
+        <u i="778" fpg="7" t="arm" n="19" s="5" m="6" loc="1" />
+        <u i="779" fpg="7" t="arm" n="25" s="5" m="6" loc="1" />
+        <u i="780" fpg="7" t="arm" n="30" s="5" m="6" loc="1" />
+        <u i="781" fpg="7" t="arm" n="36" s="5" m="6" loc="1" />
+        <u i="782" fpg="7" t="arm" n="42" s="5" m="6" loc="1" />
+        <u i="783" fpg="7" t="arm" n="48" s="5" m="6" loc="1" />
+        <u i="784" fpg="7" t="arm" n="50" s="5" m="6" loc="1" />
+        <u i="785" fpg="7" t="mech" n="4" s="3" m="4" loc="1" />
+        <u i="786" fpg="7" t="mech" n="6" s="3" m="4" loc="1" />
+        <u i="787" fpg="7" t="mech" n="9" s="3" m="4" loc="1" />
+        <u i="788" fpg="7" t="mech" n="10" s="3" m="4" loc="1" />
+        <u i="789" fpg="7" t="mech" n="11" s="3" m="4" loc="1" />
+        <u i="790" fpg="7" t="mech" n="13" s="3" m="4" loc="1" />
+        <u i="791" fpg="7" t="mech" n="14" s="3" m="4" loc="1" />
+        <u i="792" fpg="7" t="mech" n="15" s="3" m="4" loc="1" />
+        <u i="793" fpg="7" t="mech" n="16" s="3" m="4" loc="1" />
+        <u i="794" fpg="7" t="mech" n="17" s="3" m="4" loc="1" />
+        <u i="795" fpg="7" t="mech" n="18" s="3" m="4" loc="1" />
+        <u i="796" fpg="7" t="mech" n="20" s="3" m="4" loc="1" />
+        <u i="797" fpg="7" t="mech" n="21" s="3" m="4" loc="1" />
+        <u i="798" fpg="7" t="mech" n="22" s="3" m="4" loc="1" />
+        <u i="799" fpg="7" t="mech" n="23" s="3" m="4" loc="1" />
+        <u i="800" fpg="7" t="mech" n="24" s="3" m="4" loc="1" />
+        <u i="801" fpg="7" t="mech" n="27" s="3" m="4" loc="1" />
+        <u i="802" fpg="7" t="mech" n="28" s="3" m="4" loc="1" />
+        <u i="803" fpg="7" t="mech" n="29" s="3" m="4" loc="1" />
+        <u i="804" fpg="7" t="mech" n="34" s="3" m="4" loc="1" />
+        <u i="805" fpg="7" t="mech" n="35" s="3" m="4" loc="1" />
+        <u i="806" fpg="7" t="mech" n="39" s="3" m="4" loc="1" />
+        <u i="807" fpg="7" t="mech" n="44" s="3" m="4" loc="1" />
+        <u i="808" fpg="7" t="mech" n="45" s="3" m="4" loc="1" />
+        <u i="809" fpg="7" t="mech" n="46" s="3" m="4" loc="1" />
+        <u i="810" fpg="7" t="mech" n="47" s="3" m="4" loc="1" />
+        <u i="811" fpg="7" t="mech" n="49" s="3" m="4" loc="1" />
+        <u i="812" fpg="7" t="mech" n="Brazil" s="3" m="4" loc="1" />
+        <u i="813" fpg="7" t="i" n="158 CT" s="1" m="3" loc="1" />
+        <u i="814" fpg="7" t="i" n="89 Truck" s="1" m="3" loc="1" />
+        <u i="815" fpg="7" t="i" n="33" s="1" m="3" loc="1" />
+        <u i="816" fpg="7" t="i" n="38" s="1" m="3" loc="1" />
+        <u i="817" fpg="7" t="i" n="96" s="1" m="3" loc="1" />
+        <u i="818" fpg="7" t="i" n="31" s="2" m="3" loc="1" />
+        <u i="819" fpg="7" t="i" n="32" s="2" m="3" loc="1" />
+        <u i="820" fpg="7" t="i" n="37" s="2" m="3" loc="1" />
+        <u i="821" fpg="7" t="i" n="40" s="2" m="3" loc="1" />
+        <u i="822" fpg="7" t="i" n="41" s="2" m="3" loc="1" />
+        <u i="823" fpg="7" t="i" n="43" s="2" m="3" loc="1" />
+        <u i="824" fpg="7" t="i" n="77" s="2" m="3" loc="1" />
+        <u i="825" fpg="7" t="i" n="81" s="2" m="3" loc="1" />
+        <u i="826" fpg="7" t="Airborne" n="Ranger" s="1" m="3" loc="1" />
+        <u i="827" fpg="7" t="Airborne" n="11 Abn" s="1" m="3" loc="1" />
+        <u i="828" fpg="7" t="Airborne" n="13 Abn" s="1" m="3" loc="1" />
+        <u i="829" fpg="7" t="Airborne" n="17 Abn" s="1" m="3" loc="1" />
+        <u i="830" fpg="7" t="Airborne" n="82 Abn" s="1" m="3" loc="1" />
+        <u i="831" fpg="7" t="Airborne" n="101 Abn" s="1" m="3" loc="1" />
+        <u i="832" fpg="7" t="Marine" n="3 Mar" s="1" m="3" loc="1" />
+        <u i="833" fpg="7" t="Marine" n="4 Mar" s="1" m="3" loc="1" />
+        <u i="834" fpg="7" t="Marine" n="5 Mar" s="1" m="3" loc="1" />
+        <u i="835" fpg="7" t="Marine" n="6 Mar" s="1" m="3" loc="1" />
+        <u i="836" fpg="5" t="cv" n="Constelatn" s="4" m="6" loc="1" />
+        <u i="837" fpg="5" t="cv" n="Coral Sea" s="4" m="6" loc="1" />
+        <u i="838" fpg="5" t="cv" n="F.D.Roosvlt" s="4" m="6" loc="1" />
+        <u i="839" fpg="5" t="cv" n="Midway" s="4" m="6" loc="1" />
+        <u i="840" fpg="5" t="cv" n="Antietam" s="3" m="6" loc="1" />
+        <u i="841" fpg="5" t="cv" n="Hornet" s="3" m="6" loc="1" />
+        <u i="842" fpg="5" t="cv" n="BH Richard" s="3" m="6" loc="1" />
+        <u i="843" fpg="5" t="cv" n="Bennington" s="3" m="6" loc="1" />
+        <u i="844" fpg="5" t="cv" n="Boxer" s="3" m="6" loc="1" />
+        <u i="845" fpg="5" t="cv" n="Bunker Hill" s="3" m="6" loc="1" />
+        <u i="846" fpg="5" t="cv" n="Cabot" s="3" m="6" loc="1" />
+        <u i="847" fpg="5" t="cv" n="Concord" s="3" m="6" loc="1" />
+        <u i="848" fpg="5" t="cv" n="Essex" s="3" m="6" loc="1" />
+        <u i="849" fpg="5" t="cv" n="Franklin" s="3" m="6" loc="1" />
+        <u i="850" fpg="5" t="cv" n="Gettysberg" s="3" m="6" loc="1" />
+        <u i="851" fpg="5" t="cv" n="Hancock" s="3" m="6" loc="1" />
+        <u i="852" fpg="5" t="cv" n="Intrepid" s="3" m="6" loc="1" />
+        <u i="853" fpg="5" t="cv" n="Kearsarge" s="3" m="6" loc="1" />
+        <u i="854" fpg="5" t="cv" n="L.Champlan" s="3" m="6" loc="1" />
+        <u i="855" fpg="5" t="cv" n="Oriskany" s="3" m="6" loc="1" />
+        <u i="856" fpg="5" t="cv" n="Shangri-la" s="3" m="6" loc="1" />
+        <u i="857" fpg="5" t="cv" n="Ticndroga" s="3" m="6" loc="1" />
+        <u i="858" fpg="5" t="cv" n="Belleau Wd" s="2" m="6" loc="1" />
+        <u i="859" fpg="5" t="cv" n="Bataan" s="2" m="6" loc="1" />
+        <u i="860" fpg="5" t="cv" n="Buena Vista" s="2" m="6" loc="1" />
+        <u i="861" fpg="5" t="cv" n="Gullford C" s="2" m="6" loc="1" />
+        <u i="862" fpg="5" t="cv" n="Kings Mtn" s="2" m="6" loc="1" />
+        <u i="863" fpg="5" t="cv" n="Saipan" s="2" m="6" loc="1" />
+        <u i="864" fpg="5" t="cv" n="St.Miheil" s="2" m="6" loc="1" />
+        <u i="865" fpg="5" t="cv" n="Shenandoah" s="2" m="6" loc="1" />
+        <u i="866" fpg="5" t="cv" n="Stony Point" s="2" m="6" loc="1" />
+        <u i="867" fpg="5" t="cv" n="Wright" s="2" m="6" loc="1" />
+        <u i="868" fpg="5" t="cv" n="Cowpens" s="2" m="6" loc="1" />
+        <u i="869" fpg="5" t="cv" n="Ft.McHenry" s="2" m="6" loc="1" />
+        <u i="870" fpg="5" t="cv" n="Indepndnce" s="2" m="6" loc="1" />
+        <u i="871" fpg="5" t="cv" n="L.Erie" s="2" m="6" loc="1" />
+        <u i="872" fpg="5" t="cv" n="Langley" s="2" m="6" loc="1" />
+        <u i="873" fpg="5" t="cv" n="Monmouth" s="2" m="6" loc="1" />
+        <u i="874" fpg="5" t="cv" n="Monterey" s="2" m="6" loc="1" />
+        <u i="875" fpg="5" t="cv" n="Princeton" s="2" m="6" loc="1" />
+        <u i="876" fpg="5" t="cv" n="San Jacinto" s="2" m="6" loc="1" />
+        <u i="877" fpg="5" t="b" n="Iowa" s="5" m="6" loc="1" />
+        <u i="878" fpg="5" t="b" n="Wisconsin" s="5" m="6" loc="1" />
+        <u i="879" fpg="5" t="b" n="New Jersey" s="5" m="6" loc="1" />
+        <u i="880" fpg="5" t="b" n="Missouri" s="5" m="6" loc="1" />
+        <u i="881" fpg="5" t="b" n="Montana" s="5" m="6" loc="1" />
+        <u i="882" fpg="5" t="b" n="Ohio" s="5" m="6" loc="1" />
+        <u i="883" fpg="5" t="b" n="Maine" s="5" m="6" loc="1" />
+        <u i="884" fpg="5" t="b" n="N.Hampshr" s="5" m="6" loc="1" />
+        <u i="885" fpg="5" t="b" n="Michegan" s="4" m="6" loc="1" />
+        <u i="886" fpg="5" t="b" n="Minnesota" s="4" m="6" loc="1" />
+        <u i="887" fpg="5" t="b" n="Nebraska" s="4" m="6" loc="1" />
+        <u i="888" fpg="5" t="b" n="Vermont" s="4" m="6" loc="1" />
+        <u i="889" fpg="5" t="b" n="Georgia" s="3" m="6" loc="1" />
+        <u i="890" fpg="5" t="b" n="N.Dakota" s="3" m="6" loc="1" />
+        <u i="891" fpg="5" t="b" n="Oregon" s="3" m="6" loc="1" />
+        <u i="892" fpg="5" t="b" n="Virginia" s="3" m="6" loc="1" />
+        <u i="893" fpg="5" t="b" n="Hawaii" s="2" m="6" loc="1" />
+        <u i="894" fpg="5" t="b" n="Guam" s="2" m="6" loc="1" />
+        <u i="895" fpg="5" t="b" n="Alaska" s="2" m="6" loc="1" />
+        <u i="896" fpg="5" t="b" n="Philipines" s="2" m="6" loc="1" />
+        <u i="897" fpg="5" t="Cruiser" n="" s="10" m="6" loc="1" />
+        <u i="898" fpg="5" t="dd" n="" s="30" m="6" loc="1" />
+        <u i="899" fpg="5" t="CVE" n="" s="12" m="6" loc="1" />
+        <u i="900" fpg="5" t="ASW" n="" s="10" m="6" loc="1" />
+        <u i="901" fpg="5" t="sub" n="" s="9" m="6" loc="1" />
+        <u i="902" fpg="0" t="Taskforce" n="1" s="1" m="6" loc="2" h="1/1968" />
+        <u i="903" fpg="0" t="Taskforce" n="2" s="1" m="6" loc="2" h="1/1967" />
+        <u i="904" fpg="0" t="Taskforce" n="3" s="1" m="6" loc="2" h="1/1926" />
+        <u i="905" fpg="0" t="Taskforce" n="4" s="1" m="6" loc="2" h="1/1886" />
+        <u i="906" fpg="0" t="Taskforce" n="5" s="1" m="6" loc="2" h="1/1846" />
+        <u i="907" fpg="0" t="Taskforce" n="6" s="1" m="6" loc="2" h="0/44" />
+        <u i="908" fpg="0" t="Taskforce" n="7" s="1" m="6" loc="2" h="0/83" />
+        <u i="909" fpg="5" t="Taskforce" n="8" s="1" m="6" loc="1" />
+        <u i="910" fpg="5" t="Taskforce" n="9" s="1" m="6" loc="1" />
+        <u i="911" fpg="5" t="Taskforce" n="10" s="1" m="6" loc="1" />
+        <u i="912" fpg="5" t="Taskforce" n="11" s="1" m="6" loc="1" />
+        <u i="913" fpg="5" t="Taskforce" n="12" s="1" m="6" loc="1" />
+        <u i="914" fpg="6" t="aaf" n="" s="35" m="4" loc="1" />
+        <u i="918" fpg="8" t="AtomicAttack" n="" s="1" m="6" loc="1" />
+        <u i="919" fpg="8" t="FireStorm" n="" s="1" m="6" loc="1" />
+        <u i="921" fpg="8" t="Port" n="" s="1" m="6" loc="1" />
+        <u i="922" fpg="8" t="Railhead" n="" s="1" m="6" loc="1" />
+        <u i="923" fpg="8" t="ft" n="" s="1" m="6" loc="1" />
+        <u i="924" fpg="6" t="Jet" n="" s="4" m="6" loc="1" />
+        <u i="925" fpg="0" t="JetSquadron" n="" s="3" m="6" loc="0" />
+        <u i="926" fpg="6" t="Interceptor" n="" s="10" m="6" loc="1" />
+        <u i="927" fpg="6" t="at" n="" s="3" m="4" loc="1" />
+        <u i="929" fpg="0" t="cv" n="Wasp" s="3" m="6" loc="3" />
+        <u i="930" fpg="0" t="b" n="Indiana" s="4" m="6" loc="3" />
+        <u i="931" fpg="0" t="b" n="Mass" s="4" m="6" loc="3" />
+        <u i="932" fpg="0" t="b" n="Washngtn" s="4" m="6" loc="3" />
+        <u i="933" fpg="0" t="b" n="S.Dakota" s="4" m="6" loc="3" />
+        <u i="934" fpg="0" t="b" n="Alabama" s="4" m="6" loc="3" />
+        <u i="935" fpg="0" t="b" n="N.Carolna" s="4" m="6" loc="3" />
+        <u i="1171" fpg="0" t="dd" n="" s="6" m="6" loc="4" />
+        <u i="1173" fpg="0" t="Cruiser" n="" s="14" m="6" loc="4" />
+        <u i="1175" fpg="0" t="dd" n="" s="5" m="6" loc="4" />
+        <u i="1176" fpg="0" t="aaf" n="" s="2" m="4" loc="2" h="1/1927" />
+        <u i="1202" fpg="0" t="Cruiser" n="" s="6" m="6" loc="4" />
+        <u i="1203" fpg="0" t="Cruiser" n="" s="4" m="6" loc="4" />
+        <u i="1204" fpg="0" t="Cruiser" n="" s="4" m="6" loc="4" />
+        <u i="1206" fpg="0" t="dd" n="" s="3" m="6" loc="4" />
+        <u i="1207" fpg="0" t="dd" n="" s="3" m="6" loc="4" />
+        <u i="1208" fpg="0" t="dd" n="" s="1" m="6" loc="4" />
+        <u i="1209" fpg="0" t="at" n="" s="1" m="4" loc="2" h="1/1966" />
+        <u i="1231" fpg="0" t="NAS" n="" s="3" m="3" loc="4" />
+        <u i="1232" fpg="0" t="NAS" n="" s="3" m="3" loc="4" />
+        <u i="1233" fpg="0" t="NAS" n="" s="3" m="3" loc="4" />
+        <u i="1234" fpg="0" t="NAS" n="" s="1" m="3" loc="2" h="1/1533" />
+        <u i="1399" fpg="5" t="Information" n="Supply" s="1" m="6" loc="1" />
+        <u i="1401" fpg="6" t="NAS" n="" s="30" m="3" loc="1" />
+        <u i="1402" fpg="0" t="aaf" n="" s="25" m="4" loc="0" />
+        <u i="1419" fpg="0" t="Oil" n="" s="1" m="6" loc="0" />
+        <u i="1420" fpg="0" t="Oil" n="" s="1" m="6" loc="0" />
+        <u i="1421" fpg="0" t="Oil" n="" s="1" m="6" loc="0" />
+        <u i="1422" fpg="0" t="Oil" n="" s="1" m="6" loc="0" />
+        <u i="1423" fpg="0" t="Oil" n="" s="1" m="6" loc="0" />
+        <u i="1424" fpg="0" t="Oil" n="" s="6" m="6" loc="2" h="0/5" />
+        <u i="1433" fpg="8" t="Port" n="" s="1" m="6" loc="1" />
+        <u i="1434" fpg="8" t="Port" n="" s="1" m="6" loc="1" />
+        <u i="1435" fpg="0" t="Interceptor" n="" s="5" m="6" loc="0" />
+        <u i="1436" fpg="0" t="NAS" n="" s="10" m="3" loc="0" />
+        <u i="1468" fpg="5" t="cv" n="Lafayette" s="2" m="6" loc="1" />
+      </units>
+      <groupings>
+        <g i="3" n="Fall '39" />
+        <g i="4" n="Spring 1940" />
+        <g i="5" n="Naval Builds" />
+        <g i="6" n="Air Builds" />
+        <g i="7" n="Ground Builds" />
+        <g i="8" n="Additional Counters" />
+        <g i="9" n="DOW +1" />
+      </groupings>
+      <TF data="a+my521ssN2o2oVTagq1TBdrFIhtGpU2S0mWS5DIrrVJlO8SoL/pSWio/2p/B6Ot/OPiqqpdlMnOqZ41YSs5Rh6WONhHgGr9jC5/MXioGbjK6tXh3JRtV5qnsTsXTdxG2vv9qY61NQuyhEsKVI/qCTH6WfeO/8gYtihpi1l5Uh1pISaWignZpQ0lMWU0xiIE4bfOxeOGqEtv4g599rSMmJcJtCO3rB9bTwsV3zlPALNsFGYXdidTLIR/eH3tAE/OS8emmU7DimgXj3eqnr5ax+g1vJLi51UeE+CVHPYxECTO+rifWoSoq+s+pBTxh80+BSxJ0cBLEFBADEHe9FFW/yekNAn1e9wj" />
+    </c>
+    <c id="67" c="3" ally="2" name="Vichy" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="66" c="3" name="Yugoslavia" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1153" fpg="0" t="aaf" n="" s="1" m="4" loc="1" />
+        <u i="1154" fpg="0" t="i" n="1 Yug" s="2" m="3" loc="1" />
+        <u i="1155" fpg="0" t="i" n="2 Yug" s="1" m="3" loc="1" />
+        <u i="1156" fpg="0" t="i" n="3 Yug" s="1" m="3" loc="1" />
+        <u i="1157" fpg="0" t="i" n="4 Yug" s="1" m="3" loc="1" />
+        <u i="1158" fpg="0" t="i" n="5 Yug" s="1" m="3" loc="1" />
+        <u i="1159" fpg="0" t="i" n="6 Yug" s="1" m="3" loc="1" />
+        <u i="1160" fpg="0" t="i" n="7 Yug" s="1" m="3" loc="1" />
+        <u i="1317" fpg="2" t="Partisan_Com" n="4" s="1" m="3" loc="1" />
+        <u i="1318" fpg="2" t="Partisan_Com" n="3" s="1" m="3" loc="1" />
+        <u i="1319" fpg="1" t="Partisan_Com" n="2" s="1" m="3" loc="1" />
+        <u i="1320" fpg="1" t="Partisan_Com" n="1" s="1" m="3" loc="1" />
+        <u i="1321" fpg="2" t="pw" n="4" s="1" m="3" loc="1" />
+        <u i="1322" fpg="2" t="pw" n="3" s="1" m="3" loc="1" />
+        <u i="1323" fpg="1" t="pw" n="2" s="1" m="3" loc="1" />
+        <u i="1324" fpg="1" t="pw" n="1" s="1" m="3" loc="1" />
+      </units>
+      <groupings>
+        <g i="1" n="Partisans" />
+        <g i="2" n="Production Partisans" />
+      </groupings>
+    </c>
+    <c id="24" c="3" ally="0" name="Free French" dipstatus="0" dipstate="0" diplotext="">
+      <units />
+    </c>
+    <c id="32" c="3" ally="4" name="Indian Nat. Army" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1012" fpg="2" t="i" n="5 INA" s="1" m="2" loc="1" />
+        <u i="1013" fpg="2" t="i" n="6 INA" s="1" m="2" loc="1" />
+        <u i="1014" fpg="2" t="i" n="7 INA" s="1" m="2" loc="1" />
+        <u i="1015" fpg="2" t="i" n="8 INA" s="1" m="2" loc="1" />
+        <u i="1016" fpg="2" t="i" n="1 INA" s="2" m="2" loc="1" />
+        <u i="1017" fpg="2" t="i" n="2 INA" s="2" m="2" loc="1" />
+        <u i="1018" fpg="2" t="i" n="3 INA" s="2" m="2" loc="1" />
+        <u i="1019" fpg="2" t="i" n="4 INA" s="2" m="2" loc="1" />
+        <u i="1022" fpg="3" t="px" n="2 Indian" s="1" m="2" loc="1" />
+        <u i="1388" fpg="3" t="px" n="1 Indian" s="1" m="2" loc="1" />
+      </units>
+      <groupings>
+        <g i="2" n="Indian Subversion" />
+        <g i="3" n="Partisans" />
+      </groupings>
+    </c>
+    <c id="29" c="3" ally="6" name="Italian Beligerante" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="28" c="3" ally="2" name="Italian Socialist" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="63" c="3" ally="2" name="Vlasov" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1127" fpg="0" t="i" n="1 Vlasov" s="3" m="3" loc="1" />
+        <u i="1128" fpg="0" t="i" n="2 Vlasov" s="3" m="3" loc="1" />
+        <u i="1129" fpg="0" t="i" n="3 Vlasov" s="3" m="3" loc="1" />
+        <u i="1130" fpg="0" t="i" n="4 Vlasov" s="3" m="3" loc="1" />
+        <u i="1131" fpg="0" t="i" n="5 Vlasov" s="2" m="3" loc="1" />
+        <u i="1132" fpg="0" t="i" n="6 Vlasov" s="2" m="3" loc="1" />
+        <u i="1133" fpg="0" t="i" n="7 Vlasov" s="2" m="3" loc="1" />
+        <u i="1134" fpg="0" t="i" n="8 Vlasov" s="2" m="3" loc="1" />
+        <u i="1135" fpg="0" t="i" n="9 Vlasov" s="2" m="3" loc="1" />
+        <u i="1136" fpg="0" t="i" n="10 Vlasov" s="2" m="3" loc="1" />
+        <u i="1137" fpg="0" t="i" n="11 Vlasov" s="1" m="3" loc="1" />
+        <u i="1138" fpg="0" t="i" n="12 Vlasov" s="1" m="3" loc="1" />
+        <u i="1139" fpg="0" t="i" n="13 Vlasov" s="1" m="3" loc="1" />
+        <u i="1140" fpg="0" t="i" n="14 Vlasov" s="1" m="3" loc="1" />
+        <u i="1141" fpg="0" t="i" n="15 Vlasov" s="1" m="3" loc="1" />
+        <u i="1142" fpg="0" t="i" n="16 Vlasov" s="1" m="3" loc="1" />
+        <u i="1143" fpg="0" t="i" n="17 Vlasov" s="1" m="3" loc="1" />
+        <u i="1144" fpg="0" t="i" n="18 Vlasov" s="1" m="3" loc="1" />
+        <u i="1145" fpg="0" t="i" n="19 Vlasov" s="1" m="3" loc="1" />
+        <u i="1146" fpg="0" t="i" n="20 Vlasov" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="64" c="3" ally="2" name="Wafdist" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1356" fpg="1" t="px" n="2 Waf" s="1" m="3" loc="1" />
+        <u i="1357" fpg="1" t="px" n="1 Waf" s="1" m="3" loc="1" />
+      </units>
+    </c>
+    <c id="65" c="3" ally="4" name="Wang" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="1147" fpg="1" t="i" n="1 Wang" s="1" m="2" loc="1" />
+        <u i="1148" fpg="1" t="i" n="2 Wang" s="1" m="2" loc="1" />
+        <u i="1149" fpg="1" t="i" n="3 Wang" s="1" m="2" loc="1" />
+        <u i="1150" fpg="1" t="i" n="4 Wang" s="1" m="2" loc="1" />
+        <u i="1045" fpg="1" t="i" n="5 Wang" s="1" m="2" loc="1" />
+        <u i="1010" fpg="1" t="i" n="6 Wang" s="2" m="2" loc="1" />
+        <u i="1011" fpg="1" t="i" n="7 Wang" s="2" m="2" loc="1" />
+        <u i="1020" fpg="1" t="i" n="8 Wang" s="2" m="2" loc="1" />
+        <u i="1021" fpg="1" t="i" n="9 Wang" s="2" m="2" loc="1" />
+        <u i="1046" fpg="1" t="i" n="10 Wang" s="2" m="2" loc="1" />
+      </units>
+    </c>
+    <c id="12" c="3" name="Bessarabia" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="19" c="3" name="Dutch E. Indies" dipstatus="0" dipstate="0" diplotext="">
+      <units>
+        <u i="557" fpg="0" t="i" n="1 DEI" s="1" m="2" loc="2" h="1/473" />
+        <u i="558" fpg="0" t="i" n="2 DEI" s="1" m="2" loc="2" h="1/632" />
+        <u i="559" fpg="0" t="i" n="3 DEI" s="1" m="2" loc="2" h="1/515" />
+        <u i="560" fpg="0" t="aaf" n="" s="1" m="4" loc="2" h="1/473" />
+        <u i="561" fpg="0" t="Cruiser" n="" s="2" m="6" loc="2" h="1/473" />
+        <u i="562" fpg="0" t="dd" n="" s="1" m="6" loc="2" h="1/473" />
+      </units>
+    </c>
+    <c id="20" c="1" name="EastPoland" dipstatus="0" dipstate="0" diplotext="" />
+    <c id="22" c="3" name="Finnish Border" dipstatus="0" dipstate="0" diplotext="" />
+  </countries>
+  <codebreaking_history axis="1" />
+  <shipyards>
+    <shipyard owner="Britain" name="Australia" rate="1" />
+    <shipyard owner="Britain" name="Canada" rate="1" />
+    <shipyard owner="Britain" name="Glasgow" rate="4">
+      <units>
+        <unit id="8" x="1" y="2" />
+        <unit id="7" x="4" y="2" />
+        <unit id="6" x="2" y="1" />
+        <unit id="5" x="3" y="1" />
+        <unit id="4" x="1" y="1" />
+        <unit id="31" x="1" y="3" />
+        <unit id="38" x="3" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="France" name="Lorient" rate="1">
+      <units>
+        <unit id="127" x="3" y="2" />
+        <unit id="140" x="4" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="France" name="Marseilles" rate="1">
+      <units>
+        <unit id="128" x="2" y="3" />
+        <unit id="141" x="3" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="Germany" name="Kiel" rate="2">
+      <units>
+        <unit id="179" x="4" y="2" />
+        <unit id="178" x="4" y="1" />
+        <unit id="196" x="3" y="3" />
+        <unit id="1161" x="2" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="Germany" name="Captured Shipyard" rate="1" />
+    <shipyard owner="Italy" name="Genoa" rate="1">
+      <units>
+        <unit id="318" x="1" y="3" />
+        <unit id="317" x="2" y="1" />
+      </units>
+    </shipyard>
+    <shipyard owner="Italy" name="Trieste" rate="1">
+      <units>
+        <unit id="320" x="1" y="3" />
+        <unit id="319" x="2" y="1" />
+      </units>
+    </shipyard>
+    <shipyard owner="Japan" name="Tokyo" rate="3">
+      <units>
+        <unit id="393" x="4" y="1" />
+        <unit id="392" x="3" y="0" />
+        <unit id="423" x="3" y="3" />
+        <unit id="422" x="2" y="2" />
+        <unit id="421" x="1" y="2" />
+        <unit id="438" x="3" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="Russia" name="Leningrad" rate="1" />
+    <shipyard owner="Russia" name="Sevastopol" rate="1" />
+    <shipyard owner="US" name="Atlantic" rate="1" capacity="10">
+      <units>
+        <unit id="932" x="3" y="1" />
+        <unit id="931" x="2" y="1" />
+        <unit id="930" x="1" y="1" />
+        <unit id="929" x="4" y="3" />
+      </units>
+    </shipyard>
+    <shipyard owner="US" name="Pacific" rate="1" capacity="10">
+      <units>
+        <unit id="935" x="3" y="1" />
+        <unit id="934" x="2" y="1" />
+        <unit id="933" x="1" y="1" />
+      </units>
+    </shipyard>
+  </shipyards>
+  <maps>
+    <map id="0">
+      <hexes />
+    </map>
+    <map id="1">
+      <hexes />
+    </map>
+  </maps>
+</game>
