@@ -11,7 +11,6 @@ WP.HexInfo = class {
     drawUnits() {
         if (this.hex && this.hex.units) {
             var holder = WP.UnitHolder.unitHolderBuilder(hexInfoCtx, $("#hexInfoDiv"));
-            // var holder = WP.UnitHolder.Util.unitHolderBuilder(hexInfoCtx, $("#hexInfoDiv"));
             holder.units = this.hex.units;
             holder.draw();
 	   }

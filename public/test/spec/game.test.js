@@ -10,14 +10,16 @@ describe('WP.Game', function() {
         gam.maps = ['euro', 'pac']
         
         
-        obj1 = {name: 'obj1', id: 1, shipyardUnits : [{id: 1}], taskforceUnits : [{id: 1}], units: [{id: 1, holderX: 1, holderY: 1}]}
-        obj2 = {name: 'obj2', id: 2, shipyardUnits : [{id: 2}], taskforceUnits : [{id: 2}], units: [{id: 2, holderX: 2, holderY: 2}]}
-        obj3 = {name: 'obj3', id: 3, shipyardUnits : [{id: 3}], taskforceUnits : [{id: 3}], units: [{id: 3, holderX: 3, holderY: 3}]}
+        obj1 = {name: 'obj1', id: 1, shipyardUnits : [{id: 1}], taskforceUnits : [{id: 1}], units: [{id: 1, holderX: 1, holderY: 1}], owner: 'test1', isMajorPower: true}
+        obj2 = {name: 'obj2', id: 2, shipyardUnits : [{id: 2}], taskforceUnits : [{id: 2}], units: [{id: 2, holderX: 2, holderY: 2}], owner: 'test2', isMajorPower: false}
+        obj3 = {name: 'obj3', id: 3, shipyardUnits : [{id: 3}], taskforceUnits : [{id: 3}], units: [{id: 3, holderX: 3, holderY: 3}], owner: 'test3'}
         
         gam.countries = [obj1, obj2]
         gam.codebreakingResults = [obj1, obj2]
         gam.shipyards = [obj1, obj2]
         gam.taskforces = [obj1, obj2]
+        gam.selectedTaskforce = null
+        gam.selectedUnit = null
         
     })
     
@@ -27,6 +29,30 @@ describe('WP.Game', function() {
     
     it('should have a countries array with two members', function(){
         expect(gam.countries.length).toBe(2)
+    })
+    
+    it('should have a shipyards array with two members', function(){
+        expect(gam.shipyards.length).toBe(2)
+    })
+    
+    it('should have a taskforces array with two members', function(){
+        expect(gam.taskforces.length).toBe(2)
+    })
+    
+    it('should have a codebreakingResults array with two members', function(){
+        expect(gam.codebreakingResults.length).toBe(2)
+    })
+    
+    it('should have a selected taskforce property with value null', function(){
+        expect(gam.selectedTaskforce).toEqual(null)
+    })
+    
+    it('should have a selected unit property with value null', function(){
+        expect(gam.selectedUnit).toEqual(null)
+    })
+    
+    it('should have the current map be the first map of the maps array', function(){
+        expect(gam.currentMap).toEqual(gam.maps[0])
     })
     
     describe('addCountry', function() {
@@ -169,4 +195,104 @@ describe('WP.Game', function() {
         })
         
     })
+    
+    describe('getTaskforces', function() {
+             
+        it('should return a taskforce by id', function(){
+            var res = gam.getTaskforces(2)
+            expect(res.id).toBe(2)
+        })
+        
+        it('should return null if an invalid id is used', function() {
+            var res = gam.getTaskforces('banana')
+            expect(res).toBe(null)
+        })
+        
+    })
+    
+    describe('getTaskforceFromOwner', function() {
+             
+        it('should return a taskforce by owner', function(){
+            var res = gam.getTaskforceFromOwner('test2')
+            expect(res.id).toBe(2)
+        })
+        
+        it('should return null if an invalid owner is used', function() {
+            var res = gam.getTaskforceFromOwner('banana')
+            expect(res).toBe(null)
+        })
+        
+    })
+    
+    describe('getUnitForTaskforce', function() {
+             
+        it('should find a unit in country and return it', function(){
+            var res = gam.getUnitForTaskforce(1, 1, 1)
+            expect(res.id).toBe(1)
+        })
+        
+        it('should return a unit with x and y values matching those sent', function(){
+            var x = 2; var y = 2
+            var res = gam.getUnitForTaskforce(2, x, y)
+            expect(res.holderX).toBe(2)
+            expect(res.holderY).toBe(2)
+        })
+        
+        it('should return null if an invalid id is used', function() {
+            var res = gam.getUnitForTaskforce('banana')
+            expect(res).toBe(null)
+        })
+        
+    })
+
+    describe('getUnitFromCountryForGridDialog', function() {
+             
+        it('should find a unit in country and return it', function(){
+            var res = gam.getUnitFromCountryForGridDialog(1, 1, 1)
+            expect(res.id).toBe(1)
+        })
+        
+        it('should return a unit with x and y values matching those sent', function(){
+            var x = 2; var y = 2
+            var res = gam.getUnitFromCountryForGridDialog(2, x, y)
+            expect(res.holderX).toBe(2)
+            expect(res.holderY).toBe(2)
+        })
+        
+        it('should return null if an invalid id is used', function() {
+            var res = gam.getUnitFromCountryForGridDialog('banana')
+            expect(res).toBe(null)
+        })
+        
+    })
+
+    
+    describe('getMajorPowers', function() {
+        
+        it ('should return a list of major powers only', function(){
+            var res =gam.getMajorPowers()
+            expect(res.length).toBe(1)
+        })
+        
+    })
+    
+    describe('setSelectedTaskforce', function() {
+        
+        it ('should set the selected taskforce to the assigned tf', function(){
+            gam.setSelectedTaskforce(obj3)
+            expect(gam.selectedTaskforce.id).toBe(3)
+        })
+        
+    })
+
+    describe('setSelectedUnit', function() {
+        
+        it ('should set the selectedUnit to the assigned unit', function(){
+            gam.setSelectedUnit(obj2)
+            expect(gam.selectedUnit.id).toBe(2)
+        })
+        
+    })
+   
+    
 })

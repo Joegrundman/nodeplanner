@@ -22,8 +22,7 @@ WP.Map = class {
         var i = 1;
         for (var x = 0; x < 51; x++) {
             for (var y = 0; y < 40; y++) {
-                if ((id == 0) && (x == 50 && (y % 2 > 0)))
-                { i++; continue; }
+                if ((id == 0) && (x == 50 && (y % 2 > 0))){ i++; continue; }
                 this.hexes[i] = new WP.Hex(i, this, x, y);
                 i++;
             }
@@ -124,16 +123,16 @@ WP.Map = class {
         if (unit.hex == hex) return;
 
         if (unit.hex) {
-            var oldHex = unit.hex;
-            oldHex.removeUnit(game.selectedUnit);
-            //setTimeout(function () {
+                var oldHex = unit.hex;
+                oldHex.removeUnit(game.selectedUnit);
+                //setTimeout(function () {
                 oldHex.clear();
                 oldHex.draw();
-            //}, 0)
-        }
-        hex.addUnit(unit);
-        hex.clear();
-        hex.draw();
+                //}, 0)
+             }
+            hex.addUnit(unit);
+            hex.clear();
+            hex.draw();
     }
     
     onDoubleClick () {
@@ -193,8 +192,7 @@ WP.Map = class {
     
     selectUnit () {
         var unit = null;
-        if (this.currentHex)
-            { unit = this.currentHex.getTopUnit(); }
+        if (this.currentHex) { unit = this.currentHex.getTopUnit(); }
         game.setSelectedUnit(unit);
     }
     

@@ -233,18 +233,24 @@ WP.Unit.UI = {
         var dark = "rgba(20, 20, 70, 0.7)"
         var clear = "rgba(10, 10, 10, 0.1)"
         
-        var unitTexture = ctx.createRadialGradient(20, 12, 14, 20, 25, 60)
+        var unitShading = ctx.createRadialGradient(20, 12, 14, 20, 25, 60)
 		// dynamic drawing replaces jpeg for more reliable loading
 
-  	var dark = "rgba(70, 70, 70, 0.7)"
+  	    var dark = "rgba(70, 70, 70, 0.7)"
         var clear = "rgba(10, 10, 10, 0)"
+        var light = "rgba(220, 220, 220, .2)"
         
-        var unitTexture = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
-        unitTexture.addColorStop(0, clear)
-        unitTexture.addColorStop(1, dark)
-        ctx.fillStyle = unitTexture
+        var unitShading = ctx.createRadialGradient(20, 12, 11, 20, 20, 50)
+        unitShading.addColorStop(0, clear)
+        unitShading.addColorStop(1, dark)
+        ctx.fillStyle = unitShading
         ctx.fillRect(0, 0, 42, 42)
-      
+        
+        var highlight = ctx.createRadialGradient(28, 8, 5, 15, 15, 30)
+        highlight.addColorStop(0, light)
+        highlight.addColorStop(1, clear)
+        ctx.fillStyle = highlight
+        ctx.fillRect(0, 0, 42, 42)
         // var unitTexture = new Image();
 		// unitTexture.src = "content/Units/unit_texture0.png";
 

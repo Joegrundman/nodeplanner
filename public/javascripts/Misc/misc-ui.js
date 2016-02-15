@@ -10,8 +10,9 @@ WP.Misc.Ui = {
 			$("#diplomacy").dialog('close');
 		if ($('#forcepoolDialog').dialog('isOpen') == true)
 			$("#forcepoolDialog").dialog('close');
-		if ($('#gSettings').dialog('isOpen') == true)
-			$("#gSettings").dialog('close');
+        // This one causes problems. because unit texture causes game.refreshWindow, it closes the dialog
+		// if ($('#gSettings').dialog('isOpen') == true)
+		// 	$("#gSettings").dialog('close');
 		if ($('#hexControl').dialog('isOpen') == true)
 			$("#hexControl").dialog('close');
 		if ($('#researchDisplay').dialog('isOpen') == true)

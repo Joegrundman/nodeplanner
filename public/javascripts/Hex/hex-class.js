@@ -1,6 +1,7 @@
 'use strict';
 
 WP.Hex = class {
+    
     constructor (id, map, x, y) {
         this.id = id;
         this.map = map;
@@ -51,9 +52,7 @@ WP.Hex = class {
                 return;
             }
         }
-        this.units.push(unit)
-        unit.location = 2;
-        unit.hex = this;
+        this.addUnit(unit)
     }
     
     combineAllUnits (unit) {
@@ -81,14 +80,7 @@ WP.Hex = class {
     }
     
     removeUnit (unit) {
-        var j = 0
-        while (j < this.units.length) {
-            if (this.units[j] == unit) {
-                this.units.splice(j, 1)
-            } else {
-                j++
-            }
-        }
+        this.units = this.units.filter(un => un != unit)
         unit.hex = null
     }
     

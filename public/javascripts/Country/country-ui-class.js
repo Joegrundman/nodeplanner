@@ -2,7 +2,9 @@ WP.Country.UI = {
 
 	getFlagUrl: function (country) {
 		var name = country.name.toLowerCase();
-
+        if (name == "germany" && !game.noSwastikas) { 
+            return "/content/flags/" + name.replace(" ", "") + "-unsafe.bmp"
+        }
 		if (country.colonyOf)
 			name = country.colonyOf.name.toLowerCase();
 		if (country.partOf)
