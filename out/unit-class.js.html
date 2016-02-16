@@ -30,11 +30,12 @@
 
 /**
  * Represents a WP.Unit any of Air, naval, ground, misc
- * @constructor
+ * @class
  */
-
 WP.Unit = class {
-    
+    /**
+     * Create a unit
+     */
     constructor () {
         this.id = -1;
         this.fpg = 0;
@@ -66,6 +67,28 @@ WP.Unit = class {
         this.exploiting = false;
         this.isolated = false;
     }
+    
+    /**
+     * Build an instance of unit 
+     * @static
+     * unitBuilder
+     * @param {number} id - The unit id number
+     * @param {number} fpg - the forcepool grouping that currently contains the unit
+     * @param {string} type - the unit type
+     * @param {string} name - name of unit, printed on side
+     * @param {number} strength - the factor strength of the unit
+     * @param {number} movement - the movement value if land unit, range if an air unit
+     * @param {number} location - indicates current location of unit. 1 = forcepool, 2 = map, 3 = taskforce
+     * @param {boolean} slow - indicates whether unit is slow for marking with orange band (old BB3 battleships only, CVE's which are also slow have separate coloring)
+     * @param {boolean} sunk - shows whether a ship(only) is to be marked as sunk
+     * @param {boolean} damaged - shows whether a unit is to be marked as damaged
+     * @param {boolean} inverted - shows whether unit (air or naval) is to be marked as inverted 
+     * @param {boolean} exploiting - shows whether armor(only) unit is currently exploiting
+     * @param {boolean} isolated - shows whether unit is marked as isolated, and subject to end of turn elimination if supply not reestablished
+     * @param {boolean} factorable - indicates whether unit can be combined or broken down into different strength factors
+     * @returns{object} an instance of the Unit class
+     */
+
     
     static unitBuilder (id, fpg, type, name, strength, moves, location, slow, sunk, damaged, inverted, exploiting, isolated) {
         var unit = new WP.Unit();
@@ -120,7 +143,10 @@ WP.Unit = class {
 		}
 		return unit;
 	}
-
+    /**
+     * Checks to see if unit can be counted toward attrition totals
+     */
+    
     canBeCountedInAttrition () {
         if (this.factorable) return false;
         if (this.strength &lt; 1) return false;
@@ -138,6 +164,10 @@ WP.Unit = class {
 	return false;
     }
     
+     /**
+     * Checks to see if unit can be damaged
+     */
+    
     canBeDamaged () {
         switch (this.type.toLowerCase()) {
             case "battleship": case "bb": case "b": case "bc":
@@ -153,6 +183,10 @@ WP.Unit = class {
 		default: return false;
 	   }
     }
+    
+    /**
+     * Checks to see if unit can be inverted
+     */
     
     canBeInverted () {
         switch (this.type.toLowerCase()) {
@@ -182,7 +216,9 @@ WP.Unit = class {
 		default: return false;
 	   }
     }
-    
+     /**
+     * Checks to see if unit can be marked as isolated
+     */
     canBeIsolated () {
         switch (this.type.toLowerCase()) {
             case "infantry": case "i":
@@ -198,6 +234,10 @@ WP.Unit = class {
         }
     }
     
+    /**
+     * Checks to see if unit can be sunk
+     */
+    
     canSink () {
       	switch (this.type.toLowerCase()) {
             case "battleship": case "bb": case "b": case "bc": case "pb":
@@ -211,6 +251,11 @@ WP.Unit = class {
         }
         return false;         
     }
+    
+    /**
+     * changes a unit by breaking down an old unit and creating a new unit
+     * @param {number} size - strength of the new unit to be created
+     */
            
     breakdownAndCreate (size) {
         if (size >= this.strength) return;
@@ -220,7 +265,11 @@ WP.Unit = class {
         oldUnit.owner.addUnit(unit);
         return unit;
     }
-    
+
+    /**
+     * checks to see if two units can be combined
+     * @param {object} unit - additional unit that this unit is compared with
+     */    
     canCombineWith (unit) {
         if (unit == this) { return false }
         if (!unit.factorable) { return false }
@@ -238,11 +287,19 @@ WP.Unit = class {
         return true;
     }
     
+    /**
+     * checks to see if unit can exploit
+     */
+    
     canExploit (){
        if (this.type == "armor" || "arm") return true;
 	   return false;       
     }
-    
+
+    /**
+     * checks to see if this.unit is in one of a group of passed stacks
+     * @param {Array} stacks - array of stacks to be searched to match this unit 
+     */
     findStackThatMatches (stacks) {
         var res = -1
         var _this = this
@@ -251,7 +308,12 @@ WP.Unit = class {
          })
         return res
     }
-    
+
+
+    /**
+     * searches stacks to find if a unit with the same address is in
+     * @param {Array} stacks - array of stacks to be searched for unit address
+     */    
     findStackWithSameAddress (stacks) {
         var res = -1
         var _this = this
@@ -260,17 +322,25 @@ WP.Unit = class {
         })
         return res
     }
+    /**
+     * checks to see if unit is in forcepool
+     */
     
     inForcepool () {
         if (this.location == 1) { return true }
         return false
     }
-    
+
+    /**
+     * checks to see if unit is on map
+     */
     onMap () {
         if (this.location == 2) { return true }
         return false
     }
-    
+    /**
+     * returns unit to forcepool
+     */    
     returnToForcepool () {
         this.location = 1
         this.fpg = 0
@@ -288,24 +358,42 @@ WP.Unit = class {
             }
         }
     }
-    
+
+    /**
+     * sets shipyardaddress on unit 
+     * @param {object} yard - the shipyard that the unit is currently in
+     * @param {number} x - the column of the shipyard 
+     * @param {number} y - the row of the shipyard 
+     */
     setShipyardAddress (yard, x, y){
        this.yard = yard
 	   this.holderX = x
 	   this.holderY = y
     }
-    
+
+    /**
+     * sets taskforceaddress on unit 
+     * @param {object} tfOwner - the owning power of the taskforce display
+     * @param {number} x - the column of the taskforce 
+     * @param {number} y - the row of the taskforce 
+     */    
     setTaskforceAddress (tfOwner, x, y) {
         this.taskforceOwner = tfOwner
         this.holderX = x
         this.holderY = y
     }
-    
+    /**
+     * searches stack to find if a unit with the same address as this.unit is in
+     * @param {Array} stack  stack to be searched for unit matching address
+     */      
     unitHasSameAddress (stack) {
         var _this = this
         return stack.units.some(unit => (unit.holderX == _this.holderX) &amp;&amp; (unit.holderY == _this.holderY))
     }
-    
+    /**
+     * searches stack to find if a unit with the same type as this.unit is in
+     * @param {Array} stack  stack to be searched for unit matching type
+     */     
     unitTypeExistsInStack (stack) {
         var _this = this
         return stack.units.some(unit => (unit.type == _this.type) &amp;&amp; (unit.strength = _this.strength))
@@ -328,7 +416,7 @@ WP.Unit = class {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Feb 16 2016 17:07:59 GMT+0100 (W. Europe Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Feb 16 2016 22:50:16 GMT+0100 (W. Europe Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
