@@ -490,7 +490,7 @@ WP.Unit.UI.Naval = {
 			case "britain": { WP.Unit.UI.Naval.selectGbCV(ctx, unit, color); break; }
 			case "germany": { WP.Unit.UI.Naval.drawGZeppelin(ctx, unit, color); break; }
 			case "italy": { WP.Unit.UI.Naval.drawIndependence(ctx, unit, color); break; }
-			case "japan": { WP.Unit.UI.Naval.selectJaCV(ctx, unit, color); break; }un
+			case "japan": { WP.Unit.UI.Naval.selectJaCV(ctx, unit, color); break; }
 			default: { WP.Unit.UI.Naval.selectUsCV(ctx, unit, color); break; }
 		}
 	},
