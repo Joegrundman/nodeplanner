@@ -10,6 +10,16 @@ WP.Taskforce = class {
      * Create a taskforce
      */
     constructor () {
+       /**
+        * @property {number} id - id of the taskforce
+        * @property {object} owner - country object to which taskforce belongs
+        * @property {number} size - number of taskforces that this country can have at one time
+        * @property {array} taskforceUnits - individual ships and NAS in current taskforce object
+        * @property {object} unitHolder - currently instantiated holder object for the stacks of units in the taskforce
+        * @property {number} currentSquareX - x coordinate(of taskforce grid) of the currently selected unit
+        * @property {number} currentSquareY - y coordinate(of taskforce grid) of the currently selected unit
+        * @property {boolean} dragging - whether the currently selected unit can be dragged
+        */
         this.id = null;
         this.owner = null;
         this.size = null;
@@ -27,6 +37,7 @@ WP.Taskforce = class {
      * @param {number} id - the taskforce id number
      * @param {object} owner - the country to which the taskforce belongs
      * @param {number} size - the number of factors currently in the taskforce
+     * @returns {object} instance of taskforce
      */
     
     static taskforceBuilder (id, owner, size) {
@@ -47,8 +58,8 @@ WP.Taskforce = class {
     }
     /**
      * Removes a unit from the taskforce
-     * @param {object} taskforce - this taskforce holder from which the unit will be removed
-     * @param {object} unit - the unit to beremoved from the taskforce
+     * @param {object} taskforce - this taskforce instance from which the unit will be removed
+     * @param {object} unit - the unit to be removed from the taskforce
      */    
     removeUnitFrom (taskforce, unit) {
         var taskforce = game.selectedTaskforce;
@@ -164,7 +175,7 @@ WP.Taskforce = class {
         if (this.currentSquareX < 0) this.currentSquareX = 0;       
     }
     /**
-     *  Updates the unit details to match its location after being dragged
+     *  Updates the unit address to match its location after being dragged
      * @param {object} unit - the unit that has been moved
      */     
     moveUnit (unit) {

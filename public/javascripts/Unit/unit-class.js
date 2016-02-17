@@ -9,6 +9,32 @@ WP.Unit = class {
      * Create a unit
      */
     constructor () {
+       /**
+        * @property {number} id - id of the unit 
+        * @property {number} fpg - current forcepool grouping containing unit (if any) 
+        * @property {string} type - type of unit (e.g. destroyer, armor, bomber)
+        * @property {string} name - name of unit e.g. Tirpitz
+        * @property {number} size - pixel width and height of unit
+        * @property {boolean} factorable - unit can have variable strength, can be combined and broken down
+        * @property {number} strength - strength of unit (in factors)
+        * @property {number} movement - number of open hexes that a unit can move, or range for air units
+        * @property {number} location - location of unit. 1 = map, 2 = forcepool
+        * @property {object} hex - current hex object holding unit
+        * @property {string} image - path to image src, if needed
+        * @property {object} owner - country object to which unit belongs
+        * @property {object} taskforceOwner - taskforce object to which unit belongs
+        * @property {object} yard - shipyard object to which unit belongs
+        * @property {number} holderX - x-axis address of unit in taskforce or shipyard
+        * @property {number} holderY - y-axis address of unit in taskforce or shipyard
+        * @property {boolean} damaged - if unit is damaged
+        * @property {boolean} highlight - whether the unit is highlighted currently
+        * @property {boolean} eliminated - whether the unit is marked as eliminated
+        * @property {boolean} slow - whether unit is a slow ship
+        * @property {boolean} sunk - whether unit is a sunk ship
+        * @property {boolean} inverted - whether unit is an inverted air or naval unit
+        * @property {boolean} exploiting - whether unit is an exploiting armor unit
+        * @property {boolean} isolated - whether unit is currently isolated and marked for elimination
+        */
         this.id = -1;
         this.fpg = 0;
         this.type = null;
@@ -24,7 +50,6 @@ WP.Unit = class {
         this.hex = null;
         this.image = null;
         this.owner = null;
-        this.hex = null;
 
         this.taskforceOwner = null;
         this.yard = null;
@@ -32,6 +57,7 @@ WP.Unit = class {
         this.holderY = null;
 
         this.damaged = false;
+        this.eliminated = false;
         this.highlight = null;
         this.slow = false;
         this.sunk = false;
@@ -117,6 +143,7 @@ WP.Unit = class {
 	}
     /**
      * Checks to see if unit can be counted toward attrition totals
+     * @returns {boolean}
      */
     
     canBeCountedInAttrition () {
@@ -138,6 +165,7 @@ WP.Unit = class {
     
      /**
      * Checks to see if unit can be damaged
+     * @returns {boolean}
      */
     
     canBeDamaged () {
@@ -158,6 +186,7 @@ WP.Unit = class {
     
     /**
      * Checks to see if unit can be inverted
+     * @returns {boolean}
      */
     
     canBeInverted () {
@@ -190,6 +219,7 @@ WP.Unit = class {
     }
      /**
      * Checks to see if unit can be marked as isolated
+     * @returns {boolean}
      */
     canBeIsolated () {
         switch (this.type.toLowerCase()) {
@@ -208,6 +238,7 @@ WP.Unit = class {
     
     /**
      * Checks to see if unit can be sunk
+     * @returns {boolean}
      */
     
     canSink () {
@@ -227,6 +258,7 @@ WP.Unit = class {
     /**
      * changes a unit by breaking down an old unit and creating a new unit
      * @param {number} size - strength of the new unit to be created
+     * @returns {object}
      */
            
     breakdownAndCreate (size) {
@@ -241,6 +273,7 @@ WP.Unit = class {
     /**
      * checks to see if two units can be combined
      * @param {object} unit - additional unit that this unit is compared with
+     * @returns {boolean}
      */    
     canCombineWith (unit) {
         if (unit == this) { return false }
@@ -261,6 +294,7 @@ WP.Unit = class {
     
     /**
      * checks to see if unit can exploit
+     * @returns {boolean}
      */
     
     canExploit (){
@@ -271,6 +305,7 @@ WP.Unit = class {
     /**
      * checks to see if this.unit is in one of a group of passed stacks
      * @param {Array} stacks - array of stacks to be searched to match this unit 
+     * @returns {number} identifying number for stack
      */
     findStackThatMatches (stacks) {
         var res = -1
@@ -285,6 +320,7 @@ WP.Unit = class {
     /**
      * searches stacks to find if a unit with the same address is in
      * @param {Array} stacks - array of stacks to be searched for unit address
+     * @returns {number} identifying number for stack
      */    
     findStackWithSameAddress (stacks) {
         var res = -1
@@ -296,6 +332,7 @@ WP.Unit = class {
     }
     /**
      * checks to see if unit is in forcepool
+     * @returns {boolean}
      */
     
     inForcepool () {
@@ -305,6 +342,7 @@ WP.Unit = class {
 
     /**
      * checks to see if unit is on map
+     * @returns {boolean}
      */
     onMap () {
         if (this.location == 2) { return true }
@@ -357,6 +395,7 @@ WP.Unit = class {
     /**
      * searches stack to find if a unit with the same address as this.unit is in
      * @param {Array} stack  stack to be searched for unit matching address
+     * @returns {boolean}
      */      
     unitHasSameAddress (stack) {
         var _this = this
@@ -365,6 +404,7 @@ WP.Unit = class {
     /**
      * searches stack to find if a unit with the same type as this.unit is in
      * @param {Array} stack  stack to be searched for unit matching type
+     * @returns {boolean}
      */     
     unitTypeExistsInStack (stack) {
         var _this = this

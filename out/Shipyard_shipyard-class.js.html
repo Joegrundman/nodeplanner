@@ -1,4 +1,32 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Shipyard/shipyard-class.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Shipyard/shipyard-class.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 /**
  * creates a WP.Shipyard, a container handling construction and repair of ships
  * @class
@@ -62,7 +90,7 @@ WP.Shipyard = class {
     removeUnitFrom (shipyard, unit) {
         shipyard = game.getShipyardFromUnit(unit.id);
         var j = 0;
-        while (j < shipyard.shipyardUnits.length) {
+        while (j &lt; shipyard.shipyardUnits.length) {
             if (shipyard.shipyardUnits[j].id == unit.id) {
                 shipyard.shipyardUnits.splice(j, 1);
             }
@@ -77,7 +105,7 @@ WP.Shipyard = class {
      */    
     updateShipyardUnitAddress (unit) {
         var shipyard = game.getShipyardFromUnit(unit.id);
-        for (var i = 0; i < shipyard.shipyardUnits.length; i++) {
+        for (var i = 0; i &lt; shipyard.shipyardUnits.length; i++) {
             if (shipyard.shipyardUnits[i].id == unit.id) {
                 shipyard.shipyardUnits[i].x = unit.holderX;
                 shipyard.shipyardUnits[i].y = unit.holderY;
@@ -94,7 +122,7 @@ WP.Shipyard = class {
         var cty = game.getCountryFromName(ctyName);
         var rate = shipyard.rate;
         var capacity;
-        if (((shipyard.name == "Atlantic") || (shipyard.name == "Pacific")) && (rate <= 5)) { capacity = 10; }
+        if (((shipyard.name == "Atlantic") || (shipyard.name == "Pacific")) &amp;&amp; (rate &lt;= 5)) { capacity = 10; }
         else { capacity = rate * 2; }
         $("#syCountryFlag").attr("src", WP.Country.UI.getFlagUrl(cty));
         $("#syRate").html(rate);
@@ -154,7 +182,7 @@ WP.Shipyard = class {
      */     
     onMouseMove (e) {
         shipyard.setCurrentSquare(e);
-        if (game.selectedUnit  && shipyard.dragging == true) {
+        if (game.selectedUnit  &amp;&amp; shipyard.dragging == true) {
             var unit = game.selectedUnit;
             if ((shipyard.currentSquareX != unit.holderX) || (shipyard.currentSquareY != unit.holderY)) {
                 shipyard.moveUnit(unit);
@@ -175,9 +203,9 @@ WP.Shipyard = class {
         var point = getPoint('shipyardCanvas', e);
         this.currentSquareX = Math.floor((point.x - 10) / 66);
         this.currentSquareY = Math.floor((point.y - 30) / 66);
-        if (this.currentSquareY < 0) this.currentSquareY = 0;
-        if (this.currentSquareX < 0) this.currentSquareX = 0;
-        if ((this.currentSquareX < 1) && (this.currentSquareY < 5)) this.currentSquareX = 1;        
+        if (this.currentSquareY &lt; 0) this.currentSquareY = 0;
+        if (this.currentSquareX &lt; 0) this.currentSquareX = 0;
+        if ((this.currentSquareX &lt; 1) &amp;&amp; (this.currentSquareY &lt; 5)) this.currentSquareX = 1;        
     }
     /**
      *  Updates the unit address to match its location after being dragged
@@ -251,7 +279,7 @@ WP.Shipyard = class {
 // // WP.Shipyard.prototype.removeUnitFromShipyard = function (shipyard, unit) {
 // // 	shipyard = game.getShipyardFromUnit(unit.id);
 // // 	var j = 0;
-// // 	while (j < shipyard.shipyardUnits.length) {
+// // 	while (j &lt; shipyard.shipyardUnits.length) {
 // // 		if (shipyard.shipyardUnits[j].id == unit.id) {
 // // 			shipyard.shipyardUnits.splice(j, 1);
 // // 		}
@@ -265,7 +293,7 @@ WP.Shipyard = class {
 // WP.Shipyard.prototype.removeUnitFrom = function (shipyard, unit) {
 // 	shipyard = game.getShipyardFromUnit(unit.id);
 // 	var j = 0;
-// 	while (j < shipyard.shipyardUnits.length) {
+// 	while (j &lt; shipyard.shipyardUnits.length) {
 // 		if (shipyard.shipyardUnits[j].id == unit.id) {
 // 			shipyard.shipyardUnits.splice(j, 1);
 // 		}
@@ -278,7 +306,7 @@ WP.Shipyard = class {
 
 // WP.Shipyard.prototype.updateShipyardUnitAddress = function (unit) {
 // 	var shipyard = game.getShipyardFromUnit(unit.id);
-// 	for (var i = 0; i < shipyard.shipyardUnits.length; i++) {
+// 	for (var i = 0; i &lt; shipyard.shipyardUnits.length; i++) {
 // 		if (shipyard.shipyardUnits[i].id == unit.id) {
 // 			shipyard.shipyardUnits[i].x = unit.holderX;
 // 			shipyard.shipyardUnits[i].y = unit.holderY;
@@ -311,3 +339,26 @@ WP.Shipyard = class {
 // 	}
 
 // }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="WP.Shipyard.html">Shipyard</a></li><li><a href="WP.Taskforce.html">Taskforce</a></li><li><a href="WP.Unit.html">Unit</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Wed Feb 17 2016 12:56:19 GMT+0100 (W. Europe Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
