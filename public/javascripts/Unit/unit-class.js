@@ -84,7 +84,7 @@ WP.Unit = class {
      * @param {boolean} exploiting - shows whether armor(only) unit is currently exploiting
      * @param {boolean} isolated - shows whether unit is marked as isolated, and subject to end of turn elimination if supply not reestablished
      * @param {boolean} factorable - indicates whether unit can be combined or broken down into different strength factors
-     * @returns{object} an instance of the Unit class
+     * @returns {object} an instance of the Unit class
      */
 
     

@@ -8,6 +8,8 @@ var gulpFilter = require('gulp-filter')
 var complexity = require('gulp-complexity')
 var gulpif = require('gulp-if')
 var strip = require('gulp-strip-comments')
+var jsdoc = require('gulp-jsdoc')
+var shell = require('gulp-shell')
 //var imageop = require('gulp-image-optimzation')
 
 
@@ -131,6 +133,11 @@ var banner = ['/**',
  gulp.task('watch', function() {
      gulp.watch(['public/stylesheets/*.css'], ['styles'])
      gulp.watch(['public/javascripts/*.js'], ['minify'])
+ })
+ 
+ gulp.task('document', function() {
+     gulp.src(['public/javascripts/**/*.js'])
+     .pipe(jsdoc('./out'))
  })
  
 //  gulp.task('images', function (cb) {

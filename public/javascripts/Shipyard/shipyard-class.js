@@ -9,7 +9,7 @@ WP.Shipyard = class {
      */
     constructor () {
        /**
-        * @property {number} id - id of the shipyard
+        * @property {number} id -identification code of the shipyard
         * @property {string} name - name of the shipyard
         * @property {object} owner - country object to which shipyard belongs
         * @property {number} rate - shipbuilding rate (ship advances(or new keels laid down)/turn)of the shipyard

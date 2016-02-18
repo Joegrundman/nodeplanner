@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Warplanner Index</title>
+	<title>Warplanner Class: ForcepoolGrouping</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,79 +63,279 @@
 		<div id="main">
 			
 
-	
-	
+	<h1 class="page-title">Class: ForcepoolGrouping</h1>
+<section>
+
+<header>
+    
+        <h2>
+        ForcepoolGrouping
+        </h2>
+        
+            <div class="class-description"><p>A group for the forcepool dialog</p></div>
+        
+    
+</header>
 
 
-
-
-
-
-
-
-
-
-
-	
-	
-
-
-
-
-
-    <section class="readme-section">
-        <article><h1><strong><em> WARPLANNER 2 FOR NODE</em></strong></h1><p>A browser based tool to play Bruce Harper's A World At War</p>
-<p>Not finished</p>
+<article>
+    <div class="container-overview">
+    
+        
 <hr>
-<h2>Installation</h2><p>You must have node installed.</p>
-<p>To install, clone the repo, navigate a terminal to the directory and type </p>
-<p><code>npm install</code></p>
-<p>once the dependencies are installed</p>
-<p><code>npm start</code></p>
-<p>and navigate the browser to</p>
-<p><code>localhost:3000</code></p>
-<p>press the <strong>play</strong> button to go to the game screen</p>
-<p>use </p>
-<p><code>npm run dev</code> 
-to use nodemon to auto-restart the server after changes</p>
-<h2>Build</h2><p>At the moment, a very simple build system has been implemented. </p>
-<p>On <code>index.html</code>, for development, all the scripts are individually sourced.
-Performance is pretty slow in this state</p>
-<p>Or, the concatenated javascript file is found in 
-´dist/wp.min.js´</p>
-<p>On <code>index.html</code>, comment out all the javascripts (but not the libraries like jquery)
-and uncomment out the line:</p>
-<p><code>&lt;script src=&quot;dist/Min/wp.min.js&quot;&gt;&lt;/script&gt;</code></p>
-<p>the files are not actually minified, just concatenated and stripped of comments. 
-Uglify doesn't yet seem to play nicely with es6 classes, and i don't currently want to use babel to uglifyall the way back into es5</p>
-<p>to concatenate your new javascripts into a new wp.min.js
-run:
-<code>gulp concat</code></p>
-<h2>Unit Tests</h2><p>I have written about a hundred simple unit tests using karma-jasmine
-It helped somewhat with refactoring from es4 to es6, but it is also so i can demonstrate my unit testing skillz</p>
-<h2>Jsdoc</h2><p>jsdocs are implemented with DocStrap slate to keep a unified theme with the warplanner ui
-The main reason is that my first paid programming job has a good chance of writing documentation and doctests for a hightech scientific simulation software
-so i thought it would be helpful if i had some done, but who knows, maybe documentation really is awesome!</p>
-<p>to serve up the docs, navigate to the <code>./out</code> directory and run a simple server
-(unless i am missing something and i don't need to do all that)
-If you have python installed, you can make server with
-<code>python -m http.server 8000</code></p>
-<p>and then navigate to 
-<code>localhost:8000</code></p>
-<p>to see the documents</p>
-<p>to build documentation with additional doc comments you need jsdoc installed globally
-<code>npm install -g jsdoc</code></p>
-<p>then from the warplanner directory
-<code>npm run jsdoc</code></p>
-<h2>Germany Safe</h2><p>Since i have been advised that i cannot be showing swastikas to german employers, 
-i have used a SFW version of the german flag. To go back to authentic, go to</p>
-<p>content/flags and find the germany flags.</p>
-<p>Rename all the germany.jpg files as germany-safe.jpg etc</p>
-<p>rename all the germany-unsafe.jpg as germany.jpg</p></article>
-    </section>
+<dt>
+    <h4 class="name" id="ForcepoolGrouping"><span class="type-signature"></span>new ForcepoolGrouping()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Create a forcepool group</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
 
 
 
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Country_country-class.js.html">Country/country-class.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="id">
+    <h4><span class="type-signature"></span>id<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the id of the forcepoolGrouping</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the name of the forcepoolGrouping</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Country_country-class.js.html">Country/country-class.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

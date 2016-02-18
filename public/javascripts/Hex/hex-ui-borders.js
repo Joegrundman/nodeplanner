@@ -18,7 +18,8 @@ WP.Hex.UI.Borders = {
 		var result = [];
 		var delta_theta = 2.0 * Math.PI / 6;
 		var theta = 0;
-		var radius = adjust(hexSize);
+		var radius = adjust(hex.size);
+		// var radius = adjust(hexSize);
 
 		var modX = hex.pixelPoint.x + hex.size;
 		var modY = hex.pixelPoint.y + hex.size;
