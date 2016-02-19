@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Warplanner Class: ForcepoolGrouping</title>
+	<title>Warplanner Class: Codebreaking</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,16 +63,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: ForcepoolGrouping</h1>
+	<h1 class="page-title">Class: Codebreaking</h1>
 <section>
 
 <header>
     
         <h2>
-        ForcepoolGrouping
+        Codebreaking
         </h2>
         
-            <div class="class-description"><p>A group for the forcepool dialog</p></div>
+            <div class="class-description"><p>WP.Codebreaking class creates an instance of a codebreaking draw of cards</p></div>
         
     
 </header>
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="ForcepoolGrouping"><span class="type-signature"></span>new ForcepoolGrouping()</h4>
+    <h4 class="name" id="Codebreaking"><span class="type-signature"></span>new Codebreaking()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Create a forcepool group</p>
+        <p>Creates a codebreaking object</p>
     </div>
     
 
@@ -138,7 +138,7 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Country_country-class.js.html">Country/country-class.js</a>
+				<a href="Codebreaking_codebreaking-class.js.html">Codebreaking/codebreaking-class.js</a>
 			</li>
 		</ul>
 	</dd>
@@ -186,8 +186,8 @@
         <dl>
             
 <hr>
-<dt class="name" id="id">
-    <h4><span class="type-signature"></span>id<span class="type-signature"></span></h4>
+<dt class="name" id="selected">
+    <h4><span class="type-signature"></span>selected<span class="type-signature"></span></h4>
 
     
 </dt>
@@ -226,7 +226,7 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>selected</code></td>
             
 
             <td class="type">
@@ -243,20 +243,20 @@
 
             
 
-            <td class="description last"><p>the id of the forcepoolGrouping</p></td>
+            <td class="description last"><p>number of cards in the pool from which 4 are drawn</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>cards</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">array</span>
 
 
 
@@ -267,7 +267,7 @@
 
             
 
-            <td class="description last"><p>the name of the forcepoolGrouping</p></td>
+            <td class="description last"><p>the four cards held in this hand</p></td>
         </tr>
 
     
@@ -308,7 +308,7 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Country_country-class.js.html">Country/country-class.js</a>
+				<a href="Codebreaking_codebreaking-class.js.html">Codebreaking/codebreaking-class.js</a>
 			</li>
 		</ul>
 	</dd>
@@ -328,6 +328,437 @@
         </dl>
     
 
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="addCard"><span class="type-signature"></span>addCard(card)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Adds a card to the cards array</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>card</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the card to be added</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Codebreaking_codebreaking-class.js.html">Codebreaking/codebreaking-class.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="draw"><span class="type-signature"></span>draw()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>This parses year and season from the dialog html and calls showResultsFor</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Codebreaking_codebreaking-class.js.html">Codebreaking/codebreaking-class.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getResultFor"><span class="type-signature"></span>getResultFor(year, season, {number)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets results for the current turn and faction (Western Allies, Russia, Germany or Japan)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>year</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the game year</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>season</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the season of the year (4 seasons per year)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>{number</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>side - the side to which this hand belongs</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="Codebreaking_codebreaking-class.js.html">Codebreaking/codebreaking-class.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the hand of cards is returned</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
     
 
     

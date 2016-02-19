@@ -14,7 +14,7 @@ WP.Taskforce = class {
         * @property {number} id - id of the taskforce
         * @property {object} owner - country object to which taskforce belongs
         * @property {number} size - number of taskforces that this country can have at one time
-        * @property {array} taskforceUnits - individual ships and NAS in current taskforce object
+        * @property {object} taskforceUnits - individual ships and NAS in current taskforce object
         * @property {object} unitHolder - currently instantiated holder object for the stacks of units in the taskforce
         * @property {number} currentSquareX - x coordinate(of taskforce grid) of the currently selected unit
         * @property {number} currentSquareY - y coordinate(of taskforce grid) of the currently selected unit

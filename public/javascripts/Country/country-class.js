@@ -24,9 +24,9 @@ WP.Country  = class {
          * @property {color} lineColor - the color used for drawing lines for this country's units
          * @property {color} shadow - the shadowing color for this country's units
          * @property {string} flagImage - the path to his country's flag image
-         * @property {array} forcepoolGroupings - the different groups for this country's forcepool dialog
-         * @property {array} colonies - the colonies that belong to this country
-         * @property {array} units - the currently instantiated units that belong to this country
+         * @property {object} forcepoolGroupings - the different groups for this country's forcepool dialog
+         * @property {object} colonies - the colonies that belong to this country
+         * @property {object} units - the currently instantiated units that belong to this country
          * @property {object} codebreaking - the codebreaking cards and record held for this country (actually not sure about how this works)
          */
         this.id = -1;

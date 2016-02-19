@@ -1,7 +1,5 @@
 /**
- * Using ES6 Classes
- * 
- * Th UnitHolder class provides a container for holding units that will
+ * The UnitHolder class provides a container for holding units that will
  *  be drawn on the smaller canvases 
  * (eg forcepool etc.. but not main map)
  */

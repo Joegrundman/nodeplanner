@@ -1,74 +1,52 @@
 /* global WP */
-
-// using es6 Classes
-
 'use strict';
 
+/**
+ * A unit stack is an array of units that will be drawn one on top of the other
+ */
 WP.UnitStack = class {
+    /**
+     * Create a unit stack
+     */
     constructor() {
+        /**
+         * @property {number} x - x coordinate
+         * @property {number} y - y coordinate
+         * @property {object} units - array of units
+         */
         this.x = 0
         this.y = 0
         this.units = []
     }
-    
+    /**
+     * gets the top unit from the unit stack
+     * @returns {object} top unit
+     */
     getTopUnit () {
         if (!this.units) { return null } 
         return this.units[this.units.length - 1]
     }
-    
+    /**
+     * removes unit from the unit stack
+     * @param {object} the unit to be removed
+     */    
     removeUnit (unit) {
-        var j = 0;
-        while (j < this.units.length) {
-            if (this.units[j] == unit)
-                this.units.splice(j, 1);
-            else
-                j++;
-        }
+        this.units = this.units.filter(u => u != unit)
     }
-    
+    /**
+     * adds unit to the unit stack
+     * @param {object} the unit to be added
+     */     
     addUnit (unit) {
         if (!unit) return;
         this.units.push(unit);
         unit.stack = this;
     }
-    
+    /**
+     * rotates units in the unit stack
+     */ 
     rotateUnits () {
         var unit = this.units.shift();
         this.addUnit(unit);
     }
 }
-
-// ES5 classes
-
-// WP.UnitStack = function () {
-// 	this.x = 0;
-// 	this.y = 0;
-// 	this.units = new Array();
-// }
-
-// WP.UnitStack.prototype.getTopUnit = function () {
-// 	if (!this.units) return null;
-// 	return this.units[this.units.length - 1];
-// }
-
-// WP.UnitStack.prototype.removeUnit = function (unit) {
-// 	var j = 0;
-// 	while (j < this.units.length) {
-// 		if (this.units[j] == unit)
-// 			this.units.splice(j, 1);
-// 		else
-// 			j++;
-// 	}
-// }
-
-// WP.UnitStack.prototype.addUnit = function (unit) {
-// 	if (!unit) return;
-// 	this.units[this.units.length] = unit;
-// 	unit.stack = this;
-// }
-
-// WP.UnitStack.prototype.rotateUnits = function () {
-// 	var unit = this.units.shift();
-// 	this.addUnit(unit);
-
-// }

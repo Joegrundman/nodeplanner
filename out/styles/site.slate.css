@@ -1526,8 +1526,10 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #aaa;/*#f9f2f4;*/
+  color: #333;
+  /*color: #c7254e;*/
+  /*background-color: #f9f2f4;*/
+  background-color: #ccc;
   border-radius: 4px;
 }
 kbd {
@@ -7245,6 +7247,7 @@ footer {
 code {
   background-color: none;
   border: none;
+  /*color: orange;*/
   color: #333;
 }
 .buffered-name {

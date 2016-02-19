@@ -1,5 +1,5 @@
-*** WARPLANNER 2 FOR NODE***
-============================
+WARPLANNER 2 FOR NODE
+=====================
 
 A browser based tool to play Bruce Harper's A World At War
 
@@ -57,6 +57,9 @@ Unit Tests
 ----------
 I have written about a hundred simple unit tests using karma-jasmine
 It helped somewhat with refactoring from es4 to es6, but it is also so i can demonstrate my unit testing skillz
+
+To run the karma-jasmine tests, run
+`npm test`
 
 Jsdoc
 -----

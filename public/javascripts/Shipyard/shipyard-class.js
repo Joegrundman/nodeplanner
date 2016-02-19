@@ -14,7 +14,7 @@ WP.Shipyard = class {
         * @property {object} owner - country object to which shipyard belongs
         * @property {number} rate - shipbuilding rate (ship advances(or new keels laid down)/turn)of the shipyard
         * @property {object} unitHolder - currently instantiated holder object for the stacks of units in the shipyard
-        * @property {array} shipyardUnits - naval units currently in the shipyard
+        * @property {object} shipyardUnits - naval units currently in the shipyard
         * @property {number} currentSquareX - x coordinate(of shipyard grid) of the currently selected unit
         * @property {number} currentSquareY - y coordinate(of shipyard grid) of the currently selected unit
         * @property {boolean} dragging - whether the currently selected unit can be dragged

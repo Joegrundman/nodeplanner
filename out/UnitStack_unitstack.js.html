@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Warplanner Source: Forcepool/forcepool-class.js</title>
+	<title>Warplanner Source: UnitStack/unitstack.js</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,92 +63,62 @@
 		<div id="main">
 			
 
-		<h1 class="page-title">Source: Forcepool/forcepool-class.js</h1>
+		<h1 class="page-title">Source: UnitStack/unitstack.js</h1>
     
 <section>
     <article>
         <pre
-            class="sunlight-highlight-javascript ">'use strict';
+            class="sunlight-highlight-javascript ">/* global WP */
+'use strict';
 
 /**
- * WP.Forcepool class for creating forcepools. Forcepools are a popup dialog that contain units that have not been placed on the map or in a shipyard or taskforce
- * these units are also put into categories (e.g. unbuilt, dow+1, air, naval, ground)
+ * A unit stack is an array of units that will be drawn one on top of the other
  */
-
-WP.Forcepool = class {
+WP.UnitStack = class {
     /**
-     * Create a forcepool
+     * Create a unit stack
      */
-    constructor () {
+    constructor() {
         /**
-         * @property {object} unitHolder - a unitHolder object that will contain the units in the forcepool
+         * @property {number} x - x coordinate
+         * @property {number} y - y coordinate
+         * @property {object} units - array of units
          */
-        this.unitHolder = null;
-    }
-    
-    /**
-     * This is an empty function that saves having to typecheck elsewhere. It's analogs in Taskforce and Shipyard do things
-     */
-    // ___Don't delete.____
-    // Map/map.js calls this function for shipyrd or taskforce. 
-    // For fp nothing should happen when called
-    // by doing this i avoid instanceof checking
-    removeUnitFrom () {}
-    
-    /**
-     * After selecting this country on the forcepool dialog, this function updates map and forcepool groupings
-     * @param {number} id - id of the country selected
-     */
-    handleCountrySelected (id) {
-        var cty = game.getCountry(id)
-        $("#fpCountryFlag").attr("src", WP.Country.UI.getFlagUrl(cty));
-        $('#fpGroupings').empty();
-        $('#fpGroupings').append($("&lt;option />")
-			             .attr("value", "0")
-			             .text("Unbuilt"))
-        
-        cty.forcepoolGroupings.forEach(group => {
-        $('#fpGroupings')
-			.append($("&lt;option />")
-			.attr("value", group.id)
-			.text(group.name));
-        })
+        this.x = 0
+        this.y = 0
+        this.units = []
     }
     /**
-     * Upon clicking the mouse button, this function finds the unit in the shipyard display under the mouse cursor
-     * @param {object} e -  the mouse event object
+     * gets the top unit from the unit stack
+     * @returns {object} top unit
+     */
+    getTopUnit () {
+        if (!this.units) { return null } 
+        return this.units[this.units.length - 1]
+    }
+    /**
+     * removes unit from the unit stack
+     * @param {object} the unit to be removed
+     */    
+    removeUnit (unit) {
+        this.units = this.units.filter(u => u != unit)
+    }
+    /**
+     * adds unit to the unit stack
+     * @param {object} the unit to be added
+     */     
+    addUnit (unit) {
+        if (!unit) return;
+        this.units.push(unit);
+        unit.stack = this;
+    }
+    /**
+     * rotates units in the unit stack
      */ 
-    onMouseDown (e) {
-        var point = getPoint('forcepoolCanvas', e)
-        var stack = forcepool.unitHolder.findStackFor(point.x, point.y);
-        if (stack) {
-            game.setSelectedUnit(stack.getTopUnit());
-            forcepool.unitHolder.drawStack(stack);
-        }
-        else {
-            game.setSelectedUnit(null);
-        }
+    rotateUnits () {
+        var unit = this.units.shift();
+        this.addUnit(unit);
     }
-    /**
-     * Draws the units onto the forcepool display
-     */
-    draw () {
-       var id = $('#fpGroupings').val()
-	   var cty = game.getCountry($('#fpCountry').val())
-	   var units = []
-       cty.units.forEach(u => {
-            if (u.location == 1 &amp;&amp; u.fpg == id) {
-                units.push(u)
-            }
-        })
-        var holder = WP.UnitHolder.unitHolderBuilder(forcepoolCtx, $("#fpDetails"));
-        holder.units = units;
-        holder.stackSimilar = $('#fpStackCheckbox').is(':checked');
-        holder.draw();
-        forcepool.unitHolder = holder;
-    }
-    
-    
 }
 </pre>
     </article>

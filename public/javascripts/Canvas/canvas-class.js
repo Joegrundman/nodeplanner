@@ -21,8 +21,9 @@
 /* global backgroundCtx */
 /* global backgroundCanvas */
 
-WP.Canvas = {
 
+
+WP.Canvas = {
   initCanvas: function () {
     WP.Canvas.initMapCanvas()
     WP.Canvas.initBackgroundCanvas()

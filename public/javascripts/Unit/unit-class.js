@@ -319,7 +319,7 @@ WP.Unit = class {
 
     /**
      * searches stacks to find if a unit with the same address is in
-     * @param {Array} stacks - array of stacks to be searched for unit address
+     * @param {object} stacks - array of stacks to be searched for unit address
      * @returns {number} identifying number for stack
      */    
     findStackWithSameAddress (stacks) {
@@ -394,7 +394,7 @@ WP.Unit = class {
     }
     /**
      * searches stack to find if a unit with the same address as this.unit is in
-     * @param {Array} stack  stack to be searched for unit matching address
+     * @param {object} stack  stack to be searched for unit matching address
      * @returns {boolean}
      */      
     unitHasSameAddress (stack) {
@@ -403,7 +403,7 @@ WP.Unit = class {
     }
     /**
      * searches stack to find if a unit with the same type as this.unit is in
-     * @param {Array} stack  stack to be searched for unit matching type
+     * @param {object} stack  stack to be searched for unit matching type
      * @returns {boolean}
      */     
     unitTypeExistsInStack (stack) {

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Warplanner Class: ForcepoolGrouping</title>
+	<title>Warplanner Class: UnitStack</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,16 +63,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: ForcepoolGrouping</h1>
+	<h1 class="page-title">Class: UnitStack</h1>
 <section>
 
 <header>
     
         <h2>
-        ForcepoolGrouping
+        UnitStack
         </h2>
         
-            <div class="class-description"><p>A group for the forcepool dialog</p></div>
+            <div class="class-description"><p>A unit stack is an array of units that will be drawn one on top of the other</p></div>
         
     
 </header>
@@ -84,7 +84,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="ForcepoolGrouping"><span class="type-signature"></span>new ForcepoolGrouping()</h4>
+    <h4 class="name" id="UnitStack"><span class="type-signature"></span>new UnitStack()</h4>
     
     
 </dt>
@@ -92,7 +92,7 @@
 
     
     <div class="description">
-        <p>Create a forcepool group</p>
+        <p>Create a unit stack</p>
     </div>
     
 
@@ -138,7 +138,7 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Country_country-class.js.html">Country/country-class.js</a>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
 			</li>
 		</ul>
 	</dd>
@@ -186,8 +186,8 @@
         <dl>
             
 <hr>
-<dt class="name" id="id">
-    <h4><span class="type-signature"></span>id<span class="type-signature"></span></h4>
+<dt class="name" id="x">
+    <h4><span class="type-signature"></span>x<span class="type-signature"></span></h4>
 
     
 </dt>
@@ -226,7 +226,7 @@
 
         <tr>
             
-                <td class="name"><code>id</code></td>
+                <td class="name"><code>x</code></td>
             
 
             <td class="type">
@@ -243,20 +243,20 @@
 
             
 
-            <td class="description last"><p>the id of the forcepoolGrouping</p></td>
+            <td class="description last"><p>x coordinate</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>name</code></td>
+                <td class="name"><code>y</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">number</span>
 
 
 
@@ -267,7 +267,31 @@
 
             
 
-            <td class="description last"><p>the name of the forcepoolGrouping</p></td>
+            <td class="description last"><p>y coordinate</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>units</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>array of units</p></td>
         </tr>
 
     
@@ -308,7 +332,7 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="Country_country-class.js.html">Country/country-class.js</a>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
 			</li>
 		</ul>
 	</dd>
@@ -328,6 +352,482 @@
         </dl>
     
 
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="addUnit"><span class="type-signature"></span>addUnit(the)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>adds unit to the unit stack</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>the</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>unit to be added</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getTopUnit"><span class="type-signature"></span>getTopUnit()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>gets the top unit from the unit stack</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>top unit</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeUnit"><span class="type-signature"></span>removeUnit(the)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>removes unit from the unit stack</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>the</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>unit to be removed</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="rotateUnits"><span class="type-signature"></span>rotateUnits()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>rotates units in the unit stack</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="UnitStack_unitstack.js.html">UnitStack/unitstack.js</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -375,7 +875,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
-		on 2016-02-19T12:00:52+01:00
+		on 2016-02-19T12:00:53+01:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

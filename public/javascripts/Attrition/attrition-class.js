@@ -1,10 +1,21 @@
 'use strict';
-
+/**
+ * WP.Attrition class defines the attrition object which is created each time the attrition button is pressed
+ */
 WP.Attrition = class {
+    /**
+     * Create an attrition object
+     */
     constructor () {
+        /**
+         * @property {object} units - array of units currently counted towards the attrition total
+         */
         this.units = []
     }
-    
+    /**
+     * Adds a unit to the attrition array
+     * @param {object} unit - the unit to be added and counted towards attrition total
+     */
     addUnit (unit) {
         if (!unit) { return }
         if (!unit.canBeCountedInAttrition()) { return }
@@ -16,7 +27,9 @@ WP.Attrition = class {
             unit.highlight = new WP.Color(255, 255, 72).toRgb()
         }
     }
-    
+    /**
+     * handles the onmouseclick event, sending units to be added to the units array
+     */
     handleHexClick() { 
         var map = game.currentMap
         var hex = map.currentHex
@@ -30,6 +43,11 @@ WP.Attrition = class {
         hex.draw();
         this.refreshTotals();
     }
+    
+    /**
+     * removes unit from the attrition units array
+     * @param {object} unit - the unit to be removed from the attrition units array
+     */
        
     removeUnit (unit) {
         if (!unit) return;
@@ -48,6 +66,10 @@ WP.Attrition = class {
         
 
     }
+    
+    /**
+     * refreshes the calculated attrition total and displays the result on the dialog
+     */
     
     refreshTotals () {
         var total = 0
