@@ -8,24 +8,9 @@ var gulpFilter = require('gulp-filter')
 var complexity = require('gulp-complexity')
 var gulpif = require('gulp-if')
 var strip = require('gulp-strip-comments')
-var jsdoc = require('gulp-jsdoc')
-var shell = require('gulp-shell')
-//var imageop = require('gulp-image-optimzation')
+var usemin = require('gulp-usemin')
 
-
-var banner = ['/**',
-    ' * Warplanner2 for Node',
-    ' * an implementation of',
-    ' * Bruce Harper\'s A World At War',
-    ' * by GMT Games',
-    ' * Programming provided',
-    ' * by Chris Goldfarb,',
-    ' * and Joe Grundman',
-    ' */',
-    ''].join('\n')
- 
- gulp.task('concat', function(){
-          return gulp.src([
+var srcScripts = [
          'public/javascripts/Globals/globals.js',
          'public/javascripts/Web/*.js',
          'public/javascripts/Misc/*.js',
@@ -52,17 +37,64 @@ var banner = ['/**',
          'public/javascripts/Shipyard/*.js',
          'public/javascripts/Tables/*.js',
          'public/javascripts/Taskforce/*.js',
-
          'public/javascripts/UnitCounter/*.js',
          'public/javascripts/UnitHolder/*.js',
          'public/javascripts/UnitStack/*.js'
-     ])
-     .pipe(concat('wp.min.js'))
-     .pipe(strip())
-     .pipe(header(banner))
-     .pipe(gulp.dest('./public/dist/Min'))
+     ]
+     
+var banner = ['/**',
+    ' * Warplanner2 for Node',
+    ' * an implementation of',
+    ' * Bruce Harper\'s A World At War',
+    ' * by GMT Games',
+    ' * Programming provided',
+    ' * by Chris Goldfarb,',
+    ' * and Joe Grundman',
+    ' */',
+    ''].join('\n')
+ 
+ /*
+  * Concatenates the javascripts into one and pipes to two directories, public/dist and build
+  * public dist can test the validity of the concatenated file without switching to production
+  * build is for production environment
+  */ 
+ gulp.task('concat', function(){
+          return gulp.src(srcScripts)
+            .pipe(concat('wp.min.js'))
+            .pipe(strip())
+            .pipe(header(banner))
+            .pipe(gulp.dest('./public/dist/Min'))
+            .pipe(gulp.dest('./build/script/Min'))
  })
-    
+ 
+ /**
+  * concatenates vendor libraries and pipes to build/script/Vendor. Not needed if using cdn libraries
+  */
+ gulp.task('vendor', function() {
+     return gulp.src([
+         'public/javascripts/Vendor/jquery.min.js',
+         'public/javascripts/Vendor/jquery-ui.min.js'
+     ])
+        .pipe(concat('vendor.min.js'))
+        .pipe(gulp.dest('./build/script/Vendor'))
+ })
+ 
+ /*
+  * automates replacing the development script tags in index.html with a single script src to the concatenated file
+  * problem unresolved is that unlike with angular the index.html isn't part of the client side, but served up
+  * therefore there is a name clash with the old index.html, unless we can concatenate all the swig files too...
+  */
+ gulp.task('usemin', function(){
+     return gulp.src('./views/index.html')
+        .pipe(usemin())
+        .pipe(gulp.dest('./build-views/'))
+ })
+ 
+ /*
+  * minifies the files, but problem is that it does not recognise ES6 features already implemented in browsers.
+  * files must be babelified to es5 before minification, or what for minifier to catch up with reality
+  * concatenation is thre most important optimizer anyway.
+  */   
  gulp.task('minify', function() {
     //  var templatesFilter = gulpFilter('public/views/*.html')
      
@@ -114,6 +146,8 @@ var banner = ['/**',
      .pipe(complexity())
  })
  
+ 
+ 
  gulp.task('styles', function(){
      gulp.src([
          'public/stylesheets/*.css'
@@ -135,24 +169,6 @@ var banner = ['/**',
      gulp.watch(['public/javascripts/*.js'], ['minify'])
  })
  
- gulp.task('document', function() {
-     gulp.src(['public/javascripts/**/*.js'])
-     .pipe(jsdoc('./out'))
- })
- 
-//  gulp.task('images', function (cb) {
-//      gulp.src([
-//          'public/content/**/*.png',
-//          'public/content/**/*.jpg',
-//          'public/content/**/*.gif',
-//          'public/content/**/*.bmp',
-//          'public/content/**/*.png',
-//          'public/content/**/*.jpg',
-//          'public/content/**/*.gif',
-//          ])
-//          .pipe(gulp.dest('public/images'))
-//          .on('end', cb)
-//          .on('error', cb)
-//  })
- 
- gulp.task('default', ['watch', 'styles', 'minify'])
+
+gulp.task('default', ['watch', 'styles', 'minify'])
+gulp.task('build', ['vendor', 'concat'])

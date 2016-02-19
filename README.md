@@ -38,8 +38,10 @@ At the moment, a very simple build system has been implemented.
 On `index.html`, for development, all the scripts are individually sourced.
 Performance is pretty slow in this state
 
-Or, the concatenated javascript file is found in 
-´dist/wp.min.js´
+One copy of, the concatenated javascript file is found in 
+´public/dist/wp.min.js´
+
+this one is useful for checking the quality of the concatenated file without shifting to production settings
 
 On `index.html`, comment out all the javascripts (but not the libraries like jquery)
 and uncomment out the line:
@@ -49,9 +51,20 @@ and uncomment out the line:
 the files are not actually minified, just concatenated and stripped of comments. 
 Uglify doesn't yet seem to play nicely with es6 classes, and i don't currently want to use babel to uglifyall the way back into es5
 
+the other concatenated file is found in 
+`build/Min`
+
+this folder also has a copy of the styles and a repeat of the content folder, and is accessed when node environment variable is set to `production`
+
 to concatenate your new javascripts into a new wp.min.js
 run:
 `gulp concat`
+
+to run in development mode
+`npm run dev`
+
+to run in production mode
+`npm run production`
 
 Unit Tests
 ----------

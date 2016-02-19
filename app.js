@@ -15,34 +15,45 @@ var router = require('./router')(app)
 // ===> Swig setup
 app.engine('html', swig.renderFile)
 app.set('view engine', 'html')
-app.set('views', path.join(__dirname, 'views'))
 
+// if (app.get('env') === 'production') {
+//   app.set('views', path.join(__dirname, 'build-views'))
+// } else  {
+//   app.set('views', path.join(__dirname, 'views'))
+// }
+
+app.set('views', path.join(__dirname, 'views'))
 // in production always use template caching
 // here we can use swig template caching instead of express's
 
-app.set('view cache', false)
+app.set('view cache', true)
 
 if (app.get('env') === 'production') {
-  swig.setDefaults({ cache: true })
+  // using express cacheing- swig cache throws error, easiest fix is use express instead..
+  swig.setDefaults({ cache:false })
+  app.set('view cache', true)
 } else  {
   swig.setDefaults({ cache: false })
+  app.set('view cache', false)
 }
 
 
-// EJS setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'swig');
+if (app.get('env') === 'production') {
+  app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
+} else  {
+  app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+}
 
-// uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-// app.use('/', routes);
-// app.use('/users', users);
+;
+if (app.get('env') === 'production') {
+  app.use(express.static(path.join(__dirname, 'build')))
+} else  {
+  app.use(express.static(path.join(__dirname, 'public')))
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
