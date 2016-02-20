@@ -92,8 +92,8 @@ var banner = ['/**',
  
  /*
   * minifies the files, but problem is that it does not recognise ES6 features already implemented in browsers.
-  * files must be babelified to es5 before minification, or what for minifier to catch up with reality
-  * concatenation is thre most important optimizer anyway.
+  * files must be babelified to es5 before minification, or wait for minifier to catch up with reality
+  * concatenation is the most important optimizer anyway.
   */   
  gulp.task('minify', function() {
     //  var templatesFilter = gulpFilter('public/views/*.html')

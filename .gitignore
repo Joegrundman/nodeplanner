@@ -1,2 +1,4 @@
 node_modules
-build
+public
+out
+# for heroku, include build, do not include public or out
