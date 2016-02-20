@@ -154,8 +154,10 @@ WP.Game = class {
         this.countries.forEach(cty => {
             if(cty.id == id) { res = cty }
         })
-        
-        alert("Game.getCountry: Unknown country: " + id);
+        if (res == null) {
+         console.log("Game.getCountry(id): Unknown country: " + id);           
+        }
+
         return res;
     }
     /**
@@ -177,7 +179,9 @@ WP.Game = class {
         this.countries.forEach(cty => {
             if (cty.name == name) { res = cty }
         })
-        alert("Game.getCountry: Unknown country: " + name);
+        if (res == null){
+            console.log("Game.getCountryFromName: Unknown country: " + name);
+        }
         return res;
     }
     /**
@@ -230,7 +234,9 @@ WP.Game = class {
                 if (syu.id == unitId) { res = sy }
             })
         })
-        alert("Game.getShipyard from unit: Unknown shipyard with: " + unitId);
+        if (res == null) {
+         alert("Game.getShipyard from unit: Unknown shipyard with: " + unitId);           
+        }
         return res;      
     }
      /**
@@ -245,7 +251,9 @@ WP.Game = class {
                 if (tfu.id == unitId) { res = tf }
             })
         })
-        alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitId);
+        if (res == null) {
+         alert("Game.getTaskforce from unit: Unknown taskforce with: " + unitId);           
+        }
         return res;   
     }
     
@@ -279,7 +287,9 @@ WP.Game = class {
         this.taskforces.forEach(tf => {
             if (tf.id == id) { res = tf }
         })
-        alert("Game.getTaskforces: Unknown taskforce: " + id);
+        if (res == null){
+          alert("Game.getTaskforces: Unknown taskforce: " + id);          
+        }
         return res;        
     }
      /**
@@ -292,7 +302,9 @@ WP.Game = class {
         this.taskforces.forEach(tf => {
             if (tf.owner == owner) { res = tf }
         })
-        alert("Game.getTaskforce: Unknown taskforce: " + owner);
+        if (res == null) {
+         alert("Game.getTaskforce: Unknown taskforce: " + owner);           
+        }
         return res;
     }
     /**
@@ -313,6 +325,9 @@ WP.Game = class {
                 }
             })
         })
+        if (res == null) {
+           alert("Game.getUnit forTaskforce: Unknown unit: " + id);           
+        }
         return res        
     }
      /**

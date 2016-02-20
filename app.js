@@ -32,7 +32,7 @@ app.set('view cache', true)
 if (app.get('env') === 'production') {
   // using express cacheing- swig cache throws error, easiest fix is use express instead..
   swig.setDefaults({ cache:false })
-  app.set('view cache', true)
+  app.set('view cache', false)
 } else  {
   swig.setDefaults({ cache: false })
   app.set('view cache', false)
@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 ;
 if (app.get('env') === 'production') {
-  app.use(express.static(path.join(__dirname, 'build'), { maxAge: 2628000000 }))
+  app.use(express.static(path.join(__dirname, 'build')))
 } else  {
   app.use(express.static(path.join(__dirname, 'public')))
 }
