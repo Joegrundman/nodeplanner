@@ -219,7 +219,9 @@ WP.Game = class {
         this.shipyards.forEach(sy => {
             if (sy.name == name) { res = sy }
         })
-        alert("Game.getShipyardFromName: Unknown shipyard: " + name);
+        if(res == null) {
+            alert("Game.getShipyardFromName: Unknown shipyard: " + name);
+        }
         return res        
     }
      /**

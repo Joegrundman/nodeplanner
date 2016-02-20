@@ -98,37 +98,7 @@ var banner = ['/**',
  gulp.task('minify', function() {
     //  var templatesFilter = gulpFilter('public/views/*.html')
      
-     return gulp.src([
-         'public/javascripts/Globals/globals.js',
-         'public/javascripts/Web/*.js',
-         'public/javascripts/Misc/*.js',
-         'public/javascripts/Attrition/*.js',
-         'public/javascripts/Canvas/*.js',
-         'public/javascripts/Codebreaking/*.js',
-         'public/javascripts/Country/*.js',
-         'public/javascripts/Diplomacy/*.js',
-         'public/javascripts/Eventing/*.js',
-         'public/javascripts/Forcepool/*.js',
-         'public/javascripts/Game/*.js',
-         'public/javascripts/GameSettings/*.js',
-         'public/javascripts/Hex/*.js',
-         'public/javascripts/HexControl/*.js',
-         'public/javascripts/HexInfo/*.js',
-         'public/javascripts/Loaders/*.js',
-         'public/javascripts/Map/*.js',
-         'public/javascripts/Navigator/*.js',
-         'public/javascripts/NewUnit/*.js',
-         'public/javascripts/Phase/*.js',
-         'public/javascripts/ResearchDisplay/*.js',
-         'public/javascripts/ShipsAtSea/*.js',
-         'public/javascripts/Shipyard/*.js',
-         'public/javascripts/Tables/*.js',
-         'public/javascripts/Taskforce/*.js',
-         'public/javascripts/Unit/*.js',
-         'public/javascripts/UnitCounter/*.js',
-         'public/javascripts/UnitHolder/*.js',
-         'public/javascripts/UnitStack/*.js'
-     ])
+     return gulp.src(srcScripts)
     //  .pipe(templatesFilter)
     //  .pipe(templatesFilter.restore())
      .pipe(concat('wp.min.js'))
@@ -137,6 +107,9 @@ var banner = ['/**',
      .pipe(gulp.dest('./public/dist/Min'))
  })
  
+ /*
+  * a complexity analysis tool. doesn't seem to work on this build
+  */
  gulp.task('complexity', function(){
      return gulp.src([
          '!public/vendor/*.*',
@@ -146,7 +119,9 @@ var banner = ['/**',
      .pipe(complexity())
  })
  
- 
+ /*
+  * css concatenation and optimization
+  */
  
  gulp.task('styles', function(){
      gulp.src([
@@ -157,6 +132,10 @@ var banner = ['/**',
      .pipe(gulp.dest('public/stylesheets'))
  })
  
+ 
+ /*
+  * linting for css and less
+  */
  gulp.task('recess', function(){
      gulp.src('public/stylesheets')
      .pipe(recess())
@@ -164,6 +143,9 @@ var banner = ['/**',
      .pipe(gulp.dest('public/stylesheets'))
  })
  
+ /*
+  * watches for changes
+  */
  gulp.task('watch', function() {
      gulp.watch(['public/stylesheets/*.css'], ['styles'])
      gulp.watch(['public/javascripts/*.js'], ['minify'])
