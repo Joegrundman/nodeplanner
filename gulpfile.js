@@ -9,6 +9,9 @@ var complexity = require('gulp-complexity')
 var gulpif = require('gulp-if')
 var strip = require('gulp-strip-comments')
 var usemin = require('gulp-usemin')
+var changed = require('gulp-changed')
+
+
 
 var srcScripts = [
          'public/javascripts/Globals/globals.js',
@@ -63,8 +66,7 @@ var banner = ['/**',
             .pipe(concat('wp.min.js'))
             .pipe(strip())
             .pipe(header(banner))
-            .pipe(gulp.dest('./public/dist/Min'))
-            .pipe(gulp.dest('./build/script/Min'))
+            .pipe(gulp.dest('build/public/javascripts/Min'))
  })
  
  /**
@@ -76,36 +78,71 @@ var banner = ['/**',
          'public/javascripts/Vendor/jquery-ui.min.js'
      ])
         .pipe(concat('vendor.min.js'))
-        .pipe(gulp.dest('./build/script/Vendor'))
+        .pipe(gulp.dest('./build/public/javascripts/Vendor'))
  })
  
  /*
-  * automates replacing the development script tags in index.html with a single script src to the concatenated file
-  * problem unresolved is that unlike with angular the index.html isn't part of the client side, but served up
-  * therefore there is a name clash with the old index.html, unless we can concatenate all the swig files too...
+  * pipes static files from src content into the build content directory
+  */
+  
+  gulp.task('pipe-static', function() {
+      return gulp.src(['public/Content/**/*.*'])
+        .pipe(gulp.dest('build/public/Content'))
+  })
+
+ /*
+  * pipeshtml files from views content into the build views directory
+  */
+ 
+ gulp.task('pipe-html', function() {
+     return gulp.src(['views/**/*.html'])
+        .pipe(gulp.dest('build/views'))
+ })
+ 
+ /*
+  * automates replacing the development script tags and also performs the concat op
+
   */
  gulp.task('usemin', function(){
-     return gulp.src('./views/index.html')
-        .pipe(usemin())
-        .pipe(gulp.dest('./build-views/'))
+     return gulp.src('views/index.html')
+        .pipe(usemin({
+            js: [concat('../public/javascripts/Min/bundle.js')]
+        }))
+        .pipe(gulp.dest('build/views/'))
+ })
+ 
+  /*
+  * pipes router files into build
+  */
+ gulp.task('pipe-router', function() {
+     return gulp.src([
+         'router/index.js',
+         'router/**/*.js'      
+     ])
+     .pipe(gulp.dest('build/router/'))
  })
  
  /*
-  * minifies the files, but problem is that it does not recognise ES6 features already implemented in browsers.
-  * files must be babelified to es5 before minification, or wait for minifier to catch up with reality
-  * concatenation is the most important optimizer anyway.
-  */   
- gulp.task('minify', function() {
-    //  var templatesFilter = gulpFilter('public/views/*.html')
-     
-     return gulp.src(srcScripts)
-    //  .pipe(templatesFilter)
-    //  .pipe(templatesFilter.restore())
-     .pipe(concat('wp.min.js'))
-     .pipe(uglify())
-     .pipe(header(banner))
-     .pipe(gulp.dest('./public/dist/Min'))
+  * pipes bin files into build
+  */
+ gulp.task('pipe-bin', function() {
+     return gulp.src([
+         'bin/*'     
+     ])
+     .pipe(gulp.dest('build/bin/'))
  })
+ 
+   /*
+  * pipes server and package
+  */
+ gulp.task('pipe-server', function() {
+     return gulp.src([
+         'app.js',
+         'package.json'      
+     ])
+     .pipe(gulp.dest('build/'))
+ })
+
  
  /*
   * a complexity analysis tool. doesn't seem to work on this build
@@ -131,17 +168,24 @@ var banner = ['/**',
      .pipe(csso())
      .pipe(gulp.dest('public/stylesheets'))
  })
- 
- 
- /*
-  * linting for css and less
-  */
- gulp.task('recess', function(){
-     gulp.src('public/stylesheets')
-     .pipe(recess())
-     .pipe(recess.reporter())
-     .pipe(gulp.dest('public/stylesheets'))
+ //complete stylesheets piping
+ gulp.task('pipe-style-all', function(){
+     gulp.src([      
+         'public/stylesheets/*',
+         'public/stylesheets/**/*'
+     ])
+     .pipe(gulp.dest('build/public/stylesheets'))
  })
+ 
+ // very simple css piper just for updating style.css
+ gulp.task('pipe-style', function() {
+     gulp.src([
+         'public/stylesheets/style.css'
+     ])
+     .pipe(gulp.dest('build/public/stylesheets'))
+ })
+ 
+ 
  
  /*
   * watches for changes
@@ -153,4 +197,4 @@ var banner = ['/**',
  
 
 gulp.task('default', ['watch', 'styles', 'minify'])
-gulp.task('build', ['vendor', 'concat'])
+gulp.task('build', ['pipe-style','pipe-static', 'pipe-html', 'usemin', 'pipe-router', 'pipe-bin', 'pipe-server'])

@@ -1,3 +1,5 @@
+'use strict';
+
 function jQueryUIStyling() {
 	$('input:button, input:submit').button();
 	$('.webgrid-wrapper').addClass('ui-grid ui-widget ui-widget-content ui-corner-all');

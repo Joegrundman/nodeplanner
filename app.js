@@ -24,26 +24,29 @@ app.set('view engine', 'html')
 // }
 
 app.set('views', path.join(__dirname, 'views'))
+
+
 // in production always use template caching
 // here we can use swig template caching instead of express's
 
-app.set('view cache', true)
 
 if (app.get('env') === 'production') {
-  // using express cacheing- swig cache throws error, easiest fix is use express instead..
+  // using express cacheing- swig cache throws error, easiest fix is use express instead..only need to use one or the other
+  //swig cache
   swig.setDefaults({ cache:false })
+  //express cache
   app.set('view cache', false)
 } else  {
+  // swig cache  
   swig.setDefaults({ cache: false })
+  //express cache
   app.set('view cache', false)
 }
 
 
-if (app.get('env') === 'production') {
-  app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
-} else  {
-  app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-}
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 
 /*
  * Express middlewares
@@ -56,11 +59,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 ;
-if (app.get('env') === 'production') {
-  app.use(express.static(path.join(__dirname, 'build')))
-} else  {
+
   app.use(express.static(path.join(__dirname, 'public')))
-}
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
