@@ -70,7 +70,7 @@ var banner = ['/**',
             .pipe(gulp.dest('../stage/build/public/javascripts/Min'))
  })
  
- /**
+ /*
   * concatenates vendor libraries and pipes to build/script/Vendor. Not needed if using cdn libraries
   */
  gulp.task('vendor', function() {
@@ -203,11 +203,17 @@ var banner = ['/**',
      .pipe(gulp.dest('../stage/build/public/stylesheets'))
  })
  
- gulp.task('clean-local-build', function() {
+ /*
+  * clean and remove the build folder inside warplanner only
+  */
+ 
+ gulp.task('clean-local', function() {
      return gulp.src('build', {read: false})
      .pipe(clean())
  })
- 
+ /*
+  * clean and remove the build folder inside stage only
+  */ 
  gulp.task('clean-stage', function() {
      return gulp.src('../stage/build', {read: false})
      .pipe(clean({force: true}))

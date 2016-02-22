@@ -232,7 +232,14 @@ WP.Map = class {
         scrollDivRight(getCookie("rightscroll"))
         scrollDivDown(getCookie("downscroll"))
         }
-        var url = "/Content/Maps/WP" + this.theater + (game.zoomLevel *10) + ".jpg"
+        //var url = "/Content/Maps/WP" + this.theater + (game.zoomLevel *10) + ".jpg"
+        var url = ''
+        if (this.theater == 'euro') {
+            url = "http://res.cloudinary.com/druzhkwmt/image/upload/v1456179368/b3oj0apypmsiu1zsypwl.jpg"
+        } else {
+            url = "http://res.cloudinary.com/druzhkwmt/image/upload/v1456179470/evnyvf9x1ehyxt3ksrkp.jpg"
+        }
+        
         mapImage.src = url
     }
     
