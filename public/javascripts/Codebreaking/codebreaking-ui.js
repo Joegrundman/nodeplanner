@@ -2,7 +2,7 @@ WP.Codebreaking.UI = {
 	fillCard: function (div, theater, country, type, flag) {
 		var html = "<span style='font-size: 16px; font-weight: bold;'>" + theater + "</span><br />";
 		html += "<span style='font-size: 12px; font-style: italic;'>" + country + "</span><p></p>";
-		html += "<img src='content/flags/" + flag + "-smallest.png' alt='Flag' />";
+		html += "<img src='Content/flags/" + flag + "-smallest.png' alt='Flag' />";
 		html += "<p><span style='font-size: 16px; font-weight: bold; padding-top: 5px'>" + type + "</span></p>";
 		$(div).html(html);
 	},

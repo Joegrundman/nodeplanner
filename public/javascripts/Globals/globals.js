@@ -6,7 +6,7 @@ var WP = {
   initialize: function () {
 
     // for sample testing only - to be commented out
-    var filename = 'content/Sample/sample.xml'
+    var filename = 'Content/Sample/sample.xml'
 
     WP.Canvas.initCanvas()
     WP.FileLoader.startGame("euro", filename)

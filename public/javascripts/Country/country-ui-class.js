@@ -3,7 +3,7 @@ WP.Country.UI = {
 	getFlagUrl: function (country) {
 		var name = country.name.toLowerCase();
         if (name == "germany" && !game.noSwastikas) { 
-            return "/content/flags/" + name.replace(" ", "") + "-unsafe.bmp"
+            return "/Content/Flags/" + name.replace(" ", "") + "-unsafe.bmp"
         }
 		if (country.colonyOf)
 			name = country.colonyOf.name.toLowerCase();
@@ -16,7 +16,7 @@ WP.Country.UI = {
 		if (country.id == 17) name = "comchina";
 		if (country.id == 24) name = "freefrench";
 		if (country.id == 32) name = "indiannat";
-		return "/content/flags/" + name.replace(" ", "") + ".bmp";
+		return "/Content/Flags/" + name.replace(" ", "") + ".bmp";
 	},
 
 	loadFlag: function (country) {

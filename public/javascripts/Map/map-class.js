@@ -232,7 +232,7 @@ WP.Map = class {
         scrollDivRight(getCookie("rightscroll"))
         scrollDivDown(getCookie("downscroll"))
         }
-        var url = "/content/maps/WP" + this.theater + (game.zoomLevel *10) + ".jpg"
+        var url = "/Content/Maps/WP" + this.theater + (game.zoomLevel *10) + ".jpg"
         mapImage.src = url
     }
     

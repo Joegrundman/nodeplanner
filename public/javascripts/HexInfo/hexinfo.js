@@ -18,7 +18,7 @@ WP.HexInfo = class {
     
         
     refreshHeader () {
-        var flag = "/content/flags/ocean.bmp";
+        var flag = "/Content/Flags/ocean.bmp";
         var owner = "Ocean";
         var cty = null;
         var hexId = null;

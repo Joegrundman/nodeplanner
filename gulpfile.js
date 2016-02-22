@@ -10,7 +10,7 @@ var gulpif = require('gulp-if')
 var strip = require('gulp-strip-comments')
 var usemin = require('gulp-usemin')
 var changed = require('gulp-changed')
-
+var clean= require('gulp-clean')
 
 
 var srcScripts = [
@@ -67,6 +67,7 @@ var banner = ['/**',
             .pipe(strip())
             .pipe(header(banner))
             .pipe(gulp.dest('build/public/javascripts/Min'))
+            .pipe(gulp.dest('../stage/build/public/javascripts/Min'))
  })
  
  /**
@@ -88,6 +89,7 @@ var banner = ['/**',
   gulp.task('pipe-static', function() {
       return gulp.src(['public/Content/**/*.*'])
         .pipe(gulp.dest('build/public/Content'))
+        .pipe(gulp.dest('../stage/build/public/Content'))
   })
 
  /*
@@ -97,8 +99,10 @@ var banner = ['/**',
  gulp.task('pipe-html', function() {
      return gulp.src(['views/**/*.html'])
         .pipe(gulp.dest('build/views'))
+        .pipe(gulp.dest('../stage/build/views'))
  })
  
+
  /*
   * automates replacing the development script tags and also performs the concat op
 
@@ -109,6 +113,7 @@ var banner = ['/**',
             js: [concat('../public/javascripts/Min/bundle.js')]
         }))
         .pipe(gulp.dest('build/views/'))
+        .pipe(gulp.dest('../stage/build/views/'))
  })
  
   /*
@@ -120,6 +125,7 @@ var banner = ['/**',
          'router/**/*.js'      
      ])
      .pipe(gulp.dest('build/router/'))
+     .pipe(gulp.dest('../stage/build/router/'))
  })
  
  /*
@@ -130,6 +136,7 @@ var banner = ['/**',
          'bin/*'     
      ])
      .pipe(gulp.dest('build/bin/'))
+     .pipe(gulp.dest('../stage/build/bin/'))
  })
  
    /*
@@ -141,6 +148,7 @@ var banner = ['/**',
          'package.json'      
      ])
      .pipe(gulp.dest('build/'))
+     .pipe(gulp.dest('../stage/build/'))
  })
 
  
@@ -161,7 +169,7 @@ var banner = ['/**',
   */
  
  gulp.task('styles', function(){
-     gulp.src([
+     return gulp.src([
          'public/stylesheets/*.css'
      ])
      .pipe(concat('styles.min.css'))
@@ -170,19 +178,31 @@ var banner = ['/**',
  })
  //complete stylesheets piping
  gulp.task('pipe-style-all', function(){
-     gulp.src([      
+     return gulp.src([      
          'public/stylesheets/*',
          'public/stylesheets/**/*'
      ])
      .pipe(gulp.dest('build/public/stylesheets'))
+     .pipe(gulp.dest('../stage/build/public/stylesheets'))
  })
  
  // very simple css piper just for updating style.css
  gulp.task('pipe-style', function() {
-     gulp.src([
+     return gulp.src([
          'public/stylesheets/style.css'
      ])
      .pipe(gulp.dest('build/public/stylesheets'))
+     .pipe(gulp.dest('../stage/build/public/stylesheets'))
+ })
+ 
+ gulp.task('clean-local-build', function() {
+     return gulp.src('build', {read: false})
+     .pipe(clean())
+ })
+ 
+ gulp.task('clean-stage', function() {
+     return gulp.src('../stage/build', {read: false})
+     .pipe(clean({force: true}))
  })
  
  
@@ -197,4 +217,4 @@ var banner = ['/**',
  
 
 gulp.task('default', ['watch', 'styles', 'minify'])
-gulp.task('build', ['pipe-style','pipe-static', 'pipe-html', 'usemin', 'pipe-router', 'pipe-bin', 'pipe-server'])
+gulp.task('build', ['pipe-style-all','pipe-static', 'pipe-html', 'usemin', 'pipe-router', 'pipe-bin', 'pipe-server'])

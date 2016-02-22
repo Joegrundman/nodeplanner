@@ -52,7 +52,7 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
  * Express middlewares
  */
 
-app.use(compress())
+//app.use(compress())
 app.use(cors())
 app.use(logger('dev'));
 app.use(bodyParser.json());

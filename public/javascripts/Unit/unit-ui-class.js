@@ -54,7 +54,7 @@ WP.Unit.UI = {
 
 	drawDamaged: function (ctx, unit) {
 		var burningShip = new Image();
-		burningShip.src = "content/units/burning_ship.gif";
+		burningShip.src = "Content/Units/burning_ship.gif";
 		ctx.drawImage(burningShip, 0, 11);
 	},
 

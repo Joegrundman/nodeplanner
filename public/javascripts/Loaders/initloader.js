@@ -10,7 +10,7 @@ WP.InitLoader = class {
         
         $.ajax({
             type: "GET",
-            url: "content/Initialize/initialize.xml",
+            url: "Content/Initialize/initialize.xml",
             dataType: "xml",
             success: function(xml) {
                 // ____THIS IS A CODE SMELL!!____
