@@ -87,9 +87,17 @@ var banner = ['/**',
   */
   
   gulp.task('pipe-static', function() {
-      return gulp.src(['public/Content/**/*.*'])
+      return gulp.src([
+          'public/Content/**/*.*'
+          ])
         .pipe(gulp.dest('build/public/Content'))
         .pipe(gulp.dest('../stage/build/public/Content'))
+  })
+  
+  gulp.task('pipe-favicon', function() {
+      return gulp.src(['public/favicon.ico'])
+        .pipe(gulp.dest('build/public'))
+        .pipe(gulp.dest('../stage/build/public'))
   })
 
  /*
@@ -217,4 +225,6 @@ var banner = ['/**',
  
 
 gulp.task('default', ['watch', 'styles', 'minify'])
-gulp.task('build', ['pipe-style-all','pipe-static', 'pipe-html', 'usemin', 'pipe-router', 'pipe-bin', 'pipe-server'])
+
+// this unwieldy and unrefactored task is the basic build tool. Not much actually happens in the build process except concat of javascripts and piping of the rest
+gulp.task('build', ['pipe-style-all','pipe-favicon','pipe-static', 'pipe-html', 'usemin', 'pipe-router', 'pipe-bin', 'pipe-server'])

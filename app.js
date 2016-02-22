@@ -35,7 +35,7 @@ if (app.get('env') === 'production') {
   //swig cache
   swig.setDefaults({ cache:false })
   //express cache
-  app.set('view cache', false)
+  app.set('view cache', true)
 } else  {
   // swig cache  
   swig.setDefaults({ cache: false })
