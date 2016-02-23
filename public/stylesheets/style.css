@@ -79,11 +79,33 @@ html, body {
   margin-bottom: 5px;
 }
 
-.menuButton {
+.gmBtnRow {
+    display: block;
+    margin-left: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.gmBtn {
+    height: 34px;
+    width: 34px;
+    padding: 3px 3px 3px 3px;
+    border: 1px solid lightslategray;
+    background-color: #333340;
+    color: lightgrey;
+    font-size: 16px;
+    border-radius: 7px;
+}
+.gmBtn:hover {
+    border: 1px solid salmon;
+    color: salmon;
+}
+
+/*.menuButton {
   height: 36px;
   width: 36px;
   padding: 3px 3px 3px 3px;
-}
+}*/
 
 #navigatorDiv {
     width:90%;

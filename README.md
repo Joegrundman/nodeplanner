@@ -32,33 +32,32 @@ to use nodemon to auto-restart the server after changes
 
 Build
 -----
+Perhaps best not to look too closely at the gulpfile - it may only be understandable by me.
 
-At the moment, a very simple build system has been implemented. 
+there are two target build folders
 
-On `index.html`, for development, all the scripts are individually sourced.
-Performance is pretty slow in this state
+one inside the main warplanner folder, another in a parallel directory named stage. stage has a separate git repo for pushing to paas.
 
-One copy of, the concatenated javascript file is found in 
-´public/dist/wp.min.js´
+the one inside warplanner is for testing the build.
 
-this one is useful for checking the quality of the concatenated file without shifting to production settings
+there are several different gulp commands - mostly they simply pipe from dev to build
 
-On `index.html`, comment out all the javascripts (but not the libraries like jquery)
-and uncomment out the line:
+`gulp pipe-server` pipes app.js and package.json
+`gulp pipe-style-all` pipes the whole public stylsheets directory
+`gulp pipe-style` pipes the styles.css file
+`gulp pipe-html` pipes the html files
+`gulp pipe-static` pipes the static files
+`gulp usemin` concatenates the javascripts into bundle.js and pipes them 
+and in index, removes references to javascripts and replaces with single reference to bundle
 
-`<script src="dist/Min/wp.min.js"></script>`
+`gulp build` does all these in sequence BUT BADLY
+because gulp usemin runs before gulp pipe-html is finished 
 
-the files are not actually minified, just concatenated and stripped of comments. 
-Uglify doesn't yet seem to play nicely with es6 classes, and i don't currently want to use babel to uglifyall the way back into es5
+so until i fix this properly
 
-the other concatenated file is found in 
-`build/Min`
+after `gulp build` is finished, run `gulp usemin`
 
-this folder also has a copy of the styles and a repeat of the content folder, and is accessed when node environment variable is set to `production`
 
-to concatenate your new javascripts into a new wp.min.js
-run:
-`gulp concat`
 
 to run in development mode
 `npm run dev`
