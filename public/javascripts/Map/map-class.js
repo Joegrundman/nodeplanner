@@ -232,6 +232,7 @@ WP.Map = class {
         scrollDivRight(getCookie("rightscroll"))
         scrollDivDown(getCookie("downscroll"))
         }
+        // this line assumes the main maps are in the Content/Maps folder, and not from cdn
         //var url = "/Content/Maps/WP" + this.theater + (game.zoomLevel *10) + ".jpg"
         var url = ''
         if (this.theater == 'euro') {
