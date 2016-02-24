@@ -19,8 +19,10 @@ function getWindowDimensions() {
   // window.mapHeight = window.mapHeight - 100
   // window.mapWidth = window.mapWidth - 40
 
+  // current values
   window.mapHeight = window.mapHeight -80
   window.mapWidth = window.mapWidth - 186
+
 
 }
 

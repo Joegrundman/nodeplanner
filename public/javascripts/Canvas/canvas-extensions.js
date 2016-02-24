@@ -34,13 +34,15 @@ CanvasRenderingContext2D.prototype.drawUnits = function (units, x, y) {
 }
 
 CanvasRenderingContext2D.prototype.getImageDataSafely = function (x, y, width, height) {
-	try {
-		return this.getImageData(x, y, width, height);
-	}
-	catch (e) {
-		netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
-		return this.getImageData(x, y, width, height);
-	}
+	return this.getImageData(x, y, width, height);
+    
+    // try {
+	// 	return this.getImageData(x, y, width, height);
+	// }
+	// catch (e) {
+	// 	netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+	// 	return this.getImageData(x, y, width, height);
+	// }
 }
 
 CanvasRenderingContext2D.prototype.roundRect = function (sx, sy, ex, ey, r) {

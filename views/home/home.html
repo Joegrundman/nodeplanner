@@ -3,7 +3,7 @@
 {% block view %}
 
 <!-- <div id="mySplashDiv" style="width: 100%; display: block; position: absolute; top: 65px; left: 0px"></div> -->
-<div id="mainGameDiv" style="display: none">
+<div id="mainGameDiv">
 	<table>
 		<tr style="vertical-align: top">
 			<td>
@@ -42,15 +42,19 @@
 // Start the Warplanner scripts
 
 $(document).ready(function () {
+
 	getWindowDimensions()
 	splash(WP.initialize)
 
 	function splash(fn){
 		setTimeout(function(){
+ 
 			fn()
-			$("#mainGameDiv").show()
+			//$("#mainGameDiv").show()
 		}, 100)
 	}
+    
+    
 })
 </script>
 

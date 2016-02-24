@@ -4,13 +4,12 @@ var WP = {
 
     
   initialize: function () {
-
     // for sample testing only - to be commented out
     var filename = 'Content/Sample/sample.xml'
 
     WP.Canvas.initCanvas()
     WP.FileLoader.startGame("euro", filename)
-    // WP.FileLoader.Util.startGame("euro", filename)
+ 
     WP.Eventing.attachEvents()
 
     if (!hexInfo) { hexInfo = new WP.HexInfo(); }

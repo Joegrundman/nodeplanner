@@ -199,6 +199,8 @@ WP.Map = class {
     drawBackground () {
         var mapImage = new Image()
         var map = this
+        
+        mapImage.crossOrigin = "Anonymous"
 
         mapImage.onload = function() {
             var mapDiv = $("#mapDiv")
