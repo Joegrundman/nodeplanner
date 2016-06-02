@@ -35,6 +35,7 @@ CanvasRenderingContext2D.prototype.drawUnits = function (units, x, y) {
 
 CanvasRenderingContext2D.prototype.getImageDataSafely = function (x, y, width, height) {
 	return this.getImageData(x, y, width, height);
+    // deprecated
     
     // try {
 	// 	return this.getImageData(x, y, width, height);

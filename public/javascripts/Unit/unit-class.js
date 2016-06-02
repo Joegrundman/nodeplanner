@@ -20,6 +20,7 @@ WP.Unit = class {
         * @property {number} movement - number of open hexes that a unit can move, or range for air units
         * @property {number} location - location of unit. 1 = map, 2 = forcepool
         * @property {object} hex - current hex object holding unit
+        * @property {number} hexIdAtTurnStart - hexId of unit at turn start
         * @property {string} image - path to image src, if needed
         * @property {object} owner - country object to which unit belongs
         * @property {object} taskforceOwner - taskforce object to which unit belongs
@@ -48,6 +49,7 @@ WP.Unit = class {
         this.location = 0;
 
         this.hex = null;
+        this.hexIdAtTurnStart = null;
         this.image = null;
         this.owner = null;
 
@@ -160,7 +162,6 @@ WP.Unit = class {
                 return true;
             default: return false;
         }
-	return false;
     }
     
      /**
@@ -367,6 +368,15 @@ WP.Unit = class {
                 }
             }
         }
+    }
+    /**
+     * sets the Hex Id At turn start to match the fileloaded position
+     * later should be modified to be at turn start
+     * this will allow undo moves
+     */
+    
+    setHexIdAtTurnStart() {
+        this.hexIdAtTurnStart = this.hex.id
     }
 
     /**

@@ -214,7 +214,9 @@ WP.FileLoader = class {
             var stack = parseInt(unitNode.attr('stack'));
             var hex = unitNode.attr('hex');
             game.addUnitToHex(unit, hex, stack);
+            unit.setHexIdAtTurnStart();
         }
+        
     }
     
 }

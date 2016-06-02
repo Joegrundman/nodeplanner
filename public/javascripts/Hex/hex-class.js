@@ -122,6 +122,7 @@ WP.Hex = class {
         }
 	return false;
     }
+    
     /**
      * Gets the top unit in the array (treated as stack)
      * @returns {object} unit - the top unit in the units array

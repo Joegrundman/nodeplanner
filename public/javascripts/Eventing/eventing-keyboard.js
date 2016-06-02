@@ -15,25 +15,28 @@ WP.Eventing.Keyboard = {
 			case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57:
 				WP.Eventing.Keyboard.handleNumberKey(keyPress, unit, map);
 				break;
-			case 67: // c
+			case 67: // c => combine
 				WP.Eventing.Keyboard.handleC(unit, map, hex);
 				break;
-			case 68: // d
+			case 68: // d => mark damaged
 				WP.Eventing.Keyboard.handleD(unit, map, hex);
 				break;
-			case 69: // e
+			case 69: // e => mark eliminated
 				WP.Eventing.Keyboard.handleE(unit, map, hex);
 				break;
-			case 73: // i
+			case 73: // i  => mark inverted or isolated
 				WP.Eventing.Keyboard.handleI(unit, map, hex);
 				break;
-			case 76: // l
+			case 76: // l => mark lent
 				WP.Eventing.Keyboard.handleL(unit, map, hex);
 				break;
-			case 83: // s
+			case 83: // s => mark sunk
 				WP.Eventing.Keyboard.handleS(unit, map, hex);
 				break;
-			case 88: // x
+            case 85: // u => undo
+                WP.Eventing.Keyboard.handleU(unit, map, hex);
+                break;
+			case 88: // x => mark exploiting
 				WP.Eventing.Keyboard.handleX(unit, map, hex);
 				break;
 			default:
@@ -137,11 +140,25 @@ WP.Eventing.Keyboard = {
 			unit.sunk = !unit.sunk;
 		WP.Eventing.Keyboard.handlePostKeyboardAction(unit, map, hex);
 	},
+    
+    /**
+     * ignores key command to send unit back to turn start hex
+     * if not a unit selected, or if unit has no current hex id
+     * or if unit has hexIdAtTurnStart property
+     */
+    
+    handleU: function (unit, map, hex) {
+        if (!unit || !unit.hex.id || !unit.hexIdAtTurnStart) return;
+        if (unit.hex && unit.hex.id != unit.hexIdAtTurnStart) {
+            hex = map.getHexFromId(unit.hexIdAtTurnStart)
+            map.moveUnitTo(unit, hex)
+        }
+        WP.Eventing.Keyboard.handlePostKeyboardAction(unit, map, hex)
+    },
 
 	handleX: function (unit, map, hex) {
 		if (!unit) return;
-		if (unit.canExploit())
-			unit.exploiting = !unit.exploiting;
+		if (unit.canExploit()) { unit.exploiting = !unit.exploiting; }
 		WP.Eventing.Keyboard.handlePostKeyboardAction(unit, map, hex);
 	}
 }
