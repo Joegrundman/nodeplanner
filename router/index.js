@@ -14,5 +14,10 @@
 
    //Home = game screen
    app.use('/home', require('./routes/home'))
-
+   
+   // Signup
+   app.use('/signup', require('./routes/signup'))
+   
+   // Login
+   app.use('/login', require('./routes/login'))
  }

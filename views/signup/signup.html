@@ -1,0 +1,74 @@
+{% extends "../index.html" %} {% block view %}
+<br>
+<div class="container center">
+    <div class="row">
+        <div class="col-md-4 col-md-offset4">
+            <div class="panel">
+
+                <br>
+                <h3 class="text-center">Sign Up</h3>
+                <br>
+                <form class="form-group" method="post" action="#">
+                    <div>
+                        <label for="signup-form-email">Email</label>
+                        <input type="text" name="signup-form-email" id="signup-form-email" class="form-control" placeholder="email@sample.com">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="signup-form-username">Username</label>
+                        <input type="text" name="signup-form-username" id="signup-form-username" class="form-control" placeholder="D@rkW4rr13r">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="signup-form-password">Password</label>
+                        <input type="text" name="signup-form-password" id="signup-form-password" class="form-control" placeholder="Password">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="signup-form-re-password">Re-enter Password</label>
+                        <input type="text" name="signup-form-re-password" id="signup-form-re-password" class="form-control" placeholder="Re-enter Password">
+                    </div>
+                    <br>
+                    <input type="button" class="btn btn-primary" id="signupSubmit" name="signupSubmit" value ="Submit"> 
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#signupSubmit").click(function() {
+                var username = $("#signup-form-username").val()
+                var email = $("#signup-form-email").val()
+                var password = $("#signup-form-password").val()
+                var rePassword = $("#signup-form-re-password").val()
+
+                if (username == '' || email == '' || password == '' || rePassword == '') {
+                    return
+                }
+                
+                var submission = {
+                    username: username,
+                    email: email,
+                    password: password
+                }
+                
+                console.log('sending', submission)
+                
+                $.ajax({
+                    type: "POST",
+                    url: '/signup',
+                    data: submission,
+                    success: function(data, textStatus, jqXhr){
+                        console.log('Success', data.message)
+                    },
+                    error: function (jqXhr, textStatus, error) {
+                        console.log(error)
+                    }
+                    
+                })
+            })
+        })
+    </script>
+
+    {% endblock %}

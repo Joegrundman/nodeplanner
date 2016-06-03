@@ -1,0 +1,28 @@
+{% extends "../index.html" %}
+
+{% block view %}
+<br>
+<div class="container center">
+    <div class="row">
+        <div class="col-md-4 col-md-offset4">
+            <div class="panel">
+
+                <br>
+                <h3 class="text-center">Log In</h3>
+                <br>
+                <form class="form-group">
+                    <div>
+                        <label for="login-form-email">Email</label>
+                        <input type="text" id="login-form-email" class="form-control" placeholder="email@sample.com">
+                    </div>
+                    <div>
+                        <label for="login-form-password">Password</label>
+                        <input type="text" id="login-form-password" class="form-control" placeholder="Password">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary"> Submit </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

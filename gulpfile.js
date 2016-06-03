@@ -11,6 +11,7 @@ var strip = require('gulp-strip-comments')
 var usemin = require('gulp-usemin')
 var changed = require('gulp-changed')
 var clean= require('gulp-clean')
+var sass = require('gulp-sass')
 
 
 var srcScripts = [
@@ -219,7 +220,12 @@ var banner = ['/**',
      .pipe(clean({force: true}))
  })
  
- 
+// // damn tis is taking too long to sort out! 
+//  gulp.task('sass', function() {
+//      return gulp.src('public/sass/**/*.scss')
+//      .pipe(sass().on('error', sass.logError))
+//      .pipe(gulp.dest('public/stylesheets'))
+//  })
  
  /*
   * watches for changes

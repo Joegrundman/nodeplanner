@@ -4,12 +4,23 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose')
+var passport = require('passport')
+var jwt = require('jsonwebtoken')
 var swig = require('swig')
 var cors = require('cors')
 var compress = require('compression')
 var app = express();
 
-var router = require('./router')(app)
+
+var config = require('./config')
+var User = require('./models/Users')
+require('./models/passport')
+
+mongoose.connect(config.database)
+
+
+
 
 
 // view engine setup
@@ -58,9 +69,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-;
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(passport.initialize())
 
-  app.use(express.static(path.join(__dirname, 'public')))
+
+// routes must be after middleware!
+var router = require('./router')(app, passport)
 
 
 // catch 404 and forward to error handler
@@ -93,6 +107,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
 
 
 module.exports = app;
